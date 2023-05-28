@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -150,6 +150,83 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2023/05/28/Fima%20C.%20Klebaner%E9%9A%8F%E5%8D%B3%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wanye.png">
+      <meta itemprop="name" content="Ruchun Zuo">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/05/28/Fima%20C.%20Klebaner%E9%9A%8F%E5%8D%B3%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" class="post-title-link" itemprop="url">POINTS</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-05-28 11:30:36 / Modified: 12:26:45" itemprop="dateCreated datePublished" datetime="2023-05-28T11:30:36+08:00">2023-05-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h2 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h2><h4 id="7-1definition：若随机过程-M-t-可积，即-EM-t-lt-infty-，并且具有性质-E-M-t-mathcal-F-S-x3D-M-s-，则-M-t-被称作Martingale"><a href="#7-1definition：若随机过程-M-t-可积，即-EM-t-lt-infty-，并且具有性质-E-M-t-mathcal-F-S-x3D-M-s-，则-M-t-被称作Martingale" class="headerlink" title="7.1definition：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)&#x3D;M(s)$，则$M(t)$被称作Martingale"></a>7.1definition：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)&#x3D;M(s)$，则$M(t)$被称作Martingale</h4><p>$E(M(t)|\mathcal F_S)&#x3D;M(s)$，鞅是公平的，期望是常数</p>
+<p>$E(M(t)|\mathcal F_S)\le M(s)$，上鞅是盈利，期望是递减</p>
+<p>$E(M(t)|\mathcal F_S)\ge M(s)$，下鞅是亏损，期望是递增</p>
+<p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p>
+<h3 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h3><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p>
+<p>若$f$在$\mathbb R$有界且连续，则$Ito$积分$\int_0^tf(B(s))dB(s)$和$\int_0^tf(s)dB(s)$，在任何有限区间都是平方可积的鞅</p>
+<h2 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h2><p>在介绍一致可积之前，先来回忆一下什么叫可积。</p>
+<p>随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))&#x3D;0$</p>
+<h4 id="Didinition7-5：随机过程-X-称为一致可积的当-E-X-I-X-gt-n-在-n-to-infty-时对于t一直收敛到0，即-lim-limits-n-to-infty-sup-limits-t-E-X-I-X-gt-n-x3D-0"><a href="#Didinition7-5：随机过程-X-称为一致可积的当-E-X-I-X-gt-n-在-n-to-infty-时对于t一直收敛到0，即-lim-limits-n-to-infty-sup-limits-t-E-X-I-X-gt-n-x3D-0" class="headerlink" title="Didinition7.5：随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))&#x3D;0$"></a>Didinition7.5：随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))&#x3D;0$</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -195,7 +272,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-27 21:57:50" itemprop="dateModified" datetime="2023-05-27T21:57:50+08:00">2023-05-27</time>
+      <time title="Modified: 2023-05-28 11:40:32" itemprop="dateModified" datetime="2023-05-28T11:40:32+08:00">2023-05-28</time>
     </span>
 
   
@@ -208,22 +285,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><p>dx(t)&#x3D;f(x(t),t)dt+g(x(t),t)dB(t)</p>
+          <h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><p>$dx(t)&#x3D;f(x(t),t)dt+g(x(t),t)dB(t)$</p>
 <h1 id="第二章：随机微分方程"><a href="#第二章：随机微分方程" class="headerlink" title="第二章：随机微分方程"></a>第二章：随机微分方程</h1><h2 id="第三节：解的存在唯一性"><a href="#第三节：解的存在唯一性" class="headerlink" title="第三节：解的存在唯一性"></a>第三节：解的存在唯一性</h2><p>在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
 <p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear growth条件也能得到解的存在唯一性。</p>
 <p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear growth可以推出Monotone条件。</p>
 <p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p>
-<h3 id="第四节：L-p估计"><a href="#第四节：L-p估计" class="headerlink" title="第四节：L^p估计"></a>第四节：L^p估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p>
+<h3 id="第四节：-L-p-估计"><a href="#第四节：-L-p-估计" class="headerlink" title="第四节：$L^p$估计"></a>第四节：$L^p$估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p>
 <p>在类似于Monotone的条件下，p阶矩是exp收敛的</p>
 <h3 id="第五节：Almost-Surely-Asymptotic-Estimates"><a href="#第五节：Almost-Surely-Asymptotic-Estimates" class="headerlink" title="第五节：Almost Surely Asymptotic Estimates"></a>第五节：Almost Surely Asymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
 <p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用<img src="C:\Users\Administrator\Pictures\Screenshots\屏幕截图(126).png" alt="屏幕截图(126)"></p>
 <p><img src="C:\Users\Administrator\Pictures\Screenshots\屏幕截图(127).png" alt="屏幕截图(127)"></p>
 <h3 id="第六节Caratheodory估计"><a href="#第六节Caratheodory估计" class="headerlink" title="第六节Caratheodory估计"></a>第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
-<p>TH6.4在f,g连续，x_0有界且F_t0可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
+<p>TH6.4在$f,g$连续，$x_0$有界且$F_{t_0}$可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
 <h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p>
 <p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p>
 <h6 id="但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法"><a href="#但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法" class="headerlink" title="(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)"></a>(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3 id="第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式"><a href="#第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式" class="headerlink" title="第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式"></a>第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂…不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
-<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度P(X,s;A,t)以及&#x2F;int P(y,r;A,t)P(x,s;dy,r),下次问问再看</p>
+<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度P(X,s;A,t)以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>
 
       
     </div>
