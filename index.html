@@ -200,7 +200,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-29 21:49:51" itemprop="dateModified" datetime="2023-05-29T21:49:51+08:00">2023-05-29</time>
+      <time title="Modified: 2023-05-29 22:28:01" itemprop="dateModified" datetime="2023-05-29T22:28:01+08:00">2023-05-29</time>
     </span>
 
   
@@ -213,34 +213,49 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h2 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h2><h4 id="Definition：若随机过程-M-t-可积，即-EM-t-lt-infty-，并且具有性质-E-M-t-mathcal-F-S-M-s-，则-M-t-被称作Martingale"><a href="#Definition：若随机过程-M-t-可积，即-EM-t-lt-infty-，并且具有性质-E-M-t-mathcal-F-S-M-s-，则-M-t-被称作Martingale" class="headerlink" title="Definition：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale"></a>Definition：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale</h4><p>$E(M(t)|\mathcal F_S)=M(s)$，鞅是公平的，期望是常数</p>
+          <h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h2 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h2><p><strong>Definition7.1：</strong>若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale.</p>
+<p>$E(M(t)|\mathcal F_S)=M(s)$，鞅是公平的，期望是常数</p>
 <p>$E(M(t)|\mathcal F_S)\le M(s)$，上鞅是盈利，期望是递减</p>
 <p>$E(M(t)|\mathcal F_S)\ge M(s)$，下鞅是亏损，期望是递增</p>
 <p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p>
-<h5 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h5><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p>
+<p><strong>Theorem7.3：</strong>上鞅是鞅当且仅当$EM(T)=EM(0)$.</p>
+<h6 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p>
 <p>若$f$在$\mathbb R$有界且连续，则$Ito$积分$\int_0^tf(B(s))dB(s)$和$\int_0^tf(s)dB(s)$，在任何有限区间都是平方可积的鞅</p>
 <h2 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h2><p>​       在介绍一致可积之前，先来回忆一下什么叫可积。</p>
 <p>随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))=0$</p>
-<h4 id="Definition7-5：随机过程-X-称为一致可积的当-E-X-I-X-gt-n-在-n-to-infty-时对于t一直收敛到0，即-lim-limits-n-to-infty-sup-limits-t-E-X-I-X-gt-n-0"><a href="#Definition7-5：随机过程-X-称为一致可积的当-E-X-I-X-gt-n-在-n-to-infty-时对于t一直收敛到0，即-lim-limits-n-to-infty-sup-limits-t-E-X-I-X-gt-n-0" class="headerlink" title="Definition7.5：随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$"></a>Definition7.5：随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$</h4><p>$Theorem7.6$类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$</p>
-<p>$Theorem 7.7 (Vallee–Poussin):$若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits_{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积。</p>
+<p><strong>Definition7.5：</strong>随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$.</p>
+<p><strong>Theorem7.6</strong>：类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$.</p>
+<p><strong>Theorem 7.7 (Vallee–Poussin)：</strong>若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits_{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
 <p>下面构造一个一致可积鞅：</p>
-<h5 id="Theorem-7-9-Doob’s-Levy’s-Martingale-：Y是一个可积的随机变量，即-E-Y-lt-infty-定义-M-t-E-Y-mathcal-F-t-那么-M-t-是一致可积鞅。"><a href="#Theorem-7-9-Doob’s-Levy’s-Martingale-：Y是一个可积的随机变量，即-E-Y-lt-infty-定义-M-t-E-Y-mathcal-F-t-那么-M-t-是一致可积鞅。" class="headerlink" title="Theorem 7.9 (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅。"></a>Theorem 7.9 (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅。</h5><h2 id="7-3-Martingale-Convergence"><a href="#7-3-Martingale-Convergence" class="headerlink" title="7.3 Martingale Convergence"></a>7.3 Martingale Convergence</h2><p>本节考虑无穷区间的鞅</p>
-<h5 id="Theorem-7-11-Martingale-Convergence-Theorem-若M-t-是一个可积的鞅-or上鞅or下鞅-，那么就存在一个几乎肯定的-lim-limits-t-to-infty-M-t-Y，Y-是一个可积的随机变量。"><a href="#Theorem-7-11-Martingale-Convergence-Theorem-若M-t-是一个可积的鞅-or上鞅or下鞅-，那么就存在一个几乎肯定的-lim-limits-t-to-infty-M-t-Y，Y-是一个可积的随机变量。" class="headerlink" title="Theorem 7.11 (Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。"></a>Theorem 7.11 (Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。</h5><p>但$E(M(t))$可能不收敛到$EY$.例如布朗运动的指数鞅：$e^{B(t)-\frac{t}{2}}$；当$M(t)$一致可积时，收敛是肯定的。</p>
+<p><strong>Theorem 7.9：</strong> (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅.</p>
+<h2 id="7-3-Martingale-Convergence"><a href="#7-3-Martingale-Convergence" class="headerlink" title="7.3 Martingale Convergence"></a>7.3 Martingale Convergence</h2><p>本节考虑无穷区间的鞅</p>
+<p><strong>Theorem 7.11：</strong>(Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。</p>
+<p>但$E(M(t))$可能不收敛到$EY$.例如布朗运动的指数鞅：$e^{B(t)-\frac{t}{2}}$；当$M(t)$一致可积时，收敛是肯定的。</p>
 <p>一致可积鞅收敛a.s.</p>
 <p>平方可积鞅收敛a.s.</p>
 <p>正鞅收敛a.s.</p>
 <p>(负)上有界的下鞅收敛a.s.</p>
 <p>(正)下有界的上鞅收敛a.s.</p>
-<h3 id="7-4-Optional-Stopping"><a href="#7-4-Optional-Stopping" class="headerlink" title="7.4 Optional Stopping"></a>7.4 Optional Stopping</h3><h6 id="Th7-14：若-M-t-是鞅，-tau-是停时，则-M-t-land-tau-是鞅，并且-EM-t-land-tau-EM-0"><a href="#Th7-14：若-M-t-是鞅，-tau-是停时，则-M-t-land-tau-是鞅，并且-EM-t-land-tau-EM-0" class="headerlink" title="Th7.14：若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$"></a>Th7.14：若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$</h6><p>我们知道当$M(t)$是鞅时，$EM(t)=EM(0)$，但是对于停时$\tau$，等式$EM(\tau)=EM(0)$,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
-<h6 id="Th7-15（Optional-Stopping）-M-t-是鞅，1-若-tau-是有界停时，即-tau-le-K-lt-infty-则，-EM-t-EM-0-2-若-M-t-一致可积，则对于任意的停时-tau-，都有-EM-tau-EM-0"><a href="#Th7-15（Optional-Stopping）-M-t-是鞅，1-若-tau-是有界停时，即-tau-le-K-lt-infty-则，-EM-t-EM-0-2-若-M-t-一致可积，则对于任意的停时-tau-，都有-EM-tau-EM-0" class="headerlink" title="Th7.15（Optional Stopping）$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$"></a>Th7.15（Optional Stopping）$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$</h6><p>不同于有界，假如停时$\tau$是有限的，则需要添加其他条件；</p>
+<h3 id="7-4-Optional-Stopping"><a href="#7-4-Optional-Stopping" class="headerlink" title="7.4 Optional Stopping"></a>7.4 Optional Stopping</h3><p><strong>Theorem7.14：</strong>若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$</p>
+<p>我们知道当$M(t)$是鞅时，$EM(t)=EM(0)$，但是对于停时$\tau$，等式$EM(\tau)=EM(0)$,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
+<p><strong>Theorem7.15：</strong>(Optional Stopping)$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$</p>
+<p>不同于有界，假如停时$\tau$是有限的，则需要添加其他条件；</p>
 <p>在实变函数中，有界函数：函数的值域在$\in[-M,M]$,且有界一定有限；</p>
 <p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p>
 <p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p>
-<h6 id="Th7-16：-M-t-是鞅，-tau-是有限停时，若-EM-tau-lt-infty-并且-lim-limits-t-to-infty-E-M-t-I-tau-gt-t-0-，那么-EM-tau-EM-0"><a href="#Th7-16：-M-t-是鞅，-tau-是有限停时，若-EM-tau-lt-infty-并且-lim-limits-t-to-infty-E-M-t-I-tau-gt-t-0-，那么-EM-tau-EM-0" class="headerlink" title="Th7.16：$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$"></a>Th7.16：$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$</h6><h6 id="Th7-18-Optional-Sampling-M-t-是一致可积鞅，-tau-1-le-tau-2-le-infty-是两个停时，那么-E-M-tau-2-mathcal-F-tau-1-M-tau-1-a-s"><a href="#Th7-18-Optional-Sampling-M-t-是一致可积鞅，-tau-1-le-tau-2-le-infty-是两个停时，那么-E-M-tau-2-mathcal-F-tau-1-M-tau-1-a-s" class="headerlink" title="Th7.18(Optional Sampling): $M(t)$是一致可积鞅，$\tau_1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F_{\tau_1})=M(\tau_1)$ a.s."></a>Th7.18(Optional Sampling): $M(t)$是一致可积鞅，$\tau_1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F_{\tau_1})=M(\tau_1)$ a.s.</h6><h3 id="7-5-Localization-and-Local-Martingales"><a href="#7-5-Localization-and-Local-Martingales" class="headerlink" title="7.5 Localization and Local Martingales"></a>7.5 Localization and Local Martingales</h3><p>$Ito$积分$M(t)=\int_0^tX(s)dB(s)$是局部鞅，当$EM^2(T)&lt;\infty$时，$M(t)$才是鞅</p>
-<p>$Definition7.19$：随机过程$X(t)$的一个性质称作是局部的，如果存在一个停止序列{$\tau_n$}，使得当$n\to\infty$时，停时$\tau_n\uparrow\infty$，并且对于每一个n，停止过程$X(t\land\tau_n)$都有这个性质。</p>
-<h6 id="7-20局部鞅-：适应过程-M-t-被称作局部鞅，如果存在一个-tau-n-uparrow-infty-的停时序列-tau-n-，对于每一个n停止过程-M-t-land-tau-n-关于-t-是一致可积鞅。"><a href="#7-20局部鞅-：适应过程-M-t-被称作局部鞅，如果存在一个-tau-n-uparrow-infty-的停时序列-tau-n-，对于每一个n停止过程-M-t-land-tau-n-关于-t-是一致可积鞅。" class="headerlink" title="$7.20局部鞅$：适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅。"></a><strong>$7.20局部鞅$：适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅</strong>。</h6><p>对于到底什么是<a href="(https://www.zhihu.com/question/56940833">局部鞅</a>)，可以参看知乎中的回答。</p>
+<p><strong>Theorem7.16：</strong>$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$</p>
+<p><strong>Theorem7.18：</strong>(Optional Sampling): $M(t)$是一致可积鞅，$\tau_1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F_{\tau_1})=M(\tau_1)$ a.s.</p>
+<h3 id="7-5-Localization-and-Local-Martingales"><a href="#7-5-Localization-and-Local-Martingales" class="headerlink" title="7.5 Localization and Local Martingales"></a>7.5 Localization and Local Martingales</h3><p>$Ito$积分$M(t)=\int_0^tX(s)dB(s)$是局部鞅，当$EM^2(T)&lt;\infty$时，$M(t)$才是鞅</p>
+<p><strong>Definition7.19：</strong>随机过程$X(t)$的一个性质称作是局部的，如果存在一个停止序列{$\tau_n$}，使得当$n\to\infty$时，停时$\tau_n\uparrow\infty$，并且对于每一个n，停止过程$X(t\land\tau_n)$都有这个性质。</p>
+<p><strong>Definition7.20局部鞅：</strong>适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅。</p>
+<p>对于到底什么是<a href="(https://www.zhihu.com/question/56940833">局部鞅</a>)，可以参看知乎中的回答。</p>
 <p>任何鞅都是局部鞅，反之不一定成立。</p>
-<h6 id="Th7-21：若存在可积随机变量-Y-，即-E-Y-lt-infty-，使得对于局部鞅-M-t-，有-M-t-le-Y-则-M-t-是一致可积的鞅。"><a href="#Th7-21：若存在可积随机变量-Y-，即-E-Y-lt-infty-，使得对于局部鞅-M-t-，有-M-t-le-Y-则-M-t-是一致可积的鞅。" class="headerlink" title="Th7.21：若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。"></a>Th7.21：若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。</h6><p>$Corollary7.22$：对于局部鞅M(t)，若有$E(sup_{s\le t}|M(s)|)&lt;\infty$,则$M(t)$是鞅，并且在任何有限区间[0,T]一致可积；更加一般化，$E(sup_{t\ge 0}|M(t)|)&lt;\infty$，则$M(t)$在$[0,\infty]$一致可积。</p>
+<p><strong>Theorem7.21：</strong>若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。</p>
+<p><strong>Corollary7.22：</strong>对于局部鞅$M(t)$，若有$E(sup_{s\le t}|M(s)|)&lt;\infty$,则$M(t)$是鞅，并且在任何有限区间$[0,T]$一致可积；更加一般化，$E(sup_{t\ge 0}|M(t)|)&lt;\infty$，则$M(t)$在$[0,\infty]$一致可积。</p>
+<p><strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p>
+<p>由$Th7.3$和$Th7.23$可得非负局部鞅是鞅当且仅当$EM(T)=EM(0)$</p>
+<p><strong>Definition7.25(Dirichlet Class (D))</strong>：过程X是狄利克雷D类，若族{X($\tau$)：$\tau$是有限停时}是一致可积的.</p>
+<p><strong>Theorem7.26</strong>：局部鞅$M(t)$是一致可积的鞅当且仅当他是D类.</p>
 
       
     </div>
