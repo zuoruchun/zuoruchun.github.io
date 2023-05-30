@@ -27,7 +27,7 @@
 <meta property="og:description" content="Chapter 7 Martingales7.1定义Definition7.1：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)&#x3D;M(s)$，则$M(t)$被称作Martingale. $E(M(t)|\mathcal F_S)&#x3D;M(s)$，鞅是公平的，期望是常数 $E(M(t)|\mathcal F_S)\le M(s)$">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-28T03:30:36.000Z">
-<meta property="article:modified_time" content="2023-05-30T07:38:46.539Z">
+<meta property="article:modified_time" content="2023-05-30T14:06:36.239Z">
 <meta property="article:author" content="Ruchun Zuo">
 <meta property="article:tag" content="随机分析及其应用">
 <meta name="twitter:card" content="summary">
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-7-Martingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 7 Martingales</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">7.1定义</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E6%80%A7%E8%B4%A8%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E7%9A%84%E9%9E%85%EF%BC%8C%E5%8D%B3%E4%BA%8C%E9%98%B6%E7%9F%A9%E6%9C%89%E7%95%8C%E7%9A%84%E9%9E%85%E3%80%82"><span class="nav-number">1.1.0.0.0.1.</span> <span class="nav-text">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-Uniform-Integrability"><span class="nav-number">1.2.</span> <span class="nav-text">7.2 Uniform Integrability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-Martingale-Convergence"><span class="nav-number">1.3.</span> <span class="nav-text">7.3 Martingale Convergence</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-Optional-Stopping"><span class="nav-number">1.3.1.</span> <span class="nav-text">7.4 Optional Stopping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Localization-and-Local-Martingales"><span class="nav-number">1.3.2.</span> <span class="nav-text">7.5 Localization and Local Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-Quadratic-Variation-of-Martingales"><span class="nav-number">1.3.3.</span> <span class="nav-text">7.6 Quadratic Variation of Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-Martingale-Inequalities"><span class="nav-number">1.3.4.</span> <span class="nav-text">7.7 Martingale Inequalities</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-7-Martingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 7 Martingales</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">7.1定义</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E6%80%A7%E8%B4%A8%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E7%9A%84%E9%9E%85%EF%BC%8C%E5%8D%B3%E4%BA%8C%E9%98%B6%E7%9F%A9%E6%9C%89%E7%95%8C%E7%9A%84%E9%9E%85%E3%80%82"><span class="nav-number">1.1.0.0.0.1.</span> <span class="nav-text">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-Uniform-Integrability"><span class="nav-number">1.2.</span> <span class="nav-text">7.2 Uniform Integrability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-Martingale-Convergence"><span class="nav-number">1.3.</span> <span class="nav-text">7.3 Martingale Convergence</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-Optional-Stopping"><span class="nav-number">1.3.1.</span> <span class="nav-text">7.4 Optional Stopping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Localization-and-Local-Martingales"><span class="nav-number">1.3.2.</span> <span class="nav-text">7.5 Localization and Local Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-Quadratic-Variation-of-Martingales"><span class="nav-number">1.3.3.</span> <span class="nav-text">7.6 Quadratic Variation of Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-Martingale-Inequalities"><span class="nav-number">1.3.4.</span> <span class="nav-text">7.7 Martingale Inequalities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-Continuous-Martingales-%E2%80%94-Change-of"><span class="nav-number">1.3.5.</span> <span class="nav-text">7.8 Continuous Martingales — Change of</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Time"><span class="nav-number">1.3.6.</span> <span class="nav-text">Time</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,7 +207,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-30 15:38:46" itemprop="dateModified" datetime="2023-05-30T15:38:46+08:00">2023-05-30</time>
+      <time title="Modified: 2023-05-30 22:06:36" itemprop="dateModified" datetime="2023-05-30T22:06:36+08:00">2023-05-30</time>
     </span>
 
   
@@ -230,7 +230,7 @@
 <h2 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h2><p>​       在介绍一致可积之前，先来回忆一下什么叫可积。</p>
 <p>随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))=0$</p>
 <p><strong>Definition7.5：</strong>随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$.</p>
-<p><strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$.</p>
+<p><strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$，注意取了$sup$之后是一个随机变量，不再是随机过程.</p>
 <p><strong>Theorem 7.7 (Vallee–Poussin)：</strong>若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits_{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
 <p>下面构造一个一致可积鞅：</p>
 <p><strong>Theorem 7.9：</strong> (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅.</p>
@@ -270,7 +270,18 @@
 <p><strong>Theorem 7.28：</strong>$M(t)$是鞅(局部鞅)且$M(0)=0$，若对于某个$t$，使$M(t)$非0，那么就有$[M,M] (t)&gt;0$；反之，若$<a href="t">M,M</a>=0$，则对于任何的$s\le t$，都有$M(s)=0$ a.s.  </p>
 <p><strong>Theorem 7.29：</strong>$M$是连续局部鞅，固定$t$，若$M(t)\neq M(0)$，那么$M$在$[0,t]$具有无限变差.</p>
 <p><strong>Corollary 7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p>
-<h3 id="7-7-Martingale-Inequalities"><a href="#7-7-Martingale-Inequalities" class="headerlink" title="7.7 Martingale Inequalities"></a>7.7 Martingale Inequalities</h3>
+<h3 id="7-7-Martingale-Inequalities"><a href="#7-7-Martingale-Inequalities" class="headerlink" title="7.7 Martingale Inequalities"></a>7.7 Martingale Inequalities</h3><p><strong>Doob’s Martingale Inequality：</strong>$M(t)$是一个鞅(or正的下鞅)，对于$p\ge 1$有$P(\sup\limits_{s\le t}|M(s)|\ge a)\le a^{-p}\sup\limits_{s\le t}E(|M(s)^p|)$；<strong>对于p&gt;1有$P(\sup\limits_{s\le t}|M(s)|)\le (\frac{p}{1-p})^{p}E(|M(t)^p|)$</strong>.当p=2时就称为Doob鞅不等式.</p>
+<p><strong>Davis Inequality：</strong>对于任意在0处为0的局部鞅$M(t)$,都存在常数$c&gt;0$和$C&lt;\infty$，使得$cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le T}|M(t)|)\le CE(\sqrt{[M,M] (T)})$</p>
+<p><strong>Burkholder-Gundy Inequality：</strong>若$1\le p&lt;\infty$，则对于任意在0处为0的局部鞅$M(t)$,都存在仅依赖于$p$的$c_p$和$C_p$</p>
+<p>使得$c_pE([M,M] (T)^{p/2})\le E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p>
+<p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p>
+<p><strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}_+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int_{0}^{t}g(s)dB(s)$和$A(t)=\int_0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p>
+<p>$ \left\{<br>\begin{array}{rcl}<br>c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\
+c_p=1, C_p=4  & & {p=2}\\
+c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}<br>\end{array} \right. $</p>
+<h3 id="7-8-Continuous-Martingales-—-Change-of"><a href="#7-8-Continuous-Martingales-—-Change-of" class="headerlink" title="7.8 Continuous Martingales — Change of"></a>7.8 Continuous Martingales — Change of</h3><h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p><strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅</p>
+<p><strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau_t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F_{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，通过时间的变化$M(t)=B([M,M] (t))$，从布朗运动$B$得到鞅$M$.对于连续时间鞅，结果也成立</p>
+
     </div>
 
     
