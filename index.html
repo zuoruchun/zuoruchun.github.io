@@ -127,7 +127,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -192,9 +192,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-06-01 22:19:36 / Modified: 22:25:07" itemprop="dateCreated datePublished" datetime="2023-06-01T22:19:36+08:00">2023-06-01</time>
+      <time title="Created: 2023-06-01 22:19:36" itemprop="dateCreated datePublished" datetime="2023-06-01T22:19:36+08:00">2023-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-02 17:26:06" itemprop="dateModified" datetime="2023-06-02T17:26:06+08:00">2023-06-02</time>
     </span>
 
   
@@ -208,6 +214,16 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><p><strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p>
+<p>鞅一定是半鞅，反之不一定.</p>
+<p>这里给出几个半鞅的经典例子:</p>
+<p>1.$S(t)=B^2(t)$是半鞅，因为$B^2(t)-t$是鞅，$t$是有限变差过程.</p>
+<p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p>
+<p>满足以下性质的过程称为Poisson过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.N(t)-N(s)独立于过去，过去即为由N_u生成的\sigma域，其中u \le s.</span><br><span class="line">2.对于任意的t&gt;s，N(t)-N(s)有参数为\lambda(t-s)的Poisson分布.若N(0)=0,那么N(t)有Pn(\lambda t)分布.</span><br><span class="line">3.路径N(t)，t≥0，是关于t仅通过大小为1的跳跃改变的递增函数.</span><br></pre></td></tr></table></figure>
+<p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果S(t)是半鞅，f \in C^2，那么f(S(t))也是半鞅.当然f(S(t))可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p>
+<p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
+<p>5.扩散过程是半鞅.可以给dB(t)看作是局部鞅，dt看作有限变差过程.</p>
+<h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
 
       
     </div>
@@ -634,7 +650,7 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-28 21:02:36" itemprop="dateModified" datetime="2023-05-28T21:02:36+08:00">2023-05-28</time>
+      <time title="Modified: 2023-06-02 16:29:04" itemprop="dateModified" datetime="2023-06-02T16:29:04+08:00">2023-06-02</time>
     </span>
 
   
@@ -661,7 +677,7 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
 <h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p>
 <p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p>
 <h6 id="但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法"><a href="#但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法" class="headerlink" title="(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)"></a>(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3 id="第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式"><a href="#第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式" class="headerlink" title="第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式"></a>第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂…不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
-<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度P(X,s;A,t)以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>
+<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度$P(X,s;A,t)$以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>
 
       
     </div>

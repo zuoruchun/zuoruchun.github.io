@@ -19,17 +19,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Chapter 8 Calculus For SemimartingalesDefinition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅">
+    <meta name="description" content="Chapter 8 Calculus For SemimartingalesDefinition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定. 这里给出几个半鞅的经典例子: 1.$S(t)&#x3D;B^2(t)$是半鞅，因为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随机分析及其应用 Chapter 8">
 <meta property="og:url" content="https://zuoruchun.github.io/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="Chapter 8 Calculus For SemimartingalesDefinition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅">
+<meta property="og:description" content="Chapter 8 Calculus For SemimartingalesDefinition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定. 这里给出几个半鞅的经典例子: 1.$S(t)&#x3D;B^2(t)$是半鞅，因为">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-06-01T14:19:36.000Z">
-<meta property="article:modified_time" content="2023-06-01T14:25:07.502Z">
+<meta property="article:modified_time" content="2023-06-02T09:26:06.401Z">
 <meta property="article:author" content="Ruchun Zuo">
-<meta property="article:tag" content="随机分析及其应用">
+<meta property="article:tag" content="随机分析及其应用Fima C. Klebaner">
 <meta name="twitter:card" content="summary">
 
 
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Calculus-For-Semimartingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 8 Calculus For Semimartingales</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Calculus-For-Semimartingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 8 Calculus For Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Predictable-Processes"><span class="nav-number">1.0.1.</span> <span class="nav-text">8.2 Predictable Processes</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -133,7 +133,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,9 +199,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-06-01 22:19:36 / Modified: 22:25:07" itemprop="dateCreated datePublished" datetime="2023-06-01T22:19:36+08:00">2023-06-01</time>
+      <time title="Created: 2023-06-01 22:19:36" itemprop="dateCreated datePublished" datetime="2023-06-01T22:19:36+08:00">2023-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-02 17:26:06" itemprop="dateModified" datetime="2023-06-02T17:26:06+08:00">2023-06-02</time>
     </span>
 
   
@@ -214,6 +220,16 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><p><strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p>
+<p>鞅一定是半鞅，反之不一定.</p>
+<p>这里给出几个半鞅的经典例子:</p>
+<p>1.$S(t)=B^2(t)$是半鞅，因为$B^2(t)-t$是鞅，$t$是有限变差过程.</p>
+<p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p>
+<p>满足以下性质的过程称为Poisson过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.N(t)-N(s)独立于过去，过去即为由N_u生成的\sigma域，其中u \le s.</span><br><span class="line">2.对于任意的t&gt;s，N(t)-N(s)有参数为\lambda(t-s)的Poisson分布.若N(0)=0,那么N(t)有Pn(\lambda t)分布.</span><br><span class="line">3.路径N(t)，t≥0，是关于t仅通过大小为1的跳跃改变的递增函数.</span><br></pre></td></tr></table></figure>
+<p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果S(t)是半鞅，f \in C^2，那么f(S(t))也是半鞅.当然f(S(t))可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p>
+<p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
+<p>5.扩散过程是半鞅.可以给dB(t)看作是局部鞅，dt看作有限变差过程.</p>
+<h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
 
     </div>
 
@@ -223,7 +239,7 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" rel="tag"># 随机分析及其应用</a>
+              <a href="/tags/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Fima-C-Klebaner/" rel="tag"># 随机分析及其应用Fima C. Klebaner</a>
           </div>
 
         
