@@ -200,7 +200,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-02 17:26:06" itemprop="dateModified" datetime="2023-06-02T17:26:06+08:00">2023-06-02</time>
+      <time title="Modified: 2023-06-02 21:43:43" itemprop="dateModified" datetime="2023-06-02T21:43:43+08:00">2023-06-02</time>
     </span>
 
   
@@ -224,6 +224,9 @@
 <p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
 <p>5.扩散过程是半鞅.可以给dB(t)看作是局部鞅，dt看作有限变差过程.</p>
 <h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
+<p>对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.左连续适应过程</span><br><span class="line">2.左连续适应过程的极限a.s.</span><br><span class="line">3.对于任意的停时\tau，H_&#123;\tau&#125; 是F_&#123;\tau&#125;可测的，\simga域由A\cap &#123;T&lt;t&#125;生成，其中A\in \mathcal F_&#123;tau&#125;</span><br><span class="line">4.可预测过程的Borel可测函数</span><br></pre></td></tr></table></figure>
+<h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$</p>
 
       
     </div>
@@ -286,7 +289,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-31 20:53:37" itemprop="dateModified" datetime="2023-05-31T20:53:37+08:00">2023-05-31</time>
+      <time title="Modified: 2023-06-03 12:08:17" itemprop="dateModified" datetime="2023-06-03T12:08:17+08:00">2023-06-03</time>
     </span>
 
   
@@ -356,10 +359,13 @@
 <p>使得$c_pE([M,M] (T)^{p/2})\le E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p>
 <p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p>
 <p><strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}_+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int_{0}^{t}g(s)dB(s)$和$A(t)=\int_0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p>
-<p>$ \left\{<br>\begin{array}{rcl}<br>c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\
+<script type="math/tex; mode=display">
+ \left\{
+\begin{array}{rcl}
+c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  & & {0<p<2}\\
 c_p=1, C_p=4  & & {p=2}\\
-c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}<br>\end{array} \right. $</p>
-<h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p><strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.==本节讨论的change of time便是基于Levy对布朗运动的描述==.</p>
+c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}
+\end{array} \right.</script><h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p><strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.==本节讨论的change of time便是基于Levy对布朗运动的描述==.</p>
 <p><u>关于鞅的时间的变化</u></p>
 <p><strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau_t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F_{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，对布朗运动$B(t)$做时间变化，就得到鞅$M(t)$，即$M(t)=B([M,M] (t))$.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
 <p><u>关于SDE的时间的变化</u></p>
