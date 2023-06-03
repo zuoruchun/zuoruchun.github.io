@@ -289,7 +289,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-03 12:08:17" itemprop="dateModified" datetime="2023-06-03T12:08:17+08:00">2023-06-03</time>
+      <time title="Modified: 2023-06-03 12:26:59" itemprop="dateModified" datetime="2023-06-03T12:26:59+08:00">2023-06-03</time>
     </span>
 
   
@@ -359,13 +359,10 @@
 <p>使得$c_pE([M,M] (T)^{p/2})\le E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p>
 <p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p>
 <p><strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}_+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int_{0}^{t}g(s)dB(s)$和$A(t)=\int_0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p>
-<script type="math/tex; mode=display">
- \left\{
-\begin{array}{rcl}
-c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  & & {0<p<2}\\
+<p>$c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\
 c_p=1, C_p=4  & & {p=2}\\
-c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}
-\end{array} \right.</script><h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p><strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.==本节讨论的change of time便是基于Levy对布朗运动的描述==.</p>
+c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}$</p>
+<h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p><strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.==本节讨论的change of time便是基于Levy对布朗运动的描述==.</p>
 <p><u>关于鞅的时间的变化</u></p>
 <p><strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau_t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F_{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，对布朗运动$B(t)$做时间变化，就得到鞅$M(t)$，即$M(t)=B([M,M] (t))$.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
 <p><u>关于SDE的时间的变化</u></p>
@@ -656,7 +653,7 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-02 16:29:04" itemprop="dateModified" datetime="2023-06-02T16:29:04+08:00">2023-06-02</time>
+      <time title="Modified: 2023-06-03 12:24:12" itemprop="dateModified" datetime="2023-06-03T12:24:12+08:00">2023-06-03</time>
     </span>
 
   
@@ -676,8 +673,9 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
 <h3 id="第四节：-L-p-估计"><a href="#第四节：-L-p-估计" class="headerlink" title="第四节：$L^p$估计"></a>第四节：$L^p$估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p>
 <p>在类似于Monotone的条件下，p阶矩是exp收敛的</p>
 <h3 id="第五节：Almost-Surely-Asymptotic-Estimates"><a href="#第五节：Almost-Surely-Asymptotic-Estimates" class="headerlink" title="第五节：Almost Surely Asymptotic Estimates"></a>第五节：Almost Surely Asymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
-<p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用<img src="C:\Users\Administrator\Pictures\Screenshots\屏幕截图(126" alt="屏幕截图(126)">.png)</p>
-<p><img src="C:\Users\Administrator\Pictures\Screenshots\屏幕截图(127" alt="屏幕截图(127)">.png)</p>
+<p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p>
+<p><img src="/pic/Borel–Cantelli’s lemma.png" alt="img" title="Borel–Cantelli’s lemma"></p>
+<p><img src="/pic/Exponential moment inequality.png" alt="img" title="Exponential moment inequality.png"></p>
 <h3 id="第六节Caratheodory估计"><a href="#第六节Caratheodory估计" class="headerlink" title="第六节Caratheodory估计"></a>第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
 <p>TH6.4在$f,g$连续，$x_0$有界且$F_{t_0}$可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
 <h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p>
