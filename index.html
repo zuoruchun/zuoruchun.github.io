@@ -200,7 +200,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-02 21:43:43" itemprop="dateModified" datetime="2023-06-02T21:43:43+08:00">2023-06-02</time>
+      <time title="Modified: 2023-06-03 17:27:37" itemprop="dateModified" datetime="2023-06-03T17:27:37+08:00">2023-06-03</time>
     </span>
 
   
@@ -226,7 +226,23 @@
 <h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
 <p>对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.左连续适应过程</span><br><span class="line">2.左连续适应过程的极限a.s.</span><br><span class="line">3.对于任意的停时\tau，H_&#123;\tau&#125; 是F_&#123;\tau&#125;可测的，\simga域由A\cap &#123;T&lt;t&#125;生成，其中A\in \mathcal F_&#123;tau&#125;</span><br><span class="line">4.可预测过程的Borel可测函数</span><br></pre></td></tr></table></figure>
-<h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$</p>
+<h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$.</p>
+<h3 id="8-4-Integrals-With-Respect-to-Semimartingales"><a href="#8-4-Integrals-With-Respect-to-Semimartingales" class="headerlink" title="8.4 Integrals With Respect to Semimartingales"></a>8.4 Integrals With Respect to Semimartingales</h3><p>​        关于半鞅的积分形式$\int_0^TH(t)dS(t)$，其中$S(t)$是半鞅。由于布朗运动是鞅，此时若$S(t)$是布朗运动的话，就变成了之前学过的$it\widehat{o}$积分.</p>
+<h6 id="鞅的随机积分及其性质"><a href="#鞅的随机积分及其性质" class="headerlink" title="鞅的随机积分及其性质"></a>鞅的随机积分及其性质</h6><p>​        在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，$H(t)$是简单的可测过程，$H(t)=H(0)I_0+\sum_{i=0}^{n-1}H_iI_{(T_i,T_{i+1}]}$,其中$T_i$是递增的停时，$H_i$是$\mathcal F_{T_i}$可测的，于是关于局部鞅的随机积分是如此定义的$\int_0^TH(t)dM(t)=\sum_{i=0}^{n-1}H_i(M_{T_{i+1}}-M_{T_i})$.</p>
+<ol>
+<li>局部鞅性质. 若M(t)是局部鞅，则积分$\int_0^t H(s)dM(s)$是局部鞅.</li>
+<li>等距性质. 若$M(t)$是平方可积鞅，$H$满足 $E(\int_0^TH^2(s)d<a href="s">M,M</a>)&lt;\infty$, 那么$\int_0^t H(s)dM(s)$是期望为0，方差为$E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d<a href="t">M,M</a>)$的平方可积鞅.</li>
+<li>如果局部鞅$M(t)$是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li>
+</ol>
+<h6 id="半鞅的随机积分及其性质"><a href="#半鞅的随机积分及其性质" class="headerlink" title="半鞅的随机积分及其性质"></a>半鞅的随机积分及其性质</h6><p>​    $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$\int_0^TH(t)dS(t)=\int_0^TH(t)dM(t)+\int_0^TH(t)dA(t)$</p>
+<p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p>
+<p>​       $X$是半鞅，$H$是可预测过程，定义$(H\cdot X):=\int_0^tH(s)dX(s)$.</p>
+<ol>
+<li>$\Delta (H\cdot X)=H\Delta X$.不太明白</li>
+<li>如果$\tau$是停时，则$\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le \tau)dX(s)=\int_0^tH(s)dX(s\land\tau)$.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li>
+<li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li>
+<li>若$Y(t)=\int_0^tH(s)dX(s)$是半鞅，K是可预测过程，定义$(K\cdot Y)(t)=\int_0^tK(s)dY(s)$，那么$K\cdot Y=K\cdot (H\cdot X)=(KH)\cdot X$,也就是说，$\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)$.</li>
+</ol>
 
       
     </div>
@@ -501,7 +517,7 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-26 21:28:51" itemprop="dateModified" datetime="2023-05-26T21:28:51+08:00">2023-05-26</time>
+      <time title="Modified: 2023-06-03 15:46:09" itemprop="dateModified" datetime="2023-06-03T15:46:09+08:00">2023-06-03</time>
     </span>
 
   
@@ -515,6 +531,8 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
     
     <div class="post-body" itemprop="articleBody">
           <p>Cauchy分布期望，方差，高阶矩不存在</p>
+<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
+<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的。</p>
 
       
     </div>
