@@ -27,7 +27,7 @@
 <meta property="og:description" content="Chapter 8 Calculus For Semimartingales$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定. $\qquad$ 这里给出几个半鞅的经典例子: 1.$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-01T14:19:36.000Z">
-<meta property="article:modified_time" content="2023-06-05T03:59:41.767Z">
+<meta property="article:modified_time" content="2023-06-05T12:24:30.563Z">
 <meta property="article:author" content="Ruchun Zuo">
 <meta property="article:tag" content="随机分析及其应用Fima C. Klebaner">
 <meta name="twitter:card" content="summary">
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Calculus-For-Semimartingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 8 Calculus For Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Predictable-Processes"><span class="nav-number">1.0.1.</span> <span class="nav-text">8.2 Predictable Processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-Doob%E2%80%93Meyer-Decomposition"><span class="nav-number">1.0.2.</span> <span class="nav-text">8.3 Doob–Meyer Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-Integrals-With-Respect-to-Semimartingales"><span class="nav-number">1.0.3.</span> <span class="nav-text">8.4 Integrals With Respect to Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.0.3.0.0.1.</span> <span class="nav-text">鞅的随机积分及其性质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8D%8A%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.0.3.0.0.2.</span> <span class="nav-text">半鞅的随机积分及其性质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#qquad-H-t-%E6%98%AF%E5%8F%AF%E9%A2%84%E6%B5%8B%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%8D%8A%E9%9E%85-S-t-%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F%E4%B8%BA%EF%BC%9A-int-0-TH-t-dS-t-int-0-TH-t-dM-t-int-0-TH-t-dA-t"><span class="nav-number">1.0.3.0.0.3.</span> <span class="nav-text">$\qquad$ $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$\int_0^TH(t)dS(t)&#x3D;\int_0^TH(t)dM(t)+\int_0^TH(t)dA(t)$</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-Quadratic-Variation-and-Covariation"><span class="nav-number">1.0.4.</span> <span class="nav-text">8.5 Quadratic Variation and Covariation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-Ito%E2%80%99s-Formula-for-Continuous-Semimartingales"><span class="nav-number">1.0.5.</span> <span class="nav-text">8.6 Ito’s Formula for Continuous Semimartingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-8-Stochastic-Exponential"><span class="nav-number">1.0.6.</span> <span class="nav-text">8.8 Stochastic Exponential</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%8C%87%E6%95%B0"><span class="nav-number">1.0.6.0.0.1.</span> <span class="nav-text">鞅的随机指数</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Calculus-For-Semimartingales"><span class="nav-number">1.</span> <span class="nav-text">Chapter 8 Calculus For Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Predictable-Processes"><span class="nav-number">1.0.1.</span> <span class="nav-text">8.2 Predictable Processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-Doob%E2%80%93Meyer-Decomposition"><span class="nav-number">1.0.2.</span> <span class="nav-text">8.3 Doob–Meyer Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-Integrals-With-Respect-to-Semimartingales"><span class="nav-number">1.0.3.</span> <span class="nav-text">8.4 Integrals With Respect to Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.0.3.0.0.1.</span> <span class="nav-text">鞅的随机积分及其性质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8D%8A%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.0.3.0.0.2.</span> <span class="nav-text">半鞅的随机积分及其性质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#qquad-H-t-%E6%98%AF%E5%8F%AF%E9%A2%84%E6%B5%8B%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%8D%8A%E9%9E%85-S-t-%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F%E4%B8%BA%EF%BC%9A-int-0-TH-t-dS-t-int-0-TH-t-dM-t-int-0-TH-t-dA-t"><span class="nav-number">1.0.3.0.0.3.</span> <span class="nav-text">$\qquad$ $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$\int_0^TH(t)dS(t)&#x3D;\int_0^TH(t)dM(t)+\int_0^TH(t)dA(t)$</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-Quadratic-Variation-and-Covariation"><span class="nav-number">1.0.4.</span> <span class="nav-text">8.5 Quadratic Variation and Covariation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-Ito%E2%80%99s-Formula-for-Continuous-Semimartingales"><span class="nav-number">1.0.5.</span> <span class="nav-text">8.6 Ito’s Formula for Continuous Semimartingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-8-Stochastic-Exponential"><span class="nav-number">1.0.6.</span> <span class="nav-text">8.8 Stochastic Exponential</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%8C%87%E6%95%B0"><span class="nav-number">1.0.6.0.0.1.</span> <span class="nav-text">鞅的随机指数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-9-Compensators-and-Sharp-Bracket-Process"><span class="nav-number">1.0.7.</span> <span class="nav-text">8.9 Compensators and Sharp Bracket Process</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E9%9E%85%E7%9A%84%E5%B0%96%E6%8B%AC%E5%8F%B7%E8%BF%87%E7%A8%8B"><span class="nav-number">1.0.7.0.0.1.</span> <span class="nav-text">平方可积鞅的尖括号过程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8D%8A%E9%9E%85%E7%9A%84%E8%BF%9E%E7%BB%AD%E9%9E%85%E5%88%86%E9%87%8F"><span class="nav-number">1.0.7.0.0.2.</span> <span class="nav-text">半鞅的连续鞅分量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.0.7.0.0.3.</span> <span class="nav-text">随机积分存在的条件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%AF%E9%A2%84%E6%B5%8B%E4%BA%8C%E6%AC%A1%E5%8F%98%E5%B7%AE%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.0.7.0.0.4.</span> <span class="nav-text">可预测二次变差的性质</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +208,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-05 11:59:41" itemprop="dateModified" datetime="2023-06-05T11:59:41+08:00">2023-06-05</time>
+      <time title="修改时间：2023-06-05 20:24:30" itemprop="dateModified" datetime="2023-06-05T20:24:30+08:00">2023-06-05</time>
     </span>
 
   
@@ -250,7 +250,7 @@
 <li>若$Y(t)=\int_0^tH(s)dX(s)$是半鞅，K是可预测过程，定义$(K\cdot Y)(t)=\int_0^tK(s)dY(s)$，那么$K\cdot Y=K\cdot (H\cdot X)=(KH)\cdot X$,也就是说，$\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)$.</li>
 </ol>
 <h3 id="8-5-Quadratic-Variation-and-Covariation"><a href="#8-5-Quadratic-Variation-and-Covariation" class="headerlink" title="8.5 Quadratic Variation and Covariation"></a>8.5 Quadratic Variation and Covariation</h3><p>$\qquad$ 先回忆什么是二次协变差(方括号过程)，$X,Y$是半鞅，则他们的二次协变差为：$[X,Y] (t)=lim\sum_{i=1}^{n-1}(X(t_{i+1}^{n})-X(t_{i}^{n}))(Y(t_{i+1}^{n})-Y(t_{i}^{n}))$. 其中$\delta_n=max_i(t_{i+1}^n-t_{i}^n)\rightarrow0$.</p>
-<p>小知识点：布朗运动的二次方差为$[B,B] (t)=t$，Poisson过程的二次方差为：$[N,N] (t)=N(t)$.</p>
+<p>小知识点：布朗运动的二次方差为$[B,B] (t)=t$，Poisson过程的二次变差为：$[N,N] (t)=N(t)$.</p>
 <ol>
 <li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li>
 <li>[X,X] (t)是有限变差函数.</li>
@@ -282,7 +282,27 @@
 <li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)}d[M,M] (s))&lt;\infty$.</li>
 </ol>
 <p>其中1是利用Th7.3；2,3是利用7.35；</p>
-
+<p><strong>Kazamaki’s Condition : </strong>M是连续局部鞅，在0处为0，若$e^{\frac{1}{2}M(t)}$是下鞅，那么$\varepsilon(M)$是鞅.</p>
+<p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若$e^{\frac{1}{2}M(T)}&lt;\infty$，那么$\varepsilon(M)$在[0,T]是鞅.</p>
+<p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足Kazamaki Condition</p>
+<p><strong>Noviikov’s Condition：</strong>M是连续局部鞅，在0处为0，若对于每个$t\le T$都有$E(e^{\frac{1}{2}[M,M] (t)})&lt;\infty$，那么$\varepsilon(M)$是均值为0的鞅.特别的，如果对于每个t都存在一个常数$K_t$使得$[M,M] (t)&lt;K_t$，那么$\varepsilon(M)(t)$是鞅，对于任意的$t\le T$.</p>
+<p>在前面证明布朗运动的Levy特征时，使用了$e^{uM(t)-\frac{u^2t}{2}}$是鞅，在这里使用随机指数给出证明。</p>
+<p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M] (t)=t，于是随机指数$U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}$是鞅.</p>
+<h3 id="8-9-Compensators-and-Sharp-Bracket-Process"><a href="#8-9-Compensators-and-Sharp-Bracket-Process" class="headerlink" title="8.9 Compensators and Sharp Bracket Process"></a>8.9 Compensators and Sharp Bracket Process</h3><p><strong>Compensator：</strong>N(t)是一个(局部)可积变差的适应过程，他的compensator $A(t)$是唯一的可预测过程使得$M(t)=N(t)-A(t)$是一个局部鞅.</p>
+<p>在固定的域流和概率下，compensator是唯一的.</p>
+<p><strong>Theorem 8.21：</strong>N(t)是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p>
+<p>$\mathcal PROOF：$回忆Doob-Meyer分解：X是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此N与Doob-meyer分解的X对应。</p>
+<p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p>
+<p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p>
+<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$<a href="t">X,X</a>=\langle M,M\rangle$.</p>
+<p>如此一来就很方便的找到了compensator.</p>
+<h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若M使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p>
+<p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p>
+<p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p>
+<p><strong>Theorem 8.27：</strong>M是局部鞅，$0\le t\le T&lt;\infty$,在0处为0，对于所有的t都有$E\langle M,M\rangle&lt;\infty$，那么M是平方可积的鞅；并且$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$. 当$T=\infty$和$sup_{t&lt;\infty}E\langle M,M\rangle(t)&lt;\infty$,则$M(t)$在$[0,\infty)$是平方可积鞅.</p>
+<p>由于连续局部鞅是局部平方可积的，从而有</p>
+<p><strong>Corollary 8.28 ：</strong>连续局部鞅的方括号(可预测的二次变差)过程存在</p>
+<h6 id="半鞅的连续鞅分量"><a href="#半鞅的连续鞅分量" class="headerlink" title="半鞅的连续鞅分量"></a>半鞅的连续鞅分量</h6><h6 id="随机积分存在的条件"><a href="#随机积分存在的条件" class="headerlink" title="随机积分存在的条件"></a>随机积分存在的条件</h6><h6 id="可预测二次变差的性质"><a href="#可预测二次变差的性质" class="headerlink" title="可预测二次变差的性质"></a>可预测二次变差的性质</h6>
     </div>
 
     
