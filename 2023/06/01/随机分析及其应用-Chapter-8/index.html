@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Chapter 8 Calculus For Semimartingales8.1 Introduction$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定. $\qquad$ 这里">
 <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="Chapter 8 Calculus For Semimartingales8.1 Introduction$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定. $\qquad$ 这里">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-01T14:19:36.000Z">
-<meta property="article:modified_time" content="2023-06-06T14:25:00.105Z">
+<meta property="article:modified_time" content="2023-06-07T03:31:34.733Z">
 <meta property="article:author" content="Ruchun Zuo">
 <meta property="article:tag" content="随机分析及其应用Fima C. Klebaner">
 <meta name="twitter:card" content="summary">
@@ -80,6 +80,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -88,11 +89,37 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </header>
         
@@ -215,7 +242,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-06 22:25:00" itemprop="dateModified" datetime="2023-06-06T22:25:00+08:00">2023-06-06</time>
+      <time title="修改时间：2023-06-07 11:31:34" itemprop="dateModified" datetime="2023-06-07T11:31:34+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,14 +338,14 @@
 <p>$\mathcal PROOF：$回忆Doob-Meyer分解：X是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此N与Doob-meyer分解的X对应。</p>
 <p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p>
 <p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p>
-<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$<a href="t">X,X</a>=\langle M,M\rangle$.</p>
+<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle M,M\rangle$.</p>
 <p>如此一来就很方便的找到了compensator.</p>
 <h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若M使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p>
 <p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p>
 <p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p>
 <p><strong>Theorem 8.27：</strong>M是局部鞅，$0\le t\le T&lt;\infty$,在0处为0，对于所有的t都有$E\langle M,M\rangle&lt;\infty$，那么M是平方可积的鞅；并且$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$. 当$T=\infty$和$sup_{t&lt;\infty}E\langle M,M\rangle(t)&lt;\infty$,则$M(t)$在$[0,\infty)$是平方可积鞅.</p>
 <p>由于连续局部鞅是局部平方可积的，从而有</p>
-<p><strong>Corollary 8.28 ：</strong>连续局部鞅的方括号(可预测的二次变差)过程存在</p>
+<p><strong>Corollary 8.28 ：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p>
 <h6 id="半鞅的连续鞅分量"><a href="#半鞅的连续鞅分量" class="headerlink" title="半鞅的连续鞅分量"></a>半鞅的连续鞅分量</h6><p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和. 那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p>
 <p><strong>Definition 8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的. 局部鞅M,N是正交的如果MN是局部鞅. </p>
 <p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.$M=M^c+M^d$.半鞅$X(t)$可以分解成$X(t)=X(0)+M(t)+A(t)$. 其中$M(t)$是局部鞅，$M^c$被称为X的连续鞅分量，记为$X^{cm}$.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，  假若$X(t)=X(0)+M_1(t)+A_1(t)$是另一种分解，那么就有$(M-M_1)(t)=-(A-A_1)(t)$.因此$(M-M_1)$是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着$M^c-M^c_1=0$.这就证明了对于所有的半鞅分解$X^{cm}$是唯一的. 于是，就有下面的推论</p>
@@ -327,7 +354,7 @@
 <h6 id="可预测二次变差的性质"><a href="#可预测二次变差的性质" class="headerlink" title="可预测二次变差的性质"></a>可预测二次变差的性质</h6><p>对于局部可积二次变差的半鞅X,Y</p>
 <ol>
 <li>$\langle X,X\rangle(t)$关于t是增的.</li>
-<li>$\langle X,X\rangle(t)$是双线性，对称呢个的》</li>
+<li>$\langle X,X\rangle(t)$是双线性，对称的</li>
 <li>极化恒等式.$\langle X,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langle X-Y,X-Y\rangle)$</li>
 <li>$\langle X,X\rangle$是有限变差的可预测过程.</li>
 <li>$\langle X,X\rangle=0$如果X或Y是有限变差的，且其中之一是连续的.</li>
@@ -403,7 +430,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
