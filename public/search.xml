@@ -183,8 +183,8 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
 <li>[X,Y]是对称和双线性的; 即$[X,Y]=[Y,X]$,  $[\alpha X+Y,\beta U+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]$.</li>
 <li>极化恒等式；$[X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])$.</li>
 <li>[X,Y]是具有有限变差的正则右连续函数$(cadlag)$.这是由极化恒等式是两个递增函数的差证明的？</li>
-<li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，$\Delta<a href="t">X,Y</a>=\Delta X(t)\Delta Y(t)$.</li>
-<li>$X,Y$只要有一个是有限变差过程，那么$<a href="t">X,Y</a>=\sum\limits_{s\le t}\Delta X(s)\Delta Y(s)$.此条有以下推论：</li>
+<li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，$\Delta[X,Y] (t)=\Delta X(t)\Delta Y(t)$.</li>
+<li>$X,Y$只要有一个是有限变差过程，那么$[X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\Delta Y(s)$.此条有以下推论：</li>
 </ol>
 <p>$\qquad$<strong>Corollar 8.5：</strong>如果$X(t)$是具有有限变差的连续半鞅过程，那么$X(t)$与其他任何半鞅的二次协方差都为0.</p>
 <p> 下面介绍随机积分的二次变差</p>
@@ -242,6 +242,11 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
 <li>$\langle X,X\rangle=0$如果X或Y是有限变差的，且其中之一是连续的.</li>
 <li>$\big\langle \int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langle X,Y\rangle(s)$.</li>
 </ol>
+<h3 id="8-10-Ito’s-Formula-for-Semimartingales"><a href="#8-10-Ito’s-Formula-for-Semimartingales" class="headerlink" title="8.10 Ito’s Formula for Semimartingales"></a>8.10 Ito’s Formula for Semimartingales</h3><p>不同于8.6章的连续半鞅，$X(t)$是半鞅，$f\in C^2$, 则$f(X(t))$是半鞅，并且有$ito$公式:</p>
+<p>$f(X(t))-f(X(0))=\int_0^tf’(X(s-))dX(s)+\frac{1}{2}\int_0^tf’’(X(s-))d[X,X] (s)+\sum\limits_{s\le t}\Bigg (f(X(s))-f(X(s-))-f’(X(s-))\Delta X(s)-\frac{1}{2}f’’(X(s-))(\Delta X(s))^2\Bigg )$.</p>
+<h3 id="8-11-Stochastic-Exponential-and-Logarithm"><a href="#8-11-Stochastic-Exponential-and-Logarithm" class="headerlink" title="8.11 Stochastic Exponential and Logarithm"></a>8.11 Stochastic Exponential and Logarithm</h3><p>不同于8.8章的连续半鞅，$X$是半鞅，随机方程$U(t)=1+\int_0^tU(s-)dX(s)$有唯一解，被称为$X$的随机指数.</p>
+<p>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langle X,X\rangle^c (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)}$，由有限变差的分解$<a href="s">X,X</a>=\langle X,X\rangle^c(s)+\sum\limits_{0&lt;s\le t}\Delta X(s)$，这等价于</p>
+<p>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[ X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)+\frac{1}{2}(\Delta X(s))^2}$.</p>
 ]]></content>
       <categories>
         <category>随机过程</category>
