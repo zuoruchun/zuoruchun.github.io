@@ -27,7 +27,7 @@
 <meta property="og:description" content="Chapter 8 Calculus For Semimartingales8.1 Introduction$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定.  这里给出几个半鞅的经">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-01T14:19:36.000Z">
-<meta property="article:modified_time" content="2023-06-09T05:04:12.083Z">
+<meta property="article:modified_time" content="2023-06-27T09:27:16.206Z">
 <meta property="article:author" content="Ruchun Zuo">
 <meta property="article:tag" content="随机分析及其应用Fima C. Klebaner">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-09 13:04:12" itemprop="dateModified" datetime="2023-06-09T13:04:12+08:00">2023-06-09</time>
+      <time title="修改时间：2023-06-27 17:27:16" itemprop="dateModified" datetime="2023-06-27T17:27:16+08:00">2023-06-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -328,7 +328,7 @@
 <p>$\mathcal PROOF：$回忆Doob-Meyer分解：$X$是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此$N$与Doob-meyer分解的X对应。</p>
 <p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p>
 <p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p>
-<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle M,M\rangle$.</p>
+<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle X,X\rangle$.</p>
 <p>如此一来就很方便的找到了compensator.</p>
 <h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若$M$使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p>
 <p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p>
