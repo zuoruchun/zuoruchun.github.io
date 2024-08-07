@@ -1,258 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title></title>
-      <link href="/2023/08/25/Maobook2009%20Chapter3/"/>
-      <url>/2023/08/25/Maobook2009%20Chapter3/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p><p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p><p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p><h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p><p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p><p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p><p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p><p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p><p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p><p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p><p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p><p>$y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]$</p><h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p><p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p><p>$x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p><h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Something</title>
-      <link href="/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/"/>
-      <url>/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/</url>
-      
-        <content type="html"><![CDATA[<p>导数那个题 </p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 淋晓 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于枫原万叶</title>
-      <link href="/2023/06/07/wanye/"/>
-      <url>/2023/06/07/wanye/</url>
-      
-        <content type="html"><![CDATA[<p><strong>初次见面..</strong>[<u>飘摇风雨中，带刀归来赤脚行</u>] …<em>我的名字是枫原万叶，游历四方的浪人。既然你我都在旅行的路上，这段路不妨结伴同行。</em><br><strong>闲聊·自然</strong> <em>见到了这么美丽的景色，自然会产生云游四海的想法吧?</em><br><strong>闲聊·吹奏</strong> <em>既然手边有树叶，我可以为你吹奏一曲。</em><br><strong>闲聊·剑技</strong> <em><u>飘摇风雨中，睹物思故乡</u>，这把刀…是我与故乡唯一的联系了</em><br><strong>下雨的时候…</strong> <em>在大雨中漫步，让人神志清醒。不过等雨停之后，还是尽快把衣服烤干比较好。</em><br><strong>打雷的时候…</strong>比起在海上航行时遇到的雷暴，这倒也算不上什么。<br><strong>下雪的时候…</strong> <em>我喜欢下雪，雪后的世界很安静，无人来扰我清梦</em><br><strong>阳光很好…</strong> <em>晴空万里，真让人心情愉快。</em><br><strong>早上好…</strong>清晨的鸟鸣，是大自然的馈赠。启程吧，属于我们的旅途也要开始了.<br><strong>中午好…</strong>正午的阳光，让人想要小睡片刻。找个地方休息一下如何?<br><strong>晚上好…</strong> <u>抬头见月，侧耳听风，壶中有酒，我心太平…晚上好</u><br><strong>晚安…</strong>风停了… 安静的世界，适合好好休息。明天见。<br><strong>关于枫原万叶自己·航行</strong>其实，大海并非每晚都充满风浪。天气清朗的时候，月光倒映在摇晃的海面上，鱼群在船舶的周围随行。我坐在船头跳望远方，会觉得这段旅程非常值得…唯一的遗憾是水手们的歌声太吵了，他们不用睡觉的吗?<br><strong>关于枫原万叶自己·贵族武士</strong> 枫<em>原家曾经也是有名的武士门第，可借传承到我这里时，除了贵族的名号外已经别无长物。不过对我来说倒也足够了，武士不需要富足的生活，我们需要的是诗歌、美酒与手中的刀。</em><br><strong>关于我们·出海</strong> <em>找个好天气，出海看看如何?</em><br><strong>关于我们·畅谈</strong> <em>我喜欢性格爽朗的人，这样相处时可以畅所欲言。有什么想说的不必藏在心里，我能够听到自然万物的声音，其中也包括你的声音.</em><br><strong>关于[神之眼] …</strong> <em>在我看来，神之眼是力量的证明]，而不是力量的来源]。神之眼象征的是凡人继续向前的愿望，而我们武士的底气，一直都是手里的刀。</em><br><strong>有什么想要分享·竹刀</strong>想学剑道的话…我想想，拿着这个吧，这是我刚刚做好的竹刀。用这个切磋的话，我们就都不会受伤了。<br><strong>有什么想要分享·枫叶</strong> <em>[<u>深山踏红叶，耳畔闻鹿鸣</u>] …我很喜欢枫叶，可惜枫叶红时总多离别。</em><br><strong>感兴趣的见闻… </strong><u>海鸥别叫啦，从今天起，我也是漂泊者呀。</u><br><strong>关于北斗…</strong>北斗大姐头是我的恩人。大姐头她收留了从稻妻逃出来的我，并在我最因难的那段时期里，给了我重返稻妻的勇气。她是我和所有船员可以托付后背的战友。<br><strong>关于五郎…</strong>我在被通缉的那段时间里，反抗军给了我许多帮助。那时候我与五郎只有短暂的接触，但我对他的印象很深刻。他是那种有话就说的直性子，与部下同甘共苦，为朋友两肋插刀，与我很合得来。<br><strong>关于九条裟罗·态度…</strong><u>能在御前决斗中战胜我的朋友，我确实认可她的实力。但她却用这样的力量为虎作怅，带领九条军不断回收神之眼]，我无法原谅.</u><br><strong>关于九条裟罗·改观…</strong>原来如此。看来她也有自己坚持的信念。只是不知道风波平息后，[九条]家还能否延续曾经的昌盛。<br><strong>关于雷电将军…</strong><u>离开稻妻后，我许多次扪心自问，我对雷电将军的不满是否源于那一次御前决斗，是否源于她对友人落下的那一刀?我想了很久，觉得不是的。我的友人是堂学正正地死在了决斗场上，雷电将军的那一刀也并无不妥。我对她的不满，来源于眼令。没有任何人有资格剥夺他人的愿望，即便是[神]也不行。</u><br><strong>关于神里凌华…</strong>生活在稻妻的人，应该都听过白公主] 这个名字吧。神里家的大小姐，近乎完美的一个人，不过我跟她没什么交集，不知道她对如今的稻妻抱有怎样的看法。<br><strong>关于宵宫…</strong>上次她托大姐头把烟火运到璃月，还是我亲自去卸的货。好沉!除了她以外，应该没人能造出这么大的烟火了吧。<br><strong>关于珊瑚宫心海…</strong>我在反抗军的时候，周围的同伴无不对珊瑚宫大人充满敬仰。她爱惜兵力，很少会做出不计死伤的打法，总是能够用最小的代价取得胜利。听说她还要统管海祗岛的政务和外交，真的忙得过来吗…<br><strong>关于鹿野院平藏…</strong>别看我这位侦探朋友平日里潇洒随性，一旦他办起案子来，那些原本围绕在他身旁活泼灵动的风，就聚成了凌厉锐气。确实让人钦佩.<br><strong>想要了解枫原万叶·其一</strong>想要了解我的事?如你所见，我只是个随处可见的流浪武士。<br><strong>想要了解枫原万叶·其二</strong>我的耳朵很敏锐，能够听到各种各样的声音。比如风吹过山岗的声音，云散开的声音，林间的小狐狸啃咬苹果的声音，螃繁吐泡泡的声音…这是自然万物对我的眷顾，让我总能提前发现危险的到来。<br><strong>想要了解枫原万叶·其三</strong>小时候我很喜欢下雨，那种沙沙的声响容易给人一个安稳的梦。但长大了以后，对雨的感情就变得复杂了许多..虽然依旧喜欢听雨，但每次看到乌云的时候，却又忍不住感叹[今天能不能找到好心人让我借宿呢]。穿着湿漉演的衣服听雨，往往会被喷嚏声打断了情调。<br><strong>想要了解枫原万叶·其四</strong>我不会在一个地方驻足太久。因为太久的停留会让我跟，自然产生隔阂，也会让我手里的刀变钝。趁我还能远航，我希望自己能去各种各样的地方，见到不同的人们。<br><strong>想要了解枫原万叶·其五</strong>不必担心，就算有一天我们去往不同的地方，也一定会在世界的某处再次相遇。人与人的[缘]不是那么容易就断掉的东西。<br><strong>枫原万叶的爱好…</strong>躺在被正午的阳光晒暖的岩石上休息，醒来后继续漫无目的地前行。只要与刀相伴，我可以去任何地方.<br><strong>枫原万叶的烦恼…</strong>每逢风暴降临的时候，[自然的声音就会变得杂，我的耳朵也会喻喻作响。如果是在晚上的话，往往会转许久都无法入眠，让人些头痛。<br><strong>喜欢的食物…</strong>在大海上航行时，最容易获取到的食材便是鱼肉。怎么样把鱼做得好吃，是每个在海上冒险的人都要思考的问题。有机会的话，也想让尝尝看我的手艺。<br><strong>讨厌的食物…</strong>我呢，不是特别喜欢那些粗制的食物。在我看来，就算是一条普普通通的鱼也要烧得好吃才行，吃东西本应是让人身心愉快的事情，怎能将就呢?<br><strong>收到赠礼·其一</strong>能将鱼肉烹调出如此滋味，你的手艺当真了得<br><strong>收到赠礼·其二</strong>你做的饭菜不仅能够饱腹，对我而言也是慰籍<br><strong>收到赠礼·其三</strong>要休息一下吗? 内心疲惫的话，做出来的菜也会失去风味<br><strong>生日…</strong>哈..得知今天的生日，我特地写了新的诗歌。只可借诗才不佳，几个晚上只想到前两句，就先送给你吧。 [流光换日月，鹤归云起庆生时]…软等等，先别说话，我有灵感了。最后一句…[异乡有故知]，如? 生日快乐，今天一起去..吃点甜品吧。<br>这把刀，更加锋利了<br><strong>突破的感受·起</strong>这把刀，更加锋利了<br><strong>突破的感受·承</strong>雪落在地上的声音，细不可闻…但现在的我，应该可以听到了<br><strong>突破的感受·转</strong>海上的风浪很大，我也要变得更强。<br><strong>突破的感受·合</strong>行走世间，自然会有各种烦恼相伴，但既得与你相遇，不管是武艺还是内心都有了新的成长。想必今后的人生也会更加自在吧。<br><strong>元素战技·其一</strong>起!<br><strong>元素战技·其二</strong>嘿!<br><strong>元素战技·其三</strong><u>踏风!</u><br><strong>元素战技·其四</strong><u>御风而行。</u><br><strong>元素战技·其五</strong><u>朔风解意</u><br><strong>元素战技·其六</strong><u>往返自然!</u><br><strong>元素爆发·其一</strong><u>云隐…雁鸣!</u><br><strong>元素爆发·其二</strong>风共云行。<br><strong>元素爆发·其三</strong><u>可叹，落叶飘零。</u><br><strong>冲刺开始·其一</strong>该出发了。<br><strong>打开风之翼·其一</strong>顺着风的方向。<br><strong>打开宝箱·其一</strong>令人快慰。<br><strong>打开宝箱·其二</strong>天地的馈赠。<br><strong>打开宝箱·其三</strong>偶遇珍宝，是云游四方的妙趣之一。<br><strong>生命值低·其一</strong>呼、有一套嘛…<br><strong>生命值低·其二</strong>静心凝神。<br><strong>生命值低·其三</strong>保持专注!<br><strong>同伴生命值低·其一</strong>换我来保护你了!<br><strong>同伴生命值低·其二</strong>你可以把后背交给我<br><strong>倒下·其一</strong>深感遗憾..<br><strong>倒下·其二</strong>下次…绝不会再..<br><strong>倒下·其三</strong>结束了吗…<br><strong>重受击·其一</strong>不要..紧。<br><strong>重受击·其二</strong>好痛!<br><strong>加入队伍·其一</strong>要带上我吗?<br><strong>加入队伍·其二</strong>出发出发<br><strong>加入队伍·其三</strong>就这么做吧。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>MaoBook2008 Chapter 1</title>
+    <url>/2023/05/23/Maobook2008%20Chapter1/</url>
+    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
+]]></content>
       <categories>
-          
-          <category> 万叶 </category>
-          
+        <category>随机过程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 万叶 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Happy Birthday</title>
-      <link href="/2023/06/07/%E4%B8%87%E5%8F%B6%E7%94%9F%E6%97%A5/"/>
-      <url>/2023/06/07/%E4%B8%87%E5%8F%B6%E7%94%9F%E6%97%A5/</url>
-      
-        <content type="html"><![CDATA[<p><center>2021.10.29<center></p><p>枫叶红时，远望群山，满目尽是丹色。<br>遇到此番美景，云游四海的脚步也当停一停。<br>秋日虽多离别，但红叶飘落，有时也昭示着旧友相逢之「缘」。<br>就像现在，我一曲还未吹完，便见到了你。</p><p><img src="\pic\20211029.png" alt="img"></p><p><center>2022.10.29<center></p><p>轻风吹过，总是伴随着许多悦耳的声响，有时也会带来熟悉的人的声音。<br>没错，我听到了，便早早来甲板上迎接你。<br>「飞叶初乘风，天高云展船帆起，挚友复相见」。<br>等你的时候想到的新诗歌，如何？</p><p><img src="\pic\20221029.png" alt="img"></p><p><center>Waiting for 2023.10.29…<center></p>]]></content>
-      
-      
+      <tags>
+        <tag>MaoBook2008</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MaoBook Chapter 2</title>
+    <url>/2023/05/23/Maobook2008%20Chapter2/</url>
+    <content><![CDATA[<h1 id="第二章：随机微分方程"><a href="#第二章：随机微分方程" class="headerlink" title="第二章：随机微分方程"></a>第二章：随机微分方程</h1><h2 id="第三节：解的存在唯一性"><a href="#第三节：解的存在唯一性" class="headerlink" title="第三节：解的存在唯一性"></a>第三节：解的存在唯一性</h2><p>在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
+<p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear growth条件也能得到解的存在唯一性。</p>
+<p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear growth可以推出Monotone条件。</p>
+<p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p>
+<h3 id="第四节：-L-p-估计"><a href="#第四节：-L-p-估计" class="headerlink" title="第四节：$L^p$估计"></a>第四节：$L^p$估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p>
+<p>在类似于Monotone的条件下，p阶矩是exp收敛的</p>
+<h3 id="第五节：Almost-Surely-Asymptotic-Estimates"><a href="#第五节：Almost-Surely-Asymptotic-Estimates" class="headerlink" title="第五节：Almost Surely Asymptotic Estimates"></a>第五节：Almost Surely Asymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
+<p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p>
+<p><img src="/pic/Borel–Cantelli’s lemma.png" alt="img" title="Borel–Cantelli’s lemma"></p>
+<p><img src="/pic/Exponential moment inequality.png" alt="img" title="Exponential moment inequality.png"></p>
+<h3 id="第六节Caratheodory估计"><a href="#第六节Caratheodory估计" class="headerlink" title="第六节Caratheodory估计"></a>第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
+<p>TH6.4在$f,g$连续，$x_0$有界且$F_{t_0}$可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
+<h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p>
+<p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p>
+<h6 id="但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法"><a href="#但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法" class="headerlink" title="(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)"></a>(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3 id="第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式"><a href="#第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式" class="headerlink" title="第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式"></a>第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂…不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
+<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度$P(X,s;A,t)$以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>
+]]></content>
       <categories>
-          
-          <category> 万叶 </category>
-          
+        <category>随机过程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 万叶 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一些定义</title>
-      <link href="/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/"/>
-      <url>/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/</url>
-      
-        <content type="html"><![CDATA[<p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p><p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p><p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p><ol><li>$N(t)$是非负整数.</li><li>$N(t)$单调不减.</li><li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li></ol><p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p><ol><li>$N_0=0$.</li><li>$N(t)$是独立平稳增量过程.</li><li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li></ol><p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>]]></content>
-      
-      
+      <tags>
+        <tag>MaoBook2008</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/08/25/Maobook2009%20Chapter3/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
+<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
+<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
+<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
+<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
+<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
+<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
+<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
+<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
+<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
+<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
+<p>$y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]$</p>
+<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
+<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
+<p>$x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
+<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
+  </entry>
+  <entry>
+    <title>POINTS</title>
+    <url>/2023/05/23/points/</url>
+    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
+<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
+<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
+]]></content>
       <categories>
-          
-          <category> 零零散散 </category>
-          
+        <category>零零散散</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 随手 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随机分析及其应用 Chapter 8</title>
-      <link href="/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/"/>
-      <url>/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><h3 id="8-1-Introduction"><a href="#8-1-Introduction" class="headerlink" title="8.1 Introduction"></a>8.1 Introduction</h3><p>$\qquad$ <strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p><p>鞅一定是半鞅，反之不一定.</p><p> 这里给出几个半鞅的经典例子:</p><p>1.$S(t)=B^2(t)$是半鞅，因为$B^2(t)-t$是鞅，$t$是有限变差过程.</p><p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p><p>满足以下性质的过程称为Poisson过程：</p><ol><li>$N(t)-N(s)$独立于过去，过去即为由$N_u$生成的$\sigma$域，其中$u \le s$.</li><li>对于任意的$t&gt;s$，$N(t)-N(s)$有参数为$\lambda(t-s)$的$Poisson$分布.若$N(0)=0$，那么$N(t)$有$Pn(\lambda t)$分布.</li><li>路径$N(t)$，$t≥0$，是关于$t$仅通过大小为1的跳跃改变的递增函数.</li></ol><p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果$S(t)$是半鞅，$f \in C^2$，那么$f(S(t))$也是半鞅.当然$f(S(t))$可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p><p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p><p>5.扩散过程是半鞅.可以给$dB(t)$看作是局部鞅，dt看作有限变差过程.</p><h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>$\qquad$ 先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p><p>$\qquad$ 对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p><ol><li>左连续适应过程</li><li>左连续适应过程的极限a.s.</li><li>对于任意的停时$\tau$，$H_{\tau}$ 是$F_{\tau}$可测的，$\sigma$域由$A\cap {T&lt;t}$生成，其中$A\in \mathcal F_{tau}$</li><li>可预测过程的$Borel$可测函数</li></ol><h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>$\qquad$ 若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$.</p><h3 id="8-4-Integrals-With-Respect-to-Semimartingales"><a href="#8-4-Integrals-With-Respect-to-Semimartingales" class="headerlink" title="8.4 Integrals With Respect to Semimartingales"></a>8.4 Integrals With Respect to Semimartingales</h3><p>$\qquad$ 关于半鞅的积分形式$\int_0^TH(t)dS(t)$，其中$S(t)$是半鞅。由于布朗运动是鞅，此时若$S(t)$是布朗运动的话，就变成了之前学过的$it\widehat{o}$积分.</p><h6 id="鞅的随机积分及其性质"><a href="#鞅的随机积分及其性质" class="headerlink" title="鞅的随机积分及其性质"></a>鞅的随机积分及其性质</h6><p>$\qquad$ 在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，$H(t)$是简单的可测过程，$H(t)=H(0)I_0+\sum_{i=0}^{n-1}H_iI_{(T_i,T_{i+1}]}$,其中$T_i$是递增的停时，$H_i$是$\mathcal F_{T_i}$可测的，于是关于局部鞅的随机积分是如此定义的$\int_0^TH(t)dM(t)=\sum_{i=0}^{n-1}H_i(M_{T_{i+1}}-M_{T_i})$.</p><ol><li>局部鞅性质. 若M(t)是局部鞅，则积分$\int_0^t H(s)dM(s)$是局部鞅.</li><li>等距性质. 若$M(t)$是平方可积鞅，$H$满足 $E(\int_0^TH^2(s)d[M,M] (s))&lt;\infty$, 那么$\int_0^t H(s)dM(s)$是期望为0，方差为$E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d[M,M] (t))$的平方可积鞅.</li><li>如果局部鞅$M(t)$是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li></ol><h6 id="半鞅的随机积分及其性质"><a href="#半鞅的随机积分及其性质" class="headerlink" title="半鞅的随机积分及其性质"></a>半鞅的随机积分及其性质</h6><p>$\qquad$ $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$ \int_0^TH(t)dS(t)=\int_0^TH(t)dM(t)$<br />$+\int_0^TH(t)dA(t)$.</p><p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p><p>$\qquad$ $X$是半鞅，$H$是可预测过程，定义$(H\cdot X):=\int_0^tH(s)dX(s)$.</p><ol><li>$\Delta (H\cdot X)=H\Delta X$.不太明白</li><li>如果$\tau$是停时，则$\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le \tau)dX(s)$<br />$=\int_0^tH(s)dX(s\land\tau)$.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li><li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li><li>若$Y(t)=\int_0^tH(s)dX(s)$是半鞅，K是可预测过程，定义$(K\cdot Y)(t)=\int_0^tK(s)dY(s)$，那么$K\cdot Y=K\cdot (H\cdot X)=(KH)\cdot X$,也就是说，$\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)$.</li></ol><h3 id="8-5-Quadratic-Variation-and-Covariation"><a href="#8-5-Quadratic-Variation-and-Covariation" class="headerlink" title="8.5 Quadratic Variation and Covariation"></a>8.5 Quadratic Variation and Covariation</h3><ul><li>$\qquad$ 先回忆什么是二次协变差(方括号过程)，$X,Y$是半鞅，则他们的二次协变差为：<br />$[X,Y] (t)=lim\sum\limits_{i=1}^{n-1}(X(t_{i+1}^{n})-X(t_{i}^{n}))(Y(t_{i+1}^{n})-Y(t_{i}^{n}))$. 其中$\delta_n=max_i(t_{i+1}^n-t_{i}^n)\rightarrow0$.</li></ul><p>小知识点：布朗运动的二次方差为$[B,B] (t)=t$，Poisson过程的二次变差为：$[N,N] (t)=N(t)$.</p><ol><li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li><li>[X,X] (t)是有限变差函数.</li><li>[X,Y]是对称和双线性的; 即$[X,Y]=[Y,X]$,  $[\alpha X+Y,\beta U+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]$.</li><li>极化恒等式；$[X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])$.</li><li>[X,Y]是具有有限变差的正则右连续函数$(cadlag)$.这是由极化恒等式是两个递增函数的差证明的？</li><li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，$\Delta[X,Y] (t)=\Delta X(t)\Delta Y(t)$.</li><li>$X,Y$只要有一个是有限变差过程，那么$[X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\Delta Y(s)$.此条有以下推论：</li></ol><p>$\qquad$<strong>Corollar 8.5：</strong>如果$X(t)$是具有有限变差的连续半鞅过程，那么$X(t)$与其他任何半鞅的二次协方差都为0.</p><p> 下面介绍随机积分的二次变差</p><ul><li>$[\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)] (t)=\int_0^tH(s)K(s)d[X,Y] (s)$.</li></ul><ul><li>特别地，取$K(s)=1$, 就有<br /> $[\int_0^.H(s)dX(s),Y(s)] (t)=[\int_0^.H(s)dX(s),\int_0^.1dY(s)] (t)=\int_0^tH(s)d[X,Y] (s)$.</li></ul><h3 id="8-6-Ito’s-Formula-for-Continuous-Semimartingales"><a href="#8-6-Ito’s-Formula-for-Continuous-Semimartingales" class="headerlink" title="8.6 Ito’s Formula for Continuous Semimartingales"></a>8.6 Ito’s Formula for Continuous Semimartingales</h3><p>$\qquad$如果X是连续半鞅，f是二次连续可微的函数，那么f(X(t))是半鞅，并且有ito公式：</p><ul><li>$f(X(t))-f(X(0))=\int_0^tf’(X(s))dX(s)+\frac{1}{2}\int_0^tf’’(X(s))d[X,X] (s)$.</li></ul><h3 id="8-8-Stochastic-Exponential"><a href="#8-8-Stochastic-Exponential" class="headerlink" title="8.8 Stochastic Exponential"></a>8.8 Stochastic Exponential</h3><p>先回忆在章节5.2中的$ito$过程的随机指数：令$X$随机可微，$U$满足$U(t)=1+\int_0^tU(s)dX(s)$,$U$被称作是$X$的随机指数，记作$\varepsilon(X)$.在<strong>Theorem 5.2</strong>中给出这个方程的唯一解是$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X] (t)}$.</p><p>下面讨论半鞅的随机指数，随机指数（也称为半鞅，或 Doleans-Dade 指数）是指数函数的随机类比。</p><p><strong>Theorem 8.12：</strong>X是一个连续鞅，使得$U(t)=1+\int_0^tU(s-)dX(s)$成立，它的随机指数为 $U(t)=\varepsilon(X)(t)=e^{X(t)-X(0)-\frac{1}{2}[X,X]  (t)}$.</p><p>X,Y是同一个空间的半鞅.随机指数具有的性质：</p><ol><li>$\varepsilon(X) (t)\varepsilon(Y) (t)=\varepsilon(X+Y+[X,Y]) (t)$.</li><li>若X连续，X(0)=0，那么$(\varepsilon(X)(t))^{-1}=\varepsilon(-X+[X,X] (t))(t)$.</li></ol><h6 id="鞅的随机指数"><a href="#鞅的随机指数" class="headerlink" title="鞅的随机指数"></a>鞅的随机指数</h6><p>由于关于局部鞅的积分是局部鞅，所以$\varepsilon(X)(t)$是局部鞅，由于应用中一般需要鞅，下面利用Th7.21,7.35，给出随机指数是鞅的条件.</p><p><strong>Theorem 8.14 ：</strong>M(t)是连续局部鞅，在0处为0，那么他的随机指数为$\varepsilon(X)(t)=e^{M(t)-\frac{1}{2}[M,M] (t)}$并且他是连续正局部鞅. 所以它是上鞅，可积，有限非减的期望，满足下列条件之一，则他就是鞅：</p><ol><li>$E(e^{M(T)-\frac{1}{2}[M,M] (T)})=1$</li><li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)-[M,M] (t)}d[M,M] (s))&lt;\infty$.</li><li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)}d[M,M] (s))&lt;\infty$.</li></ol><p>其中1是利用Th7.3；2,3是利用7.35；</p><p><strong>Kazamaki’s Condition : </strong>M是连续局部鞅，在0处为0，若$e^{\frac{1}{2}M(t)}$是下鞅，那么$\varepsilon(M)$是鞅.</p><p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若$e^{\frac{1}{2}M(T)}&lt;\infty$，那么$\varepsilon(M)$在[0,T]是鞅.</p><p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足Kazamaki Condition</p><p><strong>Noviikov’s Condition：</strong>M是连续局部鞅，在0处为0，若对于每个$t\le T$都有$E(e^{\frac{1}{2}[M,M] (t)})&lt;\infty$，那么$\varepsilon(M)$是均值为0的鞅.特别的，如果对于每个t都存在一个常数$K_t$使得$[M,M] (t)&lt;K_t$，那么$\varepsilon(M)(t)$是鞅，对于任意的$t\le T$.</p><p>在前面证明布朗运动的Levy特征时，使用了$e^{uM(t)-\frac{u^2t}{2}}$是鞅，在这里使用随机指数给出证明。</p><p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M] (t)=t，于是随机指数$U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}$是鞅.</p><h3 id="8-9-Compensators-and-Sharp-Bracket-Process"><a href="#8-9-Compensators-and-Sharp-Bracket-Process" class="headerlink" title="8.9 Compensators and Sharp Bracket Process"></a>8.9 Compensators and Sharp Bracket Process</h3><p><strong>Compensator：</strong>$N(t)$是一个(局部)可积变差的适应过程，他的compensator $A(t)$是唯一的可预测过程使得$M(t)=N(t)-A(t)$是一个局部鞅.</p><p>在固定的域流和概率下，compensator是唯一的.</p><p><strong>Theorem 8.21：</strong>$N(t)$是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p><p>$\mathcal PROOF：$回忆Doob-Meyer分解：$X$是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此$N$与Doob-meyer分解的X对应。</p><p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p><p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p><p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle X,X\rangle$.</p><p>如此一来就很方便的找到了compensator.</p><h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若$M$使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p><p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p><p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p><p><strong>Theorem 8.27：</strong>M是局部鞅，$0\le t\le T&lt;\infty$,在0处为0，对于所有的t都有$E\langle M,M\rangle&lt;\infty$，那么M是平方可积的鞅；并且$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$. 当$T=\infty$和$sup_{t&lt;\infty}E\langle M,M\rangle(t)&lt;\infty$,则$M(t)$在$[0,\infty)$是平方可积鞅.</p><p>由于连续局部鞅是局部平方可积的，从而有</p><p><strong>Corollary 8.28 ：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p><h6 id="半鞅的连续鞅分量"><a href="#半鞅的连续鞅分量" class="headerlink" title="半鞅的连续鞅分量"></a>半鞅的连续鞅分量</h6><p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和. 那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p><p><strong>Definition 8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的. 局部鞅M,N是正交的如果MN是局部鞅. </p><p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.$M=M^c+M^d$.半鞅$X(t)$可以分解成$X(t)=X(0)+M(t)+A(t)$. 其中$M(t)$是局部鞅，$M^c$被称为X的连续鞅分量，记为$X^{cm}$.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，  假若$X(t)=X(0)+M_1(t)+A_1(t)$是另一种分解，那么就有$(M-M_1)(t)=-(A-A_1)(t)$.因此$(M-M_1)$是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着$M^c-M^c_1=0$.这就证明了对于所有的半鞅分解$X^{cm}$是唯一的. 于是，就有下面的推论</p><p><strong>Corollary 8.30 ：</strong>若X是有限变差的半鞅，这意味着半鞅X的分解中鞅部分为0，也就是说连续鞅部分也一定是0，即$X^{cm}=0$.</p><h6 id="随机积分存在的条件"><a href="#随机积分存在的条件" class="headerlink" title="随机积分存在的条件"></a>随机积分存在的条件</h6><p>总的来说，随机积分$\int_0^TH(s)dM(s)$的定义，取决于M的性质，当$\langle M,M\rangle(t)$不连续，连续，绝对连续，会让H的范围更宽泛.</p><h6 id="可预测二次变差的性质"><a href="#可预测二次变差的性质" class="headerlink" title="可预测二次变差的性质"></a>可预测二次变差的性质</h6><p>对于局部可积二次变差的半鞅X,Y</p><ol><li>$\langle X,X\rangle(t)$关于t是增的.</li><li>$\langle X,X\rangle(t)$是双线性，对称的</li><li>极化恒等式.$\langle X,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langle X-Y,X-Y\rangle)$</li><li>$\langle X,X\rangle$是有限变差的可预测过程.</li><li>$\langle X,X\rangle=0$如果X或Y是有限变差的，且其中之一是连续的.</li><li>$\big\langle \int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langle X,Y\rangle(s)$.</li></ol><h3 id="8-10-Ito’s-Formula-for-Semimartingales"><a href="#8-10-Ito’s-Formula-for-Semimartingales" class="headerlink" title="8.10 Ito’s Formula for Semimartingales"></a>8.10 Ito’s Formula for Semimartingales</h3><p>不同于8.6章的连续半鞅，$X(t)$是半鞅，$f\in C^2$, 则$f(X(t))$是半鞅，并且有$ito$公式:</p><ul><li>$f(X(t))-f(X(0))=\int_0^tf’(X(s-))dX(s)+\frac{1}{2}\int_0^tf’’(X(s-))d[X,X] (s)+ \\ \sum\limits_{s\le t}  \Bigg (f(X(s))-f(X(s-))-f’(X(s-))\Delta X(s)-\frac{1}{2}f’’(X(s-))(\Delta X(s))^2\Bigg )$.</li></ul><h3 id="8-11-Stochastic-Exponential-and-Logarithm"><a href="#8-11-Stochastic-Exponential-and-Logarithm" class="headerlink" title="8.11 Stochastic Exponential and Logarithm"></a>8.11 Stochastic Exponential and Logarithm</h3><p>不同于8.8章的连续半鞅，$X$是半鞅，随机方程$U(t)=1+\int_0^tU(s-)dX(s)$有唯一解，被称为$X$的随机指数.</p><ul><li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langle X,X\rangle^c (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)}$，由有限变差的分解$[X,X] (s)=\langle X,X\rangle^c(s)+\sum\limits_{0&lt;s\le t}\Delta X(s)$，这等价于</li></ul><ul><li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[ X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)+\frac{1}{2}(\Delta X(s))^2}$.</li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些定义</title>
+    <url>/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/</url>
+    <content><![CDATA[<p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
+<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p>
+<p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p>
+<ol>
+<li>$N(t)$是非负整数.</li>
+<li>$N(t)$单调不减.</li>
+<li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li>
+</ol>
+<p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p>
+<ol>
+<li>$N_0=0$.</li>
+<li>$N(t)$是独立平稳增量过程.</li>
+<li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li>
+</ol>
+<p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>
+]]></content>
       <categories>
-          
-          <category> 随机过程 </category>
-          
+        <category>零零散散</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 随机分析及其应用Fima C. Klebaner </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随机分析及其应用 Chapter 7</title>
-      <link href="/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/"/>
-      <url>/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h3 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h3><p>$\qquad$<strong>Definition7.1：</strong>若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale.</p><p>$E(M(t)|\mathcal F_S)=M(s)$，鞅是公平的，期望是常数</p><p>$E(M(t)|\mathcal F_S)\le M(s)$，上鞅是盈利，期望是递减</p><p>$E(M(t)|\mathcal F_S)\ge M(s)$，下鞅是亏损，期望是递增</p><p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p><p>$\qquad$<strong>Theorem7.3：</strong>上鞅是鞅当且仅当$EM(T)=EM(0)$.</p><h6 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p><p>若$f$在$\mathbb R$有界且连续，则$Ito$积分$\int_0^tf(B(s))dB(s)$和$\int_0^tf(s)dB(s)$，在任何有限区间都是平方可积的鞅.</p><h3 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h3><p>$\qquad$在介绍一致可积之前，先来回忆一下什么叫可积。随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))=0$</p><p>$\qquad$<strong>Defnition7.5：</strong>随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$.</p><p>$\qquad$<strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$，注意取了$sup$之后是一个随机变量，不再是随机过程.</p><p>$\qquad$<strong>Theorem 7.7 (Vallee–Poussin)：</strong>若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits_{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p><p>下面构造一个一致可积鞅：</p><p>$\qquad$<strong>Theorem 7.9：</strong> (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅.</p><h3 id="7-3-Martingale-Convergence"><a href="#7-3-Martingale-Convergence" class="headerlink" title="7.3 Martingale Convergence"></a>7.3 Martingale Convergence</h3><p>本节考虑无穷区间的鞅</p><p>$\qquad$<strong>Theorem 7.11：</strong>(Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。</p><p>但$E(M(t))$可能不收敛到$EY$.例如布朗运动的指数鞅：$e^{B(t)-\frac{t}{2}}$；当$M(t)$一致可积时，收敛是肯定的。</p><p>一致可积鞅收敛a.s.</p><p>平方可积鞅收敛a.s.</p><p>正鞅收敛a.s.</p><p>(负)上有界的下鞅收敛a.s.</p><p>(正)下有界的上鞅收敛a.s.</p><h3 id="7-4-Optional-Stopping"><a href="#7-4-Optional-Stopping" class="headerlink" title="7.4 Optional Stopping"></a>7.4 Optional Stopping</h3><p>$\qquad$<strong>Theorem7.14：</strong>若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$</p><p>我们知道当$M(t)$是鞅时，$EM(t)=EM(0)$，但是对于停时$\tau$，等式$EM(\tau)=EM(0)$,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p><p>$\qquad$<strong>Theorem7.15：</strong>(Optional Stopping)$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$</p><p>不同于有界，假如停时$\tau$是有限的，则需要添加其他条件；</p><p>在实变函数中，有界函数：函数的值域在$\in[-M,M]$,且有界一定有限；</p><p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p><p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p><p>$\qquad$<strong>Theorem7.16：</strong>$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$</p><p>$\qquad$<strong>Theorem7.18：</strong>(Optional Sampling): $M(t)$是一致可积鞅，$\tau_1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F_{\tau_1})=M(\tau_1)$ a.s.</p><h3 id="7-5-Localization-and-Local-Martingales"><a href="#7-5-Localization-and-Local-Martingales" class="headerlink" title="7.5 Localization and Local Martingales"></a>7.5 Localization and Local Martingales</h3><p>$\qquad$ $Ito$积分$M(t)=\int_0^tX(s)dB(s)$是局部鞅，当$EM^2(T)&lt;\infty$时，$M(t)$才是鞅</p><p>$\qquad$<strong>Definition7.19：</strong>随机过程$X(t)$的一个性质称作是局部的，如果存在一个停止序列{$\tau_n$}，使得当$n\to\infty$时，停时$\tau_n\uparrow\infty$，并且对于每一个n，停止过程$X(t\land\tau_n)$都有这个性质。</p><p>$\qquad$<strong>Definition7.20局部鞅：</strong>适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅。</p><p>参看知乎对于<a href="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p><p>任何鞅都是局部鞅，反之不一定成立。</p><p>$\qquad$<strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。</p><p>$\qquad$<strong>Corollary7.22：</strong>对于局部鞅$M(t)$，若有$E(sup_{s\le t}|M(s)|)&lt;\infty$,则$M(t)$是鞅，并且在任何有限区间$[0,T]$一致可积；更加一般化，$E(sup_{t\ge 0}|M(t)|)&lt;\infty$，则$M(t)$在$[0,\infty]$一致可积。</p><p>$\qquad$<strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p><p>由$Th7.3$和$Th7.23$可得非负局部鞅是鞅当且仅当$EM(T)=EM(0)$</p><p>$\qquad$<strong>Definition7.25(Dirichlet Class (D))：</strong>过程X是狄利克雷D类，若族{X($\tau$)：$\tau$是有限停时}是一致可积的.</p><p>$\qquad$<strong>Theorem7.26：</strong>局部鞅$M(t)$是一致可积的鞅当且仅当他是D类.</p><h3 id="7-6-Quadratic-Variation-of-Martingales"><a href="#7-6-Quadratic-Variation-of-Martingales" class="headerlink" title="7.6 Quadratic Variation of Martingales"></a>7.6 Quadratic Variation of Martingales</h3><p>$\qquad$在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程$X(t)$在$[0,t]$的二次变差定义为：$[X,X] (t)=\lim\limits_{\delta_n\to 0}\sum_{i=1}^n(X(t_i^n)-X(t_{i-1}^n))^2$，其中$t_i^n$是对$[0,t]$做分割$\delta_n$是最大的分割区间。</p><p>$\qquad$<strong>Theorem 1.10：</strong> $g$是连续且有限变差的过程，那么他的二次变差是0.</p><p>下面考虑鞅的二次变差：首先若$M(t)$是鞅，则$M^2(t)$是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p><p>$\qquad$<strong>Theorem 7.27(i)</strong>：若对于任何$t$，$M(t)$是具有有限二阶矩的鞅，那么他的二次变差过程$<a href="t">M,M</a>$存在；进一步，$M^2(t)-[M,M] (t)$是鞅.</p><p>$\qquad$<strong>Theorem 7.27(ii)</strong>：若$M(t)$是局部鞅，则二次变差$[M,M] (t)$存在，且$M^2(t)-[M,M] (t)$是局部鞅.</p><p>$\qquad$<strong>Theorem 7.28：</strong>$M(t)$是鞅(局部鞅)且$M(0)=0$，若对于某个$t$，使$M(t)$非0，那么就有$[M,M] (t)&gt;0$；反之，若$<a href="t">M,M</a>=0$，则对于任何的$s\le t$，都有$M(s)=0$ a.s.  </p><p>$\qquad$<strong>Theorem 7.29：</strong>$M$是连续局部鞅，固定$t$，若$M(t)\neq M(0)$，那么$M$在$[0,t]$具有无限变差.</p><p>$\qquad$<strong>Corollary 7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p><h3 id="7-7-Martingale-Inequalities"><a href="#7-7-Martingale-Inequalities" class="headerlink" title="7.7 Martingale Inequalities"></a>7.7 Martingale Inequalities</h3><p>$\qquad$<strong>Doob’s Martingale Inequality：</strong>$M(t)$是一个鞅(or正的下鞅)，对于$p\ge 1$有$P(\sup\limits_{s\le t}|M(s)|\ge a)\le a^{-p}\sup\limits_{s\le t}E(|M(s)^p|)$；<strong>对于p&gt;1有$P(\sup\limits_{s\le t}|M(s)|)\le (\frac{p}{1-p})^{p}E(|M(t)^p|)$</strong>.当p=2时就称为Doob鞅不等式.</p><p>$\qquad$<strong>Davis Inequality：</strong>对于任意在0处为0的局部鞅$M(t)$,都存在常数$c&gt;0$和$C&lt;\infty$，使得$cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le T}|M(t)|)\le CE(\sqrt{[M,M] (T)})$</p><p>$\qquad$<strong>Burkholder-Gundy Inequality：</strong>若$1\le p&lt;\infty$，则对于任意在0处为0的局部鞅$M(t)$,都存在仅依赖于$p$的$c_p$和$C_p$</p><p>使得$c_pE([M,M] (T)^{p/2})\le E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p><p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p><p>$\qquad$<strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}_+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int_{0}^{t}g(s)dB(s)$和$A(t)=\int_0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p><p>$c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\c_p=1, C_p=4  & & {p=2}\\c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}$</p><p>这些定理可以用来证明局部鞅是真的鞅：</p><p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅$M(t)$，并且满足他的二次方差有界$E\sqrt{ [M,M] (t)}&lt;\infty$，那么在有限区间$[0,T]$内它是一致可积的鞅.</p><h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p>$\qquad$<strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.<em>本节讨论的change of time便是基于Levy对布朗运动的描述.</em></p><p><u>关于鞅的时间的变化</u></p><p>$\qquad$<strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau_t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F_{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，对布朗运动$B(t)$做时间变化，就得到鞅$M(t)$，即$M(t)=B([M,M] (t))$.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p><p>$\qquad$<u>关于SDE的时间的变化</u></p><p>$\qquad$<strong>Theorem 7.38：</strong>$f(t)$是自适应，正，增的微分过程(为了$f^{-1}$存在)，则$dX(t)=\sqrt{f’(t)}dB(t)$有弱解$\widehat{B}(f(t))$.</p><p>$\qquad$<strong>Theorem 7.39：</strong>$\sigma(x)&gt;0$，定义$G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}$对于有限的$t$是有限的，关于$t$递增到$\infty$ a.s.，G是正的，连续的，严格增到$\infty$，因此存在逆函数$\tau_t=G^{-1}(t)$，对于固定的$t$，$\tau_t$是停时，递增的，并且他是过程$G(s)$第一次到达$t$，那么过程$X(t)=B(\tau_t)$是$dX(t)=\sigma(X(t))dB(t)$的弱解.</p><p>$\qquad$<strong>Theorem 7.41：</strong>令$X(t)$是$dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)$的解，并定义$Y(t)=X(\tau_t)$，于是$Y(t)$是$dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)$的弱解，其中$Y(0)=X(0)$， $g(x)$是正函数，$G(t)=\int_0^tg(X(s))ds$.</p>]]></content>
-      
-      
+      <tags>
+        <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再见沈以诚</title>
+    <url>/2023/05/23/%E5%86%8D%E8%A7%81%E6%B2%88%E4%BB%A5%E8%AF%9A/</url>
+    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
+<p>突然挺喜欢苏打绿的歌；</p>
+]]></content>
+      <tags>
+        <tag>淋晓</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Happy Birthday</title>
+    <url>/2023/06/07/%E4%B8%87%E5%8F%B6%E7%94%9F%E6%97%A5/</url>
+    <content><![CDATA[<p><center>2021.10.29<center></p>
+<p>枫叶红时，远望群山，满目尽是丹色。<br>遇到此番美景，云游四海的脚步也当停一停。<br>秋日虽多离别，但红叶飘落，有时也昭示着旧友相逢之「缘」。<br>就像现在，我一曲还未吹完，便见到了你。</p>
+<p><img src="\pic\20211029.png" alt="img"></p>
+<p><center>2022.10.29<center></p>
+<p>轻风吹过，总是伴随着许多悦耳的声响，有时也会带来熟悉的人的声音。<br>没错，我听到了，便早早来甲板上迎接你。<br>「飞叶初乘风，天高云展船帆起，挚友复相见」。<br>等你的时候想到的新诗歌，如何？</p>
+<p><img src="\pic\20221029.png" alt="img"></p>
+<p><center>Waiting for 2023.10.29…<center></p>
+]]></content>
       <categories>
-          
-          <category> 随机过程 </category>
-          
+        <category>万叶</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 随机分析及其应用Fima C. Klebaner </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MaoBook2008 Chapter 1</title>
-      <link href="/2023/05/23/Maobook2008%20Chapter1/"/>
-      <url>/2023/05/23/Maobook2008%20Chapter1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>]]></content>
-      
-      
+      <tags>
+        <tag>万叶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Something</title>
+    <url>/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/</url>
+    <content><![CDATA[<p>导数那个题 </p>
+]]></content>
+      <tags>
+        <tag>淋晓</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机分析及其应用 Chapter 8</title>
+    <url>/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/</url>
+    <content><![CDATA[<h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><h3 id="8-1-Introduction"><a href="#8-1-Introduction" class="headerlink" title="8.1 Introduction"></a>8.1 Introduction</h3><p>$\qquad$ <strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p>
+<p>鞅一定是半鞅，反之不一定.</p>
+<p> 这里给出几个半鞅的经典例子:</p>
+<p>1.$S(t)=B^2(t)$是半鞅，因为$B^2(t)-t$是鞅，$t$是有限变差过程.</p>
+<p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p>
+<p>满足以下性质的过程称为Poisson过程：</p>
+<ol>
+<li>$N(t)-N(s)$独立于过去，过去即为由$N_u$生成的$\sigma$域，其中$u \le s$.</li>
+<li>对于任意的$t&gt;s$，$N(t)-N(s)$有参数为$\lambda(t-s)$的$Poisson$分布.若$N(0)=0$，那么$N(t)$有$Pn(\lambda t)$分布.</li>
+<li>路径$N(t)$，$t≥0$，是关于$t$仅通过大小为1的跳跃改变的递增函数.</li>
+</ol>
+<p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果$S(t)$是半鞅，$f \in C^2$，那么$f(S(t))$也是半鞅.当然$f(S(t))$可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p>
+<p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
+<p>5.扩散过程是半鞅.可以给$dB(t)$看作是局部鞅，dt看作有限变差过程.</p>
+<h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>$\qquad$ 先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H_n$是$\mathcal F_{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
+<p>$\qquad$ 对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p>
+<ol>
+<li>左连续适应过程</li>
+<li>左连续适应过程的极限a.s.</li>
+<li>对于任意的停时$\tau$，$H_{\tau}$ 是$F_{\tau}$可测的，$\sigma$域由$A\cap {T&lt;t}$生成，其中$A\in \mathcal F_{tau}$</li>
+<li>可预测过程的$Borel$可测函数</li>
+</ol>
+<h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>$\qquad$ 若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$.</p>
+<h3 id="8-4-Integrals-With-Respect-to-Semimartingales"><a href="#8-4-Integrals-With-Respect-to-Semimartingales" class="headerlink" title="8.4 Integrals With Respect to Semimartingales"></a>8.4 Integrals With Respect to Semimartingales</h3><p>$\qquad$ 关于半鞅的积分形式$\int_0^TH(t)dS(t)$，其中$S(t)$是半鞅。由于布朗运动是鞅，此时若$S(t)$是布朗运动的话，就变成了之前学过的$it\widehat{o}$积分.</p>
+<h6 id="鞅的随机积分及其性质"><a href="#鞅的随机积分及其性质" class="headerlink" title="鞅的随机积分及其性质"></a>鞅的随机积分及其性质</h6><p>$\qquad$ 在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，$H(t)$是简单的可测过程，$H(t)=H(0)I_0+\sum_{i=0}^{n-1}H_iI_{(T_i,T_{i+1}]}$,其中$T_i$是递增的停时，$H_i$是$\mathcal F_{T_i}$可测的，于是关于局部鞅的随机积分是如此定义的$\int_0^TH(t)dM(t)=\sum_{i=0}^{n-1}H_i(M_{T_{i+1}}-M_{T_i})$.</p>
+<ol>
+<li>局部鞅性质. 若M(t)是局部鞅，则积分$\int_0^t H(s)dM(s)$是局部鞅.</li>
+<li>等距性质. 若$M(t)$是平方可积鞅，$H$满足 $E(\int_0^TH^2(s)d[M,M] (s))&lt;\infty$, 那么$\int_0^t H(s)dM(s)$是期望为0，方差为$E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d[M,M] (t))$的平方可积鞅.</li>
+<li>如果局部鞅$M(t)$是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li>
+</ol>
+<h6 id="半鞅的随机积分及其性质"><a href="#半鞅的随机积分及其性质" class="headerlink" title="半鞅的随机积分及其性质"></a>半鞅的随机积分及其性质</h6><p>$\qquad$ $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$ \int_0^TH(t)dS(t)=\int_0^TH(t)dM(t)$<br />$+\int_0^TH(t)dA(t)$.</p>
+<p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p>
+<p>$\qquad$ $X$是半鞅，$H$是可预测过程，定义$(H\cdot X):=\int_0^tH(s)dX(s)$.</p>
+<ol>
+<li>$\Delta (H\cdot X)=H\Delta X$.不太明白</li>
+<li>如果$\tau$是停时，则$\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le \tau)dX(s)$<br />$=\int_0^tH(s)dX(s\land\tau)$.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li>
+<li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li>
+<li>若$Y(t)=\int_0^tH(s)dX(s)$是半鞅，K是可预测过程，定义$(K\cdot Y)(t)=\int_0^tK(s)dY(s)$，那么$K\cdot Y=K\cdot (H\cdot X)=(KH)\cdot X$,也就是说，$\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)$.</li>
+</ol>
+<h3 id="8-5-Quadratic-Variation-and-Covariation"><a href="#8-5-Quadratic-Variation-and-Covariation" class="headerlink" title="8.5 Quadratic Variation and Covariation"></a>8.5 Quadratic Variation and Covariation</h3><ul>
+<li>$\qquad$ 先回忆什么是二次协变差(方括号过程)，$X,Y$是半鞅，则他们的二次协变差为：<br />$[X,Y] (t)=lim\sum\limits_{i=1}^{n-1}(X(t_{i+1}^{n})-X(t_{i}^{n}))(Y(t_{i+1}^{n})-Y(t_{i}^{n}))$. 其中$\delta_n=max_i(t_{i+1}^n-t_{i}^n)\rightarrow0$.</li>
+</ul>
+<p>小知识点：布朗运动的二次方差为$[B,B] (t)=t$，Poisson过程的二次变差为：$[N,N] (t)=N(t)$.</p>
+<ol>
+<li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li>
+<li>[X,X] (t)是有限变差函数.</li>
+<li>[X,Y]是对称和双线性的; 即$[X,Y]=[Y,X]$,  $[\alpha X+Y,\beta U+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]$.</li>
+<li>极化恒等式；$[X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])$.</li>
+<li>[X,Y]是具有有限变差的正则右连续函数$(cadlag)$.这是由极化恒等式是两个递增函数的差证明的？</li>
+<li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，$\Delta[X,Y] (t)=\Delta X(t)\Delta Y(t)$.</li>
+<li>$X,Y$只要有一个是有限变差过程，那么$[X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\Delta Y(s)$.此条有以下推论：</li>
+</ol>
+<p>$\qquad$<strong>Corollar 8.5：</strong>如果$X(t)$是具有有限变差的连续半鞅过程，那么$X(t)$与其他任何半鞅的二次协方差都为0.</p>
+<p> 下面介绍随机积分的二次变差</p>
+<ul>
+<li>$[\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)] (t)=\int_0^tH(s)K(s)d[X,Y] (s)$.</li>
+</ul>
+<ul>
+<li>特别地，取$K(s)=1$, 就有<br /> $[\int_0^.H(s)dX(s),Y(s)] (t)=[\int_0^.H(s)dX(s),\int_0^.1dY(s)] (t)=\int_0^tH(s)d[X,Y] (s)$.</li>
+</ul>
+<h3 id="8-6-Ito’s-Formula-for-Continuous-Semimartingales"><a href="#8-6-Ito’s-Formula-for-Continuous-Semimartingales" class="headerlink" title="8.6 Ito’s Formula for Continuous Semimartingales"></a>8.6 Ito’s Formula for Continuous Semimartingales</h3><p>$\qquad$如果X是连续半鞅，f是二次连续可微的函数，那么f(X(t))是半鞅，并且有ito公式：</p>
+<ul>
+<li>$f(X(t))-f(X(0))=\int_0^tf’(X(s))dX(s)+\frac{1}{2}\int_0^tf’’(X(s))d[X,X] (s)$.</li>
+</ul>
+<h3 id="8-8-Stochastic-Exponential"><a href="#8-8-Stochastic-Exponential" class="headerlink" title="8.8 Stochastic Exponential"></a>8.8 Stochastic Exponential</h3><p>先回忆在章节5.2中的$ito$过程的随机指数：令$X$随机可微，$U$满足$U(t)=1+\int_0^tU(s)dX(s)$,$U$被称作是$X$的随机指数，记作$\varepsilon(X)$.在<strong>Theorem 5.2</strong>中给出这个方程的唯一解是$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X] (t)}$.</p>
+<p>下面讨论半鞅的随机指数，随机指数（也称为半鞅，或 Doleans-Dade 指数）是指数函数的随机类比。</p>
+<p><strong>Theorem 8.12：</strong>X是一个连续鞅，使得$U(t)=1+\int_0^tU(s-)dX(s)$成立，它的随机指数为 $U(t)=\varepsilon(X)(t)=e^{X(t)-X(0)-\frac{1}{2}[X,X]  (t)}$.</p>
+<p>X,Y是同一个空间的半鞅.随机指数具有的性质：</p>
+<ol>
+<li>$\varepsilon(X) (t)\varepsilon(Y) (t)=\varepsilon(X+Y+[X,Y]) (t)$.</li>
+<li>若X连续，X(0)=0，那么$(\varepsilon(X)(t))^{-1}=\varepsilon(-X+[X,X] (t))(t)$.</li>
+</ol>
+<h6 id="鞅的随机指数"><a href="#鞅的随机指数" class="headerlink" title="鞅的随机指数"></a>鞅的随机指数</h6><p>由于关于局部鞅的积分是局部鞅，所以$\varepsilon(X)(t)$是局部鞅，由于应用中一般需要鞅，下面利用Th7.21,7.35，给出随机指数是鞅的条件.</p>
+<p><strong>Theorem 8.14 ：</strong>M(t)是连续局部鞅，在0处为0，那么他的随机指数为$\varepsilon(X)(t)=e^{M(t)-\frac{1}{2}[M,M] (t)}$并且他是连续正局部鞅. 所以它是上鞅，可积，有限非减的期望，满足下列条件之一，则他就是鞅：</p>
+<ol>
+<li>$E(e^{M(T)-\frac{1}{2}[M,M] (T)})=1$</li>
+<li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)-[M,M] (t)}d[M,M] (s))&lt;\infty$.</li>
+<li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)}d[M,M] (s))&lt;\infty$.</li>
+</ol>
+<p>其中1是利用Th7.3；2,3是利用7.35；</p>
+<p><strong>Kazamaki’s Condition : </strong>M是连续局部鞅，在0处为0，若$e^{\frac{1}{2}M(t)}$是下鞅，那么$\varepsilon(M)$是鞅.</p>
+<p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若$e^{\frac{1}{2}M(T)}&lt;\infty$，那么$\varepsilon(M)$在[0,T]是鞅.</p>
+<p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足Kazamaki Condition</p>
+<p><strong>Noviikov’s Condition：</strong>M是连续局部鞅，在0处为0，若对于每个$t\le T$都有$E(e^{\frac{1}{2}[M,M] (t)})&lt;\infty$，那么$\varepsilon(M)$是均值为0的鞅.特别的，如果对于每个t都存在一个常数$K_t$使得$[M,M] (t)&lt;K_t$，那么$\varepsilon(M)(t)$是鞅，对于任意的$t\le T$.</p>
+<p>在前面证明布朗运动的Levy特征时，使用了$e^{uM(t)-\frac{u^2t}{2}}$是鞅，在这里使用随机指数给出证明。</p>
+<p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M] (t)=t，于是随机指数$U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}$是鞅.</p>
+<h3 id="8-9-Compensators-and-Sharp-Bracket-Process"><a href="#8-9-Compensators-and-Sharp-Bracket-Process" class="headerlink" title="8.9 Compensators and Sharp Bracket Process"></a>8.9 Compensators and Sharp Bracket Process</h3><p><strong>Compensator：</strong>$N(t)$是一个(局部)可积变差的适应过程，他的compensator $A(t)$是唯一的可预测过程使得$M(t)=N(t)-A(t)$是一个局部鞅.</p>
+<p>在固定的域流和概率下，compensator是唯一的.</p>
+<p><strong>Theorem 8.21：</strong>$N(t)$是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p>
+<p>$\mathcal PROOF：$回忆Doob-Meyer分解：$X$是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此$N$与Doob-meyer分解的X对应。</p>
+<p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p>
+<p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p>
+<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle X,X\rangle$.</p>
+<p>如此一来就很方便的找到了compensator.</p>
+<h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若$M$使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p>
+<p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p>
+<p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p>
+<p><strong>Theorem 8.27：</strong>M是局部鞅，$0\le t\le T&lt;\infty$,在0处为0，对于所有的t都有$E\langle M,M\rangle&lt;\infty$，那么M是平方可积的鞅；并且$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$. 当$T=\infty$和$sup_{t&lt;\infty}E\langle M,M\rangle(t)&lt;\infty$,则$M(t)$在$[0,\infty)$是平方可积鞅.</p>
+<p>由于连续局部鞅是局部平方可积的，从而有</p>
+<p><strong>Corollary 8.28 ：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p>
+<h6 id="半鞅的连续鞅分量"><a href="#半鞅的连续鞅分量" class="headerlink" title="半鞅的连续鞅分量"></a>半鞅的连续鞅分量</h6><p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和. 那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p>
+<p><strong>Definition 8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的. 局部鞅M,N是正交的如果MN是局部鞅. </p>
+<p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.$M=M^c+M^d$.半鞅$X(t)$可以分解成$X(t)=X(0)+M(t)+A(t)$. 其中$M(t)$是局部鞅，$M^c$被称为X的连续鞅分量，记为$X^{cm}$.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，  假若$X(t)=X(0)+M_1(t)+A_1(t)$是另一种分解，那么就有$(M-M_1)(t)=-(A-A_1)(t)$.因此$(M-M_1)$是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着$M^c-M^c_1=0$.这就证明了对于所有的半鞅分解$X^{cm}$是唯一的. 于是，就有下面的推论</p>
+<p><strong>Corollary 8.30 ：</strong>若X是有限变差的半鞅，这意味着半鞅X的分解中鞅部分为0，也就是说连续鞅部分也一定是0，即$X^{cm}=0$.</p>
+<h6 id="随机积分存在的条件"><a href="#随机积分存在的条件" class="headerlink" title="随机积分存在的条件"></a>随机积分存在的条件</h6><p>总的来说，随机积分$\int_0^TH(s)dM(s)$的定义，取决于M的性质，当$\langle M,M\rangle(t)$不连续，连续，绝对连续，会让H的范围更宽泛.</p>
+<h6 id="可预测二次变差的性质"><a href="#可预测二次变差的性质" class="headerlink" title="可预测二次变差的性质"></a>可预测二次变差的性质</h6><p>对于局部可积二次变差的半鞅X,Y</p>
+<ol>
+<li>$\langle X,X\rangle(t)$关于t是增的.</li>
+<li>$\langle X,X\rangle(t)$是双线性，对称的</li>
+<li>极化恒等式.$\langle X,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langle X-Y,X-Y\rangle)$</li>
+<li>$\langle X,X\rangle$是有限变差的可预测过程.</li>
+<li>$\langle X,X\rangle=0$如果X或Y是有限变差的，且其中之一是连续的.</li>
+<li>$\big\langle \int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langle X,Y\rangle(s)$.</li>
+</ol>
+<h3 id="8-10-Ito’s-Formula-for-Semimartingales"><a href="#8-10-Ito’s-Formula-for-Semimartingales" class="headerlink" title="8.10 Ito’s Formula for Semimartingales"></a>8.10 Ito’s Formula for Semimartingales</h3><p>不同于8.6章的连续半鞅，$X(t)$是半鞅，$f\in C^2$, 则$f(X(t))$是半鞅，并且有$ito$公式:</p>
+<ul>
+<li>$f(X(t))-f(X(0))=\int_0^tf’(X(s-))dX(s)+\frac{1}{2}\int_0^tf’’(X(s-))d[X,X] (s)+ \\ \sum\limits_{s\le t}  \Bigg (f(X(s))-f(X(s-))-f’(X(s-))\Delta X(s)-\frac{1}{2}f’’(X(s-))(\Delta X(s))^2\Bigg )$.</li>
+</ul>
+<h3 id="8-11-Stochastic-Exponential-and-Logarithm"><a href="#8-11-Stochastic-Exponential-and-Logarithm" class="headerlink" title="8.11 Stochastic Exponential and Logarithm"></a>8.11 Stochastic Exponential and Logarithm</h3><p>不同于8.8章的连续半鞅，$X$是半鞅，随机方程$U(t)=1+\int_0^tU(s-)dX(s)$有唯一解，被称为$X$的随机指数.</p>
+<ul>
+<li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langle X,X\rangle^c (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)}$，由有限变差的分解$[X,X] (s)=\langle X,X\rangle^c(s)+\sum\limits_{0&lt;s\le t}\Delta X(s)$，这等价于</li>
+</ul>
+<ul>
+<li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[ X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)+\frac{1}{2}(\Delta X(s))^2}$.</li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> 随机过程 </category>
-          
+        <category>随机过程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MaoBook2008 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>POINTS</title>
-      <link href="/2023/05/23/points/"/>
-      <url>/2023/05/23/points/</url>
-      
-        <content type="html"><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p><p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p><p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>]]></content>
-      
-      
+      <tags>
+        <tag>随机分析及其应用Fima C. Klebaner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机分析及其应用 Chapter 7</title>
+    <url>/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/</url>
+    <content><![CDATA[<h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h3 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h3><p>$\qquad$<strong>Definition7.1：</strong>若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale.</p>
+<p>$E(M(t)|\mathcal F_S)=M(s)$，鞅是公平的，期望是常数</p>
+<p>$E(M(t)|\mathcal F_S)\le M(s)$，上鞅是盈利，期望是递减</p>
+<p>$E(M(t)|\mathcal F_S)\ge M(s)$，下鞅是亏损，期望是递增</p>
+<p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p>
+<p>$\qquad$<strong>Theorem7.3：</strong>上鞅是鞅当且仅当$EM(T)=EM(0)$.</p>
+<h6 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p>
+<p>若$f$在$\mathbb R$有界且连续，则$Ito$积分$\int_0^tf(B(s))dB(s)$和$\int_0^tf(s)dB(s)$，在任何有限区间都是平方可积的鞅.</p>
+<h3 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h3><p>$\qquad$在介绍一致可积之前，先来回忆一下什么叫可积。随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))=0$</p>
+<p>$\qquad$<strong>Defnition7.5：</strong>随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits_{n\to+\infty}\sup\limits_{t} E(|X|I(|X|&gt;n))=0$.</p>
+<p>$\qquad$<strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$，注意取了$sup$之后是一个随机变量，不再是随机过程.</p>
+<p>$\qquad$<strong>Theorem 7.7 (Vallee–Poussin)：</strong>若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits_{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
+<p>下面构造一个一致可积鞅：</p>
+<p>$\qquad$<strong>Theorem 7.9：</strong> (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅.</p>
+<h3 id="7-3-Martingale-Convergence"><a href="#7-3-Martingale-Convergence" class="headerlink" title="7.3 Martingale Convergence"></a>7.3 Martingale Convergence</h3><p>本节考虑无穷区间的鞅</p>
+<p>$\qquad$<strong>Theorem 7.11：</strong>(Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。</p>
+<p>但$E(M(t))$可能不收敛到$EY$.例如布朗运动的指数鞅：$e^{B(t)-\frac{t}{2}}$；当$M(t)$一致可积时，收敛是肯定的。</p>
+<p>一致可积鞅收敛a.s.</p>
+<p>平方可积鞅收敛a.s.</p>
+<p>正鞅收敛a.s.</p>
+<p>(负)上有界的下鞅收敛a.s.</p>
+<p>(正)下有界的上鞅收敛a.s.</p>
+<h3 id="7-4-Optional-Stopping"><a href="#7-4-Optional-Stopping" class="headerlink" title="7.4 Optional Stopping"></a>7.4 Optional Stopping</h3><p>$\qquad$<strong>Theorem7.14：</strong>若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$</p>
+<p>我们知道当$M(t)$是鞅时，$EM(t)=EM(0)$，但是对于停时$\tau$，等式$EM(\tau)=EM(0)$,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
+<p>$\qquad$<strong>Theorem7.15：</strong>(Optional Stopping)$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$</p>
+<p>不同于有界，假如停时$\tau$是有限的，则需要添加其他条件；</p>
+<p>在实变函数中，有界函数：函数的值域在$\in[-M,M]$,且有界一定有限；</p>
+<p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p>
+<p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p>
+<p>$\qquad$<strong>Theorem7.16：</strong>$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$</p>
+<p>$\qquad$<strong>Theorem7.18：</strong>(Optional Sampling): $M(t)$是一致可积鞅，$\tau_1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F_{\tau_1})=M(\tau_1)$ a.s.</p>
+<h3 id="7-5-Localization-and-Local-Martingales"><a href="#7-5-Localization-and-Local-Martingales" class="headerlink" title="7.5 Localization and Local Martingales"></a>7.5 Localization and Local Martingales</h3><p>$\qquad$ $Ito$积分$M(t)=\int_0^tX(s)dB(s)$是局部鞅，当$EM^2(T)&lt;\infty$时，$M(t)$才是鞅</p>
+<p>$\qquad$<strong>Definition7.19：</strong>随机过程$X(t)$的一个性质称作是局部的，如果存在一个停止序列{$\tau_n$}，使得当$n\to\infty$时，停时$\tau_n\uparrow\infty$，并且对于每一个n，停止过程$X(t\land\tau_n)$都有这个性质。</p>
+<p>$\qquad$<strong>Definition7.20局部鞅：</strong>适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅。</p>
+<p>参看知乎对于<a href="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p>
+<p>任何鞅都是局部鞅，反之不一定成立。</p>
+<p>$\qquad$<strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。</p>
+<p>$\qquad$<strong>Corollary7.22：</strong>对于局部鞅$M(t)$，若有$E(sup_{s\le t}|M(s)|)&lt;\infty$,则$M(t)$是鞅，并且在任何有限区间$[0,T]$一致可积；更加一般化，$E(sup_{t\ge 0}|M(t)|)&lt;\infty$，则$M(t)$在$[0,\infty]$一致可积。</p>
+<p>$\qquad$<strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p>
+<p>由$Th7.3$和$Th7.23$可得非负局部鞅是鞅当且仅当$EM(T)=EM(0)$</p>
+<p>$\qquad$<strong>Definition7.25(Dirichlet Class (D))：</strong>过程X是狄利克雷D类，若族{X($\tau$)：$\tau$是有限停时}是一致可积的.</p>
+<p>$\qquad$<strong>Theorem7.26：</strong>局部鞅$M(t)$是一致可积的鞅当且仅当他是D类.</p>
+<h3 id="7-6-Quadratic-Variation-of-Martingales"><a href="#7-6-Quadratic-Variation-of-Martingales" class="headerlink" title="7.6 Quadratic Variation of Martingales"></a>7.6 Quadratic Variation of Martingales</h3><p>$\qquad$在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程$X(t)$在$[0,t]$的二次变差定义为：$[X,X] (t)=\lim\limits_{\delta_n\to 0}\sum_{i=1}^n(X(t_i^n)-X(t_{i-1}^n))^2$，其中$t_i^n$是对$[0,t]$做分割$\delta_n$是最大的分割区间。</p>
+<p>$\qquad$<strong>Theorem 1.10：</strong> $g$是连续且有限变差的过程，那么他的二次变差是0.</p>
+<p>下面考虑鞅的二次变差：首先若$M(t)$是鞅，则$M^2(t)$是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p>
+<p>$\qquad$<strong>Theorem 7.27(i)</strong>：若对于任何$t$，$M(t)$是具有有限二阶矩的鞅，那么他的二次变差过程$<a href="t">M,M</a>$存在；进一步，$M^2(t)-[M,M] (t)$是鞅.</p>
+<p>$\qquad$<strong>Theorem 7.27(ii)</strong>：若$M(t)$是局部鞅，则二次变差$[M,M] (t)$存在，且$M^2(t)-[M,M] (t)$是局部鞅.</p>
+<p>$\qquad$<strong>Theorem 7.28：</strong>$M(t)$是鞅(局部鞅)且$M(0)=0$，若对于某个$t$，使$M(t)$非0，那么就有$[M,M] (t)&gt;0$；反之，若$<a href="t">M,M</a>=0$，则对于任何的$s\le t$，都有$M(s)=0$ a.s.  </p>
+<p>$\qquad$<strong>Theorem 7.29：</strong>$M$是连续局部鞅，固定$t$，若$M(t)\neq M(0)$，那么$M$在$[0,t]$具有无限变差.</p>
+<p>$\qquad$<strong>Corollary 7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p>
+<h3 id="7-7-Martingale-Inequalities"><a href="#7-7-Martingale-Inequalities" class="headerlink" title="7.7 Martingale Inequalities"></a>7.7 Martingale Inequalities</h3><p>$\qquad$<strong>Doob’s Martingale Inequality：</strong>$M(t)$是一个鞅(or正的下鞅)，对于$p\ge 1$有$P(\sup\limits_{s\le t}|M(s)|\ge a)\le a^{-p}\sup\limits_{s\le t}E(|M(s)^p|)$；<strong>对于p&gt;1有$P(\sup\limits_{s\le t}|M(s)|)\le (\frac{p}{1-p})^{p}E(|M(t)^p|)$</strong>.当p=2时就称为Doob鞅不等式.</p>
+<p>$\qquad$<strong>Davis Inequality：</strong>对于任意在0处为0的局部鞅$M(t)$,都存在常数$c&gt;0$和$C&lt;\infty$，使得$cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le T}|M(t)|)\le CE(\sqrt{[M,M] (T)})$</p>
+<p>$\qquad$<strong>Burkholder-Gundy Inequality：</strong>若$1\le p&lt;\infty$，则对于任意在0处为0的局部鞅$M(t)$,都存在仅依赖于$p$的$c_p$和$C_p$</p>
+<p>使得$c_pE([M,M] (T)^{p/2})\le E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p>
+<p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p>
+<p>$\qquad$<strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}_+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int_{0}^{t}g(s)dB(s)$和$A(t)=\int_0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p>
+<p>$c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\
+c_p=1, C_p=4  & & {p=2}\\
+c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}$</p>
+<p>这些定理可以用来证明局部鞅是真的鞅：</p>
+<p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅$M(t)$，并且满足他的二次方差有界$E\sqrt{ [M,M] (t)}&lt;\infty$，那么在有限区间$[0,T]$内它是一致可积的鞅.</p>
+<h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p>$\qquad$<strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.<em>本节讨论的change of time便是基于Levy对布朗运动的描述.</em></p>
+<p><u>关于鞅的时间的变化</u></p>
+<p>$\qquad$<strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau_t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F_{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，对布朗运动$B(t)$做时间变化，就得到鞅$M(t)$，即$M(t)=B([M,M] (t))$.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
+<p>$\qquad$<u>关于SDE的时间的变化</u></p>
+<p>$\qquad$<strong>Theorem 7.38：</strong>$f(t)$是自适应，正，增的微分过程(为了$f^{-1}$存在)，则$dX(t)=\sqrt{f’(t)}dB(t)$有弱解$\widehat{B}(f(t))$.</p>
+<p>$\qquad$<strong>Theorem 7.39：</strong>$\sigma(x)&gt;0$，定义$G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}$对于有限的$t$是有限的，关于$t$递增到$\infty$ a.s.，G是正的，连续的，严格增到$\infty$，因此存在逆函数$\tau_t=G^{-1}(t)$，对于固定的$t$，$\tau_t$是停时，递增的，并且他是过程$G(s)$第一次到达$t$，那么过程$X(t)=B(\tau_t)$是$dX(t)=\sigma(X(t))dB(t)$的弱解.</p>
+<p>$\qquad$<strong>Theorem 7.41：</strong>令$X(t)$是$dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)$的解，并定义$Y(t)=X(\tau_t)$，于是$Y(t)$是$dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)$的弱解，其中$Y(0)=X(0)$， $g(x)$是正函数，$G(t)=\int_0^tg(X(s))ds$.</p>
+]]></content>
       <categories>
-          
-          <category> 零零散散 </category>
-          
+        <category>随机过程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 随手 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MaoBook Chapter 2</title>
-      <link href="/2023/05/23/Maobook2008%20Chapter2/"/>
-      <url>/2023/05/23/Maobook2008%20Chapter2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="第二章：随机微分方程"><a href="#第二章：随机微分方程" class="headerlink" title="第二章：随机微分方程"></a>第二章：随机微分方程</h1><h2 id="第三节：解的存在唯一性"><a href="#第三节：解的存在唯一性" class="headerlink" title="第三节：解的存在唯一性"></a>第三节：解的存在唯一性</h2><p>在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p><p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear growth条件也能得到解的存在唯一性。</p><p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear growth可以推出Monotone条件。</p><p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p><h3 id="第四节：-L-p-估计"><a href="#第四节：-L-p-估计" class="headerlink" title="第四节：$L^p$估计"></a>第四节：$L^p$估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p><p>在类似于Monotone的条件下，p阶矩是exp收敛的</p><h3 id="第五节：Almost-Surely-Asymptotic-Estimates"><a href="#第五节：Almost-Surely-Asymptotic-Estimates" class="headerlink" title="第五节：Almost Surely Asymptotic Estimates"></a>第五节：Almost Surely Asymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p><p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p><p><img src="/pic/Borel–Cantelli’s lemma.png" alt="img" title="Borel–Cantelli’s lemma"></p><p><img src="/pic/Exponential moment inequality.png" alt="img" title="Exponential moment inequality.png"></p><h3 id="第六节Caratheodory估计"><a href="#第六节Caratheodory估计" class="headerlink" title="第六节Caratheodory估计"></a>第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p><p>TH6.4在$f,g$连续，$x_0$有界且$F_{t_0}$可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p><h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p><p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p><h6 id="但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法"><a href="#但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法" class="headerlink" title="(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)"></a>(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3 id="第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式"><a href="#第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式" class="headerlink" title="第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式"></a>第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂…不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p><h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度$P(X,s;A,t)$以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随机过程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MaoBook2008 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>再见沈以诚</title>
-      <link href="/2023/05/23/%E5%86%8D%E8%A7%81%E6%B2%88%E4%BB%A5%E8%AF%9A/"/>
-      <url>/2023/05/23/%E5%86%8D%E8%A7%81%E6%B2%88%E4%BB%A5%E8%AF%9A/</url>
-      
-        <content type="html"><![CDATA[<p>属于我的沈以诚时代已经结束了。</p><p>突然挺喜欢苏打绿的歌；</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 淋晓 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>随机分析及其应用Fima C. Klebaner</tag>
+      </tags>
+  </entry>
 </search>
