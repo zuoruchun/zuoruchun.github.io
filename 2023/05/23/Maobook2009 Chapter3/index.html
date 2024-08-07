@@ -19,27 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0exp(\int_0^t(r(s)-\frac{\sigma ^2 (s">
+    <meta name="description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lin Xiao">
-<meta property="og:url" content="https://zuoruchun.github.io/2023/08/25/Maobook2009%20Chapter3/index.html">
+<meta property="og:title" content="MaoBook Chapter 3">
+<meta property="og:url" content="https://zuoruchun.github.io/2023/05/23/Maobook2009%20Chapter3/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0exp(\int_0^t(r(s)-\frac{\sigma ^2 (s">
+<meta property="og:description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-25T14:16:51.472Z">
-<meta property="article:modified_time" content="2023-09-15T11:15:25.147Z">
+<meta property="article:published_time" content="2023-05-23T13:33:36.000Z">
+<meta property="article:modified_time" content="2024-08-07T12:15:50.369Z">
 <meta property="article:author" content="Ruchun Zuo">
+<meta property="article:tag" content="MaoBook2008">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zuoruchun.github.io/2023/08/25/Maobook2009%20Chapter3/">
+<link rel="canonical" href="https://zuoruchun.github.io/2023/05/23/Maobook2009%20Chapter3/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2023/08/25/Maobook2009%20Chapter3/","path":"2023/08/25/Maobook2009 Chapter3/","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2023/05/23/Maobook2009%20Chapter3/","path":"2023/05/23/Maobook2009 Chapter3/","title":"MaoBook Chapter 3"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title> | Lin Xiao</title>
+<title>MaoBook Chapter 3 | Lin Xiao</title>
   
 
 
@@ -126,18 +127,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -157,8 +158,7 @@
         </div>
       </div>
 	 
-	 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=168663695&auto=1&height=90"></iframe>
-
+		<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=168663695&auto=1&height=90"></iframe> -->
 	 
    </div>
 
@@ -179,7 +179,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2023/08/25/Maobook2009%20Chapter3/">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2023/05/23/Maobook2009%20Chapter3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wanye.png">
@@ -192,12 +192,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Lin Xiao">
+      <meta itemprop="name" content="MaoBook Chapter 3 | Lin Xiao">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          MaoBook Chapter 3
         </h1>
 
         <div class="post-meta-container">
@@ -208,14 +208,23 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-08-25 22:16:51" itemprop="dateCreated datePublished" datetime="2023-08-25T22:16:51+08:00">2023-08-25</time>
+      <time title="创建时间：2023-05-23 21:33:36" itemprop="dateCreated datePublished" datetime="2023-05-23T21:33:36+08:00">2023-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-15 19:15:25" itemprop="dateModified" datetime="2023-09-15T19:15:25+08:00">2023-09-15</time>
+      <time title="修改时间：2024-08-07 20:15:50" itemprop="dateModified" datetime="2024-08-07T20:15:50+08:00">2024-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">随机过程</span></a>
+        </span>
     </span>
 
   
@@ -227,7 +236,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
 <p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
 <p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
 <h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
@@ -250,16 +259,22 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MaoBook2008/" rel="tag"># MaoBook2008</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/" rel="prev" title="Something">
-                  <i class="fa fa-chevron-left"></i> Something
+                <a href="/2023/05/23/%E5%86%8D%E8%A7%81%E6%B2%88%E4%BB%A5%E8%AF%9A/" rel="prev" title="再见沈以诚">
+                  <i class="fa fa-chevron-left"></i> 再见沈以诚
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/05/23/Maobook2008%20Chapter2/" rel="next" title="MaoBook Chapter 2">
+                  MaoBook Chapter 2 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
