@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MaoBook2008 Chapter 1</title>
-    <url>/2023/05/23/Maobook2008%20Chapter1/</url>
-    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
-]]></content>
-      <categories>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo食用方法</title>
     <url>/2023/05/23/Hexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令</p>
@@ -30,24 +18,10 @@
       </tags>
   </entry>
   <entry>
-    <title>MaoBook Chapter 3</title>
-    <url>/2023/05/23/Maobook2009%20Chapter3/</url>
-    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
-<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
-<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
-<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
-<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
-<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
-<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
-<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
-<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
-<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
-<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
-<p>$y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]$</p>
-<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
-<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
-<p>$x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
-<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
+    <title>MaoBook2008 Chapter 1</title>
+    <url>/2023/05/23/Maobook2008%20Chapter1/</url>
+    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
+]]></content>
       <categories>
         <category>随机过程</category>
       </categories>
@@ -83,6 +57,46 @@
       </tags>
   </entry>
   <entry>
+    <title>POINTS</title>
+    <url>/2023/05/23/points/</url>
+    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
+<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
+<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
+]]></content>
+      <categories>
+        <category>零零散散</category>
+      </categories>
+      <tags>
+        <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MaoBook Chapter 3</title>
+    <url>/2023/05/23/Maobook2009%20Chapter3/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
+<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
+<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
+<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
+<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
+<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
+<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
+<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
+<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
+<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
+<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
+<p>$y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]$</p>
+<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
+<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
+<p>$x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
+<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
+      <categories>
+        <category>随机过程</category>
+      </categories>
+      <tags>
+        <tag>MaoBook2008</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些定义</title>
     <url>/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/</url>
     <content><![CDATA[<p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
@@ -100,20 +114,6 @@
 <li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li>
 </ol>
 <p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>
-]]></content>
-      <categories>
-        <category>零零散散</category>
-      </categories>
-      <tags>
-        <tag>随手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>POINTS</title>
-    <url>/2023/05/23/points/</url>
-    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
-<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
-<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
 ]]></content>
       <categories>
         <category>零零散散</category>
