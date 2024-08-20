@@ -20,6 +20,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo食用方法</title>
+    <url>/2024/08/07/Hexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令</p>
+<ul>
+<li><strong>git clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作</li>
+<li><strong>git s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态</li>
+<li><strong>推送远端</strong>：<code>git g</code> -&gt; <code>git d</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>零零散散</category>
+      </categories>
+      <tags>
+        <tag>Hexo使用方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MaoBook2008 Chapter 1</title>
     <url>/2023/05/23/Maobook2008%20Chapter1/</url>
     <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
@@ -29,20 +46,6 @@
       </categories>
       <tags>
         <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>POINTS</title>
-    <url>/2023/05/23/points/</url>
-    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
-<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
-<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
-]]></content>
-      <categories>
-        <category>零零散散</category>
-      </categories>
-      <tags>
-        <tag>随手</tag>
       </tags>
   </entry>
   <entry>
@@ -69,49 +72,6 @@
       </categories>
       <tags>
         <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo食用方法</title>
-    <url>/2024/08/07/Hexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令</p>
-<ul>
-<li><strong>git clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作</li>
-<li><strong>git s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态</li>
-<li><strong>推送远端</strong>：<code>git g</code> -&gt; <code>git d</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>零零散散</category>
-      </categories>
-      <tags>
-        <tag>Hexo使用方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些定义</title>
-    <url>/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/</url>
-    <content><![CDATA[<p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
-<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p>
-<p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p>
-<ol>
-<li>$N(t)$是非负整数.</li>
-<li>$N(t)$单调不减.</li>
-<li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li>
-</ol>
-<p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p>
-<ol>
-<li>$N_0=0$.</li>
-<li>$N(t)$是独立平稳增量过程.</li>
-<li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li>
-</ol>
-<p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>
-]]></content>
-      <categories>
-        <category>零零散散</category>
-      </categories>
-      <tags>
-        <tag>随手</tag>
       </tags>
   </entry>
   <entry>
@@ -142,12 +102,52 @@
       </tags>
   </entry>
   <entry>
+    <title>POINTS</title>
+    <url>/2023/05/23/points/</url>
+    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
+<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
+<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
+]]></content>
+      <categories>
+        <category>零零散散</category>
+      </categories>
+      <tags>
+        <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Something</title>
     <url>/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/</url>
     <content><![CDATA[<p>导数那个题 </p>
 ]]></content>
       <tags>
         <tag>淋晓</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些定义</title>
+    <url>/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/</url>
+    <content><![CDATA[<p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
+<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p>
+<p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p>
+<ol>
+<li>$N(t)$是非负整数.</li>
+<li>$N(t)$单调不减.</li>
+<li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li>
+</ol>
+<p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p>
+<ol>
+<li>$N_0=0$.</li>
+<li>$N(t)$是独立平稳增量过程.</li>
+<li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li>
+</ol>
+<p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>
+]]></content>
+      <categories>
+        <category>零零散散</category>
+      </categories>
+      <tags>
+        <tag>随手</tag>
       </tags>
   </entry>
   <entry>
