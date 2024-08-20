@@ -37,18 +37,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MaoBook2008 Chapter 1</title>
-    <url>/2023/05/23/Maobook2008%20Chapter1/</url>
-    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
-]]></content>
-      <categories>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MaoBook Chapter 2</title>
     <url>/2023/05/23/Maobook2008%20Chapter2/</url>
     <content><![CDATA[<h1 id="第二章：随机微分方程"><a href="#第二章：随机微分方程" class="headerlink" title="第二章：随机微分方程"></a>第二章：随机微分方程</h1><h2 id="第三节：解的存在唯一性"><a href="#第三节：解的存在唯一性" class="headerlink" title="第三节：解的存在唯一性"></a>第三节：解的存在唯一性</h2><p>在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
@@ -141,12 +129,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Something</title>
-    <url>/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/</url>
-    <content><![CDATA[<p>导数那个题 </p>
+    <title>MaoBook2008 Chapter 1</title>
+    <url>/2023/05/23/Maobook2008%20Chapter1/</url>
+    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
 ]]></content>
+      <categories>
+        <category>随机过程</category>
+      </categories>
       <tags>
-        <tag>淋晓</tag>
+        <tag>MaoBook2008</tag>
       </tags>
   </entry>
   <entry>
@@ -183,6 +174,15 @@
       </categories>
       <tags>
         <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Something</title>
+    <url>/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/</url>
+    <content><![CDATA[<p>导数那个题 </p>
+]]></content>
+      <tags>
+        <tag>淋晓</tag>
       </tags>
   </entry>
   <entry>
