@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zuoruchun.github.io/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/</loc>
+    
+    <lastmod>2024-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zuoruchun.github.io/2024/08/20/hexo%E7%AB%AF%E5%8F%A3/</loc>
     
     <lastmod>2024-08-20</lastmod>
@@ -175,7 +184,7 @@
 
   <url>
     <loc>https://zuoruchun.github.io/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -183,49 +192,56 @@
   
   <url>
     <loc>https://zuoruchun.github.io/tags/Hexo%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/BigData/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/MaoBook2008/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/Bug/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/%E9%9A%8F%E6%89%8B/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/%E6%B7%8B%E6%99%93/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/tags/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Fima-C-Klebaner/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/tags/Windows%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -234,28 +250,35 @@
   
   <url>
     <loc>https://zuoruchun.github.io/categories/%E9%9B%B6%E9%9B%B6%E6%95%A3%E6%95%A3/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/categories/BigData/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/categories/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zuoruchun.github.io/categories/Bug/</loc>
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/categories/Windows%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2024-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

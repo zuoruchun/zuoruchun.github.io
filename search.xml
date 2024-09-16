@@ -400,4 +400,108 @@ c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {
         <tag>随机分析及其应用Fima C. Klebaner</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Windows切换Macbook</title>
+    <url>/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/</url>
+    <content><![CDATA[<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Windows软件</th>
+<th>软件优点</th>
+<th>Macbook替代</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Notepad+</td>
+<td>轻便的编辑器</td>
+<td></td>
+</tr>
+<tr>
+<td>clash</td>
+<td>为皮嗯代理</td>
+<td></td>
+</tr>
+<tr>
+<td>知云文献翻译</td>
+<td>翻译英文文献</td>
+<td></td>
+</tr>
+<tr>
+<td>SpaceSniffer</td>
+<td>按大小排列C，D等盘的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>Xshell</td>
+<td>好用的ssh客户机</td>
+<td></td>
+</tr>
+<tr>
+<td>Xftp</td>
+<td>通过ssh图形化传文件</td>
+<td></td>
+</tr>
+<tr>
+<td>Adobe Acrobat DC</td>
+<td>便捷查看pdf等文件</td>
+<td></td>
+</tr>
+<tr>
+<td>Bandzip</td>
+<td>解/压缩文件</td>
+<td></td>
+</tr>
+<tr>
+<td>CopyQ</td>
+<td>比ctrl+V更好更好用的粘贴板工具</td>
+<td></td>
+</tr>
+<tr>
+<td>Everything</td>
+<td>完爆Win自带的文件查找功能</td>
+<td></td>
+</tr>
+<tr>
+<td>FormatFactory</td>
+<td>格式工厂</td>
+<td></td>
+</tr>
+<tr>
+<td>Potplayer</td>
+<td>播放视频软件</td>
+<td></td>
+</tr>
+<tr>
+<td>Quicker</td>
+<td>好用的工具箱</td>
+<td></td>
+</tr>
+<tr>
+<td>Typora</td>
+<td>好用的Markdown编辑器</td>
+<td></td>
+</tr>
+<tr>
+<td>火绒</td>
+<td>个人电脑最安全的管家</td>
+<td></td>
+</tr>
+<tr>
+<td>Snipaste</td>
+<td>世界上最好用的截图软件</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>Windows软件</category>
+      </categories>
+      <tags>
+        <tag>Windows软件</tag>
+      </tags>
+  </entry>
 </search>
