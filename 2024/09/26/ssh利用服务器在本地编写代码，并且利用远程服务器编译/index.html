@@ -20,28 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="导数那个题">
+    <meta name="description" content="在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development; 于是在VsCode侧边栏会出现一个类似与电脑的图标。   img  点击加号, 输入ssh username@ip, 之后会让你打开config配置文件, 按照下面的格式将服务器的Ho">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Something">
-<meta property="og:url" content="https://zuoruchun.github.io/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/index.html">
+<meta property="og:title" content="利用ssh,在本地编写代码，使用远程服务器编译">
+<meta property="og:url" content="https://zuoruchun.github.io/2024/09/26/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="导数那个题">
+<meta property="og:description" content="在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development; 于是在VsCode侧边栏会出现一个类似与电脑的图标。   img  点击加号, 输入ssh username@ip, 之后会让你打开config配置文件, 按照下面的格式将服务器的Ho">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-09T05:15:36.000Z">
-<meta property="article:modified_time" content="2023-06-09T05:16:42.000Z">
+<meta property="og:image" content="https://zuoruchun.github.io/source/pic/ssh%E9%85%8D%E7%BD%AE1.png">
+<meta property="article:published_time" content="2024-09-26T11:38:00.000Z">
+<meta property="article:modified_time" content="2024-10-19T07:20:06.017Z">
 <meta property="article:author" content="淋晓">
-<meta property="article:tag" content="淋晓">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zuoruchun.github.io/source/pic/ssh%E9%85%8D%E7%BD%AE1.png">
 
 
-<link rel="canonical" href="https://zuoruchun.github.io/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/">
+<link rel="canonical" href="https://zuoruchun.github.io/2024/09/26/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/","path":"2023/06/09/随手写/","title":"Something"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/09/26/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/","path":"2024/09/26/ssh利用服务器在本地编写代码，并且利用远程服务器编译/","title":"利用ssh,在本地编写代码，使用远程服务器编译"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Something | Lin Xiao</title>
+<title>利用ssh,在本地编写代码，使用远程服务器编译 | Lin Xiao</title>
   
 
 
@@ -179,7 +180,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2023/06/09/%E9%9A%8F%E6%89%8B%E5%86%99/">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/09/26/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wanye.png">
@@ -192,12 +193,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Something | Lin Xiao">
+      <meta itemprop="name" content="利用ssh,在本地编写代码，使用远程服务器编译 | Lin Xiao">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Something
+          利用ssh,在本地编写代码，使用远程服务器编译
         </h1>
 
         <div class="post-meta-container">
@@ -207,9 +208,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-09 13:15:36 / 修改时间：13:16:42" itemprop="dateCreated datePublished" datetime="2023-06-09T13:15:36+08:00">2023-06-09</time>
+      <time title="创建时间：2024-09-26 19:38:00" itemprop="dateCreated datePublished" datetime="2024-09-26T19:38:00+08:00">2024-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-19 15:20:06" itemprop="dateModified" datetime="2024-10-19T15:20:06+08:00">2024-10-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">计算机常识</span></a>
+        </span>
     </span>
 
   
@@ -221,7 +237,21 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>导数那个题</p>
+    <div class="post-body" itemprop="articleBody"><p>在VsCode中安装下面的插件：<br />
+Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
+Remote Development;<br />
+于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<figure>
+<img src="/source/pic/ssh配置1.png" title="ssh配置1" alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>点击加号, 输入<code>ssh username@ip</code>,
+之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name			# 这个可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号</span><br><span class="line">	User linxiao	# 登陆用户名</span><br></pre></td></tr></table></figure>
+<p>保存配置文件。<br />
+之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,
+然后使用服务器的poython解释器编译文件了。 <img
+src="/source/pic/ssh配置2.png" title="ssh配置2" alt="img" /></p>
 
     </div>
 
@@ -230,21 +260,18 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E6%B7%8B%E6%99%93/" rel="tag"># 淋晓</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/" rel="prev" title="一些定义">
-                  <i class="fa fa-chevron-left"></i> 一些定义
+                <a href="/2024/08/20/DataGrip%E7%9A%84bug/" rel="prev" title="关于DataGrip连接阿里云服务器的Hive数据库Bug">
+                  <i class="fa fa-chevron-left"></i> 关于DataGrip连接阿里云服务器的Hive数据库Bug
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/" rel="next" title="Windows切换Macbook">
-                  Windows切换Macbook <i class="fa fa-chevron-right"></i>
+                <a href="/2024/09/26/git%E6%93%8D%E4%BD%9C/" rel="next" title="git操作">
+                  git操作 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
