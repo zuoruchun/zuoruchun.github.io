@@ -122,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,103 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wanye.png">
+      <meta itemprop="name" content="淋晓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">在linux的命令中行运行matlab</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-20 19:38:00 / 修改时间：12:39:55" itemprop="dateCreated datePublished" datetime="2024-10-20T19:38:00+08:00">2024-10-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">计算机常识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
+<p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
+<p><strong>设置环境变量</strong> 1.
+在命令行中运行这个命令<code>vim ~/.bashrc</code>。 2.
+尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.
+3.
+距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</p>
+<p><strong>添加shell脚本</strong>
+打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code>
+的代码，
+下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。
+</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% test.m</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">    <span class="built_in">i</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1053,104 +1150,6 @@ Semimartingales</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wanye.png">
-      <meta itemprop="name" content="淋晓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lin Xiao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Lin Xiao">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/" class="post-title-link" itemprop="url">随机分析及其应用 Chapter 7</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-28 11:30:36" itemprop="dateCreated datePublished" datetime="2023-05-28T11:30:36+08:00">2023-05-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-06 22:26:00" itemprop="dateModified" datetime="2023-06-06T22:26:00+08:00">2023-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">随机过程</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="chapter-7-martingales">Chapter 7 Martingales</h1>
-<h3 id="定义">7.1定义</h3>
-<p><span class="math inline">\(\qquad\)</span><strong>Definition7.1：</strong>若随机过程<span class="math inline">\(M(t)\)</span>可积，即<span class="math inline">\(EM(t)&lt; \infty\)</span>，并且具有性质<span class="math inline">\(E(M(t)|\mathcal F_S)=M(s)\)</span>，则<span class="math inline">\(M(t)\)</span>被称作Martingale.</p>
-<p><span class="math inline">\(E(M(t)|\mathcal
-F_S)=M(s)\)</span>，鞅是公平的，期望是常数</p>
-<p><span class="math inline">\(E(M(t)|\mathcal F_S)\le
-M(s)\)</span>，上鞅是盈利，期望是递减</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/28/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8Chapter%207/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
