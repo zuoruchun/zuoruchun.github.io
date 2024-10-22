@@ -133,7 +133,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -173,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/10/22/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wanye.png">
@@ -191,7 +191,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">在linux的命令中行运行matlab</a>
+          <a href="/2024/10/22/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-title-link" itemprop="url">uploadFileToServer</a>
         </h2>
 
         <div class="post-meta-container">
@@ -201,15 +201,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-10-20 19:38:00" itemprop="dateCreated datePublished" datetime="2024-10-20T19:38:00+08:00">2024-10-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 16:01:42" itemprop="dateModified" datetime="2024-10-22T16:01:42+08:00">2024-10-22</time>
+      <time title="创建时间：2024-10-22 19:38:00 / 修改时间：19:47:48" itemprop="dateCreated datePublished" datetime="2024-10-22T19:38:00+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,21 +225,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
-<p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
-<p><strong>设置环境变量</strong> 1.
-在命令行中运行这个命令<code>vim ~/.bashrc</code>。 2.
-尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.
-3.
-距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</p>
-<p><strong>添加shell脚本</strong>
-打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code>
-的代码，
-下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。
-</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% test.m</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">    <span class="built_in">i</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/#more" rel="contents">
+              <a class="btn" href="/2024/10/22/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -276,7 +267,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/10/20/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wanye.png">
@@ -294,7 +285,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/20/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-title-link" itemprop="url">上传文件到服务器</a>
+          <a href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">runMatlabInLinuxCommandLine</a>
         </h2>
 
         <div class="post-meta-container">
@@ -312,7 +303,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 17:05:03" itemprop="dateModified" datetime="2024-10-22T17:05:03+08:00">2024-10-22</time>
+      <time title="修改时间：2024-10-22 19:50:01" itemprop="dateModified" datetime="2024-10-22T19:50:01+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,19 +325,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
-<h1 id="mac">Mac</h1>
-<p><strong>1.下载Termius</strong>
-首先打开网址<code>https://termius.com/free-ssh-client-for-mac-os</code>,下载并打开Termius</p>
-<p><strong>2.配置ssh环境</strong></p>
-<p>首先，点击newhost <img src="/pic/newhost.png" title="newhost" alt="img"> 然后按照自己的ip和username进行配置之后,点击connect。 <img src="/pic/turmius配置.png" title="turmius配置" alt="img">
-出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png" title="login" alt="img"> 在SFTP界面点击select
-host，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。
-<img src="/pic/selecthost.png" title="selecthost" alt="img">
-下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png" title="SFTP" alt="img"> 等待传输完成。</p>
+          <style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
+<p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/10/20/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
+              <a class="btn" href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -395,7 +386,7 @@ host，双击刚刚的host，然后就能看到右边的远端服务器的文件
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/" class="post-title-link" itemprop="url">利用ssh,在本地编写代码，使用远程服务器编译</a>
+          <a href="/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/" class="post-title-link" itemprop="url">useSshToWriteCodeLocallyAndCompileWithARemoteServer</a>
         </h2>
 
         <div class="post-meta-container">
@@ -413,7 +404,7 @@ host，双击刚刚的host，然后就能看到右边的远端服务器的文件
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 16:15:23" itemprop="dateModified" datetime="2024-10-22T16:15:23+08:00">2024-10-22</time>
+      <time title="修改时间：2024-10-22 19:54:34" itemprop="dateModified" datetime="2024-10-22T19:54:34+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -435,19 +426,19 @@ host，双击刚刚的host，然后就能看到右边的远端服务器的文件
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>1.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br>
+          <style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p><strong>1.准备工作</strong></p>
+<p>在VsCode中安装下面的插件：<br />
 Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
-Remote Development;<br>
+Remote Development;<br />
 于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
-<figure>
-<img src="/pic/ssh配置1.png" title="ssh配置1" alt="img">
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p><strong>2.获取服务器的username和ip</strong></p>
-<p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；
-在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；
-<img src="/pic/ip.png" title="ip" alt="img"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/#more" rel="contents">
@@ -499,7 +490,7 @@ Remote Development;<br>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/09/26/git%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">git操作</a>
+          <a href="/2024/09/26/git%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">gitOperation</a>
         </h2>
 
         <div class="post-meta-container">
@@ -509,9 +500,15 @@ Remote Development;<br>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-09-26 19:38:00 / 修改时间：20:13:44" itemprop="dateCreated datePublished" datetime="2024-09-26T19:38:00+08:00">2024-09-26</time>
+      <time title="创建时间：2024-09-26 19:38:00" itemprop="dateCreated datePublished" datetime="2024-09-26T19:38:00+08:00">2024-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 20:00:57" itemprop="dateModified" datetime="2024-10-22T20:00:57+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -519,7 +516,7 @@ Remote Development;<br>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">计算机常识</span></a>
+          <a href="/categories/Computer-common-sense/" itemprop="url" rel="index"><span itemprop="name">Computer common sense</span></a>
         </span>
     </span>
 
@@ -590,7 +587,7 @@ Remote Development;<br>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/20/DataGrip%E7%9A%84bug/" class="post-title-link" itemprop="url">关于DataGrip连接阿里云服务器的Hive数据库Bug</a>
+          <a href="/2024/08/20/DataGrip%E7%9A%84bug/" class="post-title-link" itemprop="url">TheHiveDatabaseBugDataGripToConnectToAliyunServer</a>
         </h2>
 
         <div class="post-meta-container">
@@ -600,9 +597,15 @@ Remote Development;<br>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-08-20 17:07:00 / 修改时间：17:29:48" itemprop="dateCreated datePublished" datetime="2024-08-20T17:07:00+08:00">2024-08-20</time>
+      <time title="创建时间：2024-08-20 17:07:00" itemprop="dateCreated datePublished" datetime="2024-08-20T17:07:00+08:00">2024-08-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 20:01:07" itemprop="dateModified" datetime="2024-10-22T20:01:07+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -610,7 +613,7 @@ Remote Development;<br>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/BigData/" itemprop="url" rel="index"><span itemprop="name">BigData</span></a>
+          <a href="/categories/Big-data/" itemprop="url" rel="index"><span itemprop="name">Big data</span></a>
         </span>
     </span>
 
@@ -624,15 +627,18 @@ Remote Development;<br>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
+          <style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
-<p>在SSH配置完成后的下一步，它的配置如下</p>
-<figure>
-<img src="C:\Users\Administrator\blog\source\pic\DataGrip配置失败.png" alt="DataGrip配置失败">
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
-<p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/08/20/DataGrip%E7%9A%84bug/#more" rel="contents">
@@ -684,7 +690,7 @@ Remote Development;<br>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/20/hexo%E7%AB%AF%E5%8F%A3/" class="post-title-link" itemprop="url">解决使用git时遇到Failed to connect to github.com port 443</a>
+          <a href="/2024/08/20/hexo%E7%AB%AF%E5%8F%A3/" class="post-title-link" itemprop="url">resolveFailedToConnectToGithubComPort_443WhenUsingGit</a>
         </h2>
 
         <div class="post-meta-container">
@@ -694,9 +700,15 @@ Remote Development;<br>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-08-20 17:07:00 / 修改时间：20:17:06" itemprop="dateCreated datePublished" datetime="2024-08-20T17:07:00+08:00">2024-08-20</time>
+      <time title="创建时间：2024-08-20 17:07:00" itemprop="dateCreated datePublished" datetime="2024-08-20T17:07:00+08:00">2024-08-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 19:58:43" itemprop="dateModified" datetime="2024-10-22T19:58:43+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -704,7 +716,7 @@ Remote Development;<br>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+          <a href="/categories/Bugs/" itemprop="url" rel="index"><span itemprop="name">Bugs</span></a>
         </span>
     </span>
 
@@ -718,16 +730,21 @@ Remote Development;<br>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
+          <style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
 ms: Couldn‘t connect to server #
 一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
 fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
 connect to github.com port 443 after 21090 ms: Couldn't connect to
 server</p>
 <p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
-<p>解决办法：</p>
-<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
-<p>设置-&gt;网络和Internet-&gt;代理</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/08/20/hexo%E7%AB%AF%E5%8F%A3/#more" rel="contents">
@@ -779,7 +796,7 @@ server</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/07/Hexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Hexo食用方法</a>
+          <a href="/2024/08/07/Hexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">hexoUseMethod</a>
         </h2>
 
         <div class="post-meta-container">
@@ -789,9 +806,15 @@ server</p>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-08-07 20:54:36 / 修改时间：20:54:32" itemprop="dateCreated datePublished" datetime="2024-08-07T20:54:36+08:00">2024-08-07</time>
+      <time title="创建时间：2024-08-07 20:54:36" itemprop="dateCreated datePublished" datetime="2024-08-07T20:54:36+08:00">2024-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 20:00:50" itemprop="dateModified" datetime="2024-10-22T20:00:50+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -799,7 +822,7 @@ server</p>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%B6%E9%9B%B6%E6%95%A3%E6%95%A3/" itemprop="url" rel="index"><span itemprop="name">零零散散</span></a>
+          <a href="/categories/Computer-common-sense/" itemprop="url" rel="index"><span itemprop="name">Computer common sense</span></a>
         </span>
     </span>
 
@@ -864,7 +887,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/" class="post-title-link" itemprop="url">Windows切换Macbook</a>
+          <a href="/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/" class="post-title-link" itemprop="url">windowsSwitchMacbookPrerequisiteSoftware</a>
         </h2>
 
         <div class="post-meta-container">
@@ -882,7 +905,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-09-18 13:27:22" itemprop="dateModified" datetime="2024-09-18T13:27:22+08:00">2024-09-18</time>
+      <time title="修改时间：2024-10-22 20:00:15" itemprop="dateModified" datetime="2024-10-22T20:00:15+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -890,7 +913,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Windows%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">Windows软件</span></a>
+          <a href="/categories/Windows-and-MacBook-Software/" itemprop="url" rel="index"><span itemprop="name">Windows and MacBook Software</span></a>
         </span>
     </span>
 
@@ -905,6 +928,11 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
     
     <div class="post-body" itemprop="articleBody">
           <table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 48%" />
+<col style="width: 25%" />
+</colgroup>
 <thead>
 <tr>
 <th>Windows软件</th>
@@ -914,9 +942,9 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
 </thead>
 <tbody>
 <tr>
-<td>Notepad+</td>
+<td>Notepad++</td>
 <td>轻便的编辑器</td>
-<td></td>
+<td>Notepad--</td>
 </tr>
 <tr>
 <td>clash</td>
@@ -941,7 +969,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
 <tr>
 <td>Xftp</td>
 <td>通过ssh图形化传文件</td>
-<td></td>
+<td>Terminus</td>
 </tr>
 <tr>
 <td>Adobe Acrobat DC</td>
@@ -971,7 +999,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
 <tr>
 <td>Potplayer</td>
 <td>播放视频软件</td>
-<td></td>
+<td>IINA</td>
 </tr>
 <tr>
 <td>Quicker</td>
@@ -986,7 +1014,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
 <tr>
 <td>火绒</td>
 <td>个人电脑最安全的管家</td>
-<td></td>
+<td>柠檬清理</td>
 </tr>
 <tr>
 <td>Snipaste</td>
@@ -1049,9 +1077,24 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-09 13:15:36 / 修改时间：13:16:42" itemprop="dateCreated datePublished" datetime="2023-06-09T13:15:36+08:00">2023-06-09</time>
+      <time title="创建时间：2023-06-09 13:15:36" itemprop="dateCreated datePublished" datetime="2023-06-09T13:15:36+08:00">2023-06-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 20:01:24" itemprop="dateModified" datetime="2024-10-22T20:01:24+08:00">2024-10-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linxiao/" itemprop="url" rel="index"><span itemprop="name">Linxiao</span></a>
+        </span>
     </span>
 
   
@@ -1109,7 +1152,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/" class="post-title-link" itemprop="url">一些定义</a>
+          <a href="/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/" class="post-title-link" itemprop="url">someDefinitions</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1127,7 +1170,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-07 11:25:32" itemprop="dateModified" datetime="2023-06-07T11:25:32+08:00">2023-06-07</time>
+      <time title="修改时间：2024-10-22 19:57:52" itemprop="dateModified" datetime="2024-10-22T19:57:52+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1135,7 +1178,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%B6%E9%9B%B6%E6%95%A3%E6%95%A3/" itemprop="url" rel="index"><span itemprop="name">零零散散</span></a>
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
         </span>
     </span>
 

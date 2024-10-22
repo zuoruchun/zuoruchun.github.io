@@ -20,18 +20,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development; 于是在VsCode侧边栏会出现一个类似与电脑的图标。   img  2.获取服务器的username和ip 在linux机器的终端输入whoami,终端返回的即是user">
+    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Rem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用ssh,在本地编写代码，使用远程服务器编译">
+<meta property="og:title" content="useSshToWriteCodeLocallyAndCompileWithARemoteServer">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development; 于是在VsCode侧边栏会出现一个类似与电脑的图标。   img  2.获取服务器的username和ip 在linux机器的终端输入whoami,终端返回的即是user">
+<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Rem">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE1.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ip.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE2.png">
 <meta property="article:published_time" content="2024-10-19T11:38:00.000Z">
-<meta property="article:modified_time" content="2024-10-22T08:15:23.053Z">
+<meta property="article:modified_time" content="2024-10-22T11:54:34.321Z">
 <meta property="article:author" content="淋晓">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE1.png">
@@ -41,10 +41,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/","path":"2024/10/19/ssh利用服务器在本地编写代码，并且利用远程服务器编译/","title":"利用ssh,在本地编写代码，使用远程服务器编译"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/","path":"2024/10/19/ssh利用服务器在本地编写代码，并且利用远程服务器编译/","title":"useSshToWriteCodeLocallyAndCompileWithARemoteServer"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>利用ssh,在本地编写代码，使用远程服务器编译 | Lin Xiao</title>
+<title>useSshToWriteCodeLocallyAndCompileWithARemoteServer | Lin Xiao</title>
   
 
 
@@ -142,7 +142,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -196,12 +196,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="利用ssh,在本地编写代码，使用远程服务器编译 | Lin Xiao">
+      <meta itemprop="name" content="useSshToWriteCodeLocallyAndCompileWithARemoteServer | Lin Xiao">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          利用ssh,在本地编写代码，使用远程服务器编译
+          useSshToWriteCodeLocallyAndCompileWithARemoteServer
         </h1>
 
         <div class="post-meta-container">
@@ -219,7 +219,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 16:15:23" itemprop="dateModified" datetime="2024-10-22T16:15:23+08:00">2024-10-22</time>
+      <time title="修改时间：2024-10-22 19:54:34" itemprop="dateModified" datetime="2024-10-22T19:54:34+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -240,11 +240,20 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><strong>1.准备工作</strong></p>
+    <div class="post-body" itemprop="articleBody"><style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p><strong>1.准备工作</strong></p>
 <p>在VsCode中安装下面的插件：<br />
 Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
 Remote Development;<br />
 于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<span id="more"></span>
 <figure>
 <img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" />
 <figcaption aria-hidden="true">img</figcaption>
@@ -280,13 +289,13 @@ id="但是最最最最重要的一点是可以使用motionpro连接校园网这�
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/09/26/git%E6%93%8D%E4%BD%9C/" rel="prev" title="git操作">
-                  <i class="fa fa-chevron-left"></i> git操作
+                <a href="/2024/09/26/git%E6%93%8D%E4%BD%9C/" rel="prev" title="gitOperation">
+                  <i class="fa fa-chevron-left"></i> gitOperation
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/20/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="next" title="上传文件到服务器">
-                  上传文件到服务器 <i class="fa fa-chevron-right"></i>
+                <a href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/" rel="next" title="runMatlabInLinuxCommandLine">
+                  runMatlabInLinuxCommandLine <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
