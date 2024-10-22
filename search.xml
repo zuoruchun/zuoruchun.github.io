@@ -76,32 +76,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MaoBook Chapter 3</title>
-    <url>/2023/05/23/Maobook2009%20Chapter3/</url>
-    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
-<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
-<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
-<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
-<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
-<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
-<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
-<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
-<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
-<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int<em>{t_0}^t(traceF(s)-\frac{1}{2}\sum</em>{k=1}^mtrace[G<em>k(s)G_k(s)])ds+\sum</em>{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
-<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
-<p>$y(t)=y<em>0exp[\int</em>{t<em>0}^t(a(s)-\frac{1}{2}\sum</em>{k=1}^mb<em>k^2(s))ds+\sum</em>{k=1}^mb_k(s)dB_k(s)]$</p>
-<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
-<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
-<p>$x(t)=\Phi(t)(x<em>0+\int</em>{t<em>0}^t\Phi^{-1}(s)[f(s)-\sum</em>{k=1}^mG<em>k(s)g_k(s)]ds+\sum</em>{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
-<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
-      <categories>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows切换Macbook</title>
     <url>/2024/08/07/Windows%E5%88%87%E6%8D%A2%E6%88%90Macbook/</url>
     <content><![CDATA[<div class="table-container">
@@ -206,45 +180,30 @@
       </tags>
   </entry>
   <entry>
-    <title>git操作</title>
-    <url>/2024/09/26/git%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
-<p><code>git init</code> - 初始化仓库.</p>
-<p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m &quot;提交信息&quot;</code> - 将暂存区内容添加到仓库中.</p>
-<p><code>git push</code> - 推到github</p>
-]]></content>
+    <title>MaoBook Chapter 3</title>
+    <url>/2023/05/23/Maobook2009%20Chapter3/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
+<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
+<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
+<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
+<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
+<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
+<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
+<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
+<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
+<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int<em>{t_0}^t(traceF(s)-\frac{1}{2}\sum</em>{k=1}^mtrace[G<em>k(s)G_k(s)])ds+\sum</em>{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
+<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
+<p>$y(t)=y<em>0exp[\int</em>{t<em>0}^t(a(s)-\frac{1}{2}\sum</em>{k=1}^mb<em>k^2(s))ds+\sum</em>{k=1}^mb_k(s)dB_k(s)]$</p>
+<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
+<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
+<p>$x(t)=\Phi(t)(x<em>0+\int</em>{t<em>0}^t\Phi^{-1}(s)[f(s)-\sum</em>{k=1}^mG<em>k(s)g_k(s)]ds+\sum</em>{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
+<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>]]></content>
       <categories>
-        <category>计算机常识</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>POINTS</title>
-    <url>/2023/05/23/points/</url>
-    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
-<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
-<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
-]]></content>
-      <categories>
-        <category>零零散散</category>
+        <category>随机过程</category>
       </categories>
       <tags>
-        <tag>随手</tag>
+        <tag>MaoBook2008</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>利用ssh,在本地编写代码，使用远程服务器编译</title>
-    <url>/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
-<p><img src="/pic/ssh配置1.png" alt="img" title="ssh配置1"></p>
-<p>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host name			# 这个可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号</span><br><span class="line">	User linxiao	# 登陆用户名</span><br></pre></td></tr></table></figure>
-<p>保存配置文件。<br>之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码, 然后使用服务器的poython解释器编译文件了。<br><img src="/pic/ssh配置2.png" alt="img" title="ssh配置2"></p>
-<p>ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
-<h1 id="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"><a href="#但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！" class="headerlink" title="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"></a>但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>]]></content>
-      <categories>
-        <category>计算机常识</category>
-      </categories>
   </entry>
   <entry>
     <title>解决使用git时遇到Failed to connect to github.com port 443</title>
@@ -270,6 +229,48 @@
       <tags>
         <tag>Bug</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>POINTS</title>
+    <url>/2023/05/23/points/</url>
+    <content><![CDATA[<p>Cauchy分布期望，方差，高阶矩不存在</p>
+<p>关于随机变量，我们渴望知道他的分布，if not，退而求其次，求该随机变量的期望，方差等。</p>
+<p>一般而言stopping time的使用是用来，限制在有界的区间中，例如我们定义 $\tau:=${$t\ge 0, |X(t)|\ge R$ }, 显然这是一个stopping time，那么就有$X(\tau)=R$, 于是$EX(t\wedge\tau)\le R$，这样就是用stopping time$\tau$限制了是X可积的. 难怪一些局部可积，局部鞅都用stopping time定义，就是为了保持有界性质</p>
+]]></content>
+      <categories>
+        <category>零零散散</category>
+      </categories>
+      <tags>
+        <tag>随手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git操作</title>
+    <url>/2024/09/26/git%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
+<p><code>git init</code> - 初始化仓库.</p>
+<p><code>git add .</code> - 添加文件到暂存区。</p>
+<p><code>git commint -m &quot;提交信息&quot;</code> - 将暂存区内容添加到仓库中.</p>
+<p><code>git push</code> - 推到github</p>
+]]></content>
+      <categories>
+        <category>计算机常识</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>利用ssh,在本地编写代码，使用远程服务器编译</title>
+    <url>/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p><strong>1.准备工作</strong><br>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<p><img src="/pic/ssh配置1.png" alt="img" title="ssh配置1"></p>
+<p><strong>2.获取服务器的username和ip</strong><br>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；<br>在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<br><img src="/pic/ip.png" alt="img" title="ip"></p>
+<p><strong>3.连接</strong><br>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host name			# 这个可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号</span><br><span class="line">	User linxiao	# 登陆用户名</span><br></pre></td></tr></table></figure>
+<p>保存配置文件。<br>之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码, 然后使用服务器的poython解释器编译文件了。<br><img src="/pic/ssh配置2.png" alt="img" title="ssh配置2"></p>
+<p>ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
+<h1 id="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"><a href="#但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！" class="headerlink" title="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"></a>但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>]]></content>
+      <categories>
+        <category>计算机常识</category>
+      </categories>
   </entry>
   <entry>
     <title>一些定义</title>

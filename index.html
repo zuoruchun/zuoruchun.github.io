@@ -303,7 +303,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 15:22:02" itemprop="dateModified" datetime="2024-10-22T15:22:02+08:00">2024-10-22</time>
+      <time title="修改时间：2024-10-22 15:42:54" itemprop="dateModified" datetime="2024-10-22T15:42:54+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -325,11 +325,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+          <p><strong>1.准备工作</strong><br>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
 <p><img src="/pic/ssh配置1.png" alt="img" title="ssh配置1"></p>
-<p>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
+<p><strong>2.获取服务器的username和ip</strong><br>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；<br>在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<br><img src="/pic/ip.png" alt="img" title="ip"></p>
+<p><strong>3.连接</strong><br>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name			# 这个可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号</span><br><span class="line">	User linxiao	# 登陆用户名</span><br></pre></td></tr></table></figure>
-<p>保存配置文件。<br>之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码, 然后使用服务器的poython解释器编译文件了。<br><img src="/pic/ssh配置2.png" alt="img" title="ssh配置2"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/19/ssh%E5%88%A9%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A9%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E8%AF%91/#more" rel="contents">
