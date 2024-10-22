@@ -227,13 +227,16 @@
     <div class="post-body" itemprop="articleBody">
           <p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
 <p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
-<p><strong>设置环境变量</strong></p>
-<ol>
-<li>在命令行中运行这个命令<code>vim ~/.bashrc</code>。</li>
-<li>尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.</li>
-<li>距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</li>
-</ol>
-<p><strong>添加shell脚本</strong><br>打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code> 的代码，<br>下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。<br></p>
+<p><strong>设置环境变量</strong> 1.
+在命令行中运行这个命令<code>vim ~/.bashrc</code>。 2.
+尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.
+3.
+距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</p>
+<p><strong>添加shell脚本</strong>
+打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code>
+的代码，
+下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。
+</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% test.m</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">    <span class="built_in">i</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/20/%E5%9C%A8linux%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cmatlab%E7%A8%8B%E5%BA%8F/#more" rel="contents">
@@ -303,7 +306,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 15:42:54" itemprop="dateModified" datetime="2024-10-22T15:42:54+08:00">2024-10-22</time>
+      <time title="修改时间：2024-10-22 15:49:27" itemprop="dateModified" datetime="2024-10-22T15:49:27+08:00">2024-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -325,10 +328,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>1.准备工作</strong><br>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
-<p><img src="/pic/ssh配置1.png" alt="img" title="ssh配置1"></p>
-<p><strong>2.获取服务器的username和ip</strong><br>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；<br>在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<br><img src="/pic/ip.png" alt="img" title="ip"></p>
-<p><strong>3.连接</strong><br>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去</p>
+          <p><strong>1.准备工作</strong> 在VsCode中安装下面的插件：<br>
+Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
+Remote Development;<br>
+于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<figure>
+<img src="/pic/ssh配置1.png" title="ssh配置1" alt="img">
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p><strong>2.获取服务器的username和ip</strong>
+在linux机器的终端输入<code>whoami</code>,终端返回的即是username；
+在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；
+<img src="/pic/ip.png" title="ip" alt="img"></p>
+<p><strong>3.连接</strong> 点击加号, 输入<code>ssh username@ip</code>,
+之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <img src="/pic/config.jpg" title="config" alt="img"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name			# 这个可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号</span><br><span class="line">	User linxiao	# 登陆用户名</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -418,7 +431,8 @@
           <p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
 <p><code>git init</code> - 初始化仓库.</p>
 <p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m &quot;提交信息&quot;</code> - 将暂存区内容添加到仓库中.</p>
+<p><code>git commint -m "提交信息"</code> -
+将暂存区内容添加到仓库中.</p>
 <p><code>git push</code> - 推到github</p>
           <!--noindex-->
             <div class="post-button">
@@ -506,9 +520,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
+使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
 <p>在SSH配置完成后的下一步，它的配置如下</p>
-<p><img src="C:\Users\Administrator\blog\source\pic\DataGrip配置失败.png" alt="DataGrip配置失败"></p>
+<figure>
+<img src="C:\Users\Administrator\blog\source\pic\DataGrip配置失败.png" alt="DataGrip配置失败">
+<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
+</figure>
 <p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
           <!--noindex-->
             <div class="post-button">
@@ -595,10 +613,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t connect to server</p>
-<h1 id="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"><a href="#一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？" class="headerlink" title="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"></a>一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？</h1><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/xxx/******.git/">https://github.com/xxx/******.git/</a>‘: Failed to connect to github.com port 443 after 21090 ms: Couldn’t connect to server</p>
+          <p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
+ms: Couldn‘t connect to server #
+一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
+fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
+connect to github.com port 443 after 21090 ms: Couldn't connect to
+server</p>
 <p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
 <p>解决办法：</p>
+<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
+<p>设置-&gt;网络和Internet-&gt;代理</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/08/20/hexo%E7%AB%AF%E5%8F%A3/#more" rel="contents">
@@ -684,12 +708,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令</p>
-<ul>
-<li><strong>git clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作</li>
-<li><strong>git s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态</li>
-<li><strong>推送远端</strong>：<code>git g</code> -&gt; <code>git d</code></li>
-</ul>
+          <p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令
+- <strong>git
+clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -
+<strong>git
+s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态
+- <strong>推送远端</strong>：<code>git g</code> -&gt;
+<code>git d</code></p>
 
       
     </div>
@@ -774,8 +799,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="table-container">
-<table>
+          <table>
 <thead>
 <tr>
 <th>Windows软件</th>
@@ -866,7 +890,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 
       
     </div>
@@ -936,7 +959,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>导数那个题 </p>
+          <p>导数那个题</p>
 
       
     </div>
@@ -1021,13 +1044,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
-<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p>
-<p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p>
-<ol>
-<li>$N(t)$是非负整数.</li>
-<li>$N(t)$单调不减.</li>
-<li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li>
+          <p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为<span class="math inline">\(R^+\)</span>非负有限值右连续增函数.
+两个增函数的差为<strong>有限变差过程</strong></p>
+<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和<span class="math inline">\([X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le
+t}(\Delta X(s))^2\)</span>.</p>
+<p>随机过程{<span class="math inline">\(N(t),t\ge
+0\)</span>}称为<strong>计数过程</strong>，如果它满足：</p>
+<ol type="1">
+<li><span class="math inline">\(N(t)\)</span>是非负整数.</li>
+<li><span class="math inline">\(N(t)\)</span>单调不减.</li>
+<li><span class="math inline">\(N(t)-N(s)\)</span>表示<span class="math inline">\((s,t]\)</span>内发生的事件.</li>
 </ol>
 <p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p>
           <!--noindex-->
@@ -1121,9 +1147,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><h3 id="8-1-Introduction"><a href="#8-1-Introduction" class="headerlink" title="8.1 Introduction"></a>8.1 Introduction</h3><p>$\qquad$ <strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p>
+          <h1 id="chapter-8-calculus-for-semimartingales">Chapter 8 Calculus For
+Semimartingales</h1>
+<h3 id="introduction">8.1 Introduction</h3>
+<p><span class="math inline">\(\qquad\)</span> <strong>Definition
+8.1(半鞅)：</strong>若右连左极函数<span class="math inline">\(S(t)\)</span>是由局部鞅<span class="math inline">\(M(t)\)</span>和有限变差过程<span class="math inline">\(A(t)\)</span>的和组成，其中<span class="math inline">\(S(0)=A(0)=0\)</span>,即<span class="math inline">\(S(t)=S(0)+M(t)+A(t)\)</span>，则称<span class="math inline">\(S(t)\)</span>为半鞅</p>
 <p>鞅一定是半鞅，反之不一定.</p>
-<p> 这里给出几个半鞅的经典例子:</p>
+<p>这里给出几个半鞅的经典例子:</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/06/01/%E9%9A%8F%E6%9C%BA%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-Chapter-8/#more" rel="contents">
