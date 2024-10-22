@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="有限变差过程：一过程称为增过程，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为有限变差过程 显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)&#x3D;[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$. 随机过程{$N(t),t\ge 0$}称为计数过程，如果它满">
+    <meta name="description" content="有限变差过程：一过程称为增过程，如果它的所有轨道为\(R^+\)非负有限值右连续增函数. 两个增函数的差为有限变差过程 显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和\([X,X]  (t)&#x3D;[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2\). 随机过程{\(N(t),t\ge 0\)}称为计数过">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些定义">
 <meta property="og:url" content="https://zuoruchun.github.io/2023/06/06/%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="有限变差过程：一过程称为增过程，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为有限变差过程 显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)&#x3D;[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$. 随机过程{$N(t),t\ge 0$}称为计数过程，如果它满">
+<meta property="og:description" content="有限变差过程：一过程称为增过程，如果它的所有轨道为\(R^+\)非负有限值右连续增函数. 两个增函数的差为有限变差过程 显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和\([X,X]  (t)&#x3D;[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2\). 随机过程{\(N(t),t\ge 0\)}称为计数过">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-06T13:33:36.000Z">
 <meta property="article:modified_time" content="2023-06-07T03:25:32.000Z">
@@ -127,13 +127,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -236,19 +236,28 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为$R^+$非负有限值右连续增函数. 两个增函数的差为<strong>有限变差过程</strong></p>
-<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和$[X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le t}(\Delta X(s))^2$.</p>
-<p>随机过程{$N(t),t\ge 0$}称为<strong>计数过程</strong>，如果它满足：</p>
-<ol>
-<li>$N(t)$是非负整数.</li>
-<li>$N(t)$单调不减.</li>
-<li>$N(t)-N(s)$表示$(s,t]$内发生的事件.</li>
+    <div class="post-body" itemprop="articleBody"><p>有限变差过程：一过程称为<strong>增过程</strong>，如果它的所有轨道为<span
+class="math inline">\(R^+\)</span>非负有限值右连续增函数.
+两个增函数的差为<strong>有限变差过程</strong></p>
+<p>显然，有限变差过程是右连左极过程.对于任意有限变差函数，都可以分解成连续过程与跳过程的和<span
+class="math inline">\([X,X]  (t)=[X,X] ^c (t)+\sum\limits_{0&lt;s\le
+t}(\Delta X(s))^2\)</span>.</p>
+<p>随机过程{<span class="math inline">\(N(t),t\ge
+0\)</span>}称为<strong>计数过程</strong>，如果它满足：</p>
+<ol type="1">
+<li><span class="math inline">\(N(t)\)</span>是非负整数.</li>
+<li><span class="math inline">\(N(t)\)</span>单调不减.</li>
+<li><span class="math inline">\(N(t)-N(s)\)</span>表示<span
+class="math inline">\((s,t]\)</span>内发生的事件.</li>
 </ol>
 <p>一个计数过程称为<strong>Poisson过程</strong>，如果它满足：</p>
-<ol>
-<li>$N_0=0$.</li>
-<li>$N(t)$是独立平稳增量过程.</li>
-<li>当$h\rightarrow 0$,  $\mathbb P(\Delta_hN_t=1)=\lambda h+o(h)$,$\mathbb P(\Delta_hN_t\ge 2)=o(h)$.</li>
+<ol type="1">
+<li><span class="math inline">\(N_0=0\)</span>.</li>
+<li><span class="math inline">\(N(t)\)</span>是独立平稳增量过程.</li>
+<li>当<span class="math inline">\(h\rightarrow 0\)</span>, <span
+class="math inline">\(\mathbb P(\Delta_hN_t=1)=\lambda
+h+o(h)\)</span>,<span class="math inline">\(\mathbb P(\Delta_hN_t\ge
+2)=o(h)\)</span>.</li>
 </ol>
 <p>是一个离散的计数过程，并且是纯跳过程，跳跃步长是1，每次跳跃要不是1要不是0</p>
 
