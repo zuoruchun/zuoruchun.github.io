@@ -234,22 +234,12 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
-target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
-使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
 <p>在SSH配置完成后的下一步，它的配置如下</p>
-<figure>
-<img src="C:\Users\Administrator\blog\source\pic\DataGrip配置失败.png"
-alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
+<p><img src="C:\Users\Administrator\blog\source\pic\DataGrip配置失败.png" alt="DataGrip配置失败"></p>
 <p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
 <p>尝试了很多次都没有办法，最后使用PyCharm来操作数据库，偶然成功了，最后发现，这里的HOST地址应该保留默认值localhost不变才能够连接成功</p>
-<figure>
-<img src="C:\Users\Administrator\blog\source\pic\DataGrip配置成功.png"
-alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
+<p><img src="C:\Users\Administrator\blog\source\pic\DataGrip配置成功.png" alt="DataGrip配置失败"></p>
 <p>虽然不知道具体原因，但好在问题确实出现在这里，得到了解决。</p>
 
     </div>
