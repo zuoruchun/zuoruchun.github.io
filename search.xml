@@ -251,16 +251,16 @@
     
     
     <entry>
-      <title>MaoBook2008 Chapter2</title>
-      <link href="/2023/05/23/SDE/Maobook2008%20Chapter2/"/>
-      <url>/2023/05/23/SDE/Maobook2008%20Chapter2/</url>
+      <title>再见沈以诚</title>
+      <link href="/2023/05/23/Emotion/GoobyeEason/"/>
+      <url>/2023/05/23/Emotion/GoobyeEason/</url>
       
-        <content type="html"><![CDATA[<h1 id="第二章随机微分方程">第二章：随机微分方程</h1><h2 id="第三节解的存在唯一性">第三节：解的存在唯一性</h2><p>在Lipschitz和线性Lineargrowth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p><p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Lineargrowth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Lineargrowth条件也能得到解的存在唯一性。</p><p>顺便一提，Lipschitz可以推出局部Lipschitz，Lineargrowth可以推出Monotone条件。</p><p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p><h3 id="第四节lp估计">第四节：<spanclass="math inline">\(L^p\)</span>估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Lineargrowth条件，则SDE解的p阶矩都是连续的。</p><p>在类似于Monotone的条件下，p阶矩是exp收敛的</p><h3 id="第五节almost-surely-asymptotic-estimates">第五节：Almost SurelyAsymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p><p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p><figure><img src="/pic/Borel–Cantelli’s%20lemma.png"title="Borel–Cantelli’s lemma" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><figure><img src="/pic/Exponential%20moment%20inequality.png"title="Exponential moment inequality.png" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><h3 id="第六节caratheodory估计">第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p><p>TH6.4在<span class="math inline">\(f,g\)</span>连续，<spanclass="math inline">\(x_0\)</span>有界且<spanclass="math inline">\(F_{t_0}\)</span>可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p><h3 id="第七节euler-maruyama估计">第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p><p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p><h6id="但是为什么看到的论文上只提到过euler-maruyama方法而没见过caratheodory方法">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3id="第八节pde联系sde的费曼-卡兹feynman-kac公式">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂...不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p><h3 id="第九节sde的解是merkov过程">第九节：SDE的解是Merkov过程</h3><p>看不懂..........一堆莫名其妙以至于看不懂的转移概率密度<spanclass="math inline">\(P(X,s;A,t)\)</span>以及<spanclass="math inline">\(\intP(y,r;A,t)P(x,s;dy,r)\)</span>,下次问问再看</p>]]></content>
+        <content type="html"><![CDATA[<p>属于我的沈以诚时代已经结束了。</p><p>突然挺喜欢苏打绿的歌；</p>]]></content>
       
       
       <categories>
           
-          <category> Math </category>
+          <category> Linxiao </category>
           
       </categories>
       
@@ -289,11 +289,11 @@
     
     
     <entry>
-      <title>MaoBook2008 Chapter3</title>
-      <link href="/2023/05/23/SDE/Maobook2009%20Chapter3/"/>
-      <url>/2023/05/23/SDE/Maobook2009%20Chapter3/</url>
+      <title>MaoBook2008 Chapter2</title>
+      <link href="/2023/05/23/SDE/Maobook2008%20Chapter2/"/>
+      <url>/2023/05/23/SDE/Maobook2008%20Chapter2/</url>
       
-        <content type="html"><![CDATA[<h1 id="introduction">Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<span class="math inline">\(dN_t=r(t)N(t)dt+\sigma(t)N(t)dB(t),其中t&gt;0\\\)</span>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解， <spanclass="math inline">\(N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2(s)}{2})ds+\int_0^t \sigma(s)dB(s))\\\)</span></p><p>现在我们来考虑一个d维的SDE： <spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\\\)</span>其中<spanclass="math inline">\(F(.),G_K(.)\)</span>是d*d的实值矩阵，<spanclass="math inline">\(f(.),G_K(.)\)</span>是<spanclass="math inline">\(R^d\)</span>的实值函数，<spanclass="math inline">\(B(t)=(B_1(t),...,B_m(t))^T\)</span>。</p><p>若<spanclass="math inline">\(f(t)=g_1(t)=...=g_m(t)=0\)</span>，那么SDE称为是线性的；如果<spanclass="math inline">\(G_1(t)=,...,=G_m(t)=0\)</span>，则称SDE是狭义线性的；若<spanclass="math inline">\(F,f,G_k,g_k\)</span>与t是独立的，则称SDE是自治的。</p><h1 id="stochastic-liouvilles-formula">Stochastic Liouville'sFormula</h1><p>考虑齐次的SDE:</p><p><spanclass="math inline">\(dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)\)</span></p><p><spanclass="math inline">\(\Phi_j(t)\)</span>是这个SDE的解，则称<spanclass="math inline">\(\Phi(t)=(\Phi_1(t),...,\Phi_d(t))\)</span>是这个齐次SDE的基矩阵</p><p>，即<spanclass="math inline">\(d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)\)</span>，</p><p><spanclass="math inline">\(Th2.1\)</span>,给定初值x(t_0)=x_0,则这个齐次SDE的解是<spanclass="math inline">\(x(t)=\Phi(t)x_0\)</span></p><p>定义<spanclass="math inline">\(W(t)=det.\Phi(t)\)</span>,是基矩阵的朗斯基行列式。</p><p>Th2.2：W(t)有以下显示表达，<spanclass="math inline">\(W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].\)</span></p><p>Lemma2.3：线性标量SDE:<spanclass="math inline">\(dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)\)</span>解的显式表达式是</p><p><spanclass="math inline">\(y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]\)</span></p><h1 id="the-variation-of-constants-formula">The Variation-of-ConstantsFormula</h1><p>考虑<spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\)</span>的解，</p><p>若<spanclass="math inline">\(\Phi(t)\)</span>是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p><p><spanclass="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))\)</span></p><h1 id="case-studies">Case Studies</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="第二章随机微分方程">第二章：随机微分方程</h1><h2 id="第三节解的存在唯一性">第三节：解的存在唯一性</h2><p>在Lipschitz和线性Lineargrowth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p><p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Lineargrowth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Lineargrowth条件也能得到解的存在唯一性。</p><p>顺便一提，Lipschitz可以推出局部Lipschitz，Lineargrowth可以推出Monotone条件。</p><p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p><h3 id="第四节lp估计">第四节：<spanclass="math inline">\(L^p\)</span>估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Lineargrowth条件，则SDE解的p阶矩都是连续的。</p><p>在类似于Monotone的条件下，p阶矩是exp收敛的</p><h3 id="第五节almost-surely-asymptotic-estimates">第五节：Almost SurelyAsymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p><p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p><figure><img src="/pic/Borel–Cantelli’s%20lemma.png"title="Borel–Cantelli’s lemma" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><figure><img src="/pic/Exponential%20moment%20inequality.png"title="Exponential moment inequality.png" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><h3 id="第六节caratheodory估计">第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p><p>TH6.4在<span class="math inline">\(f,g\)</span>连续，<spanclass="math inline">\(x_0\)</span>有界且<spanclass="math inline">\(F_{t_0}\)</span>可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p><h3 id="第七节euler-maruyama估计">第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p><p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p><h6id="但是为什么看到的论文上只提到过euler-maruyama方法而没见过caratheodory方法">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3id="第八节pde联系sde的费曼-卡兹feynman-kac公式">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂...不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p><h3 id="第九节sde的解是merkov过程">第九节：SDE的解是Merkov过程</h3><p>看不懂..........一堆莫名其妙以至于看不懂的转移概率密度<spanclass="math inline">\(P(X,s;A,t)\)</span>以及<spanclass="math inline">\(\intP(y,r;A,t)P(x,s;dy,r)\)</span>,下次问问再看</p>]]></content>
       
       
       <categories>
@@ -308,16 +308,16 @@
     
     
     <entry>
-      <title>再见沈以诚</title>
-      <link href="/2023/05/23/Emotion/GoobyeEason/"/>
-      <url>/2023/05/23/Emotion/GoobyeEason/</url>
+      <title>MaoBook2008 Chapter3</title>
+      <link href="/2023/05/23/SDE/Maobook2009%20Chapter3/"/>
+      <url>/2023/05/23/SDE/Maobook2009%20Chapter3/</url>
       
-        <content type="html"><![CDATA[<p>属于我的沈以诚时代已经结束了。</p><p>突然挺喜欢苏打绿的歌；</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="introduction">Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<span class="math inline">\(dN_t=r(t)N(t)dt+\sigma(t)N(t)dB(t),其中t&gt;0\\\)</span>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解， <spanclass="math inline">\(N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2(s)}{2})ds+\int_0^t \sigma(s)dB(s))\\\)</span></p><p>现在我们来考虑一个d维的SDE： <spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\\\)</span>其中<spanclass="math inline">\(F(.),G_K(.)\)</span>是d*d的实值矩阵，<spanclass="math inline">\(f(.),G_K(.)\)</span>是<spanclass="math inline">\(R^d\)</span>的实值函数，<spanclass="math inline">\(B(t)=(B_1(t),...,B_m(t))^T\)</span>。</p><p>若<spanclass="math inline">\(f(t)=g_1(t)=...=g_m(t)=0\)</span>，那么SDE称为是线性的；如果<spanclass="math inline">\(G_1(t)=,...,=G_m(t)=0\)</span>，则称SDE是狭义线性的；若<spanclass="math inline">\(F,f,G_k,g_k\)</span>与t是独立的，则称SDE是自治的。</p><h1 id="stochastic-liouvilles-formula">Stochastic Liouville'sFormula</h1><p>考虑齐次的SDE:</p><p><spanclass="math inline">\(dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)\)</span></p><p><spanclass="math inline">\(\Phi_j(t)\)</span>是这个SDE的解，则称<spanclass="math inline">\(\Phi(t)=(\Phi_1(t),...,\Phi_d(t))\)</span>是这个齐次SDE的基矩阵</p><p>，即<spanclass="math inline">\(d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)\)</span>，</p><p><spanclass="math inline">\(Th2.1\)</span>,给定初值x(t_0)=x_0,则这个齐次SDE的解是<spanclass="math inline">\(x(t)=\Phi(t)x_0\)</span></p><p>定义<spanclass="math inline">\(W(t)=det.\Phi(t)\)</span>,是基矩阵的朗斯基行列式。</p><p>Th2.2：W(t)有以下显示表达，<spanclass="math inline">\(W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].\)</span></p><p>Lemma2.3：线性标量SDE:<spanclass="math inline">\(dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)\)</span>解的显式表达式是</p><p><spanclass="math inline">\(y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]\)</span></p><h1 id="the-variation-of-constants-formula">The Variation-of-ConstantsFormula</h1><p>考虑<spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\)</span>的解，</p><p>若<spanclass="math inline">\(\Phi(t)\)</span>是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p><p><spanclass="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))\)</span></p><h1 id="case-studies">Case Studies</h1>]]></content>
       
       
       <categories>
           
-          <category> Linxiao </category>
+          <category> Math </category>
           
       </categories>
       
