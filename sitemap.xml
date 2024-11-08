@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/11/08/Nomorenomore/</loc>
+    <loc>https://zuoruchun.github.io/2023/11/08/Emotion/Nomorenomore/</loc>
     
     <lastmod>2024-11-08</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/07/SoftwareWindowsSwitchMtoMacbook/</loc>
+    <loc>https://zuoruchun.github.io/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/10/19/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/19/Useful%20use/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/05/23/GoobyeEason/</loc>
+    <loc>https://zuoruchun.github.io/2023/05/23/Emotion/GoobyeEason/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/06/06/SomePoints/</loc>
+    <loc>https://zuoruchun.github.io/2023/06/06/SDE/SomePoints/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/06/09/WriteCasually/</loc>
+    <loc>https://zuoruchun.github.io/2023/06/09/Useful%20use/WriteCasually/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/10/22/UploadFiletoServer/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/22/Useful%20use/UploadFiletoServer/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/07/HexoUseMethods/</loc>
+    <loc>https://zuoruchun.github.io/2024/08/07/Git/HexoUseMethods/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/20/HexoPort/</loc>
+    <loc>https://zuoruchun.github.io/2024/08/20/Git/HexoPort/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/09/26/GitOperation/</loc>
+    <loc>https://zuoruchun.github.io/2024/09/26/Git/GitOperation/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/20/DataGripbug/</loc>
+    <loc>https://zuoruchun.github.io/2024/08/20/Computer/DataGripbug/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/10/20/RunMatlabProgramonLinuxCommandLine/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/20/Useful%20use/RunMatlabProgramonLinuxCommandLine/</loc>
     
     <lastmod>2024-10-22</lastmod>
     
@@ -229,7 +229,21 @@
 
   
   <url>
+    <loc>https://zuoruchun.github.io/categories/Triviality/</loc>
+    <lastmod>2024-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zuoruchun.github.io/categories/Big-data/</loc>
+    <lastmod>2024-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/</loc>
     <lastmod>2024-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -250,20 +264,6 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/categories/Linxiao/</loc>
-    <lastmod>2024-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/categories/Triviality/</loc>
-    <lastmod>2024-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zuoruchun.github.io/categories/ssh/</loc>
     <lastmod>2024-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -271,14 +271,14 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/categories/Math/</loc>
+    <loc>https://zuoruchun.github.io/categories/Linxiao/</loc>
     <lastmod>2024-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/</loc>
+    <loc>https://zuoruchun.github.io/categories/Math/</loc>
     <lastmod>2024-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
