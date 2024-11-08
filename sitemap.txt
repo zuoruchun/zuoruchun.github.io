@@ -29,5 +29,5 @@ https://zuoruchun.github.io/categories/Bugs/
 https://zuoruchun.github.io/categories/Linxiao/
 https://zuoruchun.github.io/categories/Triviality/
 https://zuoruchun.github.io/categories/ssh/
-https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/
 https://zuoruchun.github.io/categories/Math/
+https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/
