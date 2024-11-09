@@ -20,15 +20,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们">
+    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }   要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我">
 <meta property="og:type" content="article">
 <meta property="og:title" content="上传文件到服务器">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/10/22/Useful%20use/UploadFiletoServer/index.html">
 <meta property="og:site_name" content="Lin Xiao">
-<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们">
+<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }   要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/newhost.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/newhost.png">
+<meta property="og:image" content="https://zuoruchun.github.io/pic/turmius%E9%85%8D%E7%BD%AE.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/login.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/selecthost.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/SFTP.png">
@@ -118,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mac"><span class="nav-text">Mac</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows"><span class="nav-text">Windows</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac"><span class="nav-text">Mac</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -133,13 +134,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -239,28 +240,17 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
 <span id="more"></span>
-<h1 id="mac">Mac</h1>
-<p><strong>1.下载Termius</strong>
-首先点击下载<a target="_blank" rel="noopener" href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p>
+<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p><strong>1.下载Termius</strong><br>首先点击下载<a target="_blank" rel="noopener" href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p>
 <p><strong>2.配置ssh环境</strong></p>
-<p>首先，点击newhost <img src="/pic/newhost.png" title="newhost"
-alt="img" /></p>
+<p>首先，点击newhost<br><img src="/pic/newhost.png" alt="img" title="newhost"></p>
 <!-- <p align="center">
     <img src="/pic/newhost.png" alt="newhost" width="50%">
 </p> -->
-<p>然后按照自己的ip和username进行配置之后,点击connect。 <img
-src="/pic/turmius配置.png" title="turmius配置" alt="img" />
-出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png"
-title="login" alt="img" /> 在SFTP界面点击select
-host，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。
-<img src="/pic/selecthost.png" title="selecthost" alt="img" />
-下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png"
-title="SFTP" alt="img" /> 等待传输完成。</p>
-<h1 id="windows">Windows</h1>
-<p>点击下载<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a>
-对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p>
+<p>然后按照自己的ip和username进行配置之后,点击connect。<br><img src="/pic/turmius配置.png" alt="img" title="turmius配置"><br>出现下面的界面就意味着，登陆成功。<br><img src="/pic/login.png" alt="img" title="login"><br>在SFTP界面点击select host，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。<br><img src="/pic/selecthost.png" alt="img" title="selecthost"><br>下面需要上传什么文件就直接拖动文件就可以了。<br><img src="/pic/SFTP.png" alt="img" title="SFTP"><br>等待传输完成。</p>
+<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><p>点击下载<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a><br>对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p>
 <p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_49448331/article/details/125767862" style="color: #FF5733; text-decoration: none;">CSDN</a>的教程.</p>
 
     </div>

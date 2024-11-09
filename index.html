@@ -122,13 +122,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -307,6 +307,7 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
           <!--noindex-->
             <div class="post-button">
@@ -407,6 +408,7 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
 <p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
           <!--noindex-->
@@ -508,11 +510,12 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
+
+
+
 <p><strong>1.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br />
-Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
-Remote Development;<br />
-于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<p>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/19/Useful%20use/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/#more" rel="contents">
@@ -607,8 +610,7 @@ Remote Development;<br />
           <p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
 <p><code>git init</code> - 初始化仓库.</p>
 <p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m "提交信息"</code> -
-将暂存区内容添加到仓库中.</p>
+<p><code>git commint -m &quot;提交信息&quot;</code> - 将暂存区内容添加到仓库中.</p>
 <p><code>git push</code> - 推到github</p>
           <!--noindex-->
             <div class="post-button">
@@ -709,10 +711,9 @@ Remote Development;<br />
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
-target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
-使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/08/20/Computer/DataGripbug/#more" rel="contents">
@@ -812,12 +813,9 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/detai
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
-ms: Couldn‘t connect to server #
-一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
-fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
-connect to github.com port 443 after 21090 ms: Couldn't connect to
-server</p>
+
+<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t connect to server</p>
+<h1 id="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"><a href="#一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？" class="headerlink" title="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"></a>一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？</h1><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/xxx/******.git/">https://github.com/xxx/******.git/</a>‘: Failed to connect to github.com port 443 after 21090 ms: Couldn’t connect to server</p>
 <p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
           <!--noindex-->
             <div class="post-button">
@@ -827,186 +825,6 @@ server</p>
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wanye.png">
-      <meta itemprop="name" content="淋晓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lin Xiao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Lin Xiao">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/" class="post-title-link" itemprop="url">Windows切换成Macbook的一些软件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-08-07 20:54:36" itemprop="dateCreated datePublished" datetime="2024-08-07T20:54:36+08:00">2024-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-22 20:10:51" itemprop="dateModified" datetime="2024-10-22T20:10:51+08:00">2024-10-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Windows-and-MacBook-Software/" itemprop="url" rel="index"><span itemprop="name">Windows and MacBook Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 48%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr>
-<th>Windows软件</th>
-<th>软件优点</th>
-<th>Macbook替代</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Notepad++</td>
-<td>轻便的编辑器</td>
-<td>Notepad--</td>
-</tr>
-<tr>
-<td>clash</td>
-<td>为皮嗯代理</td>
-<td>clashX</td>
-</tr>
-<tr>
-<td>知云文献翻译</td>
-<td>翻译英文文献</td>
-<td></td>
-</tr>
-<tr>
-<td>SpaceSniffer</td>
-<td>按大小排列C，D等盘的文件</td>
-<td></td>
-</tr>
-<tr>
-<td>Xshell</td>
-<td>好用的ssh客户机</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Xftp</td>
-<td>通过ssh图形化传文件</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Adobe Acrobat DC</td>
-<td>便捷查看pdf等文件</td>
-<td>Adobe Acrobat DC</td>
-</tr>
-<tr>
-<td>Bandzip</td>
-<td>解/压缩文件</td>
-<td>Fastzip</td>
-</tr>
-<tr>
-<td>CopyQ</td>
-<td>比ctrl+V更好更好用的粘贴板工具</td>
-<td>iCopy</td>
-</tr>
-<tr>
-<td>Everything</td>
-<td>完爆Win自带的文件查找功能</td>
-<td>聚焦</td>
-</tr>
-<tr>
-<td>FormatFactory</td>
-<td>格式工厂</td>
-<td>格式工厂</td>
-</tr>
-<tr>
-<td>Potplayer</td>
-<td>播放视频软件</td>
-<td>IINA</td>
-</tr>
-<tr>
-<td>Quicker</td>
-<td>好用的工具箱</td>
-<td></td>
-</tr>
-<tr>
-<td>Typora</td>
-<td>好用的Markdown编辑器</td>
-<td>Typora</td>
-</tr>
-<tr>
-<td>火绒</td>
-<td>个人电脑最安全的管家</td>
-<td>柠檬清理</td>
-</tr>
-<tr>
-<td>Snipaste</td>
-<td>世界上最好用的截图软件</td>
-<td>Snipaste</td>
-</tr>
-</tbody>
-</table>
-
       
     </div>
 
@@ -1090,13 +908,189 @@ server</p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令
-- <strong>git
-clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -
-<strong>git
-s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态
-- <strong>推送远端</strong>：<code>git g</code> -&gt;
-<code>git d</code></p>
+          <p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令</p>
+<ul>
+<li><strong>git clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作</li>
+<li><strong>git s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态</li>
+<li><strong>推送远端</strong>：<code>git g</code> -&gt; <code>git d</code></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wanye.png">
+      <meta itemprop="name" content="淋晓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lin Xiao">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/" class="post-title-link" itemprop="url">Windows切换成Macbook的一些软件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-07 20:54:36" itemprop="dateCreated datePublished" datetime="2024-08-07T20:54:36+08:00">2024-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-22 20:10:51" itemprop="dateModified" datetime="2024-10-22T20:10:51+08:00">2024-10-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Windows-and-MacBook-Software/" itemprop="url" rel="index"><span itemprop="name">Windows and MacBook Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Windows软件</th>
+<th>软件优点</th>
+<th>Macbook替代</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Notepad++</td>
+<td>轻便的编辑器</td>
+<td>Notepad—</td>
+</tr>
+<tr>
+<td>clash</td>
+<td>为皮嗯代理</td>
+<td>clashX</td>
+</tr>
+<tr>
+<td>知云文献翻译</td>
+<td>翻译英文文献</td>
+<td></td>
+</tr>
+<tr>
+<td>SpaceSniffer</td>
+<td>按大小排列C，D等盘的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>Xshell</td>
+<td>好用的ssh客户机</td>
+<td>Terminus</td>
+</tr>
+<tr>
+<td>Xftp</td>
+<td>通过ssh图形化传文件</td>
+<td>Terminus</td>
+</tr>
+<tr>
+<td>Adobe Acrobat DC</td>
+<td>便捷查看pdf等文件</td>
+<td>Adobe Acrobat DC</td>
+</tr>
+<tr>
+<td>Bandzip</td>
+<td>解/压缩文件</td>
+<td>Fastzip</td>
+</tr>
+<tr>
+<td>CopyQ</td>
+<td>比ctrl+V更好更好用的粘贴板工具</td>
+<td>iCopy</td>
+</tr>
+<tr>
+<td>Everything</td>
+<td>完爆Win自带的文件查找功能</td>
+<td>聚焦</td>
+</tr>
+<tr>
+<td>FormatFactory</td>
+<td>格式工厂</td>
+<td>格式工厂</td>
+</tr>
+<tr>
+<td>Potplayer</td>
+<td>播放视频软件</td>
+<td>IINA</td>
+</tr>
+<tr>
+<td>Quicker</td>
+<td>好用的工具箱</td>
+<td></td>
+</tr>
+<tr>
+<td>Typora</td>
+<td>好用的Markdown编辑器</td>
+<td>Typora</td>
+</tr>
+<tr>
+<td>火绒</td>
+<td>个人电脑最安全的管家</td>
+<td>柠檬清理</td>
+</tr>
+<tr>
+<td>Snipaste</td>
+<td>世界上最好用的截图软件</td>
+<td>Snipaste</td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
@@ -1181,7 +1175,7 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>导数那个题</p>
+          <p>导数那个题 </p>
 
       
     </div>

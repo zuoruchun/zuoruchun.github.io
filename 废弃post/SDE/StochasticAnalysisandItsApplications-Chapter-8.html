@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="lozswmbSQDc9uzNo_SpE9HsXZSFvGQk3KCIECqK5kWM">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Chapter 8 Calculus For Semimartingales8.1 Introduction$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定.  这里给出几个半鞅的经">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随机分析及其应用 Chapter8">
+<meta property="og:url" content="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/SDE/StochasticAnalysisandItsApplications-Chapter-8.html">
+<meta property="og:site_name" content="Lin Xiao">
+<meta property="og:description" content="Chapter 8 Calculus For Semimartingales8.1 Introduction$\qquad$ Definition 8.1(半鞅)：若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)&#x3D;A(0)&#x3D;0$,即$S(t)&#x3D;S(0)+M(t)+A(t)$，则称$S(t)$为半鞅 鞅一定是半鞅，反之不一定.  这里给出几个半鞅的经">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-01T14:19:36.000Z">
+<meta property="article:modified_time" content="2024-10-22T12:09:01.084Z">
+<meta property="article:author" content="淋晓">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/SDE/StochasticAnalysisandItsApplications-Chapter-8">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/SDE/StochasticAnalysisandItsApplications-Chapter-8.html","path":"废弃post/SDE/StochasticAnalysisandItsApplications-Chapter-8.html","title":"随机分析及其应用 Chapter8"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>随机分析及其应用 Chapter8 | Lin Xiao
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lin Xiao</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Calculus-For-Semimartingales"><span class="nav-text">Chapter 8 Calculus For Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-Introduction"><span class="nav-text">8.1 Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Predictable-Processes"><span class="nav-text">8.2 Predictable Processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-Doob%E2%80%93Meyer-Decomposition"><span class="nav-text">8.3 Doob–Meyer Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-Integrals-With-Respect-to-Semimartingales"><span class="nav-text">8.4 Integrals With Respect to Semimartingales</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-text">鞅的随机积分及其性质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8D%8A%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-text">半鞅的随机积分及其性质</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-Quadratic-Variation-and-Covariation"><span class="nav-text">8.5 Quadratic Variation and Covariation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-Ito%E2%80%99s-Formula-for-Continuous-Semimartingales"><span class="nav-text">8.6 Ito’s Formula for Continuous Semimartingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-8-Stochastic-Exponential"><span class="nav-text">8.8 Stochastic Exponential</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9E%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%8C%87%E6%95%B0"><span class="nav-text">鞅的随机指数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-9-Compensators-and-Sharp-Bracket-Process"><span class="nav-text">8.9 Compensators and Sharp Bracket Process</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E9%9E%85%E7%9A%84%E5%B0%96%E6%8B%AC%E5%8F%B7%E8%BF%87%E7%A8%8B"><span class="nav-text">平方可积鞅的尖括号过程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8D%8A%E9%9E%85%E7%9A%84%E8%BF%9E%E7%BB%AD%E9%9E%85%E5%88%86%E9%87%8F"><span class="nav-text">半鞅的连续鞅分量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="nav-text">随机积分存在的条件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%AF%E9%A2%84%E6%B5%8B%E4%BA%8C%E6%AC%A1%E5%8F%98%E5%B7%AE%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">可预测二次变差的性质</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-10-Ito%E2%80%99s-Formula-for-Semimartingales"><span class="nav-text">8.10 Ito’s Formula for Semimartingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-11-Stochastic-Exponential-and-Logarithm"><span class="nav-text">8.11 Stochastic Exponential and Logarithm</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="淋晓"
+      src="/images/wanye.png">
+  <p class="site-author-name" itemprop="name">淋晓</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zuoruchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zuoruchun" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ruchunzuo@gmail.com" title="E-Mail → mailto:ruchunzuo@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/loverlinxiao" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;loverlinxiao" rel="noopener me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+	 
+		<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=168663695&auto=1&height=90"></iframe> -->
+	 
+   </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">随机分析及其应用 Chapter8
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/%E5%BA%9F%E5%BC%83post/">废弃POST</a></li>
+            <li><a href="/%E5%BA%9F%E5%BC%83post/SDE/">SDE</a></li>
+            <li>STOCHASTICANALYSISANDITSAPPLICATIONS-CHAPTER-8</li>
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="Chapter-8-Calculus-For-Semimartingales"><a href="#Chapter-8-Calculus-For-Semimartingales" class="headerlink" title="Chapter 8 Calculus For Semimartingales"></a>Chapter 8 Calculus For Semimartingales</h1><h3 id="8-1-Introduction"><a href="#8-1-Introduction" class="headerlink" title="8.1 Introduction"></a>8.1 Introduction</h3><p>$\qquad$ <strong>Definition 8.1(半鞅)：</strong>若右连左极函数$S(t)$是由局部鞅$M(t)$和有限变差过程$A(t)$的和组成，其中$S(0)=A(0)=0$,即$S(t)=S(0)+M(t)+A(t)$，则称$S(t)$为半鞅</p>
+<p>鞅一定是半鞅，反之不一定.</p>
+<p> 这里给出几个半鞅的经典例子:</p>
+<p>1.$S(t)=B^2(t)$是半鞅，因为$B^2(t)-t$是鞅，$t$是有限变差过程.</p>
+<p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p>
+<p>满足以下性质的过程称为Poisson过程：</p>
+<ol>
+<li>$N(t)-N(s)$独立于过去，过去即为由$N_u$生成的$\sigma$域，其中$u \le s$.</li>
+<li>对于任意的$t&gt;s$，$N(t)-N(s)$有参数为$\lambda(t-s)$的$Poisson$分布.若$N(0)=0$，那么$N(t)$有$Pn(\lambda t)$分布.</li>
+<li>路径$N(t)$，$t≥0$，是关于$t$仅通过大小为1的跳跃改变的递增函数.</li>
+</ol>
+<p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果$S(t)$是半鞅，$f \in C^2$，那么$f(S(t))$也是半鞅.当然$f(S(t))$可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p>
+<p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
+<p>5.扩散过程是半鞅.可以给$dB(t)$看作是局部鞅，dt看作有限变差过程.</p>
+<h3 id="8-2-Predictable-Processes"><a href="#8-2-Predictable-Processes" class="headerlink" title="8.2 Predictable Processes"></a>8.2 Predictable Processes</h3><p>$\qquad$ 先回忆一下对于离散过程的可预测过程的定义：离散过程$H$是可预测的，如果$H<em>n$是$\mathcal F</em>{n-1}$可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
+<p>$\qquad$ 对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p>
+<ol>
+<li>左连续适应过程</li>
+<li>左连续适应过程的极限a.s.</li>
+<li>对于任意的停时$\tau$，$H<em>{\tau}$ 是$F</em>{\tau}$可测的，$\sigma$域由$A\cap {T&lt;t}$生成，其中$A\in \mathcal F_{tau}$</li>
+<li>可预测过程的$Borel$可测函数</li>
+</ol>
+<h3 id="8-3-Doob–Meyer-Decomposition"><a href="#8-3-Doob–Meyer-Decomposition" class="headerlink" title="8.3 Doob–Meyer Decomposition"></a>8.3 Doob–Meyer Decomposition</h3><p>$\qquad$ 若$X$是下鞅(or局部下鞅)，则存在一个局部鞅$M(t)$和唯一的递增预测过程$A(t)$，局部可积，使得：$X(t)=X(0)+M(t)+A(t)$.</p>
+<h3 id="8-4-Integrals-With-Respect-to-Semimartingales"><a href="#8-4-Integrals-With-Respect-to-Semimartingales" class="headerlink" title="8.4 Integrals With Respect to Semimartingales"></a>8.4 Integrals With Respect to Semimartingales</h3><p>$\qquad$ 关于半鞅的积分形式$\int_0^TH(t)dS(t)$，其中$S(t)$是半鞅。由于布朗运动是鞅，此时若$S(t)$是布朗运动的话，就变成了之前学过的$it\widehat{o}$积分.</p>
+<h6 id="鞅的随机积分及其性质"><a href="#鞅的随机积分及其性质" class="headerlink" title="鞅的随机积分及其性质"></a>鞅的随机积分及其性质</h6><p>$\qquad$ 在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，$H(t)$是简单的可测过程，$H(t)=H(0)I<em>0+\sum</em>{i=0}^{n-1}H<em>iI</em>{(T<em>i,T</em>{i+1}]}$,其中$T<em>i$是递增的停时，$H_i$是$\mathcal F</em>{T<em>i}$可测的，于是关于局部鞅的随机积分是如此定义的$\int_0^TH(t)dM(t)=\sum</em>{i=0}^{n-1}H<em>i(M</em>{T<em>{i+1}}-M</em>{T_i})$.</p>
+<ol>
+<li>局部鞅性质. 若M(t)是局部鞅，则积分$\int_0^t H(s)dM(s)$是局部鞅.</li>
+<li>等距性质. 若$M(t)$是平方可积鞅，$H$满足 $E(\int_0^TH^2(s)d[M,M] (s))&lt;\infty$, 那么$\int_0^t H(s)dM(s)$是期望为0，方差为$E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d[M,M] (t))$的平方可积鞅.</li>
+<li>如果局部鞅$M(t)$是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li>
+</ol>
+<h6 id="半鞅的随机积分及其性质"><a href="#半鞅的随机积分及其性质" class="headerlink" title="半鞅的随机积分及其性质"></a>半鞅的随机积分及其性质</h6><p>$\qquad$ $H(t)$是可预测过程，半鞅$S(t)$的随机积分形式为：$ \int_0^TH(t)dS(t)=\int_0^TH(t)dM(t)$<br />$+\int_0^TH(t)dA(t)$.</p>
+<p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p>
+<p>$\qquad$ $X$是半鞅，$H$是可预测过程，定义$(H\cdot X):=\int_0^tH(s)dX(s)$.</p>
+<ol>
+<li>$\Delta (H\cdot X)=H\Delta X$.不太明白</li>
+<li>如果$\tau$是停时，则$\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le \tau)dX(s)$<br />$=\int_0^tH(s)dX(s\land\tau)$.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li>
+<li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li>
+<li>若$Y(t)=\int_0^tH(s)dX(s)$是半鞅，K是可预测过程，定义$(K\cdot Y)(t)=\int_0^tK(s)dY(s)$，那么$K\cdot Y=K\cdot (H\cdot X)=(KH)\cdot X$,也就是说，$\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)$.</li>
+</ol>
+<h3 id="8-5-Quadratic-Variation-and-Covariation"><a href="#8-5-Quadratic-Variation-and-Covariation" class="headerlink" title="8.5 Quadratic Variation and Covariation"></a>8.5 Quadratic Variation and Covariation</h3><ul>
+<li>$\qquad$ 先回忆什么是二次协变差(方括号过程)，$X,Y$是半鞅，则他们的二次协变差为：<br />$[X,Y] (t)=lim\sum\limits<em>{i=1}^{n-1}(X(t</em>{i+1}^{n})-X(t<em>{i}^{n}))(Y(t</em>{i+1}^{n})-Y(t<em>{i}^{n}))$. 其中$\delta_n=max_i(t</em>{i+1}^n-t_{i}^n)\rightarrow0$.</li>
+</ul>
+<p>小知识点：布朗运动的二次方差为$[B,B] (t)=t$，Poisson过程的二次变差为：$[N,N] (t)=N(t)$.</p>
+<ol>
+<li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li>
+<li>[X,X] (t)是有限变差函数.</li>
+<li>[X,Y]是对称和双线性的; 即$[X,Y]=[Y,X]$,  $[\alpha X+Y,\beta U+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]$.</li>
+<li>极化恒等式；$[X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])$.</li>
+<li>[X,Y]是具有有限变差的正则右连续函数$(cadlag)$.这是由极化恒等式是两个递增函数的差证明的？</li>
+<li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，$\Delta[X,Y] (t)=\Delta X(t)\Delta Y(t)$.</li>
+<li>$X,Y$只要有一个是有限变差过程，那么$[X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\Delta Y(s)$.此条有以下推论：</li>
+</ol>
+<p>$\qquad$<strong>Corollar 8.5：</strong>如果$X(t)$是具有有限变差的连续半鞅过程，那么$X(t)$与其他任何半鞅的二次协方差都为0.</p>
+<p> 下面介绍随机积分的二次变差</p>
+<ul>
+<li>$[\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)] (t)=\int_0^tH(s)K(s)d[X,Y] (s)$.</li>
+</ul>
+<ul>
+<li>特别地，取$K(s)=1$, 就有<br /> $[\int_0^.H(s)dX(s),Y(s)] (t)=[\int_0^.H(s)dX(s),\int_0^.1dY(s)] (t)=\int_0^tH(s)d[X,Y] (s)$.</li>
+</ul>
+<h3 id="8-6-Ito’s-Formula-for-Continuous-Semimartingales"><a href="#8-6-Ito’s-Formula-for-Continuous-Semimartingales" class="headerlink" title="8.6 Ito’s Formula for Continuous Semimartingales"></a>8.6 Ito’s Formula for Continuous Semimartingales</h3><p>$\qquad$如果X是连续半鞅，f是二次连续可微的函数，那么f(X(t))是半鞅，并且有ito公式：</p>
+<ul>
+<li>$f(X(t))-f(X(0))=\int_0^tf’(X(s))dX(s)+\frac{1}{2}\int_0^tf’’(X(s))d[X,X] (s)$.</li>
+</ul>
+<h3 id="8-8-Stochastic-Exponential"><a href="#8-8-Stochastic-Exponential" class="headerlink" title="8.8 Stochastic Exponential"></a>8.8 Stochastic Exponential</h3><p>先回忆在章节5.2中的$ito$过程的随机指数：令$X$随机可微，$U$满足$U(t)=1+\int_0^tU(s)dX(s)$,$U$被称作是$X$的随机指数，记作$\varepsilon(X)$.在<strong>Theorem 5.2</strong>中给出这个方程的唯一解是$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X] (t)}$.</p>
+<p>下面讨论半鞅的随机指数，随机指数（也称为半鞅，或 Doleans-Dade 指数）是指数函数的随机类比。</p>
+<p><strong>Theorem 8.12：</strong>X是一个连续鞅，使得$U(t)=1+\int_0^tU(s-)dX(s)$成立，它的随机指数为 $U(t)=\varepsilon(X)(t)=e^{X(t)-X(0)-\frac{1}{2}[X,X]  (t)}$.</p>
+<p>X,Y是同一个空间的半鞅.随机指数具有的性质：</p>
+<ol>
+<li>$\varepsilon(X) (t)\varepsilon(Y) (t)=\varepsilon(X+Y+[X,Y]) (t)$.</li>
+<li>若X连续，X(0)=0，那么$(\varepsilon(X)(t))^{-1}=\varepsilon(-X+[X,X] (t))(t)$.</li>
+</ol>
+<h6 id="鞅的随机指数"><a href="#鞅的随机指数" class="headerlink" title="鞅的随机指数"></a>鞅的随机指数</h6><p>由于关于局部鞅的积分是局部鞅，所以$\varepsilon(X)(t)$是局部鞅，由于应用中一般需要鞅，下面利用Th7.21,7.35，给出随机指数是鞅的条件.</p>
+<p><strong>Theorem 8.14 ：</strong>M(t)是连续局部鞅，在0处为0，那么他的随机指数为$\varepsilon(X)(t)=e^{M(t)-\frac{1}{2}[M,M] (t)}$并且他是连续正局部鞅. 所以它是上鞅，可积，有限非减的期望，满足下列条件之一，则他就是鞅：</p>
+<ol>
+<li>$E(e^{M(T)-\frac{1}{2}[M,M] (T)})=1$</li>
+<li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)-[M,M] (t)}d[M,M] (s))&lt;\infty$.</li>
+<li>对于所有的t$\ge$0，$E(\int_0^te^{2M(s)}d[M,M] (s))&lt;\infty$.</li>
+</ol>
+<p>其中1是利用Th7.3；2,3是利用7.35；</p>
+<p><strong>Kazamaki’s Condition : </strong>M是连续局部鞅，在0处为0，若$e^{\frac{1}{2}M(t)}$是下鞅，那么$\varepsilon(M)$是鞅.</p>
+<p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若$e^{\frac{1}{2}M(T)}&lt;\infty$，那么$\varepsilon(M)$在[0,T]是鞅.</p>
+<p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足Kazamaki Condition</p>
+<p><strong>Noviikov’s Condition：</strong>M是连续局部鞅，在0处为0，若对于每个$t\le T$都有$E(e^{\frac{1}{2}[M,M] (t)})&lt;\infty$，那么$\varepsilon(M)$是均值为0的鞅.特别的，如果对于每个t都存在一个常数$K_t$使得$[M,M] (t)&lt;K_t$，那么$\varepsilon(M)(t)$是鞅，对于任意的$t\le T$.</p>
+<p>在前面证明布朗运动的Levy特征时，使用了$e^{uM(t)-\frac{u^2t}{2}}$是鞅，在这里使用随机指数给出证明。</p>
+<p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M] (t)=t，于是随机指数$U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}$是鞅.</p>
+<h3 id="8-9-Compensators-and-Sharp-Bracket-Process"><a href="#8-9-Compensators-and-Sharp-Bracket-Process" class="headerlink" title="8.9 Compensators and Sharp Bracket Process"></a>8.9 Compensators and Sharp Bracket Process</h3><p><strong>Compensator：</strong>$N(t)$是一个(局部)可积变差的适应过程，他的compensator $A(t)$是唯一的可预测过程使得$M(t)=N(t)-A(t)$是一个局部鞅.</p>
+<p>在固定的域流和概率下，compensator是唯一的.</p>
+<p><strong>Theorem 8.21：</strong>$N(t)$是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p>
+<p>$\mathcal PROOF：$回忆Doob-Meyer分解：$X$是(局部)下鞅，那么存在局部鞅$M(t)$和唯一递增的适应过程$A(t)$，使得$X(t)=X(0)+M(t)+A(t)$.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅. 因此$N$与Doob-meyer分解的X对应。</p>
+<p>回忆，半鞅X的二次方差过程$[M,M] (t)$是存在且非减的.</p>
+<p><strong>Sharp Bracket：</strong>半鞅$X$的尖括号(可预测的二次变差)过程$\langle X,X\rangle(t)$是$[X,X] (t)$的compensator.这就意味着$\langle X,X\rangle(t)$是唯一使$[X,X] (t)-\langle X,X\rangle(t)$成为局部鞅的可预测过程.</p>
+<p><strong>Theorem 8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么$[X,X] (t)=\langle X,X\rangle$.</p>
+<p>如此一来就很方便的找到了compensator.</p>
+<h6 id="平方可积鞅的尖括号过程"><a href="#平方可积鞅的尖括号过程" class="headerlink" title="平方可积鞅的尖括号过程"></a>平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若$M$使平方可积鞅，那么$M^2-[M,M] (t)$使鞅；由于$x^2$使凸函数，于是$M^2$是下鞅；在Doob-Meyer分解下，有以下定理：</p>
+<p><strong>Theorem 8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程$\langle M,M\rangle(t)$是唯一使$M^2-[M,M] (t)$是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$.</p>
+<p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p>
+<p><strong>Theorem 8.27：</strong>M是局部鞅，$0\le t\le T&lt;\infty$,在0处为0，对于所有的t都有$E\langle M,M\rangle&lt;\infty$，那么M是平方可积的鞅；并且$EM^2(t)=E[M,M] (t)=E\langle M,M\rangle(t)$. 当$T=\infty$和$sup_{t&lt;\infty}E\langle M,M\rangle(t)&lt;\infty$,则$M(t)$在$[0,\infty)$是平方可积鞅.</p>
+<p>由于连续局部鞅是局部平方可积的，从而有</p>
+<p><strong>Corollary 8.28 ：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p>
+<h6 id="半鞅的连续鞅分量"><a href="#半鞅的连续鞅分量" class="headerlink" title="半鞅的连续鞅分量"></a>半鞅的连续鞅分量</h6><p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和. 那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p>
+<p><strong>Definition 8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的. 局部鞅M,N是正交的如果MN是局部鞅. </p>
+<p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.$M=M^c+M^d$.半鞅$X(t)$可以分解成$X(t)=X(0)+M(t)+A(t)$. 其中$M(t)$是局部鞅，$M^c$被称为X的连续鞅分量，记为$X^{cm}$.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，  假若$X(t)=X(0)+M_1(t)+A_1(t)$是另一种分解，那么就有$(M-M_1)(t)=-(A-A_1)(t)$.因此$(M-M_1)$是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着$M^c-M^c_1=0$.这就证明了对于所有的半鞅分解$X^{cm}$是唯一的. 于是，就有下面的推论</p>
+<p><strong>Corollary 8.30 ：</strong>若X是有限变差的半鞅，这意味着半鞅X的分解中鞅部分为0，也就是说连续鞅部分也一定是0，即$X^{cm}=0$.</p>
+<h6 id="随机积分存在的条件"><a href="#随机积分存在的条件" class="headerlink" title="随机积分存在的条件"></a>随机积分存在的条件</h6><p>总的来说，随机积分$\int_0^TH(s)dM(s)$的定义，取决于M的性质，当$\langle M,M\rangle(t)$不连续，连续，绝对连续，会让H的范围更宽泛.</p>
+<h6 id="可预测二次变差的性质"><a href="#可预测二次变差的性质" class="headerlink" title="可预测二次变差的性质"></a>可预测二次变差的性质</h6><p>对于局部可积二次变差的半鞅X,Y</p>
+<ol>
+<li>$\langle X,X\rangle(t)$关于t是增的.</li>
+<li>$\langle X,X\rangle(t)$是双线性，对称的</li>
+<li>极化恒等式.$\langle X,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langle X-Y,X-Y\rangle)$</li>
+<li>$\langle X,X\rangle$是有限变差的可预测过程.</li>
+<li>$\langle X,X\rangle=0$如果X或Y是有限变差的，且其中之一是连续的.</li>
+<li>$\big\langle \int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langle X,Y\rangle(s)$.</li>
+</ol>
+<h3 id="8-10-Ito’s-Formula-for-Semimartingales"><a href="#8-10-Ito’s-Formula-for-Semimartingales" class="headerlink" title="8.10 Ito’s Formula for Semimartingales"></a>8.10 Ito’s Formula for Semimartingales</h3><p>不同于8.6章的连续半鞅，$X(t)$是半鞅，$f\in C^2$, 则$f(X(t))$是半鞅，并且有$ito$公式:</p>
+<ul>
+<li>$f(X(t))-f(X(0))=\int<em>0^tf’(X(s-))dX(s)+\frac{1}{2}\int_0^tf’’(X(s-))d[X,X] (s)+ \ \sum\limits</em>{s\le t}  \Bigg (f(X(s))-f(X(s-))-f’(X(s-))\Delta X(s)-\frac{1}{2}f’’(X(s-))(\Delta X(s))^2\Bigg )$.</li>
+</ul>
+<h3 id="8-11-Stochastic-Exponential-and-Logarithm"><a href="#8-11-Stochastic-Exponential-and-Logarithm" class="headerlink" title="8.11 Stochastic Exponential and Logarithm"></a>8.11 Stochastic Exponential and Logarithm</h3><p>不同于8.8章的连续半鞅，$X$是半鞅，随机方程$U(t)=1+\int_0^tU(s-)dX(s)$有唯一解，被称为$X$的随机指数.</p>
+<ul>
+<li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langle X,X\rangle^c (t)}\prod\limits<em>{s\le t}(1+\Delta X(s))e^{-\Delta X(s)}$，由有限变差的分解$[X,X] (s)=\langle X,X\rangle^c(s)+\sum\limits</em>{0&lt;s\le t}\Delta X(s)$，这等价于</li>
+</ul>
+<ul>
+<li>$U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[ X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta X(s)+\frac{1}{2}(\Delta X(s))^2}$.</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/%E5%BA%9F%E5%BC%83post/">废弃POST</a></li>
+            <li><a href="/%E5%BA%9F%E5%BC%83post/SDE/">SDE</a></li>
+            <li>STOCHASTICANALYSISANDITSAPPLICATIONS-CHAPTER-8</li>
+  </ul>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">淋晓</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
