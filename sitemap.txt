@@ -24,10 +24,10 @@ https://zuoruchun.github.io/archives/index.html
 https://zuoruchun.github.io/tags/index.html
 https://zuoruchun.github.io/categories/index.html
 https://zuoruchun.github.io/
-https://zuoruchun.github.io/categories/Bugs/
 https://zuoruchun.github.io/categories/Linxiao/
+https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/
+https://zuoruchun.github.io/categories/Bugs/
 https://zuoruchun.github.io/categories/Triviality/
 https://zuoruchun.github.io/categories/Computer-common-sense/
-https://zuoruchun.github.io/categories/ssh/
 https://zuoruchun.github.io/categories/Big-data/
-https://zuoruchun.github.io/categories/Windows-and-MacBook-Software/
+https://zuoruchun.github.io/categories/ssh/
