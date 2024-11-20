@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SSH">
+    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }   昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用DataGrip的Hive数据库连接阿里云服务器的Bug">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/08/20/Computer/DataGripbug/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SSH">
+<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }   昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SS">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/DataGrip%E9%85%8D%E7%BD%AE%E5%A4%B1%E8%B4%A5.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/DataGrip%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png">
@@ -242,22 +242,15 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
-target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
-使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
 <span id="more"></span>
 <p>在SSH配置完成后的下一步，它的配置如下</p>
-<figure>
-<img src="\pic\DataGrip配置失败.png" alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
+<p><img src="\pic\DataGrip配置失败.png" alt="DataGrip配置失败"></p>
 <p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
 <p>尝试了很多次都没有办法，最后使用PyCharm来操作数据库，偶然成功了，最后发现，这里的HOST地址应该保留默认值localhost不变才能够连接成功</p>
-<figure>
-<img src="\pic\DataGrip配置成功.png" alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
+<p><img src="\pic\DataGrip配置成功.png" alt="DataGrip配置失败"></p>
 <p>虽然不知道具体原因，但好在问题确实出现在这里，得到了解决。</p>
 
     </div>
