@@ -175,25 +175,6 @@
     
     
     <entry>
-      <title>hexo使用方法</title>
-      <link href="/2024/08/07/Git/HexoUseMethods/"/>
-      <url>/2024/08/07/Git/HexoUseMethods/</url>
-      
-        <content type="html"><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令- <strong>gitclean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -<strong>gits</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态- <strong>推送远端</strong>：<code>git g</code> -&gt;<code>git d</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Computer common sense </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Windows切换成Macbook的一些软件</title>
       <link href="/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/"/>
       <url>/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</url>
@@ -204,6 +185,25 @@
       <categories>
           
           <category> Windows and MacBook Software </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo使用方法</title>
+      <link href="/2024/08/07/Git/HexoUseMethods/"/>
+      <url>/2024/08/07/Git/HexoUseMethods/</url>
+      
+        <content type="html"><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令- <strong>gitclean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -<strong>gits</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态- <strong>推送远端</strong>：<code>git g</code> -&gt;<code>git d</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer common sense </category>
           
       </categories>
       
