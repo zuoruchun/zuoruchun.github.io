@@ -200,7 +200,6 @@
     
     <div class="post-body" itemprop="articleBody">
           
-
       
     </div>
 
@@ -276,7 +275,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>一个人的慢慢淡出，即使随着时间的流逝，也还是会久久不能释怀。</p>
-<p>很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p>
+<p> 很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p>
 <p>一座城市一个人。</p>
 <p>对于感情这方面的事情，我陷入了误区，是思想上的误区。我只会对一个初次见面的人会产生情愫，如果对于初次认识的人不是以在一起而相互了解的，我就不会再对她有什么情感上的感觉。换句话说，我对一见钟情💘这样的爱情很执着。但是问题是往往一见钟情的爱情不是建立在相互了解上的，在这种情况下的恋爱，往往在后面慢慢的就会发现，两个人并不合适。这就陷入了死循环，如果选择一见钟情，会产生性格不合；如果不是一见钟情，我不会有什么爱情的感觉。</p>
 <p>感悟什么的到底算什么呢？需要的是自己做出改变，但是性格这个东西怎么改变呢？难以做出评价。</p>
@@ -363,13 +362,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>More troubles are deeply involved.</p>
-<p>Why do you start looking for your own mistakes after separation?
-Isn't this self-inflicted? Every choice before was my best choice
-according to the situation at the time, and the final fault was not
-someone's fault, I don't want to always attribute it to myself. In my
-opinion, I should hate, all hate, because I didn't do anything wrong, I
-don't want to be separated, no matter what happens. I was broken up
-inexplicably, which is the biggest mistake!</p>
+<p>Why do you start looking for your own mistakes after separation? Isn’t this self-inflicted? Every choice before was my best choice according to the situation at the time, and the final fault was not someone’s fault, I don’t want to always attribute it to myself. In my opinion, I should hate, all hate, because I didn’t do anything wrong, I don’t want to be separated, no matter what happens. I was broken up inexplicably, which is the biggest mistake! </p>
 
       
     </div>
@@ -453,6 +446,7 @@ inexplicably, which is the biggest mistake!</p>
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
           <!--noindex-->
             <div class="post-button">
@@ -544,6 +538,7 @@ inexplicably, which is the biggest mistake!</p>
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
 <p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
           <!--noindex-->
@@ -636,11 +631,12 @@ inexplicably, which is the biggest mistake!</p>
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
+
+
+
 <p><strong>1.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br />
-Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
-Remote Development;<br />
-于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<p>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/#more" rel="contents">
@@ -726,8 +722,7 @@ Remote Development;<br />
           <p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
 <p><code>git init</code> - 初始化仓库.</p>
 <p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m "提交信息"</code> -
-将暂存区内容添加到仓库中.</p>
+<p><code>git commint -m &quot;提交信息&quot;</code> - 将暂存区内容添加到仓库中.</p>
 <p><code>git push</code> - 推到github</p>
           <!--noindex-->
             <div class="post-button">
@@ -819,10 +814,9 @@ Remote Development;<br />
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
+
 <p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
-target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
-使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip 使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/08/20/Computer/DataGripbug/#more" rel="contents">
@@ -913,12 +907,9 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/detai
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
-ms: Couldn‘t connect to server #
-一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
-fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
-connect to github.com port 443 after 21090 ms: Couldn't connect to
-server</p>
+
+<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t connect to server</p>
+<h1 id="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"><a href="#一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？" class="headerlink" title="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"></a>一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？</h1><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/xxx/******.git/">https://github.com/xxx/******.git/</a>‘: Failed to connect to github.com port 443 after 21090 ms: Couldn’t connect to server</p>
 <p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
           <!--noindex-->
             <div class="post-button">
@@ -1002,12 +993,8 @@ server</p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 48%" />
-<col style="width: 25%" />
-</colgroup>
+          <div class="table-container">
+<table>
 <thead>
 <tr>
 <th>Windows软件</th>
@@ -1019,7 +1006,7 @@ server</p>
 <tr>
 <td>Notepad++</td>
 <td>轻便的编辑器</td>
-<td>Notepad--</td>
+<td>Notepad—</td>
 </tr>
 <tr>
 <td>clash</td>
@@ -1098,6 +1085,7 @@ server</p>
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>
