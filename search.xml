@@ -2,57 +2,11 @@
 <search>
   <entry>
     <title>再见沈以诚</title>
-    <url>/2023/05/23/Emotion/GoobyeEason/</url>
-    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
-<p>突然挺喜欢苏打绿的歌。</p>
-<p>好害怕分别。</p>
-<p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p>
+    <url>/2024/11/22/test/</url>
+    <content><![CDATA[<p>if no date, what will happen?</p>
 ]]></content>
       <categories>
         <category>Linxiao</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>No more love,more love</title>
-    <url>/2024/11/08/Emotion/Nomorenomore/</url>
-    <content><![CDATA[<p>More troubles are deeply involved.</p>
-<p>Why do you start looking for your own mistakes after separation?
-Isn't this self-inflicted? Every choice before was my best choice
-according to the situation at the time, and the final fault was not
-someone's fault, I don't want to always attribute it to myself. In my
-opinion, I should hate, all hate, because I didn't do anything wrong, I
-don't want to be separated, no matter what happens. I was broken up
-inexplicably, which is the biggest mistake!</p>
-]]></content>
-      <categories>
-        <category>Triviality</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>How to love ? How to love yourself or anyone?</title>
-    <url>/2024/11/11/Emotion/Howtolove/</url>
-    <content><![CDATA[<p>一个人的慢慢淡出，即使随着时间的流逝，也还是会久久不能释怀。</p>
-<p>很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p>
-<p>一座城市一个人。</p>
-<p>对于感情这方面的事情，我陷入了误区，是思想上的误区。我只会对一个初次见面的人会产生情愫，如果对于初次认识的人不是以在一起而相互了解的，我就不会再对她有什么情感上的感觉。换句话说，我对一见钟情💘这样的爱情很执着。但是问题是往往一见钟情的爱情不是建立在相互了解上的，在这种情况下的恋爱，往往在后面慢慢的就会发现，两个人并不合适。这就陷入了死循环，如果选择一见钟情，会产生性格不合；如果不是一见钟情，我不会有什么爱情的感觉。</p>
-<p>感悟什么的到底算什么呢？需要的是自己做出改变，但是性格这个东西怎么改变呢？难以做出评价。</p>
-]]></content>
-      <categories>
-        <category>Triviality</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>git的一些操作</title>
-    <url>/2024/09/26/Git/GitOperation/</url>
-    <content><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
-<p><code>git init</code> - 初始化仓库.</p>
-<p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m "提交信息"</code> -
-将暂存区内容添加到仓库中.</p>
-<p><code>git push</code> - 推到github</p>
-]]></content>
-      <categories>
-        <category>Computer common sense</category>
       </categories>
   </entry>
   <entry>
@@ -86,21 +40,6 @@ href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
 ]]></content>
       <categories>
         <category>Big data</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo使用方法</title>
-    <url>/2024/08/07/Git/HexoUseMethods/</url>
-    <content><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令
-- <strong>git
-clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -
-<strong>git
-s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态
-- <strong>推送远端</strong>：<code>git g</code> -&gt;
-<code>git d</code></p>
-]]></content>
-      <categories>
-        <category>Computer common sense</category>
       </categories>
   </entry>
   <entry>
@@ -208,6 +147,108 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
       </categories>
   </entry>
   <entry>
+    <title>再见沈以诚</title>
+    <url>/2023/05/23/Emotion/GoobyeEason/</url>
+    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
+<p>突然挺喜欢苏打绿的歌。</p>
+<p>好害怕分别。</p>
+<p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p>
+]]></content>
+      <categories>
+        <category>Linxiao</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>How to love ? How to love yourself or anyone?</title>
+    <url>/2024/11/11/Emotion/Howtolove/</url>
+    <content><![CDATA[<p>一个人的慢慢淡出，即使随着时间的流逝，也还是会久久不能释怀。</p>
+<p>很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p>
+<p>一座城市一个人。</p>
+<p>对于感情这方面的事情，我陷入了误区，是思想上的误区。我只会对一个初次见面的人会产生情愫，如果对于初次认识的人不是以在一起而相互了解的，我就不会再对她有什么情感上的感觉。换句话说，我对一见钟情💘这样的爱情很执着。但是问题是往往一见钟情的爱情不是建立在相互了解上的，在这种情况下的恋爱，往往在后面慢慢的就会发现，两个人并不合适。这就陷入了死循环，如果选择一见钟情，会产生性格不合；如果不是一见钟情，我不会有什么爱情的感觉。</p>
+<p>感悟什么的到底算什么呢？需要的是自己做出改变，但是性格这个东西怎么改变呢？难以做出评价。</p>
+]]></content>
+      <categories>
+        <category>Triviality</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>No more love,more love</title>
+    <url>/2024/11/08/Emotion/Nomorenomore/</url>
+    <content><![CDATA[<p>More troubles are deeply involved.</p>
+<p>Why do you start looking for your own mistakes after separation?
+Isn't this self-inflicted? Every choice before was my best choice
+according to the situation at the time, and the final fault was not
+someone's fault, I don't want to always attribute it to myself. In my
+opinion, I should hate, all hate, because I didn't do anything wrong, I
+don't want to be separated, no matter what happens. I was broken up
+inexplicably, which is the biggest mistake!</p>
+]]></content>
+      <categories>
+        <category>Triviality</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git的一些操作</title>
+    <url>/2024/09/26/Git/GitOperation/</url>
+    <content><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
+<p><code>git init</code> - 初始化仓库.</p>
+<p><code>git add .</code> - 添加文件到暂存区。</p>
+<p><code>git commint -m "提交信息"</code> -
+将暂存区内容添加到仓库中.</p>
+<p><code>git push</code> - 推到github</p>
+]]></content>
+      <categories>
+        <category>Computer common sense</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解决git报错443问题</title>
+    <url>/2024/08/20/Git/HexoPort/</url>
+    <content><![CDATA[<style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
+ms: Couldn‘t connect to server #
+一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
+fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
+connect to github.com port 443 after 21090 ms: Couldn't connect to
+server</p>
+<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
+<span id="more"></span>
+<p>解决办法：</p>
+<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
+<p>设置-&gt;网络和Internet-&gt;代理</p>
+<h2
+id="设置git端口号和上面的端口号保持一致我的是10809">2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2>
+<p>git config --global http.proxy 127.0.0.1:10809</p>
+<p>git config --global https.proxy 127.0.0.1:10809</p>
+<h2 id="查看git设置可以省略">3.查看git设置（可以省略）：</h2>
+<p>PS D:&gt; git config --global -l</p>
+<p>user.email=xxx@qq.com user.name=xxx http.proxy=127.0.0.1:10809
+https.proxy=127.0.0.1:10809</p>
+<h2
+id="再次push-或者-pull-即可保险起见可以先在cmd窗口中使用-ipconfigflushdns-刷新dns缓存">4.再次push
+或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns
+刷新dns缓存）。</h2>
+<h1
+id="二如果没有挂着梯子但是还是遇到了以上报错">二、如果没有挂着梯子但是还是遇到了以上报错</h1>
+<p>还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
+<p>git config --global --unset http.proxy</p>
+<p>git config --global --unset https.proxy</p>
+<p>再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用
+ipconfig/flushdns 刷新dns缓存）。</p>
+<p>原文链接：https://blog.csdn.net/qq_40296909/article/details/134285451</p>
+]]></content>
+      <categories>
+        <category>Bugs</category>
+      </categories>
+  </entry>
+  <entry>
     <title>在linux的命令中行运行matlab</title>
     <url>/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</url>
     <content><![CDATA[<style>
@@ -247,6 +288,21 @@ s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的
 ]]></content>
       <categories>
         <category>ssh</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo使用方法</title>
+    <url>/2024/08/07/Git/HexoUseMethods/</url>
+    <content><![CDATA[<p>使用git进入路径<code>C:\Users\Administrator\blog</code>，接下来启用命令
+- <strong>git
+clean</strong>：每次启动Local或者将文章推到远端之前都要进行此操作 -
+<strong>git
+s</strong>：启用后可在<code>http://localhost:4000/</code>，查看Local的文章状态
+- <strong>推送远端</strong>：<code>git g</code> -&gt;
+<code>git d</code></p>
+]]></content>
+      <categories>
+        <category>Computer common sense</category>
       </categories>
   </entry>
   <entry>
@@ -348,53 +404,6 @@ id="但是最最最最重要的一点是可以使用motionpro连接校园网这�
 ]]></content>
       <categories>
         <category>Linxiao</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解决git报错443问题</title>
-    <url>/2024/08/20/Git/HexoPort/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
-ms: Couldn‘t connect to server #
-一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
-fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
-connect to github.com port 443 after 21090 ms: Couldn't connect to
-server</p>
-<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
-<span id="more"></span>
-<p>解决办法：</p>
-<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
-<p>设置-&gt;网络和Internet-&gt;代理</p>
-<h2
-id="设置git端口号和上面的端口号保持一致我的是10809">2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2>
-<p>git config --global http.proxy 127.0.0.1:10809</p>
-<p>git config --global https.proxy 127.0.0.1:10809</p>
-<h2 id="查看git设置可以省略">3.查看git设置（可以省略）：</h2>
-<p>PS D:&gt; git config --global -l</p>
-<p>user.email=xxx@qq.com user.name=xxx http.proxy=127.0.0.1:10809
-https.proxy=127.0.0.1:10809</p>
-<h2
-id="再次push-或者-pull-即可保险起见可以先在cmd窗口中使用-ipconfigflushdns-刷新dns缓存">4.再次push
-或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns
-刷新dns缓存）。</h2>
-<h1
-id="二如果没有挂着梯子但是还是遇到了以上报错">二、如果没有挂着梯子但是还是遇到了以上报错</h1>
-<p>还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
-<p>git config --global --unset http.proxy</p>
-<p>git config --global --unset https.proxy</p>
-<p>再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用
-ipconfig/flushdns 刷新dns缓存）。</p>
-<p>原文链接：https://blog.csdn.net/qq_40296909/article/details/134285451</p>
-]]></content>
-      <categories>
-        <category>Bugs</category>
       </categories>
   </entry>
 </search>
