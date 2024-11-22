@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="第二章：随机微分方程 第三节：解的存在唯一性 在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。 由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipsch">
+    <meta name="description" content="第二章：随机微分方程第三节：解的存在唯一性在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。 由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschit">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MaoBook2008 Chapter2">
 <meta property="og:url" content="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/SDE/Maobook2008%20Chapter2.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="第二章：随机微分方程 第三节：解的存在唯一性 在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。 由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipsch">
+<meta property="og:description" content="第二章：随机微分方程第三节：解的存在唯一性在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。 由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschit">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/Borel%E2%80%93Cantelli%E2%80%99s%20lemma.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/Exponential%20moment%20inequality.png">
@@ -118,8 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%9A%8F%E6%9C%BA%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">第二章：随机微分方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%E8%A7%A3%E7%9A%84%E5%AD%98%E5%9C%A8%E5%94%AF%E4%B8%80%E6%80%A7"><span class="nav-text">第三节：解的存在唯一性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82lp%E4%BC%B0%E8%AE%A1"><span class="nav-text">第四节：\(L^p\)估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82almost-surely-asymptotic-estimates"><span class="nav-text">第五节：Almost Surely
-Asymptotic Estimates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82caratheodory%E4%BC%B0%E8%AE%A1"><span class="nav-text">第六节Caratheodory估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82euler-maruyama%E4%BC%B0%E8%AE%A1"><span class="nav-text">第七节：Euler-Maruyama估计</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BD%86%E6%98%AF%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9C%8B%E5%88%B0%E7%9A%84%E8%AE%BA%E6%96%87%E4%B8%8A%E5%8F%AA%E6%8F%90%E5%88%B0%E8%BF%87euler-maruyama%E6%96%B9%E6%B3%95%E8%80%8C%E6%B2%A1%E8%A7%81%E8%BF%87caratheodory%E6%96%B9%E6%B3%95"><span class="nav-text">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82pde%E8%81%94%E7%B3%BBsde%E7%9A%84%E8%B4%B9%E6%9B%BC-%E5%8D%A1%E5%85%B9feynman-kac%E5%85%AC%E5%BC%8F"><span class="nav-text">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82sde%E7%9A%84%E8%A7%A3%E6%98%AFmerkov%E8%BF%87%E7%A8%8B"><span class="nav-text">第九节：SDE的解是Merkov过程</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E9%9A%8F%E6%9C%BA%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">第二章：随机微分方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A%E8%A7%A3%E7%9A%84%E5%AD%98%E5%9C%A8%E5%94%AF%E4%B8%80%E6%80%A7"><span class="nav-text">第三节：解的存在唯一性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A-L-p-%E4%BC%B0%E8%AE%A1"><span class="nav-text">第四节：$L^p$估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9AAlmost-Surely-Asymptotic-Estimates"><span class="nav-text">第五节：Almost Surely Asymptotic Estimates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E8%8A%82Caratheodory%E4%BC%B0%E8%AE%A1"><span class="nav-text">第六节Caratheodory估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E8%8A%82%EF%BC%9AEuler-Maruyama%E4%BC%B0%E8%AE%A1"><span class="nav-text">第七节：Euler-Maruyama估计</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BD%86%E6%98%AF%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9C%8B%E5%88%B0%E7%9A%84%E8%AE%BA%E6%96%87%E4%B8%8A%E5%8F%AA%E6%8F%90%E5%88%B0%E8%BF%87Euler-Maruyama%E6%96%B9%E6%B3%95%EF%BC%8C%E8%80%8C%E6%B2%A1%E8%A7%81%E8%BF%87Caratheodory%E6%96%B9%E6%B3%95"><span class="nav-text">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E8%8A%82%EF%BC%9APDE%E8%81%94%E7%B3%BBSDE%E7%9A%84%E8%B4%B9%E6%9B%BC-%E5%8D%A1%E5%85%B9-Feynman-Kac-%E5%85%AC%E5%BC%8F"><span class="nav-text">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E8%8A%82%EF%BC%9ASDE%E7%9A%84%E8%A7%A3%E6%98%AFMerkov%E8%BF%87%E7%A8%8B"><span class="nav-text">第九节：SDE的解是Merkov过程</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,53 +178,22 @@ Asymptotic Estimates</span></a></li><li class="nav-item nav-level-3"><a class="n
       
       
       <div class="post-body">
-          <h1 id="第二章随机微分方程">第二章：随机微分方程</h1>
-<h2 id="第三节解的存在唯一性">第三节：解的存在唯一性</h2>
-<p>在Lipschitz和线性Linear
-growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
-<p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear
-growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear
-growth条件也能得到解的存在唯一性。</p>
-<p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear
-growth可以推出Monotone条件。</p>
+          <h1 id="第二章：随机微分方程"><a href="#第二章：随机微分方程" class="headerlink" title="第二章：随机微分方程"></a>第二章：随机微分方程</h1><h2 id="第三节：解的存在唯一性"><a href="#第三节：解的存在唯一性" class="headerlink" title="第三节：解的存在唯一性"></a>第三节：解的存在唯一性</h2><p>在Lipschitz和线性Linear growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
+<p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear growth条件也能得到解的存在唯一性。</p>
+<p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear growth可以推出Monotone条件。</p>
 <p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p>
-<h3 id="第四节lp估计">第四节：<span
-class="math inline">\(L^p\)</span>估计</h3>
-<p>对于任意的正数p，若drift项和diffusion项满足Linear
-growth条件，则SDE解的p阶矩都是连续的。</p>
+<h3 id="第四节：-L-p-估计"><a href="#第四节：-L-p-估计" class="headerlink" title="第四节：$L^p$估计"></a>第四节：$L^p$估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Linear growth条件，则SDE解的p阶矩都是连续的。</p>
 <p>在类似于Monotone的条件下，p阶矩是exp收敛的</p>
-<h3 id="第五节almost-surely-asymptotic-estimates">第五节：Almost Surely
-Asymptotic Estimates</h3>
-<p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
+<h3 id="第五节：Almost-Surely-Asymptotic-Estimates"><a href="#第五节：Almost-Surely-Asymptotic-Estimates" class="headerlink" title="第五节：Almost Surely Asymptotic Estimates"></a>第五节：Almost Surely Asymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
 <p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p>
-<figure>
-<img src="/pic/Borel–Cantelli’s%20lemma.png"
-title="Borel–Cantelli’s lemma" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<figure>
-<img src="/pic/Exponential%20moment%20inequality.png"
-title="Exponential moment inequality.png" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<h3 id="第六节caratheodory估计">第六节Caratheodory估计</h3>
-<p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
-<p>TH6.4在<span class="math inline">\(f,g\)</span>连续，<span
-class="math inline">\(x_0\)</span>有界且<span
-class="math inline">\(F_{t_0}\)</span>可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
-<h3 id="第七节euler-maruyama估计">第七节：Euler-Maruyama估计</h3>
-<p>与Caratheodory估计相同，证明类似。</p>
+<p><img src="/pic/Borel–Cantelli’s lemma.png" alt="img" title="Borel–Cantelli’s lemma"></p>
+<p><img src="/pic/Exponential moment inequality.png" alt="img" title="Exponential moment inequality.png"></p>
+<h3 id="第六节Caratheodory估计"><a href="#第六节Caratheodory估计" class="headerlink" title="第六节Caratheodory估计"></a>第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
+<p>TH6.4在$f,g$连续，$x<em>0$有界且$F</em>{t_0}$可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
+<h3 id="第七节：Euler-Maruyama估计"><a href="#第七节：Euler-Maruyama估计" class="headerlink" title="第七节：Euler-Maruyama估计"></a>第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p>
 <p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p>
-<h6
-id="但是为什么看到的论文上只提到过euler-maruyama方法而没见过caratheodory方法">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6>
-<h3
-id="第八节pde联系sde的费曼-卡兹feynman-kac公式">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3>
-<p>看不懂...不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
-<h3 id="第九节sde的解是merkov过程">第九节：SDE的解是Merkov过程</h3>
-<p>看不懂..........一堆莫名其妙以至于看不懂的转移概率密度<span
-class="math inline">\(P(X,s;A,t)\)</span>以及<span
-class="math inline">\(\int
-P(y,r;A,t)P(x,s;dy,r)\)</span>,下次问问再看</p>
+<h6 id="但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法"><a href="#但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法" class="headerlink" title="(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)"></a>(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3 id="第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式"><a href="#第八节：PDE联系SDE的费曼-卡兹-Feynman-Kac-公式" class="headerlink" title="第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式"></a>第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂…不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
+<h3 id="第九节：SDE的解是Merkov过程"><a href="#第九节：SDE的解是Merkov过程" class="headerlink" title="第九节：SDE的解是Merkov过程"></a>第九节：SDE的解是Merkov过程</h3><p>看不懂……….一堆莫名其妙以至于看不懂的转移概率密度$P(X,s;A,t)$以及$\int P(y,r;A,t)P(x,s;dy,r)$,下次问问再看</p>
 
       </div>
       
