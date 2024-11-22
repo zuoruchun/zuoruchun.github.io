@@ -20,16 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }      1.准备工作 在VsCode中安装下面的插件：Reomte Explorer, Remote - SSh, Remote - SSH:Editing,">
+    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Rem">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssh利用服务器在本地编写代码，并且利用远程服务器编译">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }      1.准备工作 在VsCode中安装下面的插件：Reomte Explorer, Remote - SSh, Remote - SSH:Editing,">
+<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.准备工作 在VsCode中安装下面的插件： Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Rem">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE1.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ip.png">
-<meta property="og:image" content="https://zuoruchun.github.io/pic/config.jpg">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE2.png">
 <meta property="article:published_time" content="2024-10-19T11:38:00.000Z">
 <meta property="article:modified_time" content="2024-10-22T12:10:27.886Z">
@@ -118,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%86%E6%98%AF%E6%9C%80%E6%9C%80%E6%9C%80%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%80%E7%82%B9%E6%98%AF%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8MotionPro%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%EF%BC%8C%E8%BF%99%E5%90%8C%E6%A0%B7%E4%BF%9D%E8%AF%81%E4%BA%86%E7%BD%91%E7%BB%9C%E5%9C%A8%E5%90%8C%E4%B8%80%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B9%8B%E4%B8%8B%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B0%B1%E8%83%BD%E5%A4%9F%E4%BF%9D%E8%AF%81%E5%8D%B3%E4%BD%BF%E4%B8%8D%E5%9C%A8%E5%AD%A6%E6%A0%A1%EF%BC%8C%E4%BE%9D%E7%84%B6%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E8%BF%9B%E8%A1%8Cssh%EF%BC%81"><span class="nav-text">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%86%E6%98%AF%E6%9C%80%E6%9C%80%E6%9C%80%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%80%E7%82%B9%E6%98%AF%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8motionpro%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%BF%99%E5%90%8C%E6%A0%B7%E4%BF%9D%E8%AF%81%E4%BA%86%E7%BD%91%E7%BB%9C%E5%9C%A8%E5%90%8C%E4%B8%80%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B9%8B%E4%B8%8B%E4%BA%8E%E6%98%AF%E5%B0%B1%E8%83%BD%E5%A4%9F%E4%BF%9D%E8%AF%81%E5%8D%B3%E4%BD%BF%E4%B8%8D%E5%9C%A8%E5%AD%A6%E6%A0%A1%E4%BE%9D%E7%84%B6%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E8%BF%9B%E8%A1%8Cssh"><span class="nav-text">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -230,23 +229,35 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
-
-
-
-
 <p><strong>1.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br>Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels, Remote Development;<br>于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
+<p>在VsCode中安装下面的插件：<br />
+Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
+Remote Development;<br />
+于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
 <span id="more"></span>
-<p><img src="/pic/ssh配置1.png" alt="img" title="ssh配置1"></p>
+<figure>
+<img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p><strong>2.获取服务器的username和ip</strong></p>
-<p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；<br>在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<br><img src="/pic/ip.png" alt="img" title="ip"></p>
+<p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；
+在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；
+<img src="/pic/ip.png" title="ip" alt="img" /></p>
 <p><strong>3.连接</strong></p>
-<p>点击加号, 输入<code>ssh username@ip</code>, 之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去<br><img src="/pic/config.jpg" alt="img" title="config"></p>
+<p>点击加号, 输入<code>ssh username@ip</code>,
+之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <img
+src="/pic/config.jpg" title="config" alt="img" /></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name			# name可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号（不作修改）</span><br><span class="line">	User zuoruchun	# 登陆用户名username</span><br></pre></td></tr></table></figure>
-<p>保存配置文件。<br>之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码, 然后使用服务器的poython解释器编译文件了。<br><img src="/pic/ssh配置2.png" alt="img" title="ssh配置2"><br><strong>4.使用</strong></p>
+<p>保存配置文件。<br />
+之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,
+然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"
+title="ssh配置2" alt="img" /> <strong>4.使用</strong></p>
 <p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件，然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p>
-<p><strong>5.备注</strong><br>ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
-<h1 id="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"><a href="#但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！" class="headerlink" title="但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！"></a>但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>
+<p><strong>5.备注</strong>
+ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
+<h1
+id="但是最最最最重要的一点是可以使用motionpro连接校园网这同样保证了网络在同一局域网之下于是就能够保证即使不在学校依然能够使用进行ssh">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>
+
     </div>
 
     
