@@ -37,6 +37,19 @@
       </tags>
   </entry>
   <entry>
+    <title>再见沈以诚</title>
+    <url>/2023/05/23/Emotion/GoobyeEason/</url>
+    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
+<p>突然挺喜欢苏打绿的歌。</p>
+<p>好害怕分别。</p>
+<p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p>
+<p>Be an adult</p>
+]]></content>
+      <tags>
+        <tag>Triviality</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows切换成Macbook的一些软件</title>
     <url>/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</url>
     <content><![CDATA[<div class="table-container">
@@ -161,13 +174,10 @@
       </tags>
   </entry>
   <entry>
-    <title>再见沈以诚</title>
-    <url>/2023/05/23/Emotion/GoobyeEason/</url>
-    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
-<p>突然挺喜欢苏打绿的歌。</p>
-<p>好害怕分别。</p>
-<p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p>
-<p>Be an adult</p>
+    <title>No more love,more love</title>
+    <url>/2024/11/08/Emotion/Nomorenomore/</url>
+    <content><![CDATA[<p>More troubles are deeply involved.</p>
+<p>Why do you start looking for your own mistakes after separation? Isn’t this self-inflicted? Every choice before was my best choice according to the situation at the time, and the final fault was not someone’s fault, I don’t want to always attribute it to myself. In my opinion, I should hate, all hate, because I didn’t do anything wrong, I don’t want to be separated, no matter what happens. I was broken up inexplicably, which is the biggest mistake! </p>
 ]]></content>
       <tags>
         <tag>Triviality</tag>
@@ -187,13 +197,35 @@
       </tags>
   </entry>
   <entry>
-    <title>No more love,more love</title>
-    <url>/2024/11/08/Emotion/Nomorenomore/</url>
-    <content><![CDATA[<p>More troubles are deeply involved.</p>
-<p>Why do you start looking for your own mistakes after separation? Isn’t this self-inflicted? Every choice before was my best choice according to the situation at the time, and the final fault was not someone’s fault, I don’t want to always attribute it to myself. In my opinion, I should hate, all hate, because I didn’t do anything wrong, I don’t want to be separated, no matter what happens. I was broken up inexplicably, which is the biggest mistake! </p>
+    <title>解决git报错443问题</title>
+    <url>/2024/08/20/Git/HexoPort/</url>
+    <content><![CDATA[<style>
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* 根据需要调整大小 */
+  }
+</style>
+
+<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t connect to server</p>
+<h1 id="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"><a href="#一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？" class="headerlink" title="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"></a>一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？</h1><p>fatal: unable to access ‘<a href="https://github.com/xxx/******.git/">https://github.com/xxx/******.git/</a>‘: Failed to connect to github.com port 443 after 21090 ms: Couldn’t connect to server</p>
+<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
+<span id="more"></span>
+<p>解决办法：</p>
+<h2 id="1-查看本机系统端口号："><a href="#1-查看本机系统端口号：" class="headerlink" title="1.查看本机系统端口号："></a>1.查看本机系统端口号：</h2><p>设置-&gt;网络和Internet-&gt;代理</p>
+<h2 id="2-设置git端口号和上面的端口号保持一致（我的是10809）："><a href="#2-设置git端口号和上面的端口号保持一致（我的是10809）：" class="headerlink" title="2.设置git端口号和上面的端口号保持一致（我的是10809）："></a>2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2><p>git config —global http.proxy 127.0.0.1:10809</p>
+<p>git config —global https.proxy 127.0.0.1:10809</p>
+<h2 id="3-查看git设置（可以省略）："><a href="#3-查看git设置（可以省略）：" class="headerlink" title="3.查看git设置（可以省略）："></a>3.查看git设置（可以省略）：</h2><p>PS D:\demo&gt;  git config —global -l</p>
+<p>user.email=xxx@qq.com<br>user.name=xxx<br>http.proxy=127.0.0.1:10809<br>https.proxy=127.0.0.1:10809</p>
+<h2 id="4-再次push-或者-pull-即可（保险起见可以先在cmd窗口中使用-ipconfig-flushdns-刷新dns缓存）。"><a href="#4-再次push-或者-pull-即可（保险起见可以先在cmd窗口中使用-ipconfig-flushdns-刷新dns缓存）。" class="headerlink" title="4.再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。"></a>4.再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。</h2><h1 id="二、如果没有挂着梯子但是还是遇到了以上报错"><a href="#二、如果没有挂着梯子但是还是遇到了以上报错" class="headerlink" title="二、如果没有挂着梯子但是还是遇到了以上报错"></a>二、如果没有挂着梯子但是还是遇到了以上报错</h1><p> 还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
+<p>git config —global —unset http.proxy</p>
+<p>git config —global —unset https.proxy</p>
+<p> 再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。</p>
+<p>原文链接：<a href="https://blog.csdn.net/qq_40296909/article/details/134285451">https://blog.csdn.net/qq_40296909/article/details/134285451</a></p>
 ]]></content>
       <tags>
-        <tag>Triviality</tag>
+        <tag>Bugs</tag>
       </tags>
   </entry>
   <entry>
@@ -258,38 +290,6 @@
       </tags>
   </entry>
   <entry>
-    <title>解决git报错443问题</title>
-    <url>/2024/08/20/Git/HexoPort/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t connect to server</p>
-<h1 id="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"><a href="#一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？" class="headerlink" title="一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？"></a>一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？</h1><p>fatal: unable to access ‘<a href="https://github.com/xxx/******.git/">https://github.com/xxx/******.git/</a>‘: Failed to connect to github.com port 443 after 21090 ms: Couldn’t connect to server</p>
-<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
-<span id="more"></span>
-<p>解决办法：</p>
-<h2 id="1-查看本机系统端口号："><a href="#1-查看本机系统端口号：" class="headerlink" title="1.查看本机系统端口号："></a>1.查看本机系统端口号：</h2><p>设置-&gt;网络和Internet-&gt;代理</p>
-<h2 id="2-设置git端口号和上面的端口号保持一致（我的是10809）："><a href="#2-设置git端口号和上面的端口号保持一致（我的是10809）：" class="headerlink" title="2.设置git端口号和上面的端口号保持一致（我的是10809）："></a>2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2><p>git config —global http.proxy 127.0.0.1:10809</p>
-<p>git config —global https.proxy 127.0.0.1:10809</p>
-<h2 id="3-查看git设置（可以省略）："><a href="#3-查看git设置（可以省略）：" class="headerlink" title="3.查看git设置（可以省略）："></a>3.查看git设置（可以省略）：</h2><p>PS D:\demo&gt;  git config —global -l</p>
-<p>user.email=xxx@qq.com<br>user.name=xxx<br>http.proxy=127.0.0.1:10809<br>https.proxy=127.0.0.1:10809</p>
-<h2 id="4-再次push-或者-pull-即可（保险起见可以先在cmd窗口中使用-ipconfig-flushdns-刷新dns缓存）。"><a href="#4-再次push-或者-pull-即可（保险起见可以先在cmd窗口中使用-ipconfig-flushdns-刷新dns缓存）。" class="headerlink" title="4.再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。"></a>4.再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。</h2><h1 id="二、如果没有挂着梯子但是还是遇到了以上报错"><a href="#二、如果没有挂着梯子但是还是遇到了以上报错" class="headerlink" title="二、如果没有挂着梯子但是还是遇到了以上报错"></a>二、如果没有挂着梯子但是还是遇到了以上报错</h1><p> 还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
-<p>git config —global —unset http.proxy</p>
-<p>git config —global —unset https.proxy</p>
-<p> 再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns 刷新dns缓存）。</p>
-<p>原文链接：<a href="https://blog.csdn.net/qq_40296909/article/details/134285451">https://blog.csdn.net/qq_40296909/article/details/134285451</a></p>
-]]></content>
-      <tags>
-        <tag>Bugs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>上传文件到服务器</title>
     <url>/2024/10/22/UsefulUse/UploadFiletoServer/</url>
     <content><![CDATA[<style>
@@ -350,21 +350,21 @@
       </tags>
   </entry>
   <entry>
-    <title>MaoBook2008 Chapter1</title>
-    <url>/2023/05/23/Math/Maobook2008%20Chapter1/</url>
-    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
-]]></content>
-      <tags>
-        <tag>SDE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>随手写</title>
     <url>/2023/06/09/UsefulUse/WriteCasually/</url>
     <content><![CDATA[<p>导数那个题 </p>
 ]]></content>
       <tags>
         <tag>Triviality</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MaoBook2008 Chapter1</title>
+    <url>/2023/05/23/Math/Maobook2008%20Chapter1/</url>
+    <content><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><p>$dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)$</p>
+]]></content>
+      <tags>
+        <tag>SDE</tag>
       </tags>
   </entry>
   <entry>
