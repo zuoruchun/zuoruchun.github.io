@@ -1,1249 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>TestTime</title>
-    <url>/2024/11/22/TestTime/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>使用DataGrip的Hive数据库连接阿里云服务器的Bug</title>
-    <url>/2024/08/20/Computer/DataGripbug/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
-<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
-href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
-使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
-<span id="more"></span>
-<p>在SSH配置完成后的下一步，它的配置如下</p>
-<figure>
-<img src="\pic\DataGrip配置失败.png" alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
-<p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
-<p>尝试了很多次都没有办法，最后使用PyCharm来操作数据库，偶然成功了，最后发现，这里的HOST地址应该保留默认值localhost不变才能够连接成功</p>
-<figure>
-<img src="\pic\DataGrip配置成功.png" alt="DataGrip配置失败" />
-<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
-</figure>
-<p>虽然不知道具体原因，但好在问题确实出现在这里，得到了解决。</p>
-]]></content>
-      <tags>
-        <tag>bugs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows切换成Macbook的一些软件</title>
-    <url>/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</url>
-    <content><![CDATA[<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 48%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr>
-<th>Windows软件</th>
-<th>软件优点</th>
-<th>Macbook替代</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Notepad++</td>
-<td>轻便的编辑器</td>
-<td>Notepad--</td>
-</tr>
-<tr>
-<td>clash</td>
-<td>为皮嗯代理</td>
-<td>clashX</td>
-</tr>
-<tr>
-<td>知云文献翻译</td>
-<td>翻译英文文献</td>
-<td></td>
-</tr>
-<tr>
-<td>SpaceSniffer</td>
-<td>按大小排列C，D等盘的文件</td>
-<td></td>
-</tr>
-<tr>
-<td>Xshell</td>
-<td>好用的ssh客户机</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Xftp</td>
-<td>通过ssh图形化传文件</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Adobe Acrobat DC</td>
-<td>便捷查看pdf等文件</td>
-<td>Adobe Acrobat DC</td>
-</tr>
-<tr>
-<td>Bandzip</td>
-<td>解/压缩文件</td>
-<td>Fastzip</td>
-</tr>
-<tr>
-<td>CopyQ</td>
-<td>比ctrl+V更好更好用的粘贴板工具</td>
-<td>iCopy</td>
-</tr>
-<tr>
-<td>Everything</td>
-<td>完爆Win自带的文件查找功能</td>
-<td>聚焦</td>
-</tr>
-<tr>
-<td>FormatFactory</td>
-<td>格式工厂</td>
-<td>格式工厂</td>
-</tr>
-<tr>
-<td>Potplayer</td>
-<td>播放视频软件</td>
-<td>IINA</td>
-</tr>
-<tr>
-<td>Quicker</td>
-<td>好用的工具箱</td>
-<td></td>
-</tr>
-<tr>
-<td>Typora</td>
-<td>好用的Markdown编辑器</td>
-<td>Typora</td>
-</tr>
-<tr>
-<td>火绒</td>
-<td>个人电脑最安全的管家</td>
-<td>柠檬清理</td>
-</tr>
-<tr>
-<td>Snipaste</td>
-<td>世界上最好用的截图软件</td>
-<td>Snipaste</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to love ? How to love yourself or anyone?</title>
-    <url>/2024/11/11/Emotion/Howtolove/</url>
-    <content><![CDATA[<p>一个人的慢慢淡出，即使随着时间的流逝，也还是会久久不能释怀。</p>
-<p>很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p>
-<p>一座城市一个人。</p>
-<p>对于感情这方面的事情，我陷入了误区，是思想上的误区。我只会对一个初次见面的人会产生情愫，如果对于初次认识的人不是以在一起而相互了解的，我就不会再对她有什么情感上的感觉。换句话说，我对一见钟情💘这样的爱情很执着。但是问题是往往一见钟情的爱情不是建立在相互了解上的，在这种情况下的恋爱，往往在后面慢慢的就会发现，两个人并不合适。这就陷入了死循环，如果选择一见钟情，会产生性格不合；如果不是一见钟情，我不会有什么爱情的感觉。</p>
-<p>感悟什么的到底算什么呢？需要的是自己做出改变，但是性格这个东西怎么改变呢？难以做出评价。</p>
-]]></content>
-      <tags>
-        <tag>Triviality</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No more love,more love</title>
-    <url>/2024/11/08/Emotion/Nomorenomore/</url>
-    <content><![CDATA[<p>More troubles are deeply involved.</p>
-<p>Why do you start looking for your own mistakes after separation?
-Isn't this self-inflicted? Every choice before was my best choice
-according to the situation at the time, and the final fault was not
-someone's fault, I don't want to always attribute it to myself. In my
-opinion, I should hate, all hate, because I didn't do anything wrong, I
-don't want to be separated, no matter what happens. I was broken up
-inexplicably, which is the biggest mistake!</p>
-]]></content>
-      <tags>
-        <tag>Triviality</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决git报错443问题</title>
-    <url>/2024/08/20/Git/HexoPort/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
-ms: Couldn‘t connect to server #
-一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
-fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
-connect to github.com port 443 after 21090 ms: Couldn't connect to
-server</p>
-<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
-<span id="more"></span>
-<p>解决办法：</p>
-<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
-<p>设置-&gt;网络和Internet-&gt;代理</p>
-<h2
-id="设置git端口号和上面的端口号保持一致我的是10809">2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2>
-<p>git config --global http.proxy 127.0.0.1:10809</p>
-<p>git config --global https.proxy 127.0.0.1:10809</p>
-<h2 id="查看git设置可以省略">3.查看git设置（可以省略）：</h2>
-<p>PS D:&gt; git config --global -l</p>
-<p>user.email=xxx@qq.com user.name=xxx http.proxy=127.0.0.1:10809
-https.proxy=127.0.0.1:10809</p>
-<h2
-id="再次push-或者-pull-即可保险起见可以先在cmd窗口中使用-ipconfigflushdns-刷新dns缓存">4.再次push
-或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns
-刷新dns缓存）。</h2>
-<h1
-id="二如果没有挂着梯子但是还是遇到了以上报错">二、如果没有挂着梯子但是还是遇到了以上报错</h1>
-<p>还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
-<p>git config --global --unset http.proxy</p>
-<p>git config --global --unset https.proxy</p>
-<p>再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用
-ipconfig/flushdns 刷新dns缓存）。</p>
-<p>原文链接：https://blog.csdn.net/qq_40296909/article/details/134285451</p>
-]]></content>
-      <tags>
-        <tag>Bugs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git的一些操作</title>
-    <url>/2024/09/26/Git/GitOperation/</url>
-    <content><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p>
-<p><code>git init</code> - 初始化仓库.</p>
-<p><code>git add .</code> - 添加文件到暂存区。</p>
-<p><code>git commint -m "提交信息"</code> -
-将暂存区内容添加到仓库中.</p>
-<p><code>git push</code> - 推到github</p>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再见沈以诚</title>
-    <url>/2023/05/23/Emotion/GoobyeEason/</url>
-    <content><![CDATA[<p>属于我的沈以诚时代已经结束了。</p>
-<p>突然挺喜欢苏打绿的歌。</p>
-<p>好害怕分别。</p>
-<p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p>
-<p>Be an adult</p>
-]]></content>
-      <tags>
-        <tag>Triviality</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>上传文件到服务器</title>
-    <url>/2024/10/22/UsefulUse/UploadFiletoServer/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
-<span id="more"></span>
-<h1 id="mac">Mac</h1>
-<p><strong>1.下载Termius</strong>
-首先点击下载<a href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p>
-<p><strong>2.配置ssh环境</strong></p>
-<p>首先，点击newhost <img src="/pic/newhost.png" title="newhost"
-alt="img" /></p>
-<!-- <p align="center">
-    <img src="/pic/newhost.png" alt="newhost" width="50%">
-</p> -->
-<p>然后按照自己的ip和username进行配置之后,点击connect。 <img
-src="/pic/turmius配置.png" title="turmius配置" alt="img" />
-出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png"
-title="login" alt="img" /> 在SFTP界面点击select
-host，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。
-<img src="/pic/selecthost.png" title="selecthost" alt="img" />
-下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png"
-title="SFTP" alt="img" /> 等待传输完成。</p>
-<h1 id="windows">Windows</h1>
-<p>点击下载<a href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a>
-对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p>
-<p>参考<a href="https://blog.csdn.net/m0_49448331/article/details/125767862" style="color: #FF5733; text-decoration: none;">CSDN</a>的教程.</p>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在linux的命令中行运行matlab</title>
-    <url>/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p>
-<p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p>
-<span id="more"></span>
-<p><strong>设置环境变量</strong></p>
-<ol type="1">
-<li>在命令行中运行这个命令<code>vim ~/.bashrc</code>。<br />
-</li>
-<li>尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.<br />
-</li>
-<li>距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</li>
-</ol>
-<p><strong>添加shell脚本</strong></p>
-<p>打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code>
-的代码，
-下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">% test.m</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">    <span class="built_in">i</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-下面我们尝试在命令行运行他，在终端输入<code>matlab -batch test</code>，注意这里输入的是<code>test</code>而不是<code>test.m</code>,稍等一会，命令行输出1，2，3的字样。</p>
-<p>接下来我们编写一个shell脚本用来运行它，当然如果你觉得每次多输入<code>-batch</code>不算麻烦的话，下面的内容就不需要看了。
-1.
-输入这个命令<code>cd /home/username/bin/</code>,这里<code>username</code>输入你的英文名，也就是linux的主机名，开启电脑时，登陆界面的那个名字。输入<code>pwd</code>，确保当前路径是<code>/home/zuoruchun/bin/</code>.
-2.
-接下来在终端输入<code>vim matlab.sh</code>，按下<code>i</code>，进入insert模式，将下面的代码粘贴进去，注意这里粘贴需要使用鼠标右键的粘贴。同样的，按下<code>esc</code>，键入<code>:wq</code>退出编辑器。
-3.
-赋予脚本执行权限.在终端中运行以下命令：<code>chmod +x matlab.sh</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查是否提供了脚本名称</span></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    echo &quot;使用方法: matlab_run.sh your_script_name&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行 MATLAB 脚本并输出日志</span></span><br><span class="line">echo &quot;开始运行 MATLAB 脚本: $1&quot;</span><br><span class="line">matlab -batch &quot;$1&quot;</span><br></pre></td></tr></table></figure>
-<p>大功告成，接下来，我们只需要在命令行输入<code>matlab.sh test</code>，就可以运行这个代码了。</p>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ssh利用服务器在本地编写代码，并且利用远程服务器编译</title>
-    <url>/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p><strong>1.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br />
-Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
-Remote Development;<br />
-于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
-<span id="more"></span>
-<figure>
-<img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p><strong>2.获取服务器的username和ip</strong></p>
-<p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；
-在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；
-<img src="/pic/ip.png" title="ip" alt="img" /></p>
-<p><strong>3.连接</strong></p>
-<p>点击加号, 输入<code>ssh username@ip</code>,
-之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <img
-src="/pic/config.jpg" title="config" alt="img" /></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host name			# name可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号（不作修改）</span><br><span class="line">	User zuoruchun	# 登陆用户名username</span><br></pre></td></tr></table></figure>
-<p>保存配置文件。<br />
-之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,
-然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"
-title="ssh配置2" alt="img" /> <strong>4.使用</strong></p>
-<p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件，然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p>
-<p><strong>5.备注</strong>
-ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
-<h1
-id="但是最最最最重要的一点是可以使用motionpro连接校园网这同样保证了网络在同一局域网之下于是就能够保证即使不在学校依然能够使用进行ssh">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo使用方法</title>
-    <url>/2024/08/07/Git/HexoUseMethods/</url>
-    <content><![CDATA[<p>终端进入blog目录，接下来启用命令 -
-<strong>创建一篇新blog</strong>：<code>hexo new '我的第一篇blog'</code><br />
--
-<strong>每次启动Local或者将文章推到远端之前都要进行此操作</strong>：<code>hexo clean</code>
--
-<strong>启动Local,可在<code>http://localhost:4000/</code>查看本地文章状态</strong>：<code>hexo s</code>
-- <strong>生成静态文件</strong>：<code>hexo g</code> -
-<strong>将生成的静态文件推送到远端</strong>：<code>hexo d</code></p>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随手写</title>
-    <url>/2023/06/09/UsefulUse/WriteCasually/</url>
-    <content><![CDATA[<p>导数那个题</p>
-]]></content>
-      <tags>
-        <tag>Triviality</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MaoBook2008 Chapter1</title>
-    <url>/2023/05/23/Math/Maobook2008%20Chapter1/</url>
-    <content><![CDATA[<h1 id="chapter-1">Chapter 1</h1>
-<p><span
-class="math inline">\(dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)\)</span></p>
-]]></content>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MaoBook2008 Chapter2</title>
-    <url>/2023/05/23/Math/Maobook2008%20Chapter2/</url>
-    <content><![CDATA[<h1 id="第二章随机微分方程">第二章：随机微分方程</h1>
-<h2 id="第三节解的存在唯一性">第三节：解的存在唯一性</h2>
-<p>在Lipschitz和线性Linear
-growth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p>
-<p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Linear
-growth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Linear
-growth条件也能得到解的存在唯一性。</p>
-<p>顺便一提，Lipschitz可以推出局部Lipschitz，Linear
-growth可以推出Monotone条件。</p>
-<p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p>
-<h3 id="第四节lp估计">第四节：<span
-class="math inline">\(L^p\)</span>估计</h3>
-<p>对于任意的正数p，若drift项和diffusion项满足Linear
-growth条件，则SDE解的p阶矩都是连续的。</p>
-<p>在类似于Monotone的条件下，p阶矩是exp收敛的</p>
-<h3 id="第五节almost-surely-asymptotic-estimates">第五节：Almost Surely
-Asymptotic Estimates</h3>
-<p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p>
-<p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p>
-<figure>
-<img src="/pic/Borel–Cantelli’s%20lemma.png"
-title="Borel–Cantelli’s lemma" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<figure>
-<img src="/pic/Exponential%20moment%20inequality.png"
-title="Exponential moment inequality.png" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<h3 id="第六节caratheodory估计">第六节Caratheodory估计</h3>
-<p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p>
-<p>TH6.4在<span class="math inline">\(f,g\)</span>连续，<span
-class="math inline">\(x_0\)</span>有界且<span
-class="math inline">\(F_{t_0}\)</span>可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p>
-<h3 id="第七节euler-maruyama估计">第七节：Euler-Maruyama估计</h3>
-<p>与Caratheodory估计相同，证明类似。</p>
-<p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p>
-<h6
-id="但是为什么看到的论文上只提到过euler-maruyama方法而没见过caratheodory方法">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6>
-<h3
-id="第八节pde联系sde的费曼-卡兹feynman-kac公式">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3>
-<p>看不懂...不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p>
-<h3 id="第九节sde的解是merkov过程">第九节：SDE的解是Merkov过程</h3>
-<p>看不懂..........一堆莫名其妙以至于看不懂的转移概率密度<span
-class="math inline">\(P(X,s;A,t)\)</span>以及<span
-class="math inline">\(\int
-P(y,r;A,t)P(x,s;dy,r)\)</span>,下次问问再看</p>
-]]></content>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MaoBook2008 Chapter3</title>
-    <url>/2023/05/23/Math/Maobook2009%20Chapter3/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。
-<span class="math inline">\(dN_t=r(t)N(t)dt+\sigma
-(t)N(t)dB(t),其中t&gt;0\\\)</span>
-初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解， <span
-class="math inline">\(N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2
-(s)}{2})ds+\int_0^t \sigma(s)dB(s))\\\)</span></p>
-<p>现在我们来考虑一个d维的SDE： <span
-class="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\\\)</span>
-其中<span
-class="math inline">\(F(.),G_K(.)\)</span>是d*d的实值矩阵，<span
-class="math inline">\(f(.),G_K(.)\)</span>是<span
-class="math inline">\(R^d\)</span>的实值函数，<span
-class="math inline">\(B(t)=(B_1(t),...,B_m(t))^T\)</span>。</p>
-<p>若<span
-class="math inline">\(f(t)=g_1(t)=...=g_m(t)=0\)</span>，那么SDE称为是线性的；如果<span
-class="math inline">\(G_1(t)=,...,=G_m(t)=0\)</span>，则称SDE是狭义线性的；若<span
-class="math inline">\(F,f,G_k,g_k\)</span>与t是独立的，则称SDE是自治的。</p>
-<h1 id="stochastic-liouvilles-formula">Stochastic Liouville's
-Formula</h1>
-<p>考虑齐次的SDE:</p>
-<p><span
-class="math inline">\(dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)\)</span></p>
-<p><span
-class="math inline">\(\Phi_j(t)\)</span>是这个SDE的解，则称<span
-class="math inline">\(\Phi(t)=(\Phi_1(t),...,\Phi_d(t))\)</span>是这个齐次SDE的基矩阵</p>
-<p>，即<span
-class="math inline">\(d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)\)</span>，</p>
-<p><span
-class="math inline">\(Th2.1\)</span>,给定初值x(t_0)=x_0,则这个齐次SDE的解是<span
-class="math inline">\(x(t)=\Phi(t)x_0\)</span></p>
-<p>定义<span
-class="math inline">\(W(t)=det.\Phi(t)\)</span>,是基矩阵的朗斯基行列式。</p>
-<p>Th2.2：W(t)有以下显示表达，<span
-class="math inline">\(W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].\)</span></p>
-<p>Lemma2.3：线性标量SDE:<span
-class="math inline">\(dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)\)</span>解的显式表达式是</p>
-<p><span
-class="math inline">\(y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]\)</span></p>
-<h1 id="the-variation-of-constants-formula">The Variation-of-Constants
-Formula</h1>
-<p>考虑<span
-class="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\)</span>的解，</p>
-<p>若<span
-class="math inline">\(\Phi(t)\)</span>是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
-<p><span
-class="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))\)</span></p>
-<h1 id="case-studies">Case Studies</h1>
-]]></content>
-      <tags>
-        <tag>MaoBook2008</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机分析及其应用 Chapter7</title>
-    <url>/2023/05/28/Math/StochasticAnalysisandItsApplications-Chapter-7/</url>
-    <content><![CDATA[<h1 id="chapter-7-martingales">Chapter 7 Martingales</h1>
-<h3 id="定义">7.1定义</h3>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Definition7.1：</strong>若随机过程<span
-class="math inline">\(M(t)\)</span>可积，即<span
-class="math inline">\(EM(t)&lt; \infty\)</span>，并且具有性质<span
-class="math inline">\(E(M(t)|\mathcal F_S)=M(s)\)</span>，则<span
-class="math inline">\(M(t)\)</span>被称作Martingale.</p>
-<p><span class="math inline">\(E(M(t)|\mathcal
-F_S)=M(s)\)</span>，鞅是公平的，期望是常数</p>
-<p><span class="math inline">\(E(M(t)|\mathcal F_S)\le
-M(s)\)</span>，上鞅是盈利，期望是递减</p>
-<p><span class="math inline">\(E(M(t)|\mathcal F_S)\ge
-M(s)\)</span>，下鞅是亏损，期望是递增</p>
-<p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.3：</strong>上鞅是鞅当且仅当<span
-class="math inline">\(EM(T)=EM(0)\)</span>.</p>
-<h6
-id="另一个有用的性质是平方可积的鞅即二阶矩有界的鞅">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6>
-<p>在有限区间内，<span class="math inline">\(B(t)\)</span>和<span
-class="math inline">\(B^2(t)-t\)</span>是平方可积的鞅</p>
-<p>若<span class="math inline">\(f\)</span>在<span
-class="math inline">\(\mathbb R\)</span>有界且连续，则<span
-class="math inline">\(Ito\)</span>积分<span
-class="math inline">\(\int_0^tf(B(s))dB(s)\)</span>和<span
-class="math inline">\(\int_0^tf(s)dB(s)\)</span>，在任何有限区间都是平方可积的鞅.</p>
-<h3 id="uniform-integrability">7.2 Uniform Integrability</h3>
-<p><span
-class="math inline">\(\qquad\)</span>在介绍一致可积之前，先来回忆一下什么叫可积。随机变量<span
-class="math inline">\(X\)</span>可积即<span
-class="math inline">\(E(X)&lt;\infty\)</span>这等价于<span
-class="math inline">\(\lim\limits_{n\to+\infty}
-E(|X|I(|X|&gt;n))=0\)</span></p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Defnition7.5：</strong>随机过程<span
-class="math inline">\(X\)</span>称为一致可积的当$ E(|X|I(|X|&gt;n))<span
-class="math inline">\(在\)</span>n <span
-class="math inline">\(时对于t一直收敛到0，即\)</span><em>{n+}</em>{t}
-E(|X|I(|X|&gt;n))=0$.</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的<span
-class="math inline">\(Weierstrass\)</span>判别法，随机过程<span
-class="math inline">\(X(t)\)</span>被随机变量<span
-class="math inline">\(Y\)</span>控制，即<span
-class="math inline">\(|X(t)|\le Y且E(Y)&lt;
-\infty\)</span>则X是一致可积的。特别的取<span
-class="math inline">\(Y=E(\sup\limits_t|X(t)|)\)</span>，注意取了<span
-class="math inline">\(sup\)</span>之后是一个随机变量，不再是随机过程.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem 7.7
-(Vallee–Poussin)：</strong>若G(x)在[0,<span
-class="math inline">\(\infty\)</span>)是正的，递增，凸函数,并且<span
-class="math inline">\(\lim\limits_{x \to
-\infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le
-T}E(G(|X(t)|))&lt;\infty\)</span>则X(t)在<span
-class="math inline">\(t\le T\)</span>是一致可积的。特别的，取<span
-class="math inline">\(G(x)=x^r(r&gt;1)\)</span>,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
-<p>下面构造一个一致可积鞅：</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.9：</strong> (Doob’s, Levy’s
-Martingale)：Y是一个可积的随机变量，即<span
-class="math inline">\(E(Y)&lt; \infty\)</span>,定义<span
-class="math inline">\(M(t)=E(Y|\mathcal F_t)\)</span>,那么<span
-class="math inline">\(M(t)\)</span>是一致可积鞅.</p>
-<h3 id="martingale-convergence">7.3 Martingale Convergence</h3>
-<p>本节考虑无穷区间的鞅</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.11：</strong>(Martingale Convergence
-Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的<span
-class="math inline">\(\lim\limits_{t\to
-\infty}M(t)=Y，Y\)</span>是一个可积的随机变量。</p>
-<p>但<span class="math inline">\(E(M(t))\)</span>可能不收敛到<span
-class="math inline">\(EY\)</span>.例如布朗运动的指数鞅：<span
-class="math inline">\(e^{B(t)-\frac{t}{2}}\)</span>；当<span
-class="math inline">\(M(t)\)</span>一致可积时，收敛是肯定的。</p>
-<p>一致可积鞅收敛a.s.</p>
-<p>平方可积鞅收敛a.s.</p>
-<p>正鞅收敛a.s.</p>
-<p>(负)上有界的下鞅收敛a.s.</p>
-<p>(正)下有界的上鞅收敛a.s.</p>
-<h3 id="optional-stopping">7.4 Optional Stopping</h3>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.14：</strong>若<span
-class="math inline">\(M(t)\)</span>是鞅，<span
-class="math inline">\(\tau\)</span>是停时，则<span
-class="math inline">\(M(t\land\tau)\)</span>是鞅，并且<span
-class="math inline">\(EM(t\land\tau)=EM(0)\)</span></p>
-<p>我们知道当<span class="math inline">\(M(t)\)</span>是鞅时，<span
-class="math inline">\(EM(t)=EM(0)\)</span>，但是对于停时<span
-class="math inline">\(\tau\)</span>，等式<span
-class="math inline">\(EM(\tau)=EM(0)\)</span>,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.15：</strong>(Optional
-Stopping)<span class="math inline">\(M(t)\)</span>是鞅，1.若<span
-class="math inline">\(\tau\)</span>是有界停时，即<span
-class="math inline">\(\tau\le K&lt;\infty\)</span>则，$EM(t)=EM(0)<span
-class="math inline">\(2.若\)</span>M(t)<span
-class="math inline">\(一致可积，则对于任意的停时\)</span><span
-class="math inline">\(，都有\)</span>EM()=EM(0)$</p>
-<p>不同于有界，假如停时<span
-class="math inline">\(\tau\)</span>是有限的，则需要添加其他条件；</p>
-<p>在实变函数中，有界函数：函数的值域在<span
-class="math inline">\(\in[-M,M]\)</span>,且有界一定有限；</p>
-<p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p>
-<p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.16：</strong><span
-class="math inline">\(M(t)\)</span>是鞅，<span
-class="math inline">\(\tau\)</span>是有限停时，若<span
-class="math inline">\(EM(\tau)&lt;\infty\)</span>并且<span
-class="math inline">\(\lim\limits_{t \to
-\infty}E(M(t)I(\tau&gt;t))=0\)</span>，那么<span
-class="math inline">\(EM(\tau)=EM(0)\)</span></p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.18：</strong>(Optional
-Sampling): <span class="math inline">\(M(t)\)</span>是一致可积鞅，<span
-class="math inline">\(\tau_1\le\tau_2\le\infty\)</span>是两个停时，那么<span
-class="math inline">\(E(M(\tau_2)|\mathcal
-F_{\tau_1})=M(\tau_1)\)</span> a.s.</p>
-<h3 id="localization-and-local-martingales">7.5 Localization and Local
-Martingales</h3>
-<p><span class="math inline">\(\qquad\)</span> <span
-class="math inline">\(Ito\)</span>积分<span
-class="math inline">\(M(t)=\int_0^tX(s)dB(s)\)</span>是局部鞅，当<span
-class="math inline">\(EM^2(T)&lt;\infty\)</span>时，<span
-class="math inline">\(M(t)\)</span>才是鞅</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Definition7.19：</strong>随机过程<span
-class="math inline">\(X(t)\)</span>的一个性质称作是局部的，如果存在一个停止序列{<span
-class="math inline">\(\tau_n\)</span>}，使得当<span
-class="math inline">\(n\to\infty\)</span>时，停时<span
-class="math inline">\(\tau_n\uparrow\infty\)</span>，并且对于每一个n，停止过程<span
-class="math inline">\(X(t\land\tau_n)\)</span>都有这个性质。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Definition7.20局部鞅：</strong>适应过程<span
-class="math inline">\(M(t)\)</span>被称作局部鞅，如果存在一个<span
-class="math inline">\(\tau_n\uparrow\infty\)</span>的停时序列<span
-class="math inline">\(\tau_n\)</span>，对于每一个n停止过程<span
-class="math inline">\(M(t\land\tau_n)\)</span>关于<span
-class="math inline">\(t\)</span>是一致可积鞅。</p>
-<p>参看知乎对于<a
-href="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p>
-<p>任何鞅都是局部鞅，反之不一定成立。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量<span
-class="math inline">\(Y\)</span>，即<span
-class="math inline">\(E(Y)&lt;\infty\)</span>，使得对于局部鞅<span
-class="math inline">\(M(t)\)</span>，有<span
-class="math inline">\(M(t)\le Y\)</span>,则<span
-class="math inline">\(M(t)\)</span>是一致可积的鞅。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Corollary7.22：</strong>对于局部鞅<span
-class="math inline">\(M(t)\)</span>，若有<span
-class="math inline">\(E(sup_{s\le t}|M(s)|)&lt;\infty\)</span>,则<span
-class="math inline">\(M(t)\)</span>是鞅，并且在任何有限区间<span
-class="math inline">\([0,T]\)</span>一致可积；更加一般化，<span
-class="math inline">\(E(sup_{t\ge 0}|M(t)|)&lt;\infty\)</span>，则<span
-class="math inline">\(M(t)\)</span>在<span
-class="math inline">\([0,\infty]\)</span>一致可积。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p>
-<p>由<span class="math inline">\(Th7.3\)</span>和<span
-class="math inline">\(Th7.23\)</span>可得非负局部鞅是鞅当且仅当<span
-class="math inline">\(EM(T)=EM(0)\)</span></p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Definition7.25(Dirichlet
-Class (D))：</strong>过程X是狄利克雷D类，若族{X(<span
-class="math inline">\(\tau\)</span>)：<span
-class="math inline">\(\tau\)</span>是有限停时}是一致可积的.</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Theorem7.26：</strong>局部鞅<span
-class="math inline">\(M(t)\)</span>是一致可积的鞅当且仅当他是D类.</p>
-<h3 id="quadratic-variation-of-martingales">7.6 Quadratic Variation of
-Martingales</h3>
-<p><span
-class="math inline">\(\qquad\)</span>在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程<span
-class="math inline">\(X(t)\)</span>在<span
-class="math inline">\([0,t]\)</span>的二次变差定义为：<span
-class="math inline">\([X,X] (t)=\lim\limits_{\delta_n\to
-0}\sum_{i=1}^n(X(t_i^n)-X(t_{i-1}^n))^2\)</span>，其中<span
-class="math inline">\(t_i^n\)</span>是对<span
-class="math inline">\([0,t]\)</span>做分割<span
-class="math inline">\(\delta_n\)</span>是最大的分割区间。</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-1.10：</strong> <span
-class="math inline">\(g\)</span>是连续且有限变差的过程，那么他的二次变差是0.</p>
-<p>下面考虑鞅的二次变差：首先若<span
-class="math inline">\(M(t)\)</span>是鞅，则<span
-class="math inline">\(M^2(t)\)</span>是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.27(i)</strong>：若对于任何<span
-class="math inline">\(t\)</span>，<span
-class="math inline">\(M(t)\)</span>是具有有限二阶矩的鞅，那么他的二次变差过程<span
-class="math inline">\([M,M](t)\)</span>存在；进一步，<span
-class="math inline">\(M^2(t)-[M,M] (t)\)</span>是鞅.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.27(ii)</strong>：若<span
-class="math inline">\(M(t)\)</span>是局部鞅，则二次变差<span
-class="math inline">\([M,M] (t)\)</span>存在，且<span
-class="math inline">\(M^2(t)-[M,M] (t)\)</span>是局部鞅.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.28：</strong><span
-class="math inline">\(M(t)\)</span>是鞅(局部鞅)且<span
-class="math inline">\(M(0)=0\)</span>，若对于某个<span
-class="math inline">\(t\)</span>，使<span
-class="math inline">\(M(t)\)</span>非0，那么就有<span
-class="math inline">\([M,M] (t)&gt;0\)</span>；反之，若<span
-class="math inline">\([M,M](t)=0\)</span>，则对于任何的<span
-class="math inline">\(s\le t\)</span>，都有<span
-class="math inline">\(M(s)=0\)</span> a.s.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.29：</strong><span
-class="math inline">\(M\)</span>是连续局部鞅，固定<span
-class="math inline">\(t\)</span>，若<span class="math inline">\(M(t)\neq
-M(0)\)</span>，那么<span class="math inline">\(M\)</span>在<span
-class="math inline">\([0,t]\)</span>具有无限变差.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Corollary
-7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p>
-<h3 id="martingale-inequalities">7.7 Martingale Inequalities</h3>
-<p><span class="math inline">\(\qquad\)</span><strong>Doob’s Martingale
-Inequality：</strong><span
-class="math inline">\(M(t)\)</span>是一个鞅(or正的下鞅)，对于<span
-class="math inline">\(p\ge 1\)</span>有<span
-class="math inline">\(P(\sup\limits_{s\le t}|M(s)|\ge a)\le
-a^{-p}\sup\limits_{s\le
-t}E(|M(s)^p|)\)</span>；<strong>对于p&gt;1有<span
-class="math inline">\(P(\sup\limits_{s\le t}|M(s)|)\le
-(\frac{p}{1-p})^{p}E(|M(t)^p|)\)</span></strong>.当p=2时就称为Doob鞅不等式.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Davis
-Inequality：</strong>对于任意在0处为0的局部鞅<span
-class="math inline">\(M(t)\)</span>,都存在常数<span
-class="math inline">\(c&gt;0\)</span>和<span
-class="math inline">\(C&lt;\infty\)</span>，使得<span
-class="math inline">\(cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le
-T}|M(t)|)\le CE(\sqrt{[M,M] (T)})\)</span></p>
-<p><span class="math inline">\(\qquad\)</span><strong>Burkholder-Gundy
-Inequality：</strong>若<span class="math inline">\(1\le
-p&lt;\infty\)</span>，则对于任意在0处为0的局部鞅<span
-class="math inline">\(M(t)\)</span>,都存在仅依赖于<span
-class="math inline">\(p\)</span>的<span
-class="math inline">\(c_p\)</span>和<span
-class="math inline">\(C_p\)</span></p>
-<p>使得<span class="math inline">\(c_pE([M,M] (T)^{p/2})\le
-E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M]
-(T)^{p/2})\)</span>；同时若<span
-class="math inline">\(M(t)\)</span>连续，则不等式对<span
-class="math inline">\(0&lt;p&lt;1\)</span>也成立.</p>
-<p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求<span
-class="math inline">\(M(t)\)</span>是鞅，要求他是<span
-class="math inline">\(Ito\)</span>积分。</p>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Burkholder-Davis-Gundy不等式：</strong>设$g<sup>2(<em>+;^{d
-m}) <span class="math inline">\(，对于\)</span>t<span
-class="math inline">\(，定义\)</span>x(t)=</em>{0}</sup>{t}g(s)dB(s)<span
-class="math inline">\(和\)</span>A(t)=_0<sup>t|g(s)|</sup>2ds$
-，对于p&gt;0，存在唯一的仅依赖于p的常数<span
-class="math inline">\(c_p\)</span>，<span
-class="math inline">\(C_p\)</span>使得 <span class="math inline">\(c_p
-E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le
-C_p E|A(t)|^{\frac{P}{2}}\)</span>，其中</p>
-<p><span class="math inline">\(c_p=(\frac{p}{2})^p,
-C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0&lt;p&lt;2}\\
-c_p=1, C_p=4  &amp; &amp; {p=2}\\
-c_p=(2p)^{-\frac{p}{2}},
-C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  &amp; &amp;
-{p&gt;2}\)</span></p>
-<p>这些定理可以用来证明局部鞅是真的鞅：</p>
-<p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅<span
-class="math inline">\(M(t)\)</span>，并且满足他的二次方差有界<span
-class="math inline">\(E\sqrt{ [M,M]
-(t)}&lt;\infty\)</span>，那么在有限区间<span
-class="math inline">\([0,T]\)</span>内它是一致可积的鞅.</p>
-<h3 id="continuous-martingales-change-of-time">7.8 Continuous
-Martingales — Change of Time</h3>
-<p><span
-class="math inline">\(\qquad\)</span><strong>Levy对布朗运动的描述：</strong>对于一个<span
-class="math inline">\(M(0)=0\)</span>的过程<span
-class="math inline">\(M\)</span>是布朗运动，且仅当它是二次变差为<span
-class="math inline">\([M,M] (t)=t\)</span>的局部鞅.<em>本节讨论的change
-of time便是基于Levy对布朗运动的描述.</em></p>
-<p><u>关于鞅的时间的变化</u></p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.37(Dambis-Dubin-Schwarz(DDS))：</strong><span
-class="math inline">\(M(t)\)</span>是在0处为0的连续鞅，使得<span
-class="math inline">\([M,M] (t)\)</span>不递减到<span
-class="math inline">\(\infty\)</span>，并定义<span
-class="math inline">\(\tau_t=inf\)</span>{<span
-class="math inline">\(s：[M,M] (s)&gt;t\)</span>}，那么过程<span
-class="math inline">\(B(t)=M(\tau_t)\)</span>是关于域流<span
-class="math inline">\(\mathcal
-F_{\tau_t}\)</span>的布朗运动；进一步<span class="math inline">\([M,M]
-(t)\)</span>是关于这域流的停时，对布朗运动<span
-class="math inline">\(B(t)\)</span>做时间变化，就得到鞅<span
-class="math inline">\(M(t)\)</span>，即<span
-class="math inline">\(M(t)=B([M,M]
-(t))\)</span>.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
-<p><span
-class="math inline">\(\qquad\)</span><u>关于SDE的时间的变化</u></p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.38：</strong><span
-class="math inline">\(f(t)\)</span>是自适应，正，增的微分过程(为了<span
-class="math inline">\(f^{-1}\)</span>存在)，则<span
-class="math inline">\(dX(t)=\sqrt{f&#39;(t)}dB(t)\)</span>有弱解<span
-class="math inline">\(\widehat{B}(f(t))\)</span>.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.39：</strong><span
-class="math inline">\(\sigma(x)&gt;0\)</span>，定义<span
-class="math inline">\(G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}\)</span>对于有限的<span
-class="math inline">\(t\)</span>是有限的，关于<span
-class="math inline">\(t\)</span>递增到<span
-class="math inline">\(\infty\)</span>
-a.s.，G是正的，连续的，严格增到<span
-class="math inline">\(\infty\)</span>，因此存在逆函数<span
-class="math inline">\(\tau_t=G^{-1}(t)\)</span>，对于固定的<span
-class="math inline">\(t\)</span>，<span
-class="math inline">\(\tau_t\)</span>是停时，递增的，并且他是过程<span
-class="math inline">\(G(s)\)</span>第一次到达<span
-class="math inline">\(t\)</span>，那么过程<span
-class="math inline">\(X(t)=B(\tau_t)\)</span>是<span
-class="math inline">\(dX(t)=\sigma(X(t))dB(t)\)</span>的弱解.</p>
-<p><span class="math inline">\(\qquad\)</span><strong>Theorem
-7.41：</strong>令<span class="math inline">\(X(t)\)</span>是<span
-class="math inline">\(dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)\)</span>的解，并定义<span
-class="math inline">\(Y(t)=X(\tau_t)\)</span>，于是<span
-class="math inline">\(Y(t)\)</span>是<span
-class="math inline">\(dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)\)</span>的弱解，其中<span
-class="math inline">\(Y(0)=X(0)\)</span>， <span
-class="math inline">\(g(x)\)</span>是正函数，<span
-class="math inline">\(G(t)=\int_0^tg(X(s))ds\)</span>.</p>
-]]></content>
-      <tags>
-        <tag>随机分析及其应用Fima C. Klebaner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机分析及其应用 Chapter8</title>
-    <url>/2023/06/01/Math/StochasticAnalysisandItsApplications-Chapter-8/</url>
-    <content><![CDATA[<h1 id="chapter-8-calculus-for-semimartingales">Chapter 8 Calculus For
-Semimartingales</h1>
-<h3 id="introduction">8.1 Introduction</h3>
-<p><span class="math inline">\(\qquad\)</span> <strong>Definition
-8.1(半鞅)：</strong>若右连左极函数<span
-class="math inline">\(S(t)\)</span>是由局部鞅<span
-class="math inline">\(M(t)\)</span>和有限变差过程<span
-class="math inline">\(A(t)\)</span>的和组成，其中<span
-class="math inline">\(S(0)=A(0)=0\)</span>,即<span
-class="math inline">\(S(t)=S(0)+M(t)+A(t)\)</span>，则称<span
-class="math inline">\(S(t)\)</span>为半鞅</p>
-<p>鞅一定是半鞅，反之不一定.</p>
-<p>这里给出几个半鞅的经典例子:</p>
-<p>1.<span class="math inline">\(S(t)=B^2(t)\)</span>是半鞅，因为<span
-class="math inline">\(B^2(t)-t\)</span>是鞅，<span
-class="math inline">\(t\)</span>是有限变差过程.</p>
-<p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p>
-<p>满足以下性质的过程称为Poisson过程：</p>
-<ol type="1">
-<li><span
-class="math inline">\(N(t)-N(s)\)</span>独立于过去，过去即为由<span
-class="math inline">\(N_u\)</span>生成的<span
-class="math inline">\(\sigma\)</span>域，其中<span
-class="math inline">\(u \le s\)</span>.</li>
-<li>对于任意的<span class="math inline">\(t&gt;s\)</span>，<span
-class="math inline">\(N(t)-N(s)\)</span>有参数为<span
-class="math inline">\(\lambda(t-s)\)</span>的<span
-class="math inline">\(Poisson\)</span>分布.若<span
-class="math inline">\(N(0)=0\)</span>，那么<span
-class="math inline">\(N(t)\)</span>有<span
-class="math inline">\(Pn(\lambda t)\)</span>分布.</li>
-<li>路径<span class="math inline">\(N(t)\)</span>，<span
-class="math inline">\(t≥0\)</span>，是关于<span
-class="math inline">\(t\)</span>仅通过大小为1的跳跃改变的递增函数.</li>
-</ol>
-<p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果<span
-class="math inline">\(S(t)\)</span>是半鞅，<span class="math inline">\(f
-\in C^2\)</span>，那么<span
-class="math inline">\(f(S(t))\)</span>也是半鞅.当然<span
-class="math inline">\(f(S(t))\)</span>可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p>
-<p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p>
-<p>5.扩散过程是半鞅.可以给<span
-class="math inline">\(dB(t)\)</span>看作是局部鞅，dt看作有限变差过程.</p>
-<h3 id="predictable-processes">8.2 Predictable Processes</h3>
-<p><span class="math inline">\(\qquad\)</span>
-先回忆一下对于离散过程的可预测过程的定义：离散过程<span
-class="math inline">\(H\)</span>是可预测的，如果<span
-class="math inline">\(H_n\)</span>是<span class="math inline">\(\mathcal
-F_{n-1}\)</span>可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p>
-<p><span class="math inline">\(\qquad\)</span>
-对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p>
-<ol type="1">
-<li>左连续适应过程</li>
-<li>左连续适应过程的极限a.s.</li>
-<li>对于任意的停时<span class="math inline">\(\tau\)</span>，<span
-class="math inline">\(H_{\tau}\)</span> 是<span
-class="math inline">\(F_{\tau}\)</span>可测的，<span
-class="math inline">\(\sigma\)</span>域由<span
-class="math inline">\(A\cap {T&lt;t}\)</span>生成，其中<span
-class="math inline">\(A\in \mathcal F_{tau}\)</span></li>
-<li>可预测过程的<span class="math inline">\(Borel\)</span>可测函数</li>
-</ol>
-<h3 id="doobmeyer-decomposition">8.3 Doob–Meyer Decomposition</h3>
-<p><span class="math inline">\(\qquad\)</span> 若<span
-class="math inline">\(X\)</span>是下鞅(or局部下鞅)，则存在一个局部鞅<span
-class="math inline">\(M(t)\)</span>和唯一的递增预测过程<span
-class="math inline">\(A(t)\)</span>，局部可积，使得：<span
-class="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>.</p>
-<h3 id="integrals-with-respect-to-semimartingales">8.4 Integrals With
-Respect to Semimartingales</h3>
-<p><span class="math inline">\(\qquad\)</span> 关于半鞅的积分形式<span
-class="math inline">\(\int_0^TH(t)dS(t)\)</span>，其中<span
-class="math inline">\(S(t)\)</span>是半鞅。由于布朗运动是鞅，此时若<span
-class="math inline">\(S(t)\)</span>是布朗运动的话，就变成了之前学过的<span
-class="math inline">\(it\widehat{o}\)</span>积分.</p>
-<h6 id="鞅的随机积分及其性质">鞅的随机积分及其性质</h6>
-<p><span class="math inline">\(\qquad\)</span>
-在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，<span
-class="math inline">\(H(t)\)</span>是简单的可测过程，<span
-class="math inline">\(H(t)=H(0)I_0+\sum_{i=0}^{n-1}H_iI_{(T_i,T_{i+1}]}\)</span>,其中<span
-class="math inline">\(T_i\)</span>是递增的停时，<span
-class="math inline">\(H_i\)</span>是<span class="math inline">\(\mathcal
-F_{T_i}\)</span>可测的，于是关于局部鞅的随机积分是如此定义的<span
-class="math inline">\(\int_0^TH(t)dM(t)=\sum_{i=0}^{n-1}H_i(M_{T_{i+1}}-M_{T_i})\)</span>.</p>
-<ol type="1">
-<li>局部鞅性质. 若M(t)是局部鞅，则积分<span
-class="math inline">\(\int_0^t H(s)dM(s)\)</span>是局部鞅.</li>
-<li>等距性质. 若<span
-class="math inline">\(M(t)\)</span>是平方可积鞅，<span
-class="math inline">\(H\)</span>满足 <span
-class="math inline">\(E(\int_0^TH^2(s)d[M,M] (s))&lt;\infty\)</span>,
-那么<span class="math inline">\(\int_0^t
-H(s)dM(s)\)</span>是期望为0，方差为<span
-class="math inline">\(E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d[M,M]
-(t))\)</span>的平方可积鞅.</li>
-<li>如果局部鞅<span
-class="math inline">\(M(t)\)</span>是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li>
-</ol>
-<h6 id="半鞅的随机积分及其性质">半鞅的随机积分及其性质</h6>
-<p><span class="math inline">\(\qquad\)</span> <span
-class="math inline">\(H(t)\)</span>是可预测过程，半鞅<span
-class="math inline">\(S(t)\)</span>的随机积分形式为：$
-_0^TH(t)dS(t)=_0^TH(t)dM(t)<span class="math inline">\(&lt;br
-/&gt;\)</span>+_0^TH(t)dA(t)$.</p>
-<p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p>
-<p><span class="math inline">\(\qquad\)</span> <span
-class="math inline">\(X\)</span>是半鞅，<span
-class="math inline">\(H\)</span>是可预测过程，定义<span
-class="math inline">\((H\cdot X):=\int_0^tH(s)dX(s)\)</span>.</p>
-<ol type="1">
-<li><span class="math inline">\(\Delta (H\cdot X)=H\Delta
-X\)</span>.不太明白</li>
-<li>如果<span class="math inline">\(\tau\)</span>是停时，则<span
-class="math inline">\(\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le
-\tau)dX(s)\)</span><br /><span
-class="math inline">\(=\int_0^tH(s)dX(s\land\tau)\)</span>.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li>
-<li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li>
-<li>若<span
-class="math inline">\(Y(t)=\int_0^tH(s)dX(s)\)</span>是半鞅，K是可预测过程，定义<span
-class="math inline">\((K\cdot
-Y)(t)=\int_0^tK(s)dY(s)\)</span>，那么<span class="math inline">\(K\cdot
-Y=K\cdot (H\cdot X)=(KH)\cdot X\)</span>,也就是说，<span
-class="math inline">\(\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)\)</span>.</li>
-</ol>
-<h3 id="quadratic-variation-and-covariation">8.5 Quadratic Variation and
-Covariation</h3>
-<ul>
-<li><span class="math inline">\(\qquad\)</span>
-先回忆什么是二次协变差(方括号过程)，<span
-class="math inline">\(X,Y\)</span>是半鞅，则他们的二次协变差为：<br /><span
-class="math inline">\([X,Y]
-(t)=lim\sum\limits_{i=1}^{n-1}(X(t_{i+1}^{n})-X(t_{i}^{n}))(Y(t_{i+1}^{n})-Y(t_{i}^{n}))\)</span>.
-其中<span
-class="math inline">\(\delta_n=max_i(t_{i+1}^n-t_{i}^n)\rightarrow0\)</span>.</li>
-</ul>
-<p>小知识点：布朗运动的二次方差为<span class="math inline">\([B,B]
-(t)=t\)</span>，Poisson过程的二次变差为：<span
-class="math inline">\([N,N] (t)=N(t)\)</span>.</p>
-<ol type="1">
-<li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li>
-<li>[X,X] (t)是有限变差函数.</li>
-<li>[X,Y]是对称和双线性的; 即<span
-class="math inline">\([X,Y]=[Y,X]\)</span>, <span
-class="math inline">\([\alpha X+Y,\beta
-U+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]\)</span>.</li>
-<li>极化恒等式；<span
-class="math inline">\([X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])\)</span>.</li>
-<li>[X,Y]是具有有限变差的正则右连续函数<span
-class="math inline">\((cadlag)\)</span>.这是由极化恒等式是两个递增函数的差证明的？</li>
-<li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，<span
-class="math inline">\(\Delta[X,Y] (t)=\Delta X(t)\Delta
-Y(t)\)</span>.</li>
-<li><span
-class="math inline">\(X,Y\)</span>只要有一个是有限变差过程，那么<span
-class="math inline">\([X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\Delta
-Y(s)\)</span>.此条有以下推论：</li>
-</ol>
-<p><span class="math inline">\(\qquad\)</span><strong>Corollar
-8.5：</strong>如果<span
-class="math inline">\(X(t)\)</span>是具有有限变差的连续半鞅过程，那么<span
-class="math inline">\(X(t)\)</span>与其他任何半鞅的二次协方差都为0.</p>
-<p>下面介绍随机积分的二次变差</p>
-<ul>
-<li><p><span class="math inline">\([\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)]
-(t)=\int_0^tH(s)K(s)d[X,Y] (s)\)</span>.</p></li>
-<li><p>特别地，取<span class="math inline">\(K(s)=1\)</span>, 就有<br />
-<span class="math inline">\([\int_0^.H(s)dX(s),Y(s)]
-(t)=[\int_0^.H(s)dX(s),\int_0^.1dY(s)] (t)=\int_0^tH(s)d[X,Y]
-(s)\)</span>.</p></li>
-</ul>
-<h3 id="itos-formula-for-continuous-semimartingales">8.6 Ito’s Formula
-for Continuous Semimartingales</h3>
-<p><span
-class="math inline">\(\qquad\)</span>如果X是连续半鞅，f是二次连续可微的函数，那么f(X(t))是半鞅，并且有ito公式：</p>
-<ul>
-<li><span
-class="math inline">\(f(X(t))-f(X(0))=\int_0^tf&#39;(X(s))dX(s)+\frac{1}{2}\int_0^tf&#39;&#39;(X(s))d[X,X]
-(s)\)</span>.</li>
-</ul>
-<h3 id="stochastic-exponential">8.8 Stochastic Exponential</h3>
-<p>先回忆在章节5.2中的<span
-class="math inline">\(ito\)</span>过程的随机指数：令<span
-class="math inline">\(X\)</span>随机可微，<span
-class="math inline">\(U\)</span>满足<span
-class="math inline">\(U(t)=1+\int_0^tU(s)dX(s)\)</span>,<span
-class="math inline">\(U\)</span>被称作是<span
-class="math inline">\(X\)</span>的随机指数，记作<span
-class="math inline">\(\varepsilon(X)\)</span>.在<strong>Theorem
-5.2</strong>中给出这个方程的唯一解是<span
-class="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X]
-(t)}\)</span>.</p>
-<p>下面讨论半鞅的随机指数，随机指数（也称为半鞅，或 Doleans-Dade
-指数）是指数函数的随机类比。</p>
-<p><strong>Theorem 8.12：</strong>X是一个连续鞅，使得<span
-class="math inline">\(U(t)=1+\int_0^tU(s-)dX(s)\)</span>成立，它的随机指数为
-<span
-class="math inline">\(U(t)=\varepsilon(X)(t)=e^{X(t)-X(0)-\frac{1}{2}[X,X]  (t)}\)</span>.</p>
-<p>X,Y是同一个空间的半鞅.随机指数具有的性质：</p>
-<ol type="1">
-<li><span class="math inline">\(\varepsilon(X) (t)\varepsilon(Y)
-(t)=\varepsilon(X+Y+[X,Y]) (t)\)</span>.</li>
-<li>若X连续，X(0)=0，那么<span
-class="math inline">\((\varepsilon(X)(t))^{-1}=\varepsilon(-X+[X,X]
-(t))(t)\)</span>.</li>
-</ol>
-<h6 id="鞅的随机指数">鞅的随机指数</h6>
-<p>由于关于局部鞅的积分是局部鞅，所以<span
-class="math inline">\(\varepsilon(X)(t)\)</span>是局部鞅，由于应用中一般需要鞅，下面利用Th7.21,7.35，给出随机指数是鞅的条件.</p>
-<p><strong>Theorem 8.14
-：</strong>M(t)是连续局部鞅，在0处为0，那么他的随机指数为<span
-class="math inline">\(\varepsilon(X)(t)=e^{M(t)-\frac{1}{2}[M,M]
-(t)}\)</span>并且他是连续正局部鞅.
-所以它是上鞅，可积，有限非减的期望，满足下列条件之一，则他就是鞅：</p>
-<ol type="1">
-<li><span class="math inline">\(E(e^{M(T)-\frac{1}{2}[M,M]
-(T)})=1\)</span></li>
-<li>对于所有的t$<span
-class="math inline">\(0，\)</span>E(_0<sup>te</sup>{2M(s)-[M,M]
-(t)}d[M,M] (s))&lt;$.</li>
-<li>对于所有的t$<span
-class="math inline">\(0，\)</span>E(_0<sup>te</sup>{2M(s)}d[M,M]
-(s))&lt;$.</li>
-</ol>
-<p>其中1是利用Th7.3；2,3是利用7.35；</p>
-<p><strong>Kazamaki's Condition :
-</strong>M是连续局部鞅，在0处为0，若<span
-class="math inline">\(e^{\frac{1}{2}M(t)}\)</span>是下鞅，那么<span
-class="math inline">\(\varepsilon(M)\)</span>是鞅.</p>
-<p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若<span
-class="math inline">\(e^{\frac{1}{2}M(T)}&lt;\infty\)</span>，那么<span
-class="math inline">\(\varepsilon(M)\)</span>在[0,T]是鞅.</p>
-<p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足Kazamaki
-Condition</p>
-<p><strong>Noviikov's
-Condition：</strong>M是连续局部鞅，在0处为0，若对于每个<span
-class="math inline">\(t\le T\)</span>都有<span
-class="math inline">\(E(e^{\frac{1}{2}[M,M]
-(t)})&lt;\infty\)</span>，那么<span
-class="math inline">\(\varepsilon(M)\)</span>是均值为0的鞅.特别的，如果对于每个t都存在一个常数<span
-class="math inline">\(K_t\)</span>使得<span class="math inline">\([M,M]
-(t)&lt;K_t\)</span>，那么<span
-class="math inline">\(\varepsilon(M)(t)\)</span>是鞅，对于任意的<span
-class="math inline">\(t\le T\)</span>.</p>
-<p>在前面证明布朗运动的Levy特征时，使用了<span
-class="math inline">\(e^{uM(t)-\frac{u^2t}{2}}\)</span>是鞅，在这里使用随机指数给出证明。</p>
-<p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M]
-(t)=t，于是随机指数<span
-class="math inline">\(U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}\)</span>是鞅.</p>
-<h3 id="compensators-and-sharp-bracket-process">8.9 Compensators and
-Sharp Bracket Process</h3>
-<p><strong>Compensator：</strong><span
-class="math inline">\(N(t)\)</span>是一个(局部)可积变差的适应过程，他的compensator
-<span class="math inline">\(A(t)\)</span>是唯一的可预测过程使得<span
-class="math inline">\(M(t)=N(t)-A(t)\)</span>是一个局部鞅.</p>
-<p>在固定的域流和概率下，compensator是唯一的.</p>
-<p><strong>Theorem 8.21：</strong><span
-class="math inline">\(N(t)\)</span>是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p>
-<p><span class="math inline">\(\mathcal
-PROOF：\)</span>回忆Doob-Meyer分解：<span
-class="math inline">\(X\)</span>是(局部)下鞅，那么存在局部鞅<span
-class="math inline">\(M(t)\)</span>和唯一递增的适应过程<span
-class="math inline">\(A(t)\)</span>，使得<span
-class="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅.
-因此<span class="math inline">\(N\)</span>与Doob-meyer分解的X对应。</p>
-<p>回忆，半鞅X的二次方差过程<span class="math inline">\([M,M]
-(t)\)</span>是存在且非减的.</p>
-<p><strong>Sharp Bracket：</strong>半鞅<span
-class="math inline">\(X\)</span>的尖括号(可预测的二次变差)过程<span
-class="math inline">\(\langle X,X\rangle(t)\)</span>是<span
-class="math inline">\([X,X] (t)\)</span>的compensator.这就意味着<span
-class="math inline">\(\langle X,X\rangle(t)\)</span>是唯一使<span
-class="math inline">\([X,X] (t)-\langle
-X,X\rangle(t)\)</span>成为局部鞅的可预测过程.</p>
-<p><strong>Theorem
-8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么<span
-class="math inline">\([X,X] (t)=\langle X,X\rangle\)</span>.</p>
-<p>如此一来就很方便的找到了compensator.</p>
-<h6 id="平方可积鞅的尖括号过程">平方可积鞅的尖括号过程</h6>
-<p>回忆前面鞅的二次变差，若<span
-class="math inline">\(M\)</span>使平方可积鞅，那么<span
-class="math inline">\(M^2-[M,M] (t)\)</span>使鞅；由于<span
-class="math inline">\(x^2\)</span>使凸函数，于是<span
-class="math inline">\(M^2\)</span>是下鞅；在Doob-Meyer分解下，有以下定理：</p>
-<p><strong>Theorem
-8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程<span
-class="math inline">\(\langle M,M\rangle(t)\)</span>是唯一使<span
-class="math inline">\(M^2-[M,M]
-(t)\)</span>是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有<span
-class="math inline">\(EM^2(t)=E[M,M] (t)=E\langle
-M,M\rangle(t)\)</span>.</p>
-<p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p>
-<p><strong>Theorem 8.27：</strong>M是局部鞅，<span
-class="math inline">\(0\le t\le
-T&lt;\infty\)</span>,在0处为0，对于所有的t都有<span
-class="math inline">\(E\langle
-M,M\rangle&lt;\infty\)</span>，那么M是平方可积的鞅；并且<span
-class="math inline">\(EM^2(t)=E[M,M] (t)=E\langle
-M,M\rangle(t)\)</span>. 当<span
-class="math inline">\(T=\infty\)</span>和<span
-class="math inline">\(sup_{t&lt;\infty}E\langle
-M,M\rangle(t)&lt;\infty\)</span>,则<span
-class="math inline">\(M(t)\)</span>在<span
-class="math inline">\([0,\infty)\)</span>是平方可积鞅.</p>
-<p>由于连续局部鞅是局部平方可积的，从而有</p>
-<p><strong>Corollary 8.28
-：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p>
-<h6 id="半鞅的连续鞅分量">半鞅的连续鞅分量</h6>
-<p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和.
-那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p>
-<p><strong>Definition
-8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的.
-局部鞅M,N是正交的如果MN是局部鞅.</p>
-<p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.<span
-class="math inline">\(M=M^c+M^d\)</span>.半鞅<span
-class="math inline">\(X(t)\)</span>可以分解成<span
-class="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>. 其中<span
-class="math inline">\(M(t)\)</span>是局部鞅，<span
-class="math inline">\(M^c\)</span>被称为X的连续鞅分量，记为<span
-class="math inline">\(X^{cm}\)</span>.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，
-假若<span
-class="math inline">\(X(t)=X(0)+M_1(t)+A_1(t)\)</span>是另一种分解，那么就有<span
-class="math inline">\((M-M_1)(t)=-(A-A_1)(t)\)</span>.因此<span
-class="math inline">\((M-M_1)\)</span>是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着<span
-class="math inline">\(M^c-M^c_1=0\)</span>.这就证明了对于所有的半鞅分解<span
-class="math inline">\(X^{cm}\)</span>是唯一的. 于是，就有下面的推论</p>
-<p><strong>Corollary 8.30
-：</strong>若X是有限变差的半鞅，这意味着半鞅X的分解中鞅部分为0，也就是说连续鞅部分也一定是0，即<span
-class="math inline">\(X^{cm}=0\)</span>.</p>
-<h6 id="随机积分存在的条件">随机积分存在的条件</h6>
-<p>总的来说，随机积分<span
-class="math inline">\(\int_0^TH(s)dM(s)\)</span>的定义，取决于M的性质，当<span
-class="math inline">\(\langle
-M,M\rangle(t)\)</span>不连续，连续，绝对连续，会让H的范围更宽泛.</p>
-<h6 id="可预测二次变差的性质">可预测二次变差的性质</h6>
-<p>对于局部可积二次变差的半鞅X,Y</p>
-<ol type="1">
-<li><span class="math inline">\(\langle
-X,X\rangle(t)\)</span>关于t是增的.</li>
-<li><span class="math inline">\(\langle
-X,X\rangle(t)\)</span>是双线性，对称的</li>
-<li>极化恒等式.<span class="math inline">\(\langle
-X,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langle
-X-Y,X-Y\rangle)\)</span></li>
-<li><span class="math inline">\(\langle
-X,X\rangle\)</span>是有限变差的可预测过程.</li>
-<li><span class="math inline">\(\langle
-X,X\rangle=0\)</span>如果X或Y是有限变差的，且其中之一是连续的.</li>
-<li><span class="math inline">\(\big\langle
-\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langle
-X,Y\rangle(s)\)</span>.</li>
-</ol>
-<h3 id="itos-formula-for-semimartingales">8.10 Ito’s Formula for
-Semimartingales</h3>
-<p>不同于8.6章的连续半鞅，<span
-class="math inline">\(X(t)\)</span>是半鞅，<span
-class="math inline">\(f\in C^2\)</span>, 则<span
-class="math inline">\(f(X(t))\)</span>是半鞅，并且有<span
-class="math inline">\(ito\)</span>公式:</p>
-<ul>
-<li><span
-class="math inline">\(f(X(t))-f(X(0))=\int_0^tf&#39;(X(s-))dX(s)+\frac{1}{2}\int_0^tf&#39;&#39;(X(s-))d[X,X]
-(s)+ \\ \sum\limits_{s\le t}  \Bigg
-(f(X(s))-f(X(s-))-f&#39;(X(s-))\Delta
-X(s)-\frac{1}{2}f&#39;&#39;(X(s-))(\Delta X(s))^2\Bigg )\)</span>.</li>
-</ul>
-<h3 id="stochastic-exponential-and-logarithm">8.11 Stochastic
-Exponential and Logarithm</h3>
-<p>不同于8.8章的连续半鞅，<span
-class="math inline">\(X\)</span>是半鞅，随机方程<span
-class="math inline">\(U(t)=1+\int_0^tU(s-)dX(s)\)</span>有唯一解，被称为<span
-class="math inline">\(X\)</span>的随机指数.</p>
-<ul>
-<li><p><span
-class="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langle
-X,X\rangle^c (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta
-X(s)}\)</span>，由有限变差的分解<span class="math inline">\([X,X]
-(s)=\langle X,X\rangle^c(s)+\sum\limits_{0&lt;s\le t}\Delta
-X(s)\)</span>，这等价于</p></li>
-<li><p><span
-class="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[
-X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\Delta
-X(s)+\frac{1}{2}(\Delta X(s))^2}\)</span>.</p></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>随机分析及其应用Fima C. Klebaner</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>TestTime</title>
+      <link href="/2024/11/22/TestTime/"/>
+      <url>/2024/11/22/TestTime/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to love ? How to love yourself or anyone?</title>
+      <link href="/2024/11/11/Emotion/Howtolove/"/>
+      <url>/2024/11/11/Emotion/Howtolove/</url>
+      
+        <content type="html"><![CDATA[<p>一个人的慢慢淡出，即使随着时间的流逝，也还是会久久不能释怀。</p><p>很多时候感觉有很多话在心里面，但是不知该如何表达出来，此刻想写下很多感悟，却总结不出。</p><p>一座城市一个人。</p><p>对于感情这方面的事情，我陷入了误区，是思想上的误区。我只会对一个初次见面的人会产生情愫，如果对于初次认识的人不是以在一起而相互了解的，我就不会再对她有什么情感上的感觉。换句话说，我对一见钟情💘这样的爱情很执着。但是问题是往往一见钟情的爱情不是建立在相互了解上的，在这种情况下的恋爱，往往在后面慢慢的就会发现，两个人并不合适。这就陷入了死循环，如果选择一见钟情，会产生性格不合；如果不是一见钟情，我不会有什么爱情的感觉。</p><p>感悟什么的到底算什么呢？需要的是自己做出改变，但是性格这个东西怎么改变呢？难以做出评价。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Triviality </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>No more love,more love</title>
+      <link href="/2024/11/08/Emotion/Nomorenomore/"/>
+      <url>/2024/11/08/Emotion/Nomorenomore/</url>
+      
+        <content type="html"><![CDATA[<p>More troubles are deeply involved.</p><p>Why do you start looking for your own mistakes after separation?Isn't this self-inflicted? Every choice before was my best choiceaccording to the situation at the time, and the final fault was notsomeone's fault, I don't want to always attribute it to myself. In myopinion, I should hate, all hate, because I didn't do anything wrong, Idon't want to be separated, no matter what happens. I was broken upinexplicably, which is the biggest mistake!</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Triviality </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>上传文件到服务器</title>
+      <link href="/2024/10/22/UsefulUse/UploadFiletoServer/"/>
+      <url>/2024/10/22/UsefulUse/UploadFiletoServer/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p><span id="more"></span><h1 id="mac">Mac</h1><p><strong>1.下载Termius</strong>首先点击下载<a href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p><p><strong>2.配置ssh环境</strong></p><p>首先，点击newhost <img src="/pic/newhost.png" title="newhost"alt="img" /></p><!-- <p align="center">    <img src="/pic/newhost.png" alt="newhost" width="50%"></p> --><p>然后按照自己的ip和username进行配置之后,点击connect。 <imgsrc="/pic/turmius配置.png" title="turmius配置" alt="img" />出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png"title="login" alt="img" /> 在SFTP界面点击selecthost，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。<img src="/pic/selecthost.png" title="selecthost" alt="img" />下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png"title="SFTP" alt="img" /> 等待传输完成。</p><h1 id="windows">Windows</h1><p>点击下载<a href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a>对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p><p>参考<a href="https://blog.csdn.net/m0_49448331/article/details/125767862" style="color: #FF5733; text-decoration: none;">CSDN</a>的教程.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在linux的命令中行运行matlab</title>
+      <link href="/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/"/>
+      <url>/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p>当我们已经通过ssh连接了远程服务器之后，之所以能够在命令行运行<code>python test.py</code>的原因是：在linux安装anaconda的时候，会自动生成一个python的全局变量，因此可以直接在命令行运行python，但是安装matlab，默认并不会设置环境变量，下面我们介绍一下matlab如何在linux的命令行中运行。</p><p>首先，找到当前linux系统中matlab的安装位置，以<code>/usr/local/MATLAB/R2023a/bin/matlab</code>为例。首先，确保当前的输入法是英文输入法，并且是小写，这点非常重要。</p><span id="more"></span><p><strong>设置环境变量</strong></p><ol type="1"><li>在命令行中运行这个命令<code>vim ~/.bashrc</code>。<br /></li><li>尝试按下键盘的上下左右此时你会发现光标的移动，按住下键，直到光标位于最后一行，确保当前的输入法环境是小写英文，下面一直是这个要求，不再重复。当光标到达最后一行，只需要按下<code>o</code>，光标会移动到下一行，并且左下角会出现insert的字样，此时将这个代码粘贴进去<code>export PATH=$PATH:/usr/local/MATLAB/R2023a/bin</code>,注意这里粘贴需要使用鼠标右键的粘贴，接下来准备退出编辑器，按下<code>esc</code>键，退出insert模式，按住<code>shift+;</code>，也就是打出<code>:</code>,再按下wq，最终的命令是<code>:wq</code>,最后按下<code>enter</code>,就退出了编辑器，返回到了命令行界面.<br /></li><li>距离环境变量的配置还差最后一步，在命令行执行这个命令<code>source ~/.bashrc</code>，这就结束了，现在我们就可以在命令行输入<code>matlab</code>直接打开matlab客户端了。</li></ol><p><strong>添加shell脚本</strong></p><p>打开你的matlab的文件夹，里面有你的matlab代码，在这个文件夹空白的地方按下鼠标右键，打开终端命令，在终端中执行<code>ls</code>,你应该能看到你的matlab代码，假设这有有一个名字是<code>test.m</code>的代码，下面是代码的内容，你也可以设置同样的代码，用来测试你是否成功配置环境。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% test.m</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">    <span class="built_in">i</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>下面我们尝试在命令行运行他，在终端输入<code>matlab -batch test</code>，注意这里输入的是<code>test</code>而不是<code>test.m</code>,稍等一会，命令行输出1，2，3的字样。</p><p>接下来我们编写一个shell脚本用来运行它，当然如果你觉得每次多输入<code>-batch</code>不算麻烦的话，下面的内容就不需要看了。1.输入这个命令<code>cd /home/username/bin/</code>,这里<code>username</code>输入你的英文名，也就是linux的主机名，开启电脑时，登陆界面的那个名字。输入<code>pwd</code>，确保当前路径是<code>/home/zuoruchun/bin/</code>.2.接下来在终端输入<code>vim matlab.sh</code>，按下<code>i</code>，进入insert模式，将下面的代码粘贴进去，注意这里粘贴需要使用鼠标右键的粘贴。同样的，按下<code>esc</code>，键入<code>:wq</code>退出编辑器。3.赋予脚本执行权限.在终端中运行以下命令：<code>chmod +x matlab.sh</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查是否提供了脚本名称</span></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    echo &quot;使用方法: matlab_run.sh your_script_name&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行 MATLAB 脚本并输出日志</span></span><br><span class="line">echo &quot;开始运行 MATLAB 脚本: $1&quot;</span><br><span class="line">matlab -batch &quot;$1&quot;</span><br></pre></td></tr></table></figure><p>大功告成，接下来，我们只需要在命令行输入<code>matlab.sh test</code>，就可以运行这个代码了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ssh利用服务器在本地编写代码，并且利用远程服务器编译</title>
+      <link href="/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/"/>
+      <url>/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p><strong>1.准备工作</strong></p><p>在VsCode中安装下面的插件：<br />Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,Remote Development;<br />于是在VsCode侧边栏会出现一个类似与电脑的图标。</p><span id="more"></span><figure><img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><p><strong>2.获取服务器的username和ip</strong></p><p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<img src="/pic/ip.png" title="ip" alt="img" /></p><p><strong>3.连接</strong></p><p>点击加号, 输入<code>ssh username@ip</code>,之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <imgsrc="/pic/config.jpg" title="config" alt="img" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name# name可以任意填写</span><br><span class="line">HostName ip# 填写服务器ip</span><br><span class="line">Port 22# 服务器段口号（不作修改）</span><br><span class="line">User zuoruchun# 登陆用户名username</span><br></pre></td></tr></table></figure><p>保存配置文件。<br />之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"title="ssh配置2" alt="img" /> <strong>4.使用</strong></p><p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件，然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p><p><strong>5.备注</strong>ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p><h1id="但是最最最最重要的一点是可以使用motionpro连接校园网这同样保证了网络在同一局域网之下于是就能够保证即使不在学校依然能够使用进行ssh">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git的一些操作</title>
+      <link href="/2024/09/26/Git/GitOperation/"/>
+      <url>/2024/09/26/Git/GitOperation/</url>
+      
+        <content type="html"><![CDATA[<p><code>git clone githun url</code> - 将github的内容克隆到本地</p><p><code>git init</code> - 初始化仓库.</p><p><code>git add .</code> - 添加文件到暂存区。</p><p><code>git commint -m "提交信息"</code> -将暂存区内容添加到仓库中.</p><p><code>git push</code> - 推到github</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用DataGrip的Hive数据库连接阿里云服务器的Bug</title>
+      <link href="/2024/08/20/Computer/DataGripbug/"/>
+      <url>/2024/08/20/Computer/DataGripbug/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p><p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<ahref="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p><span id="more"></span><p>在SSH配置完成后的下一步，它的配置如下</p><figure><img src="\pic\DataGrip配置失败.png" alt="DataGrip配置失败" /><figcaption aria-hidden="true">DataGrip配置失败</figcaption></figure><p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p><p>尝试了很多次都没有办法，最后使用PyCharm来操作数据库，偶然成功了，最后发现，这里的HOST地址应该保留默认值localhost不变才能够连接成功</p><figure><img src="\pic\DataGrip配置成功.png" alt="DataGrip配置失败" /><figcaption aria-hidden="true">DataGrip配置失败</figcaption></figure><p>虽然不知道具体原因，但好在问题确实出现在这里，得到了解决。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Bugs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决git报错443问题</title>
+      <link href="/2024/08/20/Git/HexoPort/"/>
+      <url>/2024/08/20/Git/HexoPort/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p>解决使用git时遇到Failed to connect to github.com port 443 after 21090ms: Couldn‘t connect to server #一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？fatal: unable to access 'https://github.com/xxx/******.git/': Failed toconnect to github.com port 443 after 21090 ms: Couldn't connect toserver</p><p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p><span id="more"></span><p>解决办法：</p><h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2><p>设置-&gt;网络和Internet-&gt;代理</p><h2id="设置git端口号和上面的端口号保持一致我的是10809">2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2><p>git config --global http.proxy 127.0.0.1:10809</p><p>git config --global https.proxy 127.0.0.1:10809</p><h2 id="查看git设置可以省略">3.查看git设置（可以省略）：</h2><p>PS D:&gt; git config --global -l</p><p>user.email=xxx@qq.com user.name=xxx http.proxy=127.0.0.1:10809https.proxy=127.0.0.1:10809</p><h2id="再次push-或者-pull-即可保险起见可以先在cmd窗口中使用-ipconfigflushdns-刷新dns缓存">4.再次push或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns刷新dns缓存）。</h2><h1id="二如果没有挂着梯子但是还是遇到了以上报错">二、如果没有挂着梯子但是还是遇到了以上报错</h1><p>还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p><p>git config --global --unset http.proxy</p><p>git config --global --unset https.proxy</p><p>再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用ipconfig/flushdns 刷新dns缓存）。</p><p>原文链接：https://blog.csdn.net/qq_40296909/article/details/134285451</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Bugs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo使用方法</title>
+      <link href="/2024/08/07/Git/HexoUseMethods/"/>
+      <url>/2024/08/07/Git/HexoUseMethods/</url>
+      
+        <content type="html"><![CDATA[<p>终端进入blog目录，接下来启用命令 -<strong>创建一篇新blog</strong>：<code>hexo new '我的第一篇blog'</code><br />-<strong>每次启动Local或者将文章推到远端之前都要进行此操作</strong>：<code>hexo clean</code>-<strong>启动Local,可在<code>http://localhost:4000/</code>查看本地文章状态</strong>：<code>hexo s</code>- <strong>生成静态文件</strong>：<code>hexo g</code> -<strong>将生成的静态文件推送到远端</strong>：<code>hexo d</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows切换成Macbook的一些软件</title>
+      <link href="/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/"/>
+      <url>/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</url>
+      
+        <content type="html"><![CDATA[<table><colgroup><col style="width: 25%" /><col style="width: 48%" /><col style="width: 25%" /></colgroup><thead><tr><th>Windows软件</th><th>软件优点</th><th>Macbook替代</th></tr></thead><tbody><tr><td>Notepad++</td><td>轻便的编辑器</td><td>Notepad--</td></tr><tr><td>clash</td><td>为皮嗯代理</td><td>clashX</td></tr><tr><td>知云文献翻译</td><td>翻译英文文献</td><td></td></tr><tr><td>SpaceSniffer</td><td>按大小排列C，D等盘的文件</td><td></td></tr><tr><td>Xshell</td><td>好用的ssh客户机</td><td>Terminus</td></tr><tr><td>Xftp</td><td>通过ssh图形化传文件</td><td>Terminus</td></tr><tr><td>Adobe Acrobat DC</td><td>便捷查看pdf等文件</td><td>Adobe Acrobat DC</td></tr><tr><td>Bandzip</td><td>解/压缩文件</td><td>Fastzip</td></tr><tr><td>CopyQ</td><td>比ctrl+V更好更好用的粘贴板工具</td><td>iCopy</td></tr><tr><td>Everything</td><td>完爆Win自带的文件查找功能</td><td>聚焦</td></tr><tr><td>FormatFactory</td><td>格式工厂</td><td>格式工厂</td></tr><tr><td>Potplayer</td><td>播放视频软件</td><td>IINA</td></tr><tr><td>Quicker</td><td>好用的工具箱</td><td></td></tr><tr><td>Typora</td><td>好用的Markdown编辑器</td><td>Typora</td></tr><tr><td>火绒</td><td>个人电脑最安全的管家</td><td>柠檬清理</td></tr><tr><td>Snipaste</td><td>世界上最好用的截图软件</td><td>Snipaste</td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随手写</title>
+      <link href="/2023/06/09/UsefulUse/WriteCasually/"/>
+      <url>/2023/06/09/UsefulUse/WriteCasually/</url>
+      
+        <content type="html"><![CDATA[<p>导数那个题</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Triviality </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随机分析及其应用 Chapter8</title>
+      <link href="/2023/06/01/Math/StochasticAnalysisandItsApplications-Chapter-8/"/>
+      <url>/2023/06/01/Math/StochasticAnalysisandItsApplications-Chapter-8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="chapter-8-calculus-for-semimartingales">Chapter 8 Calculus ForSemimartingales</h1><h3 id="introduction">8.1 Introduction</h3><p><span class="math inline">\(\qquad\)</span> <strong>Definition8.1(半鞅)：</strong>若右连左极函数<spanclass="math inline">\(S(t)\)</span>是由局部鞅<spanclass="math inline">\(M(t)\)</span>和有限变差过程<spanclass="math inline">\(A(t)\)</span>的和组成，其中<spanclass="math inline">\(S(0)=A(0)=0\)</span>,即<spanclass="math inline">\(S(t)=S(0)+M(t)+A(t)\)</span>，则称<spanclass="math inline">\(S(t)\)</span>为半鞅</p><p>鞅一定是半鞅，反之不一定.</p><p>这里给出几个半鞅的经典例子:</p><p>1.<span class="math inline">\(S(t)=B^2(t)\)</span>是半鞅，因为<spanclass="math inline">\(B^2(t)-t\)</span>是鞅，<spanclass="math inline">\(t\)</span>是有限变差过程.</p><p>2.Poisson过程N(t)是半鞅，这是由于它其实是有限变差过程.</p><p>满足以下性质的过程称为Poisson过程：</p><ol type="1"><li><spanclass="math inline">\(N(t)-N(s)\)</span>独立于过去，过去即为由<spanclass="math inline">\(N_u\)</span>生成的<spanclass="math inline">\(\sigma\)</span>域，其中<spanclass="math inline">\(u \le s\)</span>.</li><li>对于任意的<span class="math inline">\(t&gt;s\)</span>，<spanclass="math inline">\(N(t)-N(s)\)</span>有参数为<spanclass="math inline">\(\lambda(t-s)\)</span>的<spanclass="math inline">\(Poisson\)</span>分布.若<spanclass="math inline">\(N(0)=0\)</span>，那么<spanclass="math inline">\(N(t)\)</span>有<spanclass="math inline">\(Pn(\lambda t)\)</span>分布.</li><li>路径<span class="math inline">\(N(t)\)</span>，<spanclass="math inline">\(t≥0\)</span>，是关于<spanclass="math inline">\(t\)</span>仅通过大小为1的跳跃改变的递增函数.</li></ol><p>3.从已知半鞅获得半鞅的方法是应用二次连续可微变换，即如果<spanclass="math inline">\(S(t)\)</span>是半鞅，<span class="math inline">\(f\in C^2\)</span>，那么<spanclass="math inline">\(f(S(t))\)</span>也是半鞅.当然<spanclass="math inline">\(f(S(t))\)</span>可以分解成鞅部分和有限变差部分，这由Ito公式给出.</p><p>4.右连左极(RCLL)确定性过程是半鞅当且仅当它是有限变差的.</p><p>5.扩散过程是半鞅.可以给<spanclass="math inline">\(dB(t)\)</span>看作是局部鞅，dt看作有限变差过程.</p><h3 id="predictable-processes">8.2 Predictable Processes</h3><p><span class="math inline">\(\qquad\)</span>先回忆一下对于离散过程的可预测过程的定义：离散过程<spanclass="math inline">\(H\)</span>是可预测的，如果<spanclass="math inline">\(H_n\)</span>是<span class="math inline">\(\mathcalF_{n-1}\)</span>可测的，也就是说根据直到n-1时刻的的信息，可以知道n时刻的信息.</p><p><span class="math inline">\(\qquad\)</span>对于连续的适应过程，若满足下列条件之一，则称其为可预测过程：</p><ol type="1"><li>左连续适应过程</li><li>左连续适应过程的极限a.s.</li><li>对于任意的停时<span class="math inline">\(\tau\)</span>，<spanclass="math inline">\(H_{\tau}\)</span> 是<spanclass="math inline">\(F_{\tau}\)</span>可测的，<spanclass="math inline">\(\sigma\)</span>域由<spanclass="math inline">\(A\cap {T&lt;t}\)</span>生成，其中<spanclass="math inline">\(A\in \mathcal F_{tau}\)</span></li><li>可预测过程的<span class="math inline">\(Borel\)</span>可测函数</li></ol><h3 id="doobmeyer-decomposition">8.3 Doob–Meyer Decomposition</h3><p><span class="math inline">\(\qquad\)</span> 若<spanclass="math inline">\(X\)</span>是下鞅(or局部下鞅)，则存在一个局部鞅<spanclass="math inline">\(M(t)\)</span>和唯一的递增预测过程<spanclass="math inline">\(A(t)\)</span>，局部可积，使得：<spanclass="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>.</p><h3 id="integrals-with-respect-to-semimartingales">8.4 Integrals WithRespect to Semimartingales</h3><p><span class="math inline">\(\qquad\)</span> 关于半鞅的积分形式<spanclass="math inline">\(\int_0^TH(t)dS(t)\)</span>，其中<spanclass="math inline">\(S(t)\)</span>是半鞅。由于布朗运动是鞅，此时若<spanclass="math inline">\(S(t)\)</span>是布朗运动的话，就变成了之前学过的<spanclass="math inline">\(it\widehat{o}\)</span>积分.</p><h6 id="鞅的随机积分及其性质">鞅的随机积分及其性质</h6><p><span class="math inline">\(\qquad\)</span>在定义关于半鞅的积分之前，先定义关于鞅的积分，先从简单形式出发，<spanclass="math inline">\(H(t)\)</span>是简单的可测过程，<spanclass="math inline">\(H(t)=H(0)I_0+\sum_{i=0}^{n-1}H_iI_{(T_i,T_{i+1}]}\)</span>,其中<spanclass="math inline">\(T_i\)</span>是递增的停时，<spanclass="math inline">\(H_i\)</span>是<span class="math inline">\(\mathcalF_{T_i}\)</span>可测的，于是关于局部鞅的随机积分是如此定义的<spanclass="math inline">\(\int_0^TH(t)dM(t)=\sum_{i=0}^{n-1}H_i(M_{T_{i+1}}-M_{T_i})\)</span>.</p><ol type="1"><li>局部鞅性质. 若M(t)是局部鞅，则积分<spanclass="math inline">\(\int_0^t H(s)dM(s)\)</span>是局部鞅.</li><li>等距性质. 若<spanclass="math inline">\(M(t)\)</span>是平方可积鞅，<spanclass="math inline">\(H\)</span>满足 <spanclass="math inline">\(E(\int_0^TH^2(s)d[M,M] (s))&lt;\infty\)</span>,那么<span class="math inline">\(\int_0^tH(s)dM(s)\)</span>是期望为0，方差为<spanclass="math inline">\(E(\int_0^tH(s)dM(s))^2=E(\int_0^tH^2(s)d[M,M](t))\)</span>的平方可积鞅.</li><li>如果局部鞅<spanclass="math inline">\(M(t)\)</span>是有限变差的，那么这个随机积分与Stieltjes积分是没有区别的.</li></ol><h6 id="半鞅的随机积分及其性质">半鞅的随机积分及其性质</h6><p><span class="math inline">\(\qquad\)</span> <spanclass="math inline">\(H(t)\)</span>是可预测过程，半鞅<spanclass="math inline">\(S(t)\)</span>的随机积分形式为：$_0^TH(t)dS(t)=_0^TH(t)dM(t)<span class="math inline">\(&lt;br/&gt;\)</span>+_0^TH(t)dA(t)$.</p><p>由于局部鞅的积分是局部鞅，可预测过程的积分是可预测过程，从而半鞅的积分还是半鞅.</p><p><span class="math inline">\(\qquad\)</span> <spanclass="math inline">\(X\)</span>是半鞅，<spanclass="math inline">\(H\)</span>是可预测过程，定义<spanclass="math inline">\((H\cdot X):=\int_0^tH(s)dX(s)\)</span>.</p><ol type="1"><li><span class="math inline">\(\Delta (H\cdot X)=H\DeltaX\)</span>.不太明白</li><li>如果<span class="math inline">\(\tau\)</span>是停时，则<spanclass="math inline">\(\int_0^{t\land\tau}H(s)dX(s)=\int_0^tH(s)I(s\le\tau)dX(s)\)</span><br /><spanclass="math inline">\(=\int_0^tH(s)dX(s\land\tau)\)</span>.这不应该都有这个性质吗？为什么在半鞅随机积分性质单独提一下呢？</li><li>若X是有限变差，则半鞅随机积分与Stieltjes积分没有区别.</li><li>若<spanclass="math inline">\(Y(t)=\int_0^tH(s)dX(s)\)</span>是半鞅，K是可预测过程，定义<spanclass="math inline">\((K\cdotY)(t)=\int_0^tK(s)dY(s)\)</span>，那么<span class="math inline">\(K\cdotY=K\cdot (H\cdot X)=(KH)\cdot X\)</span>,也就是说，<spanclass="math inline">\(\int_0^tK(s)dY(s)=\int_0^tK(s)H(s)dX(s)\)</span>.</li></ol><h3 id="quadratic-variation-and-covariation">8.5 Quadratic Variation andCovariation</h3><ul><li><span class="math inline">\(\qquad\)</span>先回忆什么是二次协变差(方括号过程)，<spanclass="math inline">\(X,Y\)</span>是半鞅，则他们的二次协变差为：<br /><spanclass="math inline">\([X,Y](t)=lim\sum\limits_{i=1}^{n-1}(X(t_{i+1}^{n})-X(t_{i}^{n}))(Y(t_{i+1}^{n})-Y(t_{i}^{n}))\)</span>.其中<spanclass="math inline">\(\delta_n=max_i(t_{i+1}^n-t_{i}^n)\rightarrow0\)</span>.</li></ul><p>小知识点：布朗运动的二次方差为<span class="math inline">\([B,B](t)=t\)</span>，Poisson过程的二次变差为：<spanclass="math inline">\([N,N] (t)=N(t)\)</span>.</p><ol type="1"><li>如果X是半鞅，那么[X,X]存在，并且是适应过程.</li><li>[X,X] (t)是有限变差函数.</li><li>[X,Y]是对称和双线性的; 即<spanclass="math inline">\([X,Y]=[Y,X]\)</span>, <spanclass="math inline">\([\alpha X+Y,\betaU+V]=\alpha\beta[X,U]+\alpha[X,V]+\beta[Y,U]+[Y,V]\)</span>.</li><li>极化恒等式；<spanclass="math inline">\([X,Y]=\frac{1}{2}([X+Y,X+Y]-[X,X]-[Y,Y])\)</span>.</li><li>[X,Y]是具有有限变差的正则右连续函数<spanclass="math inline">\((cadlag)\)</span>.这是由极化恒等式是两个递增函数的差证明的？</li><li>二次协变差过程的跳跃只发生在两个过程都有跳跃的点上，<spanclass="math inline">\(\Delta[X,Y] (t)=\Delta X(t)\DeltaY(t)\)</span>.</li><li><spanclass="math inline">\(X,Y\)</span>只要有一个是有限变差过程，那么<spanclass="math inline">\([X,Y] (t)=\sum\limits_{s\le t}\Delta X(s)\DeltaY(s)\)</span>.此条有以下推论：</li></ol><p><span class="math inline">\(\qquad\)</span><strong>Corollar8.5：</strong>如果<spanclass="math inline">\(X(t)\)</span>是具有有限变差的连续半鞅过程，那么<spanclass="math inline">\(X(t)\)</span>与其他任何半鞅的二次协方差都为0.</p><p>下面介绍随机积分的二次变差</p><ul><li><p><span class="math inline">\([\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)](t)=\int_0^tH(s)K(s)d[X,Y] (s)\)</span>.</p></li><li><p>特别地，取<span class="math inline">\(K(s)=1\)</span>, 就有<br /><span class="math inline">\([\int_0^.H(s)dX(s),Y(s)](t)=[\int_0^.H(s)dX(s),\int_0^.1dY(s)] (t)=\int_0^tH(s)d[X,Y](s)\)</span>.</p></li></ul><h3 id="itos-formula-for-continuous-semimartingales">8.6 Ito’s Formulafor Continuous Semimartingales</h3><p><spanclass="math inline">\(\qquad\)</span>如果X是连续半鞅，f是二次连续可微的函数，那么f(X(t))是半鞅，并且有ito公式：</p><ul><li><spanclass="math inline">\(f(X(t))-f(X(0))=\int_0^tf&#39;(X(s))dX(s)+\frac{1}{2}\int_0^tf&#39;&#39;(X(s))d[X,X](s)\)</span>.</li></ul><h3 id="stochastic-exponential">8.8 Stochastic Exponential</h3><p>先回忆在章节5.2中的<spanclass="math inline">\(ito\)</span>过程的随机指数：令<spanclass="math inline">\(X\)</span>随机可微，<spanclass="math inline">\(U\)</span>满足<spanclass="math inline">\(U(t)=1+\int_0^tU(s)dX(s)\)</span>,<spanclass="math inline">\(U\)</span>被称作是<spanclass="math inline">\(X\)</span>的随机指数，记作<spanclass="math inline">\(\varepsilon(X)\)</span>.在<strong>Theorem5.2</strong>中给出这个方程的唯一解是<spanclass="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X](t)}\)</span>.</p><p>下面讨论半鞅的随机指数，随机指数（也称为半鞅，或 Doleans-Dade指数）是指数函数的随机类比。</p><p><strong>Theorem 8.12：</strong>X是一个连续鞅，使得<spanclass="math inline">\(U(t)=1+\int_0^tU(s-)dX(s)\)</span>成立，它的随机指数为<spanclass="math inline">\(U(t)=\varepsilon(X)(t)=e^{X(t)-X(0)-\frac{1}{2}[X,X]  (t)}\)</span>.</p><p>X,Y是同一个空间的半鞅.随机指数具有的性质：</p><ol type="1"><li><span class="math inline">\(\varepsilon(X) (t)\varepsilon(Y)(t)=\varepsilon(X+Y+[X,Y]) (t)\)</span>.</li><li>若X连续，X(0)=0，那么<spanclass="math inline">\((\varepsilon(X)(t))^{-1}=\varepsilon(-X+[X,X](t))(t)\)</span>.</li></ol><h6 id="鞅的随机指数">鞅的随机指数</h6><p>由于关于局部鞅的积分是局部鞅，所以<spanclass="math inline">\(\varepsilon(X)(t)\)</span>是局部鞅，由于应用中一般需要鞅，下面利用Th7.21,7.35，给出随机指数是鞅的条件.</p><p><strong>Theorem 8.14：</strong>M(t)是连续局部鞅，在0处为0，那么他的随机指数为<spanclass="math inline">\(\varepsilon(X)(t)=e^{M(t)-\frac{1}{2}[M,M](t)}\)</span>并且他是连续正局部鞅.所以它是上鞅，可积，有限非减的期望，满足下列条件之一，则他就是鞅：</p><ol type="1"><li><span class="math inline">\(E(e^{M(T)-\frac{1}{2}[M,M](T)})=1\)</span></li><li>对于所有的t$<spanclass="math inline">\(0，\)</span>E(_0<sup>te</sup>{2M(s)-[M,M](t)}d[M,M] (s))&lt;$.</li><li>对于所有的t$<spanclass="math inline">\(0，\)</span>E(_0<sup>te</sup>{2M(s)}d[M,M](s))&lt;$.</li></ol><p>其中1是利用Th7.3；2,3是利用7.35；</p><p><strong>Kazamaki's Condition :</strong>M是连续局部鞅，在0处为0，若<spanclass="math inline">\(e^{\frac{1}{2}M(t)}\)</span>是下鞅，那么<spanclass="math inline">\(\varepsilon(M)\)</span>是鞅.</p><p><strong>Theorem 8.16: </strong>M是连续鞅，在0处为0.若<spanclass="math inline">\(e^{\frac{1}{2}M(T)}&lt;\infty\)</span>，那么<spanclass="math inline">\(\varepsilon(M)\)</span>在[0,T]是鞅.</p><p>remark:局部鞅的积分是局部鞅，这里鞅的积分是鞅，前提是满足KazamakiCondition</p><p><strong>Noviikov'sCondition：</strong>M是连续局部鞅，在0处为0，若对于每个<spanclass="math inline">\(t\le T\)</span>都有<spanclass="math inline">\(E(e^{\frac{1}{2}[M,M](t)})&lt;\infty\)</span>，那么<spanclass="math inline">\(\varepsilon(M)\)</span>是均值为0的鞅.特别的，如果对于每个t都存在一个常数<spanclass="math inline">\(K_t\)</span>使得<span class="math inline">\([M,M](t)&lt;K_t\)</span>，那么<spanclass="math inline">\(\varepsilon(M)(t)\)</span>是鞅，对于任意的<spanclass="math inline">\(t\le T\)</span>.</p><p>在前面证明布朗运动的Levy特征时，使用了<spanclass="math inline">\(e^{uM(t)-\frac{u^2t}{2}}\)</span>是鞅，在这里使用随机指数给出证明。</p><p><strong>Corollary 8.18：</strong>若M是连续局部鞅，[M,M](t)=t，于是随机指数<spanclass="math inline">\(U(t)=\varepsilon(M)(t)=e^{uM(t)-\frac{u^2t}{2}}\)</span>是鞅.</p><h3 id="compensators-and-sharp-bracket-process">8.9 Compensators andSharp Bracket Process</h3><p><strong>Compensator：</strong><spanclass="math inline">\(N(t)\)</span>是一个(局部)可积变差的适应过程，他的compensator<span class="math inline">\(A(t)\)</span>是唯一的可预测过程使得<spanclass="math inline">\(M(t)=N(t)-A(t)\)</span>是一个局部鞅.</p><p>在固定的域流和概率下，compensator是唯一的.</p><p><strong>Theorem 8.21：</strong><spanclass="math inline">\(N(t)\)</span>是一个(局部)可积变差的适应过程，那么它的compensator存在，并且是局部可积的.</p><p><span class="math inline">\(\mathcalPROOF：\)</span>回忆Doob-Meyer分解：<spanclass="math inline">\(X\)</span>是(局部)下鞅，那么存在局部鞅<spanclass="math inline">\(M(t)\)</span>和唯一递增的适应过程<spanclass="math inline">\(A(t)\)</span>，使得<spanclass="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>.我们知道有限变差过程是两个递增过程的差，又由于局部化，可以假设递增过程可积，而递增的可积过程是下鞅.因此<span class="math inline">\(N\)</span>与Doob-meyer分解的X对应。</p><p>回忆，半鞅X的二次方差过程<span class="math inline">\([M,M](t)\)</span>是存在且非减的.</p><p><strong>Sharp Bracket：</strong>半鞅<spanclass="math inline">\(X\)</span>的尖括号(可预测的二次变差)过程<spanclass="math inline">\(\langle X,X\rangle(t)\)</span>是<spanclass="math inline">\([X,X] (t)\)</span>的compensator.这就意味着<spanclass="math inline">\(\langle X,X\rangle(t)\)</span>是唯一使<spanclass="math inline">\([X,X] (t)-\langleX,X\rangle(t)\)</span>成为局部鞅的可预测过程.</p><p><strong>Theorem8.23：</strong>若X(t)是具有可积二次变差的连续半鞅，那么<spanclass="math inline">\([X,X] (t)=\langle X,X\rangle\)</span>.</p><p>如此一来就很方便的找到了compensator.</p><h6 id="平方可积鞅的尖括号过程">平方可积鞅的尖括号过程</h6><p>回忆前面鞅的二次变差，若<spanclass="math inline">\(M\)</span>使平方可积鞅，那么<spanclass="math inline">\(M^2-[M,M] (t)\)</span>使鞅；由于<spanclass="math inline">\(x^2\)</span>使凸函数，于是<spanclass="math inline">\(M^2\)</span>是下鞅；在Doob-Meyer分解下，有以下定理：</p><p><strong>Theorem8.24：</strong>M是平方可积(局部)鞅，那么尖括号过程<spanclass="math inline">\(\langle M,M\rangle(t)\)</span>是唯一使<spanclass="math inline">\(M^2-[M,M](t)\)</span>是(局部)鞅的可预测递增过程;此时当M时鞅，在0处为0时，就有<spanclass="math inline">\(EM^2(t)=E[M,M] (t)=E\langleM,M\rangle(t)\)</span>.</p><p>下面定理是用可预测的二次变差来判断局部鞅是鞅：</p><p><strong>Theorem 8.27：</strong>M是局部鞅，<spanclass="math inline">\(0\le t\leT&lt;\infty\)</span>,在0处为0，对于所有的t都有<spanclass="math inline">\(E\langleM,M\rangle&lt;\infty\)</span>，那么M是平方可积的鞅；并且<spanclass="math inline">\(EM^2(t)=E[M,M] (t)=E\langleM,M\rangle(t)\)</span>. 当<spanclass="math inline">\(T=\infty\)</span>和<spanclass="math inline">\(sup_{t&lt;\infty}E\langleM,M\rangle(t)&lt;\infty\)</span>,则<spanclass="math inline">\(M(t)\)</span>在<spanclass="math inline">\([0,\infty)\)</span>是平方可积鞅.</p><p>由于连续局部鞅是局部平方可积的，从而有</p><p><strong>Corollary 8.28：</strong>连续局部鞅的尖括号(可预测的二次变差)过程存在</p><h6 id="半鞅的连续鞅分量">半鞅的连续鞅分量</h6><p>有限变差过程可以分解成连续和不连续的部分，而半鞅是局部鞅和有限变差过程的和.那么就可以把任何一个局部鞅分解成连续局部鞅部分和纯不连续局部鞅部分。</p><p><strong>Definition8.29：</strong>局部鞅与任何连续局部鞅正交，那么他是纯不连续的.局部鞅M,N是正交的如果MN是局部鞅.</p><p>可以证明，任一局部鞅都可以唯一分解成连续和纯不连续的局部鞅.<spanclass="math inline">\(M=M^c+M^d\)</span>.半鞅<spanclass="math inline">\(X(t)\)</span>可以分解成<spanclass="math inline">\(X(t)=X(0)+M(t)+A(t)\)</span>. 其中<spanclass="math inline">\(M(t)\)</span>是局部鞅，<spanclass="math inline">\(M^c\)</span>被称为X的连续鞅分量，记为<spanclass="math inline">\(X^{cm}\)</span>.虽然这种分解不是唯一的，但是X的连续鞅分解是唯一的，假若<spanclass="math inline">\(X(t)=X(0)+M_1(t)+A_1(t)\)</span>是另一种分解，那么就有<spanclass="math inline">\((M-M_1)(t)=-(A-A_1)(t)\)</span>.因此<spanclass="math inline">\((M-M_1)\)</span>是有限变差鞅，从而它的连续部分也是有限变差鞅，而连续鞅的有限变差是一个常数，这就意味着<spanclass="math inline">\(M^c-M^c_1=0\)</span>.这就证明了对于所有的半鞅分解<spanclass="math inline">\(X^{cm}\)</span>是唯一的. 于是，就有下面的推论</p><p><strong>Corollary 8.30：</strong>若X是有限变差的半鞅，这意味着半鞅X的分解中鞅部分为0，也就是说连续鞅部分也一定是0，即<spanclass="math inline">\(X^{cm}=0\)</span>.</p><h6 id="随机积分存在的条件">随机积分存在的条件</h6><p>总的来说，随机积分<spanclass="math inline">\(\int_0^TH(s)dM(s)\)</span>的定义，取决于M的性质，当<spanclass="math inline">\(\langleM,M\rangle(t)\)</span>不连续，连续，绝对连续，会让H的范围更宽泛.</p><h6 id="可预测二次变差的性质">可预测二次变差的性质</h6><p>对于局部可积二次变差的半鞅X,Y</p><ol type="1"><li><span class="math inline">\(\langleX,X\rangle(t)\)</span>关于t是增的.</li><li><span class="math inline">\(\langleX,X\rangle(t)\)</span>是双线性，对称的</li><li>极化恒等式.<span class="math inline">\(\langleX,X\rangle=\frac{1}{4}(\langle X+Y,X+Y\rangle-\langleX-Y,X-Y\rangle)\)</span></li><li><span class="math inline">\(\langleX,X\rangle\)</span>是有限变差的可预测过程.</li><li><span class="math inline">\(\langleX,X\rangle=0\)</span>如果X或Y是有限变差的，且其中之一是连续的.</li><li><span class="math inline">\(\big\langle\int_0^.H(s)dX(s),\int_0^.K(s)dY(s)\big\rangle(t)=\int_0^tH(s)K(s)d\langleX,Y\rangle(s)\)</span>.</li></ol><h3 id="itos-formula-for-semimartingales">8.10 Ito’s Formula forSemimartingales</h3><p>不同于8.6章的连续半鞅，<spanclass="math inline">\(X(t)\)</span>是半鞅，<spanclass="math inline">\(f\in C^2\)</span>, 则<spanclass="math inline">\(f(X(t))\)</span>是半鞅，并且有<spanclass="math inline">\(ito\)</span>公式:</p><ul><li><spanclass="math inline">\(f(X(t))-f(X(0))=\int_0^tf&#39;(X(s-))dX(s)+\frac{1}{2}\int_0^tf&#39;&#39;(X(s-))d[X,X](s)+ \\ \sum\limits_{s\le t}  \Bigg(f(X(s))-f(X(s-))-f&#39;(X(s-))\DeltaX(s)-\frac{1}{2}f&#39;&#39;(X(s-))(\Delta X(s))^2\Bigg )\)</span>.</li></ul><h3 id="stochastic-exponential-and-logarithm">8.11 StochasticExponential and Logarithm</h3><p>不同于8.8章的连续半鞅，<spanclass="math inline">\(X\)</span>是半鞅，随机方程<spanclass="math inline">\(U(t)=1+\int_0^tU(s-)dX(s)\)</span>有唯一解，被称为<spanclass="math inline">\(X\)</span>的随机指数.</p><ul><li><p><spanclass="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}\langleX,X\rangle^c (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\DeltaX(s)}\)</span>，由有限变差的分解<span class="math inline">\([X,X](s)=\langle X,X\rangle^c(s)+\sum\limits_{0&lt;s\le t}\DeltaX(s)\)</span>，这等价于</p></li><li><p><spanclass="math inline">\(U(t)=\varepsilon(X)(t):=e^{X(t)-X(0)-\frac{1}{2}[X,X] (t)}\prod\limits_{s\le t}(1+\Delta X(s))e^{-\DeltaX(s)+\frac{1}{2}(\Delta X(s))^2}\)</span>.</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随机分析及其应用 Chapter7</title>
+      <link href="/2023/05/28/Math/StochasticAnalysisandItsApplications-Chapter-7/"/>
+      <url>/2023/05/28/Math/StochasticAnalysisandItsApplications-Chapter-7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="chapter-7-martingales">Chapter 7 Martingales</h1><h3 id="定义">7.1定义</h3><p><spanclass="math inline">\(\qquad\)</span><strong>Definition7.1：</strong>若随机过程<spanclass="math inline">\(M(t)\)</span>可积，即<spanclass="math inline">\(EM(t)&lt; \infty\)</span>，并且具有性质<spanclass="math inline">\(E(M(t)|\mathcal F_S)=M(s)\)</span>，则<spanclass="math inline">\(M(t)\)</span>被称作Martingale.</p><p><span class="math inline">\(E(M(t)|\mathcalF_S)=M(s)\)</span>，鞅是公平的，期望是常数</p><p><span class="math inline">\(E(M(t)|\mathcal F_S)\leM(s)\)</span>，上鞅是盈利，期望是递减</p><p><span class="math inline">\(E(M(t)|\mathcal F_S)\geM(s)\)</span>，下鞅是亏损，期望是递增</p><p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.3：</strong>上鞅是鞅当且仅当<spanclass="math inline">\(EM(T)=EM(0)\)</span>.</p><h6id="另一个有用的性质是平方可积的鞅即二阶矩有界的鞅">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6><p>在有限区间内，<span class="math inline">\(B(t)\)</span>和<spanclass="math inline">\(B^2(t)-t\)</span>是平方可积的鞅</p><p>若<span class="math inline">\(f\)</span>在<spanclass="math inline">\(\mathbb R\)</span>有界且连续，则<spanclass="math inline">\(Ito\)</span>积分<spanclass="math inline">\(\int_0^tf(B(s))dB(s)\)</span>和<spanclass="math inline">\(\int_0^tf(s)dB(s)\)</span>，在任何有限区间都是平方可积的鞅.</p><h3 id="uniform-integrability">7.2 Uniform Integrability</h3><p><spanclass="math inline">\(\qquad\)</span>在介绍一致可积之前，先来回忆一下什么叫可积。随机变量<spanclass="math inline">\(X\)</span>可积即<spanclass="math inline">\(E(X)&lt;\infty\)</span>这等价于<spanclass="math inline">\(\lim\limits_{n\to+\infty}E(|X|I(|X|&gt;n))=0\)</span></p><p><spanclass="math inline">\(\qquad\)</span><strong>Defnition7.5：</strong>随机过程<spanclass="math inline">\(X\)</span>称为一致可积的当$ E(|X|I(|X|&gt;n))<spanclass="math inline">\(在\)</span>n <spanclass="math inline">\(时对于t一直收敛到0，即\)</span><em>{n+}</em>{t}E(|X|I(|X|&gt;n))=0$.</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的<spanclass="math inline">\(Weierstrass\)</span>判别法，随机过程<spanclass="math inline">\(X(t)\)</span>被随机变量<spanclass="math inline">\(Y\)</span>控制，即<spanclass="math inline">\(|X(t)|\le Y且E(Y)&lt;\infty\)</span>则X是一致可积的。特别的取<spanclass="math inline">\(Y=E(\sup\limits_t|X(t)|)\)</span>，注意取了<spanclass="math inline">\(sup\)</span>之后是一个随机变量，不再是随机过程.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem 7.7(Vallee–Poussin)：</strong>若G(x)在[0,<spanclass="math inline">\(\infty\)</span>)是正的，递增，凸函数,并且<spanclass="math inline">\(\lim\limits_{x \to\infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\leT}E(G(|X(t)|))&lt;\infty\)</span>则X(t)在<spanclass="math inline">\(t\le T\)</span>是一致可积的。特别的，取<spanclass="math inline">\(G(x)=x^r(r&gt;1)\)</span>,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p><p>下面构造一个一致可积鞅：</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.9：</strong> (Doob’s, Levy’sMartingale)：Y是一个可积的随机变量，即<spanclass="math inline">\(E(Y)&lt; \infty\)</span>,定义<spanclass="math inline">\(M(t)=E(Y|\mathcal F_t)\)</span>,那么<spanclass="math inline">\(M(t)\)</span>是一致可积鞅.</p><h3 id="martingale-convergence">7.3 Martingale Convergence</h3><p>本节考虑无穷区间的鞅</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.11：</strong>(Martingale ConvergenceTheorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的<spanclass="math inline">\(\lim\limits_{t\to\infty}M(t)=Y，Y\)</span>是一个可积的随机变量。</p><p>但<span class="math inline">\(E(M(t))\)</span>可能不收敛到<spanclass="math inline">\(EY\)</span>.例如布朗运动的指数鞅：<spanclass="math inline">\(e^{B(t)-\frac{t}{2}}\)</span>；当<spanclass="math inline">\(M(t)\)</span>一致可积时，收敛是肯定的。</p><p>一致可积鞅收敛a.s.</p><p>平方可积鞅收敛a.s.</p><p>正鞅收敛a.s.</p><p>(负)上有界的下鞅收敛a.s.</p><p>(正)下有界的上鞅收敛a.s.</p><h3 id="optional-stopping">7.4 Optional Stopping</h3><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.14：</strong>若<spanclass="math inline">\(M(t)\)</span>是鞅，<spanclass="math inline">\(\tau\)</span>是停时，则<spanclass="math inline">\(M(t\land\tau)\)</span>是鞅，并且<spanclass="math inline">\(EM(t\land\tau)=EM(0)\)</span></p><p>我们知道当<span class="math inline">\(M(t)\)</span>是鞅时，<spanclass="math inline">\(EM(t)=EM(0)\)</span>，但是对于停时<spanclass="math inline">\(\tau\)</span>，等式<spanclass="math inline">\(EM(\tau)=EM(0)\)</span>,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.15：</strong>(OptionalStopping)<span class="math inline">\(M(t)\)</span>是鞅，1.若<spanclass="math inline">\(\tau\)</span>是有界停时，即<spanclass="math inline">\(\tau\le K&lt;\infty\)</span>则，$EM(t)=EM(0)<spanclass="math inline">\(2.若\)</span>M(t)<spanclass="math inline">\(一致可积，则对于任意的停时\)</span><spanclass="math inline">\(，都有\)</span>EM()=EM(0)$</p><p>不同于有界，假如停时<spanclass="math inline">\(\tau\)</span>是有限的，则需要添加其他条件；</p><p>在实变函数中，有界函数：函数的值域在<spanclass="math inline">\(\in[-M,M]\)</span>,且有界一定有限；</p><p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p><p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.16：</strong><spanclass="math inline">\(M(t)\)</span>是鞅，<spanclass="math inline">\(\tau\)</span>是有限停时，若<spanclass="math inline">\(EM(\tau)&lt;\infty\)</span>并且<spanclass="math inline">\(\lim\limits_{t \to\infty}E(M(t)I(\tau&gt;t))=0\)</span>，那么<spanclass="math inline">\(EM(\tau)=EM(0)\)</span></p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.18：</strong>(OptionalSampling): <span class="math inline">\(M(t)\)</span>是一致可积鞅，<spanclass="math inline">\(\tau_1\le\tau_2\le\infty\)</span>是两个停时，那么<spanclass="math inline">\(E(M(\tau_2)|\mathcalF_{\tau_1})=M(\tau_1)\)</span> a.s.</p><h3 id="localization-and-local-martingales">7.5 Localization and LocalMartingales</h3><p><span class="math inline">\(\qquad\)</span> <spanclass="math inline">\(Ito\)</span>积分<spanclass="math inline">\(M(t)=\int_0^tX(s)dB(s)\)</span>是局部鞅，当<spanclass="math inline">\(EM^2(T)&lt;\infty\)</span>时，<spanclass="math inline">\(M(t)\)</span>才是鞅</p><p><spanclass="math inline">\(\qquad\)</span><strong>Definition7.19：</strong>随机过程<spanclass="math inline">\(X(t)\)</span>的一个性质称作是局部的，如果存在一个停止序列{<spanclass="math inline">\(\tau_n\)</span>}，使得当<spanclass="math inline">\(n\to\infty\)</span>时，停时<spanclass="math inline">\(\tau_n\uparrow\infty\)</span>，并且对于每一个n，停止过程<spanclass="math inline">\(X(t\land\tau_n)\)</span>都有这个性质。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Definition7.20局部鞅：</strong>适应过程<spanclass="math inline">\(M(t)\)</span>被称作局部鞅，如果存在一个<spanclass="math inline">\(\tau_n\uparrow\infty\)</span>的停时序列<spanclass="math inline">\(\tau_n\)</span>，对于每一个n停止过程<spanclass="math inline">\(M(t\land\tau_n)\)</span>关于<spanclass="math inline">\(t\)</span>是一致可积鞅。</p><p>参看知乎对于<ahref="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p><p>任何鞅都是局部鞅，反之不一定成立。</p><p><spanclass="math inline">\(\qquad\)</span><strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量<spanclass="math inline">\(Y\)</span>，即<spanclass="math inline">\(E(Y)&lt;\infty\)</span>，使得对于局部鞅<spanclass="math inline">\(M(t)\)</span>，有<spanclass="math inline">\(M(t)\le Y\)</span>,则<spanclass="math inline">\(M(t)\)</span>是一致可积的鞅。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Corollary7.22：</strong>对于局部鞅<spanclass="math inline">\(M(t)\)</span>，若有<spanclass="math inline">\(E(sup_{s\le t}|M(s)|)&lt;\infty\)</span>,则<spanclass="math inline">\(M(t)\)</span>是鞅，并且在任何有限区间<spanclass="math inline">\([0,T]\)</span>一致可积；更加一般化，<spanclass="math inline">\(E(sup_{t\ge 0}|M(t)|)&lt;\infty\)</span>，则<spanclass="math inline">\(M(t)\)</span>在<spanclass="math inline">\([0,\infty]\)</span>一致可积。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p><p>由<span class="math inline">\(Th7.3\)</span>和<spanclass="math inline">\(Th7.23\)</span>可得非负局部鞅是鞅当且仅当<spanclass="math inline">\(EM(T)=EM(0)\)</span></p><p><spanclass="math inline">\(\qquad\)</span><strong>Definition7.25(DirichletClass (D))：</strong>过程X是狄利克雷D类，若族{X(<spanclass="math inline">\(\tau\)</span>)：<spanclass="math inline">\(\tau\)</span>是有限停时}是一致可积的.</p><p><spanclass="math inline">\(\qquad\)</span><strong>Theorem7.26：</strong>局部鞅<spanclass="math inline">\(M(t)\)</span>是一致可积的鞅当且仅当他是D类.</p><h3 id="quadratic-variation-of-martingales">7.6 Quadratic Variation ofMartingales</h3><p><spanclass="math inline">\(\qquad\)</span>在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程<spanclass="math inline">\(X(t)\)</span>在<spanclass="math inline">\([0,t]\)</span>的二次变差定义为：<spanclass="math inline">\([X,X] (t)=\lim\limits_{\delta_n\to0}\sum_{i=1}^n(X(t_i^n)-X(t_{i-1}^n))^2\)</span>，其中<spanclass="math inline">\(t_i^n\)</span>是对<spanclass="math inline">\([0,t]\)</span>做分割<spanclass="math inline">\(\delta_n\)</span>是最大的分割区间。</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem1.10：</strong> <spanclass="math inline">\(g\)</span>是连续且有限变差的过程，那么他的二次变差是0.</p><p>下面考虑鞅的二次变差：首先若<spanclass="math inline">\(M(t)\)</span>是鞅，则<spanclass="math inline">\(M^2(t)\)</span>是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.27(i)</strong>：若对于任何<spanclass="math inline">\(t\)</span>，<spanclass="math inline">\(M(t)\)</span>是具有有限二阶矩的鞅，那么他的二次变差过程<spanclass="math inline">\([M,M](t)\)</span>存在；进一步，<spanclass="math inline">\(M^2(t)-[M,M] (t)\)</span>是鞅.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.27(ii)</strong>：若<spanclass="math inline">\(M(t)\)</span>是局部鞅，则二次变差<spanclass="math inline">\([M,M] (t)\)</span>存在，且<spanclass="math inline">\(M^2(t)-[M,M] (t)\)</span>是局部鞅.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.28：</strong><spanclass="math inline">\(M(t)\)</span>是鞅(局部鞅)且<spanclass="math inline">\(M(0)=0\)</span>，若对于某个<spanclass="math inline">\(t\)</span>，使<spanclass="math inline">\(M(t)\)</span>非0，那么就有<spanclass="math inline">\([M,M] (t)&gt;0\)</span>；反之，若<spanclass="math inline">\([M,M](t)=0\)</span>，则对于任何的<spanclass="math inline">\(s\le t\)</span>，都有<spanclass="math inline">\(M(s)=0\)</span> a.s.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.29：</strong><spanclass="math inline">\(M\)</span>是连续局部鞅，固定<spanclass="math inline">\(t\)</span>，若<span class="math inline">\(M(t)\neqM(0)\)</span>，那么<span class="math inline">\(M\)</span>在<spanclass="math inline">\([0,t]\)</span>具有无限变差.</p><p><span class="math inline">\(\qquad\)</span><strong>Corollary7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p><h3 id="martingale-inequalities">7.7 Martingale Inequalities</h3><p><span class="math inline">\(\qquad\)</span><strong>Doob’s MartingaleInequality：</strong><spanclass="math inline">\(M(t)\)</span>是一个鞅(or正的下鞅)，对于<spanclass="math inline">\(p\ge 1\)</span>有<spanclass="math inline">\(P(\sup\limits_{s\le t}|M(s)|\ge a)\lea^{-p}\sup\limits_{s\let}E(|M(s)^p|)\)</span>；<strong>对于p&gt;1有<spanclass="math inline">\(P(\sup\limits_{s\le t}|M(s)|)\le(\frac{p}{1-p})^{p}E(|M(t)^p|)\)</span></strong>.当p=2时就称为Doob鞅不等式.</p><p><span class="math inline">\(\qquad\)</span><strong>DavisInequality：</strong>对于任意在0处为0的局部鞅<spanclass="math inline">\(M(t)\)</span>,都存在常数<spanclass="math inline">\(c&gt;0\)</span>和<spanclass="math inline">\(C&lt;\infty\)</span>，使得<spanclass="math inline">\(cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\leT}|M(t)|)\le CE(\sqrt{[M,M] (T)})\)</span></p><p><span class="math inline">\(\qquad\)</span><strong>Burkholder-GundyInequality：</strong>若<span class="math inline">\(1\lep&lt;\infty\)</span>，则对于任意在0处为0的局部鞅<spanclass="math inline">\(M(t)\)</span>,都存在仅依赖于<spanclass="math inline">\(p\)</span>的<spanclass="math inline">\(c_p\)</span>和<spanclass="math inline">\(C_p\)</span></p><p>使得<span class="math inline">\(c_pE([M,M] (T)^{p/2})\leE(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M](T)^{p/2})\)</span>；同时若<spanclass="math inline">\(M(t)\)</span>连续，则不等式对<spanclass="math inline">\(0&lt;p&lt;1\)</span>也成立.</p><p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求<spanclass="math inline">\(M(t)\)</span>是鞅，要求他是<spanclass="math inline">\(Ito\)</span>积分。</p><p><spanclass="math inline">\(\qquad\)</span><strong>Burkholder-Davis-Gundy不等式：</strong>设$g<sup>2(<em>+;^{dm}) <span class="math inline">\(，对于\)</span>t<spanclass="math inline">\(，定义\)</span>x(t)=</em>{0}</sup>{t}g(s)dB(s)<spanclass="math inline">\(和\)</span>A(t)=_0<sup>t|g(s)|</sup>2ds$，对于p&gt;0，存在唯一的仅依赖于p的常数<spanclass="math inline">\(c_p\)</span>，<spanclass="math inline">\(C_p\)</span>使得 <span class="math inline">\(c_pE|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\leC_p E|A(t)|^{\frac{P}{2}}\)</span>，其中</p><p><span class="math inline">\(c_p=(\frac{p}{2})^p,C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0&lt;p&lt;2}\\c_p=1, C_p=4  &amp; &amp; {p=2}\\c_p=(2p)^{-\frac{p}{2}},C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  &amp; &amp;{p&gt;2}\)</span></p><p>这些定理可以用来证明局部鞅是真的鞅：</p><p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅<spanclass="math inline">\(M(t)\)</span>，并且满足他的二次方差有界<spanclass="math inline">\(E\sqrt{ [M,M](t)}&lt;\infty\)</span>，那么在有限区间<spanclass="math inline">\([0,T]\)</span>内它是一致可积的鞅.</p><h3 id="continuous-martingales-change-of-time">7.8 ContinuousMartingales — Change of Time</h3><p><spanclass="math inline">\(\qquad\)</span><strong>Levy对布朗运动的描述：</strong>对于一个<spanclass="math inline">\(M(0)=0\)</span>的过程<spanclass="math inline">\(M\)</span>是布朗运动，且仅当它是二次变差为<spanclass="math inline">\([M,M] (t)=t\)</span>的局部鞅.<em>本节讨论的changeof time便是基于Levy对布朗运动的描述.</em></p><p><u>关于鞅的时间的变化</u></p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.37(Dambis-Dubin-Schwarz(DDS))：</strong><spanclass="math inline">\(M(t)\)</span>是在0处为0的连续鞅，使得<spanclass="math inline">\([M,M] (t)\)</span>不递减到<spanclass="math inline">\(\infty\)</span>，并定义<spanclass="math inline">\(\tau_t=inf\)</span>{<spanclass="math inline">\(s：[M,M] (s)&gt;t\)</span>}，那么过程<spanclass="math inline">\(B(t)=M(\tau_t)\)</span>是关于域流<spanclass="math inline">\(\mathcalF_{\tau_t}\)</span>的布朗运动；进一步<span class="math inline">\([M,M](t)\)</span>是关于这域流的停时，对布朗运动<spanclass="math inline">\(B(t)\)</span>做时间变化，就得到鞅<spanclass="math inline">\(M(t)\)</span>，即<spanclass="math inline">\(M(t)=B([M,M](t))\)</span>.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p><p><spanclass="math inline">\(\qquad\)</span><u>关于SDE的时间的变化</u></p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.38：</strong><spanclass="math inline">\(f(t)\)</span>是自适应，正，增的微分过程(为了<spanclass="math inline">\(f^{-1}\)</span>存在)，则<spanclass="math inline">\(dX(t)=\sqrt{f&#39;(t)}dB(t)\)</span>有弱解<spanclass="math inline">\(\widehat{B}(f(t))\)</span>.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.39：</strong><spanclass="math inline">\(\sigma(x)&gt;0\)</span>，定义<spanclass="math inline">\(G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}\)</span>对于有限的<spanclass="math inline">\(t\)</span>是有限的，关于<spanclass="math inline">\(t\)</span>递增到<spanclass="math inline">\(\infty\)</span>a.s.，G是正的，连续的，严格增到<spanclass="math inline">\(\infty\)</span>，因此存在逆函数<spanclass="math inline">\(\tau_t=G^{-1}(t)\)</span>，对于固定的<spanclass="math inline">\(t\)</span>，<spanclass="math inline">\(\tau_t\)</span>是停时，递增的，并且他是过程<spanclass="math inline">\(G(s)\)</span>第一次到达<spanclass="math inline">\(t\)</span>，那么过程<spanclass="math inline">\(X(t)=B(\tau_t)\)</span>是<spanclass="math inline">\(dX(t)=\sigma(X(t))dB(t)\)</span>的弱解.</p><p><span class="math inline">\(\qquad\)</span><strong>Theorem7.41：</strong>令<span class="math inline">\(X(t)\)</span>是<spanclass="math inline">\(dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)\)</span>的解，并定义<spanclass="math inline">\(Y(t)=X(\tau_t)\)</span>，于是<spanclass="math inline">\(Y(t)\)</span>是<spanclass="math inline">\(dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)\)</span>的弱解，其中<spanclass="math inline">\(Y(0)=X(0)\)</span>， <spanclass="math inline">\(g(x)\)</span>是正函数，<spanclass="math inline">\(G(t)=\int_0^tg(X(s))ds\)</span>.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>再见沈以诚</title>
+      <link href="/2023/05/23/Emotion/GoobyeEason/"/>
+      <url>/2023/05/23/Emotion/GoobyeEason/</url>
+      
+        <content type="html"><![CDATA[<p>属于我的沈以诚时代已经结束了。</p><p>突然挺喜欢苏打绿的歌。</p><p>好害怕分别。</p><p>以前睡醒的时候会是最想念的时候，现在睡醒是最难过的时候。</p><p>Be an adult</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Triviality </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MaoBook2008 Chapter2</title>
+      <link href="/2023/05/23/Math/Maobook2008%20Chapter2/"/>
+      <url>/2023/05/23/Math/Maobook2008%20Chapter2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第二章随机微分方程">第二章：随机微分方程</h1><h2 id="第三节解的存在唯一性">第三节：解的存在唯一性</h2><p>在Lipschitz和线性Lineargrowth条件下微分方程的解存在且唯一，其中存在性使用Picard迭代，并且给出了此时解的收敛速度。</p><p>由于这个定理的条件对drift项和diffusion项的要求过强，使得一些SDE的解存在且唯一但并不满足Lipschitz和Lineargrowth条件，实际上，当用局部Lipschitz条件取代Lipschitz也能得到解的存在唯一性，再次使用Monotone条件代替Lineargrowth条件也能得到解的存在唯一性。</p><p>顺便一提，Lipschitz可以推出局部Lipschitz，Lineargrowth可以推出Monotone条件。</p><p>另外当SDE再每个子区间都满足局部Lipschitz和Monotone条件时，则SDE在整个区间的解存在且唯一。</p><h3 id="第四节lp估计">第四节：<spanclass="math inline">\(L^p\)</span>估计</h3><p>对于任意的正数p，若drift项和diffusion项满足Lineargrowth条件，则SDE解的p阶矩都是连续的。</p><p>在类似于Monotone的条件下，p阶矩是exp收敛的</p><h3 id="第五节almost-surely-asymptotic-estimates">第五节：Almost SurelyAsymptotic Estimates</h3><p>在Monotone条件下，SDE解的Lyapunov指数小于一个常数</p><p>一个技巧：指数矩不等式与Borel-Cantelli Lemma联动使用</p><figure><img src="/pic/Borel–Cantelli’s%20lemma.png"title="Borel–Cantelli’s lemma" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><figure><img src="/pic/Exponential%20moment%20inequality.png"title="Exponential moment inequality.png" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><h3 id="第六节caratheodory估计">第六节Caratheodory估计</h3><p>TH6.3在李普希兹条件和线性增长，SDE有唯一解的条件下，数值解指数阶强收敛。</p><p>TH6.4在<span class="math inline">\(f,g\)</span>连续，<spanclass="math inline">\(x_0\)</span>有界且<spanclass="math inline">\(F_{t_0}\)</span>可测，线性增长条件，唯一解存在，则Caratheodory数值解强收敛到真实解。（阶不知道）</p><h3 id="第七节euler-maruyama估计">第七节：Euler-Maruyama估计</h3><p>与Caratheodory估计相同，证明类似。</p><p>在TH6.4的条件下，Caratheodory和Euler-Maruyama的数值解都唯一地收敛到真实解，但是Picard迭代的数值解在这些条件下的收敛性未知，从而说明这两个估计要比Picard迭代的估计要好。</p><h6id="但是为什么看到的论文上只提到过euler-maruyama方法而没见过caratheodory方法">(但是为什么看到的论文上只提到过Euler-Maruyama方法，而没见过Caratheodory方法)</h6><h3id="第八节pde联系sde的费曼-卡兹feynman-kac公式">第八节：PDE联系SDE的费曼-卡兹(Feynman-Kac)公式</h3><p>看不懂...不想看感觉和研究没啥关系知道个SDE能和PDE用费曼-卡兹公式联系起来就应该差不多了吧..</p><h3 id="第九节sde的解是merkov过程">第九节：SDE的解是Merkov过程</h3><p>看不懂..........一堆莫名其妙以至于看不懂的转移概率密度<spanclass="math inline">\(P(X,s;A,t)\)</span>以及<spanclass="math inline">\(\intP(y,r;A,t)P(x,s;dy,r)\)</span>,下次问问再看</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MaoBook2008 Chapter1</title>
+      <link href="/2023/05/23/Math/Maobook2008%20Chapter1/"/>
+      <url>/2023/05/23/Math/Maobook2008%20Chapter1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="chapter-1">Chapter 1</h1><p><spanclass="math inline">\(dx(t)=f(x(t),t)dt+g(x(t),t)dB(t)\)</span></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MaoBook2008 Chapter3</title>
+      <link href="/2023/05/23/Math/Maobook2009%20Chapter3/"/>
+      <url>/2023/05/23/Math/Maobook2009%20Chapter3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="introduction">Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<span class="math inline">\(dN_t=r(t)N(t)dt+\sigma(t)N(t)dB(t),其中t&gt;0\\\)</span>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解， <spanclass="math inline">\(N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2(s)}{2})ds+\int_0^t \sigma(s)dB(s))\\\)</span></p><p>现在我们来考虑一个d维的SDE： <spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\\\)</span>其中<spanclass="math inline">\(F(.),G_K(.)\)</span>是d*d的实值矩阵，<spanclass="math inline">\(f(.),G_K(.)\)</span>是<spanclass="math inline">\(R^d\)</span>的实值函数，<spanclass="math inline">\(B(t)=(B_1(t),...,B_m(t))^T\)</span>。</p><p>若<spanclass="math inline">\(f(t)=g_1(t)=...=g_m(t)=0\)</span>，那么SDE称为是线性的；如果<spanclass="math inline">\(G_1(t)=,...,=G_m(t)=0\)</span>，则称SDE是狭义线性的；若<spanclass="math inline">\(F,f,G_k,g_k\)</span>与t是独立的，则称SDE是自治的。</p><h1 id="stochastic-liouvilles-formula">Stochastic Liouville'sFormula</h1><p>考虑齐次的SDE:</p><p><spanclass="math inline">\(dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)\)</span></p><p><spanclass="math inline">\(\Phi_j(t)\)</span>是这个SDE的解，则称<spanclass="math inline">\(\Phi(t)=(\Phi_1(t),...,\Phi_d(t))\)</span>是这个齐次SDE的基矩阵</p><p>，即<spanclass="math inline">\(d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)\)</span>，</p><p><spanclass="math inline">\(Th2.1\)</span>,给定初值x(t_0)=x_0,则这个齐次SDE的解是<spanclass="math inline">\(x(t)=\Phi(t)x_0\)</span></p><p>定义<spanclass="math inline">\(W(t)=det.\Phi(t)\)</span>,是基矩阵的朗斯基行列式。</p><p>Th2.2：W(t)有以下显示表达，<spanclass="math inline">\(W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].\)</span></p><p>Lemma2.3：线性标量SDE:<spanclass="math inline">\(dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)\)</span>解的显式表达式是</p><p><spanclass="math inline">\(y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]\)</span></p><h1 id="the-variation-of-constants-formula">The Variation-of-ConstantsFormula</h1><p>考虑<spanclass="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\)</span>的解，</p><p>若<spanclass="math inline">\(\Phi(t)\)</span>是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p><p><spanclass="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))\)</span></p><h1 id="case-studies">Case Studies</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
