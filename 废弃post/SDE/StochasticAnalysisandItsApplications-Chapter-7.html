@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Chapter 7 Martingales7.1定义$\qquad$Definition7.1：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)&#x3D;M(s)$，则$M(t)$被称作Martingale. $E(M(t)|\mathcal F_S)&#x3D;M(s)$，鞅是公平的，期望是常数 $E(M(t)|\mathcal F_S)\">
+    <meta name="description" content="Chapter 7 Martingales 7.1定义 \(\qquad\)Definition7.1：若随机过程\(M(t)\)可积，即\(EM(t)&lt; \infty\)，并且具有性质\(E(M(t)|\mathcal F_S)&#x3D;M(s)\)，则\(M(t)\)被称作Martingale. \(E(M(t)|\mathcal F_S)&#x3D;M(s)\)，鞅是公平的，期望是常数 \(E(M(t)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="随机分析及其应用 Chapter7">
 <meta property="og:url" content="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/SDE/StochasticAnalysisandItsApplications-Chapter-7.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="Chapter 7 Martingales7.1定义$\qquad$Definition7.1：若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)&#x3D;M(s)$，则$M(t)$被称作Martingale. $E(M(t)|\mathcal F_S)&#x3D;M(s)$，鞅是公平的，期望是常数 $E(M(t)|\mathcal F_S)\">
+<meta property="og:description" content="Chapter 7 Martingales 7.1定义 \(\qquad\)Definition7.1：若随机过程\(M(t)\)可积，即\(EM(t)&lt; \infty\)，并且具有性质\(E(M(t)|\mathcal F_S)&#x3D;M(s)\)，则\(M(t)\)被称作Martingale. \(E(M(t)|\mathcal F_S)&#x3D;M(s)\)，鞅是公平的，期望是常数 \(E(M(t)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-28T03:30:36.000Z">
 <meta property="article:modified_time" content="2024-11-22T09:09:44.310Z">
@@ -115,7 +115,10 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-7-Martingales"><span class="nav-text">Chapter 7 Martingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1%E5%AE%9A%E4%B9%89"><span class="nav-text">7.1定义</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E6%80%A7%E8%B4%A8%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E7%9A%84%E9%9E%85%EF%BC%8C%E5%8D%B3%E4%BA%8C%E9%98%B6%E7%9F%A9%E6%9C%89%E7%95%8C%E7%9A%84%E9%9E%85%E3%80%82"><span class="nav-text">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Uniform-Integrability"><span class="nav-text">7.2 Uniform Integrability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-Martingale-Convergence"><span class="nav-text">7.3 Martingale Convergence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-Optional-Stopping"><span class="nav-text">7.4 Optional Stopping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Localization-and-Local-Martingales"><span class="nav-text">7.5 Localization and Local Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-Quadratic-Variation-of-Martingales"><span class="nav-text">7.6 Quadratic Variation of Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-Martingale-Inequalities"><span class="nav-text">7.7 Martingale Inequalities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-Continuous-Martingales-%E2%80%94-Change-of-Time"><span class="nav-text">7.8 Continuous Martingales — Change of Time</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-7-martingales"><span class="nav-text">Chapter 7 Martingales</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">7.1定义</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E6%80%A7%E8%B4%A8%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8F%AF%E7%A7%AF%E7%9A%84%E9%9E%85%E5%8D%B3%E4%BA%8C%E9%98%B6%E7%9F%A9%E6%9C%89%E7%95%8C%E7%9A%84%E9%9E%85"><span class="nav-text">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniform-integrability"><span class="nav-text">7.2 Uniform Integrability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#martingale-convergence"><span class="nav-text">7.3 Martingale Convergence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#optional-stopping"><span class="nav-text">7.4 Optional Stopping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localization-and-local-martingales"><span class="nav-text">7.5 Localization and Local
+Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#quadratic-variation-of-martingales"><span class="nav-text">7.6 Quadratic Variation of
+Martingales</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#martingale-inequalities"><span class="nav-text">7.7 Martingale Inequalities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-martingales-change-of-time"><span class="nav-text">7.8 Continuous
+Martingales — Change of Time</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,74 +178,335 @@
       
       
       <div class="post-body">
-          <h1 id="Chapter-7-Martingales"><a href="#Chapter-7-Martingales" class="headerlink" title="Chapter 7 Martingales"></a>Chapter 7 Martingales</h1><h3 id="7-1定义"><a href="#7-1定义" class="headerlink" title="7.1定义"></a>7.1定义</h3><p>$\qquad$<strong>Definition7.1：</strong>若随机过程$M(t)$可积，即$EM(t)&lt; \infty$，并且具有性质$E(M(t)|\mathcal F_S)=M(s)$，则$M(t)$被称作Martingale.</p>
-<p>$E(M(t)|\mathcal F_S)=M(s)$，鞅是公平的，期望是常数</p>
-<p>$E(M(t)|\mathcal F_S)\le M(s)$，上鞅是盈利，期望是递减</p>
-<p>$E(M(t)|\mathcal F_S)\ge M(s)$，下鞅是亏损，期望是递增</p>
+          <h1 id="chapter-7-martingales">Chapter 7 Martingales</h1>
+<h3 id="定义">7.1定义</h3>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Definition7.1：</strong>若随机过程<span
+class="math inline">\(M(t)\)</span>可积，即<span
+class="math inline">\(EM(t)&lt; \infty\)</span>，并且具有性质<span
+class="math inline">\(E(M(t)|\mathcal F_S)=M(s)\)</span>，则<span
+class="math inline">\(M(t)\)</span>被称作Martingale.</p>
+<p><span class="math inline">\(E(M(t)|\mathcal
+F_S)=M(s)\)</span>，鞅是公平的，期望是常数</p>
+<p><span class="math inline">\(E(M(t)|\mathcal F_S)\le
+M(s)\)</span>，上鞅是盈利，期望是递减</p>
+<p><span class="math inline">\(E(M(t)|\mathcal F_S)\ge
+M(s)\)</span>，下鞅是亏损，期望是递增</p>
 <p>其中，期望的单调性只需要对于鞅性质两边取个期望，就可以证明。鞅一定是上(下)鞅，反之不一定成立；单调性质可以用来判断上(下)鞅是否是一个鞅。</p>
-<p>$\qquad$<strong>Theorem7.3：</strong>上鞅是鞅当且仅当$EM(T)=EM(0)$.</p>
-<h6 id="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"><a href="#另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。" class="headerlink" title="另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。"></a>另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6><p>在有限区间内，$B(t)$和$B^2(t)-t$是平方可积的鞅</p>
-<p>若$f$在$\mathbb R$有界且连续，则$Ito$积分$\int_0^tf(B(s))dB(s)$和$\int_0^tf(s)dB(s)$，在任何有限区间都是平方可积的鞅.</p>
-<h3 id="7-2-Uniform-Integrability"><a href="#7-2-Uniform-Integrability" class="headerlink" title="7.2 Uniform Integrability"></a>7.2 Uniform Integrability</h3><p>$\qquad$在介绍一致可积之前，先来回忆一下什么叫可积。随机变量$X$可积即$E(X)&lt;\infty$这等价于$\lim\limits_{n\to+\infty} E(|X|I(|X|&gt;n))=0$</p>
-<p>$\qquad$<strong>Defnition7.5：</strong>随机过程$X$称为一致可积的当$ E(|X|I(|X|&gt;n))$在$n \to \infty$时对于t一直收敛到0，即$\lim\limits<em>{n\to+\infty}\sup\limits</em>{t} E(|X|I(|X|&gt;n))=0$.</p>
-<p>$\qquad$<strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的$Weierstrass$判别法，随机过程$X(t)$被随机变量$Y$控制，即$|X(t)|\le Y且E(Y)&lt; \infty$则X是一致可积的。特别的取$Y=E(\sup\limits_t|X(t)|)$，注意取了$sup$之后是一个随机变量，不再是随机过程.</p>
-<p>$\qquad$<strong>Theorem 7.7 (Vallee–Poussin)：</strong>若G(x)在[0,$\infty$)是正的，递增，凸函数,并且$\lim\limits<em>{x \to \infty}\frac{G(X)}{X}=\infty,\sup\limits</em>{t\le T}E(G(|X(t)|))&lt;\infty$则X(t)在$t\le T$是一致可积的。特别的，取$G(x)=x^r(r&gt;1)$,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.3：</strong>上鞅是鞅当且仅当<span
+class="math inline">\(EM(T)=EM(0)\)</span>.</p>
+<h6
+id="另一个有用的性质是平方可积的鞅即二阶矩有界的鞅">另一个有用的性质是平方可积的鞅，即二阶矩有界的鞅。</h6>
+<p>在有限区间内，<span class="math inline">\(B(t)\)</span>和<span
+class="math inline">\(B^2(t)-t\)</span>是平方可积的鞅</p>
+<p>若<span class="math inline">\(f\)</span>在<span
+class="math inline">\(\mathbb R\)</span>有界且连续，则<span
+class="math inline">\(Ito\)</span>积分<span
+class="math inline">\(\int_0^tf(B(s))dB(s)\)</span>和<span
+class="math inline">\(\int_0^tf(s)dB(s)\)</span>，在任何有限区间都是平方可积的鞅.</p>
+<h3 id="uniform-integrability">7.2 Uniform Integrability</h3>
+<p><span
+class="math inline">\(\qquad\)</span>在介绍一致可积之前，先来回忆一下什么叫可积。随机变量<span
+class="math inline">\(X\)</span>可积即<span
+class="math inline">\(E(X)&lt;\infty\)</span>这等价于<span
+class="math inline">\(\lim\limits_{n\to+\infty}
+E(|X|I(|X|&gt;n))=0\)</span></p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Defnition7.5：</strong>随机过程<span
+class="math inline">\(X\)</span>称为一致可积的当$ E(|X|I(|X|&gt;n))<span
+class="math inline">\(在\)</span>n <span
+class="math inline">\(时对于t一直收敛到0，即\)</span><em>{n+}</em>{t}
+E(|X|I(|X|&gt;n))=0$.</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.6：</strong>类似于证明函数项级数一致收敛的<span
+class="math inline">\(Weierstrass\)</span>判别法，随机过程<span
+class="math inline">\(X(t)\)</span>被随机变量<span
+class="math inline">\(Y\)</span>控制，即<span
+class="math inline">\(|X(t)|\le Y且E(Y)&lt;
+\infty\)</span>则X是一致可积的。特别的取<span
+class="math inline">\(Y=E(\sup\limits_t|X(t)|)\)</span>，注意取了<span
+class="math inline">\(sup\)</span>之后是一个随机变量，不再是随机过程.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem 7.7
+(Vallee–Poussin)：</strong>若G(x)在[0,<span
+class="math inline">\(\infty\)</span>)是正的，递增，凸函数,并且<span
+class="math inline">\(\lim\limits_{x \to
+\infty}\frac{G(X)}{X}=\infty,\sup\limits_{t\le
+T}E(G(|X(t)|))&lt;\infty\)</span>则X(t)在<span
+class="math inline">\(t\le T\)</span>是一致可积的。特别的，取<span
+class="math inline">\(G(x)=x^r(r&gt;1)\)</span>,于是可以用矩检验一致性。更特别的，这得到了平方可积一定一致可积.</p>
 <p>下面构造一个一致可积鞅：</p>
-<p>$\qquad$<strong>Theorem 7.9：</strong> (Doob’s, Levy’s Martingale)：Y是一个可积的随机变量，即$E(Y)&lt; \infty$,定义$M(t)=E(Y|\mathcal F_t)$,那么$M(t)$是一致可积鞅.</p>
-<h3 id="7-3-Martingale-Convergence"><a href="#7-3-Martingale-Convergence" class="headerlink" title="7.3 Martingale Convergence"></a>7.3 Martingale Convergence</h3><p>本节考虑无穷区间的鞅</p>
-<p>$\qquad$<strong>Theorem 7.11：</strong>(Martingale Convergence Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的$\lim\limits_{t\to \infty}M(t)=Y，Y$是一个可积的随机变量。</p>
-<p>但$E(M(t))$可能不收敛到$EY$.例如布朗运动的指数鞅：$e^{B(t)-\frac{t}{2}}$；当$M(t)$一致可积时，收敛是肯定的。</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.9：</strong> (Doob’s, Levy’s
+Martingale)：Y是一个可积的随机变量，即<span
+class="math inline">\(E(Y)&lt; \infty\)</span>,定义<span
+class="math inline">\(M(t)=E(Y|\mathcal F_t)\)</span>,那么<span
+class="math inline">\(M(t)\)</span>是一致可积鞅.</p>
+<h3 id="martingale-convergence">7.3 Martingale Convergence</h3>
+<p>本节考虑无穷区间的鞅</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.11：</strong>(Martingale Convergence
+Theorem):若M(t)是一个可积的鞅(or上鞅or下鞅)，那么就存在一个几乎肯定的<span
+class="math inline">\(\lim\limits_{t\to
+\infty}M(t)=Y，Y\)</span>是一个可积的随机变量。</p>
+<p>但<span class="math inline">\(E(M(t))\)</span>可能不收敛到<span
+class="math inline">\(EY\)</span>.例如布朗运动的指数鞅：<span
+class="math inline">\(e^{B(t)-\frac{t}{2}}\)</span>；当<span
+class="math inline">\(M(t)\)</span>一致可积时，收敛是肯定的。</p>
 <p>一致可积鞅收敛a.s.</p>
 <p>平方可积鞅收敛a.s.</p>
 <p>正鞅收敛a.s.</p>
 <p>(负)上有界的下鞅收敛a.s.</p>
 <p>(正)下有界的上鞅收敛a.s.</p>
-<h3 id="7-4-Optional-Stopping"><a href="#7-4-Optional-Stopping" class="headerlink" title="7.4 Optional Stopping"></a>7.4 Optional Stopping</h3><p>$\qquad$<strong>Theorem7.14：</strong>若$M(t)$是鞅，$\tau$是停时，则$M(t\land\tau)$是鞅，并且$EM(t\land\tau)=EM(0)$</p>
-<p>我们知道当$M(t)$是鞅时，$EM(t)=EM(0)$，但是对于停时$\tau$，等式$EM(\tau)=EM(0)$,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
-<p>$\qquad$<strong>Theorem7.15：</strong>(Optional Stopping)$M(t)$是鞅，1.若$\tau$是有界停时，即$\tau\le K&lt;\infty$则，$EM(t)=EM(0)$2.若$M(t)$一致可积，则对于任意的停时$\tau$，都有$EM(\tau)=EM(0)$</p>
-<p>不同于有界，假如停时$\tau$是有限的，则需要添加其他条件；</p>
-<p>在实变函数中，有界函数：函数的值域在$\in[-M,M]$,且有界一定有限；</p>
+<h3 id="optional-stopping">7.4 Optional Stopping</h3>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.14：</strong>若<span
+class="math inline">\(M(t)\)</span>是鞅，<span
+class="math inline">\(\tau\)</span>是停时，则<span
+class="math inline">\(M(t\land\tau)\)</span>是鞅，并且<span
+class="math inline">\(EM(t\land\tau)=EM(0)\)</span></p>
+<p>我们知道当<span class="math inline">\(M(t)\)</span>是鞅时，<span
+class="math inline">\(EM(t)=EM(0)\)</span>，但是对于停时<span
+class="math inline">\(\tau\)</span>，等式<span
+class="math inline">\(EM(\tau)=EM(0)\)</span>,就不一定成立了，这就需要在鞅或者停时上添加一些条件</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.15：</strong>(Optional
+Stopping)<span class="math inline">\(M(t)\)</span>是鞅，1.若<span
+class="math inline">\(\tau\)</span>是有界停时，即<span
+class="math inline">\(\tau\le K&lt;\infty\)</span>则，$EM(t)=EM(0)<span
+class="math inline">\(2.若\)</span>M(t)<span
+class="math inline">\(一致可积，则对于任意的停时\)</span><span
+class="math inline">\(，都有\)</span>EM()=EM(0)$</p>
+<p>不同于有界，假如停时<span
+class="math inline">\(\tau\)</span>是有限的，则需要添加其他条件；</p>
+<p>在实变函数中，有界函数：函数的值域在<span
+class="math inline">\(\in[-M,M]\)</span>,且有界一定有限；</p>
 <p>有限函数：任何一点的函数值都是实数，不是无穷大，故有限不一定有界。</p>
 <p>无限函数：函数在某些点或整个定义域上无限增长或无限减小的函数。</p>
-<p>$\qquad$<strong>Theorem7.16：</strong>$M(t)$是鞅，$\tau$是有限停时，若$EM(\tau)&lt;\infty$并且$\lim\limits_{t \to \infty}E(M(t)I(\tau&gt;t))=0$，那么$EM(\tau)=EM(0)$</p>
-<p>$\qquad$<strong>Theorem7.18：</strong>(Optional Sampling): $M(t)$是一致可积鞅，$\tau<em>1\le\tau_2\le\infty$是两个停时，那么$E(M(\tau_2)|\mathcal F</em>{\tau_1})=M(\tau_1)$ a.s.</p>
-<h3 id="7-5-Localization-and-Local-Martingales"><a href="#7-5-Localization-and-Local-Martingales" class="headerlink" title="7.5 Localization and Local Martingales"></a>7.5 Localization and Local Martingales</h3><p>$\qquad$ $Ito$积分$M(t)=\int_0^tX(s)dB(s)$是局部鞅，当$EM^2(T)&lt;\infty$时，$M(t)$才是鞅</p>
-<p>$\qquad$<strong>Definition7.19：</strong>随机过程$X(t)$的一个性质称作是局部的，如果存在一个停止序列{$\tau_n$}，使得当$n\to\infty$时，停时$\tau_n\uparrow\infty$，并且对于每一个n，停止过程$X(t\land\tau_n)$都有这个性质。</p>
-<p>$\qquad$<strong>Definition7.20局部鞅：</strong>适应过程$M(t)$被称作局部鞅，如果存在一个$\tau_n\uparrow\infty$的停时序列$\tau_n$，对于每一个n停止过程$M(t\land\tau_n)$关于$t$是一致可积鞅。</p>
-<p>参看知乎对于<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.16：</strong><span
+class="math inline">\(M(t)\)</span>是鞅，<span
+class="math inline">\(\tau\)</span>是有限停时，若<span
+class="math inline">\(EM(\tau)&lt;\infty\)</span>并且<span
+class="math inline">\(\lim\limits_{t \to
+\infty}E(M(t)I(\tau&gt;t))=0\)</span>，那么<span
+class="math inline">\(EM(\tau)=EM(0)\)</span></p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.18：</strong>(Optional
+Sampling): <span class="math inline">\(M(t)\)</span>是一致可积鞅，<span
+class="math inline">\(\tau_1\le\tau_2\le\infty\)</span>是两个停时，那么<span
+class="math inline">\(E(M(\tau_2)|\mathcal
+F_{\tau_1})=M(\tau_1)\)</span> a.s.</p>
+<h3 id="localization-and-local-martingales">7.5 Localization and Local
+Martingales</h3>
+<p><span class="math inline">\(\qquad\)</span> <span
+class="math inline">\(Ito\)</span>积分<span
+class="math inline">\(M(t)=\int_0^tX(s)dB(s)\)</span>是局部鞅，当<span
+class="math inline">\(EM^2(T)&lt;\infty\)</span>时，<span
+class="math inline">\(M(t)\)</span>才是鞅</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Definition7.19：</strong>随机过程<span
+class="math inline">\(X(t)\)</span>的一个性质称作是局部的，如果存在一个停止序列{<span
+class="math inline">\(\tau_n\)</span>}，使得当<span
+class="math inline">\(n\to\infty\)</span>时，停时<span
+class="math inline">\(\tau_n\uparrow\infty\)</span>，并且对于每一个n，停止过程<span
+class="math inline">\(X(t\land\tau_n)\)</span>都有这个性质。</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Definition7.20局部鞅：</strong>适应过程<span
+class="math inline">\(M(t)\)</span>被称作局部鞅，如果存在一个<span
+class="math inline">\(\tau_n\uparrow\infty\)</span>的停时序列<span
+class="math inline">\(\tau_n\)</span>，对于每一个n停止过程<span
+class="math inline">\(M(t\land\tau_n)\)</span>关于<span
+class="math inline">\(t\)</span>是一致可积鞅。</p>
+<p>参看知乎对于<a
+target="_blank" rel="noopener" href="https://www.zhihu.com/question/56940833">局部鞅</a>的解释。</p>
 <p>任何鞅都是局部鞅，反之不一定成立。</p>
-<p>$\qquad$<strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量$Y$，即$E(Y)&lt;\infty$，使得对于局部鞅$M(t)$，有$M(t)\le Y$,则$M(t)$是一致可积的鞅。</p>
-<p>$\qquad$<strong>Corollary7.22：</strong>对于局部鞅$M(t)$，若有$E(sup<em>{s\le t}|M(s)|)&lt;\infty$,则$M(t)$是鞅，并且在任何有限区间$[0,T]$一致可积；更加一般化，$E(sup</em>{t\ge 0}|M(t)|)&lt;\infty$，则$M(t)$在$[0,\infty]$一致可积。</p>
-<p>$\qquad$<strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p>
-<p>由$Th7.3$和$Th7.23$可得非负局部鞅是鞅当且仅当$EM(T)=EM(0)$</p>
-<p>$\qquad$<strong>Definition7.25(Dirichlet Class (D))：</strong>过程X是狄利克雷D类，若族{X($\tau$)：$\tau$是有限停时}是一致可积的.</p>
-<p>$\qquad$<strong>Theorem7.26：</strong>局部鞅$M(t)$是一致可积的鞅当且仅当他是D类.</p>
-<h3 id="7-6-Quadratic-Variation-of-Martingales"><a href="#7-6-Quadratic-Variation-of-Martingales" class="headerlink" title="7.6 Quadratic Variation of Martingales"></a>7.6 Quadratic Variation of Martingales</h3><p>$\qquad$在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程$X(t)$在$[0,t]$的二次变差定义为：$[X,X] (t)=\lim\limits<em>{\delta_n\to 0}\sum</em>{i=1}^n(X(t<em>i^n)-X(t</em>{i-1}^n))^2$，其中$t_i^n$是对$[0,t]$做分割$\delta_n$是最大的分割区间。</p>
-<p>$\qquad$<strong>Theorem 1.10：</strong> $g$是连续且有限变差的过程，那么他的二次变差是0.</p>
-<p>下面考虑鞅的二次变差：首先若$M(t)$是鞅，则$M^2(t)$是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p>
-<p>$\qquad$<strong>Theorem 7.27(i)</strong>：若对于任何$t$，$M(t)$是具有有限二阶矩的鞅，那么他的二次变差过程$<a href="t">M,M</a>$存在；进一步，$M^2(t)-[M,M] (t)$是鞅.</p>
-<p>$\qquad$<strong>Theorem 7.27(ii)</strong>：若$M(t)$是局部鞅，则二次变差$[M,M] (t)$存在，且$M^2(t)-[M,M] (t)$是局部鞅.</p>
-<p>$\qquad$<strong>Theorem 7.28：</strong>$M(t)$是鞅(局部鞅)且$M(0)=0$，若对于某个$t$，使$M(t)$非0，那么就有$[M,M] (t)&gt;0$；反之，若$<a href="t">M,M</a>=0$，则对于任何的$s\le t$，都有$M(s)=0$ a.s.  </p>
-<p>$\qquad$<strong>Theorem 7.29：</strong>$M$是连续局部鞅，固定$t$，若$M(t)\neq M(0)$，那么$M$在$[0,t]$具有无限变差.</p>
-<p>$\qquad$<strong>Corollary 7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p>
-<h3 id="7-7-Martingale-Inequalities"><a href="#7-7-Martingale-Inequalities" class="headerlink" title="7.7 Martingale Inequalities"></a>7.7 Martingale Inequalities</h3><p>$\qquad$<strong>Doob’s Martingale Inequality：</strong>$M(t)$是一个鞅(or正的下鞅)，对于$p\ge 1$有$P(\sup\limits<em>{s\le t}|M(s)|\ge a)\le a^{-p}\sup\limits</em>{s\le t}E(|M(s)^p|)$；<strong>对于p&gt;1有$P(\sup\limits_{s\le t}|M(s)|)\le (\frac{p}{1-p})^{p}E(|M(t)^p|)$</strong>.当p=2时就称为Doob鞅不等式.</p>
-<p>$\qquad$<strong>Davis Inequality：</strong>对于任意在0处为0的局部鞅$M(t)$,都存在常数$c&gt;0$和$C&lt;\infty$，使得$cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le T}|M(t)|)\le CE(\sqrt{[M,M] (T)})$</p>
-<p>$\qquad$<strong>Burkholder-Gundy Inequality：</strong>若$1\le p&lt;\infty$，则对于任意在0处为0的局部鞅$M(t)$,都存在仅依赖于$p$的$c_p$和$C_p$</p>
-<p>使得$c<em>pE([M,M] (T)^{p/2})\le E(\sup\limits</em>{t\le T}|M(t)|^p)\le C_pE([M,M] (T)^{p/2})$；同时若$M(t)$连续，则不等式对$0&lt;p&lt;1$也成立.</p>
-<p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求$M(t)$是鞅，要求他是$Ito$积分。</p>
-<p>$\qquad$<strong>Burkholder-Davis-Gundy不等式：</strong>设$g\in \mathcal{L}^2(\mathscr{R}<em>+;\mathscr{R}^{d<br>\times m}) $，对于$t\ge 0$，定义$x(t)=\int</em>{0}^{t}g(s)dB(s)$和$A(t)=\int<em>0^t|g(s)|^2ds$ ，对于p&gt;0，存在唯一的仅依赖于p的常数$c_p$，$C_p$使得<br>      $c_p E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits</em>{0\le s\le t}|x(s)|^p)\le C_p E|A(t)|^{\frac{P}{2}}$，其中</p>
-<p>$c_p=(\frac{p}{2})^p, C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0<p<2}\\
-c_p=1, C_p=4  & & {p=2}\\
-c_p=(2p)^{-\frac{p}{2}}, C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  & & {p>2}$</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong><em><u>Theorem7.21</u></em>：</strong>若存在可积随机变量<span
+class="math inline">\(Y\)</span>，即<span
+class="math inline">\(E(Y)&lt;\infty\)</span>，使得对于局部鞅<span
+class="math inline">\(M(t)\)</span>，有<span
+class="math inline">\(M(t)\le Y\)</span>,则<span
+class="math inline">\(M(t)\)</span>是一致可积的鞅。</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Corollary7.22：</strong>对于局部鞅<span
+class="math inline">\(M(t)\)</span>，若有<span
+class="math inline">\(E(sup_{s\le t}|M(s)|)&lt;\infty\)</span>,则<span
+class="math inline">\(M(t)\)</span>是鞅，并且在任何有限区间<span
+class="math inline">\([0,T]\)</span>一致可积；更加一般化，<span
+class="math inline">\(E(sup_{t\ge 0}|M(t)|)&lt;\infty\)</span>，则<span
+class="math inline">\(M(t)\)</span>在<span
+class="math inline">\([0,\infty]\)</span>一致可积。</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.23：</strong>非负局部鞅是上鞅.</p>
+<p>由<span class="math inline">\(Th7.3\)</span>和<span
+class="math inline">\(Th7.23\)</span>可得非负局部鞅是鞅当且仅当<span
+class="math inline">\(EM(T)=EM(0)\)</span></p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Definition7.25(Dirichlet
+Class (D))：</strong>过程X是狄利克雷D类，若族{X(<span
+class="math inline">\(\tau\)</span>)：<span
+class="math inline">\(\tau\)</span>是有限停时}是一致可积的.</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Theorem7.26：</strong>局部鞅<span
+class="math inline">\(M(t)\)</span>是一致可积的鞅当且仅当他是D类.</p>
+<h3 id="quadratic-variation-of-martingales">7.6 Quadratic Variation of
+Martingales</h3>
+<p><span
+class="math inline">\(\qquad\)</span>在讲鞅的二次变差之前，先来回忆一下什么是函数的二次变差。过程<span
+class="math inline">\(X(t)\)</span>在<span
+class="math inline">\([0,t]\)</span>的二次变差定义为：<span
+class="math inline">\([X,X] (t)=\lim\limits_{\delta_n\to
+0}\sum_{i=1}^n(X(t_i^n)-X(t_{i-1}^n))^2\)</span>，其中<span
+class="math inline">\(t_i^n\)</span>是对<span
+class="math inline">\([0,t]\)</span>做分割<span
+class="math inline">\(\delta_n\)</span>是最大的分割区间。</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+1.10：</strong> <span
+class="math inline">\(g\)</span>是连续且有限变差的过程，那么他的二次变差是0.</p>
+<p>下面考虑鞅的二次变差：首先若<span
+class="math inline">\(M(t)\)</span>是鞅，则<span
+class="math inline">\(M^2(t)\)</span>是下鞅。不一定是真鞅，但是可以通过添加递增项，他就可能变成鞅，这个添加的项就是他的二次变差</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.27(i)</strong>：若对于任何<span
+class="math inline">\(t\)</span>，<span
+class="math inline">\(M(t)\)</span>是具有有限二阶矩的鞅，那么他的二次变差过程<span
+class="math inline">\([M,M](t)\)</span>存在；进一步，<span
+class="math inline">\(M^2(t)-[M,M] (t)\)</span>是鞅.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.27(ii)</strong>：若<span
+class="math inline">\(M(t)\)</span>是局部鞅，则二次变差<span
+class="math inline">\([M,M] (t)\)</span>存在，且<span
+class="math inline">\(M^2(t)-[M,M] (t)\)</span>是局部鞅.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.28：</strong><span
+class="math inline">\(M(t)\)</span>是鞅(局部鞅)且<span
+class="math inline">\(M(0)=0\)</span>，若对于某个<span
+class="math inline">\(t\)</span>，使<span
+class="math inline">\(M(t)\)</span>非0，那么就有<span
+class="math inline">\([M,M] (t)&gt;0\)</span>；反之，若<span
+class="math inline">\([M,M](t)=0\)</span>，则对于任何的<span
+class="math inline">\(s\le t\)</span>，都有<span
+class="math inline">\(M(s)=0\)</span> a.s.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.29：</strong><span
+class="math inline">\(M\)</span>是连续局部鞅，固定<span
+class="math inline">\(t\)</span>，若<span class="math inline">\(M(t)\neq
+M(0)\)</span>，那么<span class="math inline">\(M\)</span>在<span
+class="math inline">\([0,t]\)</span>具有无限变差.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Corollary
+7.30：</strong>若连续局部鞅在一个区间有有限变差，则他在这个区间恒为常数.</p>
+<h3 id="martingale-inequalities">7.7 Martingale Inequalities</h3>
+<p><span class="math inline">\(\qquad\)</span><strong>Doob’s Martingale
+Inequality：</strong><span
+class="math inline">\(M(t)\)</span>是一个鞅(or正的下鞅)，对于<span
+class="math inline">\(p\ge 1\)</span>有<span
+class="math inline">\(P(\sup\limits_{s\le t}|M(s)|\ge a)\le
+a^{-p}\sup\limits_{s\le
+t}E(|M(s)^p|)\)</span>；<strong>对于p&gt;1有<span
+class="math inline">\(P(\sup\limits_{s\le t}|M(s)|)\le
+(\frac{p}{1-p})^{p}E(|M(t)^p|)\)</span></strong>.当p=2时就称为Doob鞅不等式.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Davis
+Inequality：</strong>对于任意在0处为0的局部鞅<span
+class="math inline">\(M(t)\)</span>,都存在常数<span
+class="math inline">\(c&gt;0\)</span>和<span
+class="math inline">\(C&lt;\infty\)</span>，使得<span
+class="math inline">\(cE(\sqrt{[M,M] (T)})\le E(\sup\limits_{t\le
+T}|M(t)|)\le CE(\sqrt{[M,M] (T)})\)</span></p>
+<p><span class="math inline">\(\qquad\)</span><strong>Burkholder-Gundy
+Inequality：</strong>若<span class="math inline">\(1\le
+p&lt;\infty\)</span>，则对于任意在0处为0的局部鞅<span
+class="math inline">\(M(t)\)</span>,都存在仅依赖于<span
+class="math inline">\(p\)</span>的<span
+class="math inline">\(c_p\)</span>和<span
+class="math inline">\(C_p\)</span></p>
+<p>使得<span class="math inline">\(c_pE([M,M] (T)^{p/2})\le
+E(\sup\limits_{t\le T}|M(t)|^p)\le C_pE([M,M]
+(T)^{p/2})\)</span>；同时若<span
+class="math inline">\(M(t)\)</span>连续，则不等式对<span
+class="math inline">\(0&lt;p&lt;1\)</span>也成立.</p>
+<p>上述不等式对T是停时成立。下面这个定理来源于毛老师书，是矩不等式，未要求<span
+class="math inline">\(M(t)\)</span>是鞅，要求他是<span
+class="math inline">\(Ito\)</span>积分。</p>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Burkholder-Davis-Gundy不等式：</strong>设$g<sup>2(<em>+;^{d
+m}) <span class="math inline">\(，对于\)</span>t<span
+class="math inline">\(，定义\)</span>x(t)=</em>{0}</sup>{t}g(s)dB(s)<span
+class="math inline">\(和\)</span>A(t)=_0<sup>t|g(s)|</sup>2ds$
+，对于p&gt;0，存在唯一的仅依赖于p的常数<span
+class="math inline">\(c_p\)</span>，<span
+class="math inline">\(C_p\)</span>使得 <span class="math inline">\(c_p
+E|A(t)|^{\frac{P}{2}}\le E(\mathop{sup}\limits_{0\le s\le t}|x(s)|^p)\le
+C_p E|A(t)|^{\frac{P}{2}}\)</span>，其中</p>
+<p><span class="math inline">\(c_p=(\frac{p}{2})^p,
+C_p=(\frac{32}{p})^{\frac{p}{2}}  &amp; &amp; {0&lt;p&lt;2}\\
+c_p=1, C_p=4  &amp; &amp; {p=2}\\
+c_p=(2p)^{-\frac{p}{2}},
+C_p=(\frac{p^{p+1}}{2(p-1)^{p-1}})^{\frac{p}{2}}  &amp; &amp;
+{p&gt;2}\)</span></p>
 <p>这些定理可以用来证明局部鞅是真的鞅：</p>
-<p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅$M(t)$，并且满足他的二次方差有界$E\sqrt{ [M,M] (t)}&lt;\infty$，那么在有限区间$[0,T]$内它是一致可积的鞅.</p>
-<h3 id="7-8-Continuous-Martingales-—-Change-of-Time"><a href="#7-8-Continuous-Martingales-—-Change-of-Time" class="headerlink" title="7.8 Continuous Martingales — Change of Time"></a>7.8 Continuous Martingales — Change of Time</h3><p>$\qquad$<strong>Levy对布朗运动的描述：</strong>对于一个$M(0)=0$的过程$M$是布朗运动，且仅当它是二次变差为$[M,M] (t)=t$的局部鞅.<em>本节讨论的change of time便是基于Levy对布朗运动的描述.</em></p>
+<p><strong><em><u>Theorem 7.35：</u></em></strong>在0处为0的局部鞅<span
+class="math inline">\(M(t)\)</span>，并且满足他的二次方差有界<span
+class="math inline">\(E\sqrt{ [M,M]
+(t)}&lt;\infty\)</span>，那么在有限区间<span
+class="math inline">\([0,T]\)</span>内它是一致可积的鞅.</p>
+<h3 id="continuous-martingales-change-of-time">7.8 Continuous
+Martingales — Change of Time</h3>
+<p><span
+class="math inline">\(\qquad\)</span><strong>Levy对布朗运动的描述：</strong>对于一个<span
+class="math inline">\(M(0)=0\)</span>的过程<span
+class="math inline">\(M\)</span>是布朗运动，且仅当它是二次变差为<span
+class="math inline">\([M,M] (t)=t\)</span>的局部鞅.<em>本节讨论的change
+of time便是基于Levy对布朗运动的描述.</em></p>
 <p><u>关于鞅的时间的变化</u></p>
-<p>$\qquad$<strong>Theorem 7.37(Dambis-Dubin-Schwarz(DDS))：</strong>$M(t)$是在0处为0的连续鞅，使得$[M,M] (t)$不递减到$\infty$，并定义$\tau<em>t=inf${$s：[M,M] (s)&gt;t$}，那么过程$B(t)=M(\tau_t)$是关于域流$\mathcal F</em>{\tau_t}$的布朗运动；进一步$[M,M] (t)$是关于这域流的停时，对布朗运动$B(t)$做时间变化，就得到鞅$M(t)$，即$M(t)=B([M,M] (t))$.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
-<p>$\qquad$<u>关于SDE的时间的变化</u></p>
-<p>$\qquad$<strong>Theorem 7.38：</strong>$f(t)$是自适应，正，增的微分过程(为了$f^{-1}$存在)，则$dX(t)=\sqrt{f’(t)}dB(t)$有弱解$\widehat{B}(f(t))$.</p>
-<p>$\qquad$<strong>Theorem 7.39：</strong>$\sigma(x)&gt;0$，定义$G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}$对于有限的$t$是有限的，关于$t$递增到$\infty$ a.s.，G是正的，连续的，严格增到$\infty$，因此存在逆函数$\tau_t=G^{-1}(t)$，对于固定的$t$，$\tau_t$是停时，递增的，并且他是过程$G(s)$第一次到达$t$，那么过程$X(t)=B(\tau_t)$是$dX(t)=\sigma(X(t))dB(t)$的弱解.</p>
-<p>$\qquad$<strong>Theorem 7.41：</strong>令$X(t)$是$dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)$的解，并定义$Y(t)=X(\tau_t)$，于是$Y(t)$是$dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)$的弱解，其中$Y(0)=X(0)$， $g(x)$是正函数，$G(t)=\int_0^tg(X(s))ds$.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.37(Dambis-Dubin-Schwarz(DDS))：</strong><span
+class="math inline">\(M(t)\)</span>是在0处为0的连续鞅，使得<span
+class="math inline">\([M,M] (t)\)</span>不递减到<span
+class="math inline">\(\infty\)</span>，并定义<span
+class="math inline">\(\tau_t=inf\)</span>{<span
+class="math inline">\(s：[M,M] (s)&gt;t\)</span>}，那么过程<span
+class="math inline">\(B(t)=M(\tau_t)\)</span>是关于域流<span
+class="math inline">\(\mathcal
+F_{\tau_t}\)</span>的布朗运动；进一步<span class="math inline">\([M,M]
+(t)\)</span>是关于这域流的停时，对布朗运动<span
+class="math inline">\(B(t)\)</span>做时间变化，就得到鞅<span
+class="math inline">\(M(t)\)</span>，即<span
+class="math inline">\(M(t)=B([M,M]
+(t))\)</span>.对于连续时间鞅，结果也成立.(同时书中给出了好几个例子，更加便于理解)</p>
+<p><span
+class="math inline">\(\qquad\)</span><u>关于SDE的时间的变化</u></p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.38：</strong><span
+class="math inline">\(f(t)\)</span>是自适应，正，增的微分过程(为了<span
+class="math inline">\(f^{-1}\)</span>存在)，则<span
+class="math inline">\(dX(t)=\sqrt{f&#39;(t)}dB(t)\)</span>有弱解<span
+class="math inline">\(\widehat{B}(f(t))\)</span>.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.39：</strong><span
+class="math inline">\(\sigma(x)&gt;0\)</span>，定义<span
+class="math inline">\(G(t)=\int_0^t\frac{ds}{\sigma^2(B(s))}\)</span>对于有限的<span
+class="math inline">\(t\)</span>是有限的，关于<span
+class="math inline">\(t\)</span>递增到<span
+class="math inline">\(\infty\)</span>
+a.s.，G是正的，连续的，严格增到<span
+class="math inline">\(\infty\)</span>，因此存在逆函数<span
+class="math inline">\(\tau_t=G^{-1}(t)\)</span>，对于固定的<span
+class="math inline">\(t\)</span>，<span
+class="math inline">\(\tau_t\)</span>是停时，递增的，并且他是过程<span
+class="math inline">\(G(s)\)</span>第一次到达<span
+class="math inline">\(t\)</span>，那么过程<span
+class="math inline">\(X(t)=B(\tau_t)\)</span>是<span
+class="math inline">\(dX(t)=\sigma(X(t))dB(t)\)</span>的弱解.</p>
+<p><span class="math inline">\(\qquad\)</span><strong>Theorem
+7.41：</strong>令<span class="math inline">\(X(t)\)</span>是<span
+class="math inline">\(dX(t)=\mu(X(t))dt+\sigma(X(t))dB(t)\)</span>的解，并定义<span
+class="math inline">\(Y(t)=X(\tau_t)\)</span>，于是<span
+class="math inline">\(Y(t)\)</span>是<span
+class="math inline">\(dY(t)=\frac{\mu(Y(t))}{g(Y(t))}dt+\frac{\sigma(Y(t))}{\sqrt{g(Y(t))}}dB(t)\)</span>的弱解，其中<span
+class="math inline">\(Y(0)=X(0)\)</span>， <span
+class="math inline">\(g(x)\)</span>是正函数，<span
+class="math inline">\(G(t)=\int_0^tg(X(s))ds\)</span>.</p>
 
       </div>
       
