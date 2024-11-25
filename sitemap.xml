@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zuoruchun.github.io/about/index.html</loc>
+    
+    <lastmod>2024-11-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/2024/11/22/TestTime/</loc>
+    
+    <lastmod>2024-11-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zuoruchun.github.io/2024/08/07/Git/HexoUseMethods/</loc>
     
     <lastmod>2024-11-22</lastmod>
@@ -20,16 +38,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/11/11/Emotion/Howtolove/</loc>
-    
-    <lastmod>2024-11-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/2024/11/22/TestTime/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Emotion/Howtolove.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -101,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/05/23/Emotion/GoobyeEason/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Emotion/GoobyeEason.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -209,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/11/08/Emotion/Nomorenomore/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Emotion/Nomorenomore.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -237,15 +246,6 @@
   
   <url>
     <loc>https://zuoruchun.github.io/archives/index.html</loc>
-    
-    <lastmod>2024-11-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/about/index.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -292,7 +292,7 @@
 
   <url>
     <loc>https://zuoruchun.github.io/</loc>
-    <lastmod>2024-11-22</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
