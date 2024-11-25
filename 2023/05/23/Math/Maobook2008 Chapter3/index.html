@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Introduction 一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。 \(dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\\\) 初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解， \(N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\si">
+    <meta name="description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MaoBook2008 Chapter3">
 <meta property="og:url" content="https://zuoruchun.github.io/2023/05/23/Math/Maobook2008%20Chapter3/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="Introduction 一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。 \(dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\\\) 初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解， \(N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\si">
+<meta property="og:description" content="Introduction一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。$dN_t&#x3D;r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$初值为N(0)&#x3D;N_0&gt;0,由ito公式可以直接得到它的显式解，$N(t)&#x3D;N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-23T13:33:36.000Z">
 <meta property="article:modified_time" content="2024-11-25T10:12:11.876Z">
@@ -116,9 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stochastic-liouvilles-formula"><span class="nav-text">Stochastic Liouville&#39;s
-Formula</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-variation-of-constants-formula"><span class="nav-text">The Variation-of-Constants
-Formula</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#case-studies"><span class="nav-text">Case Studies</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stochastic-Liouville%E2%80%99s-Formula"><span class="nav-text">Stochastic Liouville’s Formula</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Variation-of-Constants-Formula"><span class="nav-text">The Variation-of-Constants Formula</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case-Studies"><span class="nav-text">Case Studies</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -213,55 +211,22 @@ Formula</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
-<p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。
-<span class="math inline">\(dN_t=r(t)N(t)dt+\sigma
-(t)N(t)dB(t),其中t&gt;0\\\)</span>
-初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解， <span
-class="math inline">\(N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2
-(s)}{2})ds+\int_0^t \sigma(s)dB(s))\\\)</span></p>
-<p>现在我们来考虑一个d维的SDE： <span
-class="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\\\)</span>
-其中<span
-class="math inline">\(F(.),G_K(.)\)</span>是d*d的实值矩阵，<span
-class="math inline">\(f(.),G_K(.)\)</span>是<span
-class="math inline">\(R^d\)</span>的实值函数，<span
-class="math inline">\(B(t)=(B_1(t),...,B_m(t))^T\)</span>。</p>
-<p>若<span
-class="math inline">\(f(t)=g_1(t)=...=g_m(t)=0\)</span>，那么SDE称为是线性的；如果<span
-class="math inline">\(G_1(t)=,...,=G_m(t)=0\)</span>，则称SDE是狭义线性的；若<span
-class="math inline">\(F,f,G_k,g_k\)</span>与t是独立的，则称SDE是自治的。</p>
-<h1 id="stochastic-liouvilles-formula">Stochastic Liouville's
-Formula</h1>
-<p>考虑齐次的SDE:</p>
-<p><span
-class="math inline">\(dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)\)</span></p>
-<p><span
-class="math inline">\(\Phi_j(t)\)</span>是这个SDE的解，则称<span
-class="math inline">\(\Phi(t)=(\Phi_1(t),...,\Phi_d(t))\)</span>是这个齐次SDE的基矩阵</p>
-<p>，即<span
-class="math inline">\(d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)\)</span>，</p>
-<p><span
-class="math inline">\(Th2.1\)</span>,给定初值x(t_0)=x_0,则这个齐次SDE的解是<span
-class="math inline">\(x(t)=\Phi(t)x_0\)</span></p>
-<p>定义<span
-class="math inline">\(W(t)=det.\Phi(t)\)</span>,是基矩阵的朗斯基行列式。</p>
-<p>Th2.2：W(t)有以下显示表达，<span
-class="math inline">\(W(t)=exp[\int_{t_0}^t(traceF(s)-\frac{1}{2}\sum_{k=1}^mtrace[G_k(s)G_k(s)])ds+\sum_{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].\)</span></p>
-<p>Lemma2.3：线性标量SDE:<span
-class="math inline">\(dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)\)</span>解的显式表达式是</p>
-<p><span
-class="math inline">\(y(t)=y_0exp[\int_{t_0}^t(a(s)-\frac{1}{2}\sum_{k=1}^mb_k^2(s))ds+\sum_{k=1}^mb_k(s)dB_k(s)]\)</span></p>
-<h1 id="the-variation-of-constants-formula">The Variation-of-Constants
-Formula</h1>
-<p>考虑<span
-class="math inline">\(dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\)</span>的解，</p>
-<p>若<span
-class="math inline">\(\Phi(t)\)</span>是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
-<p><span
-class="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^mG_k(s)g_k(s)]ds+\sum_{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))\)</span></p>
-<h1 id="case-studies">Case Studies</h1>
-
+    <div class="post-body" itemprop="articleBody"><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>一开始学习SDE的时候，直接开始学习的就是SDE的数值解法，但实际上有一类简单的SDE是有显示表达式的，那就是线性SDE。<br>$dN_t=r(t)N(t)dt+\sigma (t)N(t)dB(t),其中t&gt;0\$<br>初值为N(0)=N_0&gt;0,由ito公式可以直接得到它的显式解，<br>$N(t)=N_0 exp(\int_0^t(r(s)-\frac{\sigma ^2 (s)}{2})ds+\int_0^t \sigma(s)dB(s))\$</p>
+<p>现在我们来考虑一个d维的SDE：<br>$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)\$<br>其中$F(.),G_K(.)$是d*d的实值矩阵，$f(.),G_K(.)$是$R^d$的实值函数，$B(t)=(B_1(t),…,B_m(t))^T$。</p>
+<p>若$f(t)=g_1(t)=…=g_m(t)=0$，那么SDE称为是线性的；如果$G_1(t)=,…,=G_m(t)=0$，则称SDE是狭义线性的；若$F,f,G_k,g_k$与t是独立的，则称SDE是自治的。</p>
+<h1 id="Stochastic-Liouville’s-Formula"><a href="#Stochastic-Liouville’s-Formula" class="headerlink" title="Stochastic Liouville’s Formula"></a>Stochastic Liouville’s Formula</h1><p>考虑齐次的SDE:</p>
+<p>$dx(t)=F(t)x(t)dt+\sum_{k=1}^mG_k(t)x(t)dB_k(t)$</p>
+<p>$\Phi_j(t)$是这个SDE的解，则称$\Phi(t)=(\Phi_1(t),…,\Phi_d(t))$是这个齐次SDE的基矩阵</p>
+<p>，即$d\Phi(t)=F(t)\Phi(t)dt+\sum_{k=1}^mG_k(t)\Phi(t)dB_k(t)$，</p>
+<p>$Th2.1$,给定初值x(t_0)=x_0,则这个齐次SDE的解是$x(t)=\Phi(t)x_0$</p>
+<p>定义$W(t)=det.\Phi(t)$,是基矩阵的朗斯基行列式。</p>
+<p>Th2.2：W(t)有以下显示表达，$W(t)=exp[\int<em>{t_0}^t(traceF(s)-\frac{1}{2}\sum</em>{k=1}^mtrace[G<em>k(s)G_k(s)])ds+\sum</em>{k=1}^m\int_{t_0}^ttraceG_k(s)dB_k(s)].$</p>
+<p>Lemma2.3：线性标量SDE:$dy(t)=a(t)y(t)dt+\sum_{k=1}^mb_k(t)y(t)dB_k(t)$解的显式表达式是</p>
+<p>$y(t)=y<em>0exp[\int</em>{t<em>0}^t(a(s)-\frac{1}{2}\sum</em>{k=1}^mb<em>k^2(s))ds+\sum</em>{k=1}^mb_k(s)dB_k(s)]$</p>
+<h1 id="The-Variation-of-Constants-Formula"><a href="#The-Variation-of-Constants-Formula" class="headerlink" title="The Variation-of-Constants Formula"></a>The Variation-of-Constants Formula</h1><p>考虑$dx(t)=(F(t)x(t)+f(t))dt+\sum_{k=1}^m(G_k(t)x(t)+g_k(t))dB_k(t)$的解，</p>
+<p>若$\Phi(t)$是对应齐次SDE的基矩阵，那么这个SDE的解有显示表达：</p>
+<p>$x(t)=\Phi(t)(x<em>0+\int</em>{t<em>0}^t\Phi^{-1}(s)[f(s)-\sum</em>{k=1}^mG<em>k(s)g_k(s)]ds+\sum</em>{k=1}^m\int_{t_0}^t\Phi^{-1}(s)g_k(s)dB_k(s))$</p>
+<h1 id="Case-Studies"><a href="#Case-Studies" class="headerlink" title="Case Studies"></a>Case Studies</h1>
     </div>
 
     
@@ -277,10 +242,13 @@ class="math inline">\(x(t)=\Phi(t)(x_0+\int_{t_0}^t\Phi^{-1}(s)[f(s)-\sum_{k=1}^
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/05/23/Math/Maobook2008%20Chapter2/" rel="prev" title="MaoBook2008 Chapter2">
+                  <i class="fa fa-chevron-left"></i> MaoBook2008 Chapter2
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/23/Math/Maobook2008%20Chapter2/" rel="next" title="MaoBook2008 Chapter2">
-                  MaoBook2008 Chapter2 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/05/23/Math/Maobook2008%20Chapter1/" rel="next" title="MaoBook2008 Chapter1">
+                  MaoBook2008 Chapter1 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
