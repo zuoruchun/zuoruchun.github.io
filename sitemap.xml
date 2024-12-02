@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zuoruchun.github.io/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</loc>
+    
+    <lastmod>2024-12-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
     
     <lastmod>2024-11-29</lastmod>
@@ -84,15 +93,6 @@
   
   <url>
     <loc>https://zuoruchun.github.io/2024/10/22/UsefulUse/UploadFiletoServer/</loc>
-    
-    <lastmod>2024-11-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -247,7 +247,7 @@
 
   <url>
     <loc>https://zuoruchun.github.io/</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2024-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
