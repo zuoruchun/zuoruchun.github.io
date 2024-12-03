@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="打开终端并导航到当前文件夹  ​    cd &#x2F;path&#x2F;to&#x2F;your&#x2F;current&#x2F;folder  初始化 Git 仓库（如果还没有初始化）  ​    git init  添加远程仓库">
+    <meta name="description" content="打开终端并导航到当前文件夹  ​ cd &#x2F;path&#x2F;to&#x2F;your&#x2F;current&#x2F;folder  初始化 Git 仓库（如果还没有初始化）  ​ git init  添加远程仓库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gittogithub">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/12/03/Git/gittogithub/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="打开终端并导航到当前文件夹  ​    cd &#x2F;path&#x2F;to&#x2F;your&#x2F;current&#x2F;folder  初始化 Git 仓库（如果还没有初始化）  ​    git init  添加远程仓库">
+<meta property="og:description" content="打开终端并导航到当前文件夹  ​ cd &#x2F;path&#x2F;to&#x2F;your&#x2F;current&#x2F;folder  初始化 Git 仓库（如果还没有初始化）  ​ git init  添加远程仓库">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-03T12:08:04.000Z">
 <meta property="article:modified_time" content="2024-12-03T12:22:00.861Z">
@@ -203,30 +203,31 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><ol>
+    <div class="post-body" itemprop="articleBody"><ol type="1">
 <li>打开终端并导航到当前文件夹</li>
 </ol>
-<p>​    <code>cd /path/to/your/current/folder</code></p>
-<ol>
+<p>​ <code>cd /path/to/your/current/folder</code></p>
+<ol start="2" type="1">
 <li>初始化 Git 仓库（如果还没有初始化）</li>
 </ol>
-<p>​    <code>git init</code></p>
-<ol>
+<p>​ <code>git init</code></p>
+<ol start="3" type="1">
 <li>添加远程仓库</li>
 </ol>
-<p>​    <code>git remote add origin https://github.com/zuoruchun/TCCIR.git</code></p>
-<ol>
+<p>​
+<code>git remote add origin https://github.com/zuoruchun/TCCIR.git</code></p>
+<ol start="4" type="1">
 <li>添加所有文件到暂存区</li>
 </ol>
-<p>​    <code>git add .</code></p>
-<ol>
+<p>​ <code>git add .</code></p>
+<ol start="5" type="1">
 <li>提交更改</li>
 </ol>
-<p>​    <code>git commit -m &quot;Initial commit&quot;</code></p>
-<ol>
+<p>​ <code>git commit -m "Initial commit"</code></p>
+<ol start="6" type="1">
 <li>推送到远程仓库</li>
 </ol>
-<p>​    <code>git push -u origin master</code></p>
+<p>​ <code>git push -u origin master</code></p>
 <p>如果远程仓库已经存在并且有内容，你可能需要先拉取远程仓库的内容，然后再推送</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
 <p>建议直接使用VSCode，Cursor等软件进行git更加合适。</p>
