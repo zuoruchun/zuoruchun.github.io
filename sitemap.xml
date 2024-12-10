@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/12/03/Git/gittogithub/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
+    
+    <lastmod>2024-12-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Git/gittogithub.html</loc>
     
     <lastmod>2024-12-04</lastmod>
     
@@ -11,18 +20,9 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/RunMatlabProgramonLinuxCommandLine.html</loc>
     
     <lastmod>2024-12-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
-    
-    <lastmod>2024-11-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/07/Git/HexoUseMethods/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Git/HexoUseMethods.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Computer/SoftwareWindowsSwitchMtoMacbook.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/20/Computer/DataGripbug/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Computer/DataGripbug.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2023/06/09/UsefulUse/WriteCasually/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/WriteCasually.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/09/26/Git/GitOperation/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Git/GitOperation.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/08/20/Git/HexoPort/</loc>
+    <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Git/HexoPort.html</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -256,7 +256,7 @@
 
   <url>
     <loc>https://zuoruchun.github.io/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

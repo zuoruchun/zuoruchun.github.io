@@ -24,7 +24,7 @@
 
     <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.获取服务器的username和ip 在linux机器的终端输入whoami,终端返回的即是username； 在linux机器的终端输入ifconfig,终">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh利用服务器在本地编写代码，并且利用远程服务器编译">
+<meta property="og:title" content="ssh运行服务器中的代码">
 <meta property="og:url" content="https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
 <meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  1.获取服务器的username和ip 在linux机器的终端输入whoami,终端返回的即是username； 在linux机器的终端输入ifconfig,终">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE1.png">
 <meta property="og:image" content="https://zuoruchun.github.io/pic/ssh%E9%85%8D%E7%BD%AE2.png">
 <meta property="article:published_time" content="2024-10-19T11:38:00.000Z">
-<meta property="article:modified_time" content="2024-11-29T13:49:06.287Z">
+<meta property="article:modified_time" content="2024-12-10T09:02:45.628Z">
 <meta property="article:author" content="左如春">
 <meta property="article:tag" content="Computer">
 <meta name="twitter:card" content="summary">
@@ -44,10 +44,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/","path":"2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/","title":"ssh利用服务器在本地编写代码，并且利用远程服务器编译"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/","path":"2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/","title":"ssh运行服务器中的代码"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>ssh利用服务器在本地编写代码，并且利用远程服务器编译 | Ruchun Zuo</title>
+<title>ssh运行服务器中的代码 | Ruchun Zuo</title>
   
 
 
@@ -180,12 +180,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="ssh利用服务器在本地编写代码，并且利用远程服务器编译 | Ruchun Zuo">
+      <meta itemprop="name" content="ssh运行服务器中的代码 | Ruchun Zuo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ssh利用服务器在本地编写代码，并且利用远程服务器编译
+          ssh运行服务器中的代码
         </h1>
 
         <div class="post-meta-container">
@@ -203,7 +203,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-29 21:49:06" itemprop="dateModified" datetime="2024-11-29T21:49:06+08:00">2024-11-29</time>
+      <time title="修改时间：2024-12-10 17:02:45" itemprop="dateModified" datetime="2024-12-10T17:02:45+08:00">2024-12-10</time>
     </span>
 
   
@@ -246,7 +246,7 @@ src="/pic/config.jpg" title="config" alt="img" /></p>
 之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,
 然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"
 title="ssh配置2" alt="img" /> <strong>4.使用</strong></p>
-<p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件，然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p>
+<p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件（matlab文件类似，需要安装matlab的插件），然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p>
 <p><strong>5.备注</strong>
 ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
 <h1
@@ -267,13 +267,10 @@ id="但是最最最最重要的一点是可以使用motionpro连接校园网这�
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/09/26/Git/GitOperation/" rel="prev" title="git的一些操作">
-                  <i class="fa fa-chevron-left"></i> git的一些操作
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/20/UsefulUse/RunMatlabProgramonLinuxCommandLine/" rel="next" title="在linux的命令中行运行matlab">
-                  在linux的命令中行运行matlab <i class="fa fa-chevron-right"></i>
+                <a href="/2024/10/22/UsefulUse/UploadFiletoServer/" rel="next" title="上传文件到服务器">
+                  上传文件到服务器 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

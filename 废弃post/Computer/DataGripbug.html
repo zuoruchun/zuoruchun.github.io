@@ -22,28 +22,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t conn">
-<meta property="og:type" content="article">
-<meta property="og:title" content="解决git报错443问题">
-<meta property="og:url" content="https://zuoruchun.github.io/2024/08/20/Git/HexoPort/index.html">
+    <meta name="description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SSH">
+<meta property="og:type" content="website">
+<meta property="og:title" content="使用DataGrip的Hive数据库连接阿里云服务器的Bug">
+<meta property="og:url" content="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Computer/DataGripbug.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  解决使用git时遇到Failed to connect to github.com port 443 after 21090 ms: Couldn‘t conn">
+<meta property="og:description" content="img {       display: block;       margin-left: auto;       margin-right: auto;       width: 80%; &#x2F;* 根据需要调整大小 *&#x2F;   }  昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示SSH">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zuoruchun.github.io/pic/DataGrip%E9%85%8D%E7%BD%AE%E5%A4%B1%E8%B4%A5.png">
+<meta property="og:image" content="https://zuoruchun.github.io/pic/DataGrip%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png">
 <meta property="article:published_time" content="2024-08-20T09:07:00.000Z">
-<meta property="article:modified_time" content="2024-11-22T08:56:02.827Z">
+<meta property="article:modified_time" content="2024-11-22T12:14:05.555Z">
 <meta property="article:author" content="左如春">
 <meta property="article:tag" content="Bugs">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zuoruchun.github.io/pic/DataGrip%E9%85%8D%E7%BD%AE%E5%A4%B1%E8%B4%A5.png">
 
 
-<link rel="canonical" href="https://zuoruchun.github.io/2024/08/20/Git/HexoPort/">
+<link rel="canonical" href="https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Computer/DataGripbug">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/08/20/Git/HexoPort/","path":"2024/08/20/Git/HexoPort/","title":"解决git报错443问题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Computer/DataGripbug.html","path":"废弃post/Computer/DataGripbug.html","title":"使用DataGrip的Hive数据库连接阿里云服务器的Bug"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>解决git报错443问题 | Ruchun Zuo</title>
+<title>使用DataGrip的Hive数据库连接阿里云服务器的Bug | Ruchun Zuo
+</title>
   
 
 
@@ -103,7 +107,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,9 +120,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-text">1.查看本机系统端口号：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEgit%E7%AB%AF%E5%8F%A3%E5%8F%B7%E5%92%8C%E4%B8%8A%E9%9D%A2%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8F%B7%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4%E6%88%91%E7%9A%84%E6%98%AF10809"><span class="nav-text">2.设置git端口号和上面的端口号保持一致（我的是10809）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8Bgit%E8%AE%BE%E7%BD%AE%E5%8F%AF%E4%BB%A5%E7%9C%81%E7%95%A5"><span class="nav-text">3.查看git设置（可以省略）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1push-%E6%88%96%E8%80%85-pull-%E5%8D%B3%E5%8F%AF%E4%BF%9D%E9%99%A9%E8%B5%B7%E8%A7%81%E5%8F%AF%E4%BB%A5%E5%85%88%E5%9C%A8cmd%E7%AA%97%E5%8F%A3%E4%B8%AD%E4%BD%BF%E7%94%A8-ipconfigflushdns-%E5%88%B7%E6%96%B0dns%E7%BC%93%E5%AD%98"><span class="nav-text">4.再次push
-或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig&#x2F;flushdns
-刷新dns缓存）。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E6%8C%82%E7%9D%80%E6%A2%AF%E5%AD%90%E4%BD%86%E6%98%AF%E8%BF%98%E6%98%AF%E9%81%87%E5%88%B0%E4%BA%86%E4%BB%A5%E4%B8%8A%E6%8A%A5%E9%94%99"><span class="nav-text">二、如果没有挂着梯子但是还是遇到了以上报错</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -154,66 +155,31 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner page posts-expand">
 
 
-  
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
 
+<h1 class="post-title" itemprop="name headline">使用DataGrip的Hive数据库连接阿里云服务器的Bug
+</h1>
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/08/20/Git/HexoPort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wanye.png">
-      <meta itemprop="name" content="左如春">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ruchun Zuo">
-      <meta itemprop="description" content="暂时还没想到怎么描述我的网站，或者说我。">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="解决git报错443问题 | Ruchun Zuo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          解决git报错443问题
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-08-20 17:07:00" itemprop="dateCreated datePublished" datetime="2024-08-20T17:07:00+08:00">2024-08-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-22 16:56:02" itemprop="dateModified" datetime="2024-11-22T16:56:02+08:00">2024-11-22</time>
-    </span>
-
-  
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/%E5%BA%9F%E5%BC%83post/">废弃POST</a></li>
+            <li><a href="/%E5%BA%9F%E5%BC%83post/Computer/">COMPUTER</a></li>
+            <li>DATAGRIPBUG</li>
+  </ul>
 </div>
 
-        </div>
-      </header>
+</header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><style>
+      
+      
+      <div class="post-body">
+          <style>
   img {
       display: block;
       margin-left: auto;
@@ -221,70 +187,37 @@
       width: 80%; /* 根据需要调整大小 */
   }
 </style>
-<p>解决使用git时遇到Failed to connect to github.com port 443 after 21090
-ms: Couldn‘t connect to server #
-一、如果是在挂着梯子的情况下拉取或者推送代码的时候是否遇到了报错？
-fatal: unable to access 'https://github.com/xxx/******.git/': Failed to
-connect to github.com port 443 after 21090 ms: Couldn't connect to
-server</p>
-<p>一般出现这种问题都是开过VPN导致的本机系统端口号和git的端口号不一致导致的。</p>
+<p>昨天将Hadoop迁移到阿里云服务器的时候，解决了不少bug，但是今天当我使用DataGrip远程SSH连接Hive数据库的时候，测试链接一直不通过，显示<code>SSH 隧道创建失败: Timeout expired: 30000 MILLISECONDS.</code></p>
+<p>此时云服务器hadoop102的公网IP是47.99.155.XX在CSDN的教程中<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/ggg6568/article/details/124314770">DataGrip
+使用ssh认证连接远程数据库，如何配置_datagrip ssh-CSDN博客</a></p>
 <span id="more"></span>
-<p>解决办法：</p>
-<h2 id="查看本机系统端口号">1.查看本机系统端口号：</h2>
-<p>设置-&gt;网络和Internet-&gt;代理</p>
-<h2
-id="设置git端口号和上面的端口号保持一致我的是10809">2.设置git端口号和上面的端口号保持一致（我的是10809）：</h2>
-<p>git config --global http.proxy 127.0.0.1:10809</p>
-<p>git config --global https.proxy 127.0.0.1:10809</p>
-<h2 id="查看git设置可以省略">3.查看git设置（可以省略）：</h2>
-<p>PS D:&gt; git config --global -l</p>
-<p>user.email=xxx@qq.com user.name=xxx http.proxy=127.0.0.1:10809
-https.proxy=127.0.0.1:10809</p>
-<h2
-id="再次push-或者-pull-即可保险起见可以先在cmd窗口中使用-ipconfigflushdns-刷新dns缓存">4.再次push
-或者 pull 即可（保险起见可以先在cmd窗口中使用 ipconfig/flushdns
-刷新dns缓存）。</h2>
-<h1
-id="二如果没有挂着梯子但是还是遇到了以上报错">二、如果没有挂着梯子但是还是遇到了以上报错</h1>
-<p>还是一样的原因，两边端口不一致导致的，那么直接去掉git代理即可：</p>
-<p>git config --global --unset http.proxy</p>
-<p>git config --global --unset https.proxy</p>
-<p>再次push 或者 pull 即可（保险起见可以先在cmd窗口中使用
-ipconfig/flushdns 刷新dns缓存）。</p>
-<p>原文链接：https://blog.csdn.net/qq_40296909/article/details/134285451</p>
+<p>在SSH配置完成后的下一步，它的配置如下</p>
+<figure>
+<img src="\pic\DataGrip配置失败.png" alt="DataGrip配置失败" />
+<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
+</figure>
+<p>这里的HOST地址填写的是公网IP，但是我在这里尝试使用自己的IP47.99.155.XX，就会报错SSH隧道创建失败。</p>
+<p>尝试了很多次都没有办法，最后使用PyCharm来操作数据库，偶然成功了，最后发现，这里的HOST地址应该保留默认值localhost不变才能够连接成功</p>
+<figure>
+<img src="\pic\DataGrip配置成功.png" alt="DataGrip配置失败" />
+<figcaption aria-hidden="true">DataGrip配置失败</figcaption>
+</figure>
+<p>虽然不知道具体原因，但好在问题确实出现在这里，得到了解决。</p>
 
+      </div>
+      
+      
+      
     </div>
+  <ul class="breadcrumb">
+            <li><a href="/%E5%BA%9F%E5%BC%83post/">废弃POST</a></li>
+            <li><a href="/%E5%BA%9F%E5%BC%83post/Computer/">COMPUTER</a></li>
+            <li>DATAGRIPBUG</li>
+  </ul>
 
     
     
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Bugs/" rel="tag"># Bugs</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2024/08/07/Computer/SoftwareWindowsSwitchMtoMacbook/" rel="prev" title="Windows切换成Macbook的一些软件">
-                  <i class="fa fa-chevron-left"></i> Windows切换成Macbook的一些软件
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2024/08/20/Computer/DataGripbug/" rel="next" title="使用DataGrip的Hive数据库连接阿里云服务器的Bug">
-                  使用DataGrip的Hive数据库连接阿里云服务器的Bug <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
 
 
 </div>
