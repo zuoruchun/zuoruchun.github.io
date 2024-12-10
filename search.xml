@@ -1,86 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>上传文件到服务器</title>
-    <url>/2024/10/22/UsefulUse/UploadFiletoServer/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p>
-<span id="more"></span>
-<h1 id="mac">Mac</h1>
-<p><strong>1.下载Termius</strong>
-首先点击下载<a href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p>
-<p><strong>2.配置ssh环境</strong></p>
-<p>首先，点击newhost <img src="/pic/newhost.png" title="newhost"
-alt="img" /></p>
-<!-- <p align="center">
-    <img src="/pic/newhost.png" alt="newhost" width="50%">
-</p> -->
-<p>然后按照自己的ip和username进行配置之后,点击connect。 <img
-src="/pic/turmius配置.png" title="turmius配置" alt="img" />
-出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png"
-title="login" alt="img" /> 在SFTP界面点击select
-host，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。
-<img src="/pic/selecthost.png" title="selecthost" alt="img" />
-下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png"
-title="SFTP" alt="img" /> 等待传输完成。</p>
-<h1 id="windows">Windows</h1>
-<p>点击下载<a href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a>
-对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p>
-<p>参考<a href="https://blog.csdn.net/m0_49448331/article/details/125767862" style="color: #FF5733; text-decoration: none;">CSDN</a>的教程.</p>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ssh运行服务器中的代码</title>
-    <url>/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</url>
-    <content><![CDATA[<style>
-  img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%; /* 根据需要调整大小 */
-  }
-</style>
-<p><strong>1.获取服务器的username和ip</strong></p>
-<p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；
-在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；
-<img src="/pic/ip.png" title="ip" alt="img" /></p>
-<p><strong>2.准备工作</strong></p>
-<p>在VsCode中安装下面的插件：<br />
-Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,
-Remote Development;<br />
-于是在VsCode侧边栏会出现一个类似与电脑的图标。</p>
-<span id="more"></span>
-<figure>
-<img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" />
-<figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p><strong>3.连接</strong></p>
-<p>点击加号, 输入<code>ssh username@ip</code>,
-之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <img
-src="/pic/config.jpg" title="config" alt="img" /></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host name			# name可以任意填写</span><br><span class="line">	HostName ip		# 填写服务器ip</span><br><span class="line">	Port 22			# 服务器段口号（不作修改）</span><br><span class="line">	User zuoruchun	# 登陆用户名username</span><br></pre></td></tr></table></figure>
-<p>保存配置文件。<br />
-之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,
-然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"
-title="ssh配置2" alt="img" /> <strong>4.使用</strong></p>
-<p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件（matlab文件类似，需要安装matlab的插件），然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p>
-<p><strong>5.备注</strong>
-ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p>
-<h1
-id="但是最最最最重要的一点是可以使用motionpro连接校园网这同样保证了网络在同一局域网之下于是就能够保证即使不在学校依然能够使用进行ssh">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>
-]]></content>
-      <tags>
-        <tag>Computer</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>上传文件到服务器</title>
+      <link href="/2024/10/22/UsefulUse/UploadFiletoServer/"/>
+      <url>/2024/10/22/UsefulUse/UploadFiletoServer/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p>要想完美的使用在本地就能操作远端服务器的文件，由于是无图形化界面，相比于图形化界面，获取文件的方式也发生了变化，由于是无图形化界面，无法使用浏览器进行下载。我们采用的方式也是使用ssh完成的，首先将需要在服务器中使用的文件下载到本地，这里以<code>DeepLearningPython</code>文件夹为例，使用ssh将它从本地上传到服务器，下面分为Mac和Windows分别进行介绍。</p><span id="more"></span><h1 id="mac">Mac</h1><p><strong>1.下载Termius</strong>首先点击下载<a href="https://termius.com/free-ssh-client-for-mac-os" style="color: #FF5733; text-decoration: none;">Termius</a></p><p><strong>2.配置ssh环境</strong></p><p>首先，点击newhost <img src="/pic/newhost.png" title="newhost"alt="img" /></p><!-- <p align="center">    <img src="/pic/newhost.png" alt="newhost" width="50%"></p> --><p>然后按照自己的ip和username进行配置之后,点击connect。 <imgsrc="/pic/turmius配置.png" title="turmius配置" alt="img" />出现下面的界面就意味着，登陆成功。 <img src="/pic/login.png"title="login" alt="img" /> 在SFTP界面点击selecthost，双击刚刚的host，然后就能看到右边的远端服务器的文件目录了，左边是本地的。<img src="/pic/selecthost.png" title="selecthost" alt="img" />下面需要上传什么文件就直接拖动文件就可以了。 <img src="/pic/SFTP.png"title="SFTP" alt="img" /> 等待传输完成。</p><h1 id="windows">Windows</h1><p>点击下载<a href="https://www.xshell.com/zh/free-for-home-school/" style="color: #FF5733; text-decoration: none;">XFTP</a>对于XFTP，需要注意的是，该软件使用一定时间之后需要重新到上述网站重新下载安装才能使用，时间大概是一个月（Xshell同理）</p><p>参考<a href="https://blog.csdn.net/m0_49448331/article/details/125767862" style="color: #FF5733; text-decoration: none;">CSDN</a>的教程.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ssh运行服务器中的代码</title>
+      <link href="/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/"/>
+      <url>/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</url>
+      
+        <content type="html"><![CDATA[<style>  img {      display: block;      margin-left: auto;      margin-right: auto;      width: 80%; /* 根据需要调整大小 */  }</style><p><strong>1.获取服务器的username和ip</strong></p><p>在linux机器的终端输入<code>whoami</code>,终端返回的即是username；在linux机器的终端输入<code>ifconfig</code>,终端中的inet即为当前机器的ip地址，例如173.48.29.103；<img src="/pic/ip.png" title="ip" alt="img" /></p><p><strong>2.准备工作</strong></p><p>在VsCode中安装下面的插件：<br />Reomte Explorer, Remote - SSh, Remote - SSH:Editing, Remote - Tunnels,Remote Development;<br />于是在VsCode侧边栏会出现一个类似与电脑的图标。</p><span id="more"></span><figure><img src="/pic/ssh配置1.png" title="ssh配置1" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><p><strong>3.连接</strong></p><p>点击加号, 输入<code>ssh username@ip</code>,之后会让你打开config配置文件, 按照下面的格式将服务器的Host添加进去 <imgsrc="/pic/config.jpg" title="config" alt="img" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host name# name可以任意填写</span><br><span class="line">HostName ip# 填写服务器ip</span><br><span class="line">Port 22# 服务器段口号（不作修改）</span><br><span class="line">User zuoruchun# 登陆用户名username</span><br></pre></td></tr></table></figure><p>保存配置文件。<br />之后就可以在侧边栏连接这个服务器了, 后面就可以使用VsCode在本地编写代码,然后使用服务器的poython解释器编译文件了。 <img src="/pic/ssh配置2.png"title="ssh配置2" alt="img" /> <strong>4.使用</strong></p><p>下面介绍如何利用ssh,在本地编写代码，使用远程服务器编译。如果不进行ssh连接，直接打开vscode，这个时候vscode左边代表的是本地文件夹，我们可以双击某个文件，比如python文件（matlab文件类似，需要安装matlab的插件），然后在窗口编辑代码，然后运行，这个是常规的本地运行。使用ssh后，运行远端服务器的代码也是类似，这不过这个时候，左侧的文件夹位置已经变成了远端服务器的文件地址，下面你就可以想象这个vscode不再是本地的vscode，而是远端服务器的vscode，类似打开文件夹的操作，他不会跳转到本地的文件地址，而是会跳转到远端的地址；同理，编辑代码界面也是一样，我们可以打开远端的一个python文件，类似于在本地编辑那样，对这个python文件进行修改，运行，这些都是在本地操作的，但是他们修改的实际上是远端的文件，运行的python解释器，CPU和GPU等等，使用的都是远端服务器上的。换句话说，除了在本地进行编辑操作，其他的操作实际上都是在远端服务器上进行的。</p><p><strong>5.备注</strong>ssh命令一般只能在同一个局域网之下才能够使用，如果不是同一个局域网，需要内网穿透，貌似大致就是买一个服务器，让两台电脑连接服务器的网络，就能够进行正常的ssh了。</p><h1id="但是最最最最重要的一点是可以使用motionpro连接校园网这同样保证了网络在同一局域网之下于是就能够保证即使不在学校依然能够使用进行ssh">但是最最最最重要的一点是，可以使用MotionPro连接校园网，这同样保证了网络在同一局域网之下，于是就能够保证即使不在学校，依然能够使用进行ssh！</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
