@@ -158,6 +158,94 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/12/17/Recreate-codes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wanye.png">
+      <meta itemprop="name" content="左如春">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruchun Zuo">
+      <meta itemprop="description" content="暂时还没想到怎么描述我的网站，或者说我。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ruchun Zuo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/17/Recreate-codes/" class="post-title-link" itemprop="url">Recreate codes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-12-17 12:39:34 / 修改时间：12:43:56" itemprop="dateCreated datePublished" datetime="2024-12-17T12:39:34+08:00">2024-12-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="代码复现">代码复现</h1>
+<p>最近研究score-based
+SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。</p>
+<ol type="1">
+<li>关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。</li>
+<li>这里主要讲一下显卡的事情，<code>nvidia-smi</code>这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia官方<a target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/drivers/">NVIDIA
+GeForce</a>，下载适合自己显卡版本的驱动，进行更新显卡驱动（这个事情最好是不要做，除非是必须的，真的很麻烦，很容易报错）如果确实要做的话，可以去网上找教程，这里就不细说了。如果想要查看自己电脑的cuda版本实际上的命令时<code>nvcc -V</code>，这个能查询自己电脑的cuda（注意这里的cuda版本必须低于使用命令<code>nvidia-smi</code>的cuda版本），这个cuda才是我们后面真正使用的版本，当然他是可以多版本共存的。</li>
+<li>一些关于python，cuda，cudnn，tensorflow，pytorch的<a target="_blank" rel="noopener" href="https://blog.csdn.net/ly869915532/article/details/124542362">对应表</a>。</li>
+</ol>
+<h1 id="历史版本">历史版本</h1>
+<p>cuda下载：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA
+历史版本</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/17/Recreate-codes/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/12/13/code-reproduction-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
