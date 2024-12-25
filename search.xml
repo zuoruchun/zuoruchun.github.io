@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Recreate codes</title>
+    <url>/2024/12/17/Machine%20Learning/Recreate-codes/</url>
+    <content><![CDATA[<h1 id="代码复现">代码复现</h1>
+<p>最近研究score-based
+SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。</p>
+<ol type="1">
+<li>关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。</li>
+<li>这里主要讲一下显卡的事情，<code>nvidia-smi</code>这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia官方<a
+href="https://www.nvidia.cn/geforce/drivers/">NVIDIA
+GeForce</a>，下载适合自己显卡版本的驱动，进行更新显卡驱动（这个事情最好是不要做，除非是必须的，真的很麻烦，很容易报错）如果确实要做的话，可以去网上找教程，这里就不细说了。如果想要查看自己电脑的cuda版本实际上的命令时<code>nvcc -V</code>，这个能查询自己电脑的cuda（注意这里的cuda版本必须低于使用命令<code>nvidia-smi</code>的cuda版本），这个cuda才是我们后面真正使用的版本，当然他是可以多版本共存的。</li>
+<li>一些关于python，cuda，cudnn，tensorflow，pytorch的<a
+href="https://blog.csdn.net/ly869915532/article/details/124542362">对应表</a>。</li>
+</ol>
+<span id="more"></span>
+<h1 id="历史版本">历史版本</h1>
+<p>cuda下载：<a
+href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA
+历史版本</a></p>
+<p>cudnn下载：<a
+href="https://developer.nvidia.cn/rdp/cudnn-archive">cuDNN
+历史版本</a></p>
+<p>jax下载：<a href="https://github.com/jax-ml/jax">jax历史版本</a></p>
+<p>jaxlib下载：<a
+href="https://storage.googleapis.com/jax-releases/jax_cuda_releases.html">jaxlib历史版本</a></p>
+<p>pytorch下载：<a
+href="https://pytorch.org/get-started/previous-versions/">Previous历史版本</a></p>
+]]></content>
+      <tags>
+        <tag>Machine Learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>code_reproduction_guide</title>
-    <url>/2024/12/13/code-reproduction-guide/</url>
+    <url>/2024/12/13/Machine%20Learning/code-reproduction-guide/</url>
     <content><![CDATA[<h1 id="深度学习代码复现指南">深度学习代码复现指南</h1>
 <h2 id="环境配置基础检查">1. 环境配置基础检查</h2>
 <p>安装不同版本的cuda，参见<a
@@ -15,6 +47,7 @@ href="https://blog.csdn.net/qq_50677040/article/details/140210921">CUDA多版本
 <li>检查显存大小是否满足要求</li>
 <li>确认驱动版本是否最新</li>
 </ul>
+<span id="more"></span>
 <h3 id="cuda环境管理">1.2 CUDA环境管理</h3>
 <h4 id="多cuda版本共存">1.2.1 多CUDA版本共存</h4>
 <ul>
@@ -298,34 +331,6 @@ https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/</li>
 <li>Stack Overflow</li>
 <li>框架官方论坛</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Recreate codes</title>
-    <url>/2024/12/17/Recreate-codes/</url>
-    <content><![CDATA[<h1 id="代码复现">代码复现</h1>
-<p>最近研究score-based
-SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。</p>
-<ol type="1">
-<li>关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。</li>
-<li>这里主要讲一下显卡的事情，<code>nvidia-smi</code>这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia官方<a
-href="https://www.nvidia.cn/geforce/drivers/">NVIDIA
-GeForce</a>，下载适合自己显卡版本的驱动，进行更新显卡驱动（这个事情最好是不要做，除非是必须的，真的很麻烦，很容易报错）如果确实要做的话，可以去网上找教程，这里就不细说了。如果想要查看自己电脑的cuda版本实际上的命令时<code>nvcc -V</code>，这个能查询自己电脑的cuda（注意这里的cuda版本必须低于使用命令<code>nvidia-smi</code>的cuda版本），这个cuda才是我们后面真正使用的版本，当然他是可以多版本共存的。</li>
-<li>一些关于python，cuda，cudnn，tensorflow，pytorch的<a
-href="https://blog.csdn.net/ly869915532/article/details/124542362">对应表</a>。</li>
-</ol>
-<h1 id="历史版本">历史版本</h1>
-<p>cuda下载：<a
-href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA
-历史版本</a></p>
-<p>cudnn下载：<a
-href="https://developer.nvidia.cn/rdp/cudnn-archive">cuDNN
-历史版本</a></p>
-<p>jax下载：<a href="https://github.com/jax-ml/jax">jax历史版本</a></p>
-<p>jaxlib下载：<a
-href="https://storage.googleapis.com/jax-releases/jax_cuda_releases.html">jaxlib历史版本</a></p>
-<p>pytorch下载：<a
-href="https://pytorch.org/get-started/previous-versions/">Previous历史版本</a></p>
 ]]></content>
       <tags>
         <tag>Machine Learning</tag>
