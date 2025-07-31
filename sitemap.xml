@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/12/13/Machine%20Learning/code-reproduction-guide/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
     
-    <lastmod>2024-12-25</lastmod>
+    <lastmod>2025-07-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zuoruchun.github.io/2024/12/17/Machine%20Learning/Recreate-codes/</loc>
+    <loc>https://zuoruchun.github.io/2024/10/22/UsefulUse/UploadFiletoServer/</loc>
     
-    <lastmod>2024-12-25</lastmod>
+    <lastmod>2025-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/2024/12/17/MachineLearning/RecreateCodes/</loc>
+    
+    <lastmod>2025-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoruchun.github.io/2024/12/13/MachineLearning/CodeReproductionGuide/</loc>
+    
+    <lastmod>2025-07-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,15 +39,6 @@
   
   <url>
     <loc>https://zuoruchun.github.io/about/index.html</loc>
-    
-    <lastmod>2024-12-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/2024/10/19/UsefulUse/UsetheServertoWriteCodeLocallyandCompileswithRemoteServer/</loc>
     
     <lastmod>2024-12-10</lastmod>
     
@@ -111,15 +120,6 @@
   
   <url>
     <loc>https://zuoruchun.github.io/%E5%BA%9F%E5%BC%83post/Emotion/GoobyeEason.html</loc>
-    
-    <lastmod>2024-11-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoruchun.github.io/2024/10/22/UsefulUse/UploadFiletoServer/</loc>
     
     <lastmod>2024-11-22</lastmod>
     
@@ -274,7 +274,7 @@
 
   <url>
     <loc>https://zuoruchun.github.io/</loc>
-    <lastmod>2025-02-06</lastmod>
+    <lastmod>2025-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

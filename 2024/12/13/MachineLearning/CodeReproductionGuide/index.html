@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="lozswmbSQDc9uzNo_SpE9HsXZSFvGQk3KCIECqK5kWM">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="深度学习代码复现指南 1. 环境配置基础检查 安装不同版本的CUDA, 参见CUDA多版本安装教程 1.1 硬件环境检查  检查GPU型号：nvidia-smi 确认CUDA版本：nvidia-smi 或 nvcc --version 检查显存大小是否满足要求 确认驱动版本是否为最新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="code_reproduction_guide">
+<meta property="og:url" content="https://zuoruchun.github.io/2024/12/13/MachineLearning/CodeReproductionGuide/index.html">
+<meta property="og:site_name" content="Ruchun Zuo">
+<meta property="og:description" content="深度学习代码复现指南 1. 环境配置基础检查 安装不同版本的CUDA, 参见CUDA多版本安装教程 1.1 硬件环境检查  检查GPU型号：nvidia-smi 确认CUDA版本：nvidia-smi 或 nvcc --version 检查显存大小是否满足要求 确认驱动版本是否为最新">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-13T06:07:07.000Z">
+<meta property="article:modified_time" content="2025-07-31T06:18:27.865Z">
+<meta property="article:author" content="左如春">
+<meta property="article:tag" content="Machine Learning">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zuoruchun.github.io/2024/12/13/MachineLearning/CodeReproductionGuide/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/12/13/MachineLearning/CodeReproductionGuide/","path":"2024/12/13/MachineLearning/CodeReproductionGuide/","title":"code_reproduction_guide"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>code_reproduction_guide | Ruchun Zuo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ruchun Zuo</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">学习&吐槽日记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0%E6%8C%87%E5%8D%97"><span class="nav-text">深度学习代码复现指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80%E6%A3%80%E6%9F%A5"><span class="nav-text">1. 环境配置基础检查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E7%8E%AF%E5%A2%83%E6%A3%80%E6%9F%A5"><span class="nav-text">1.1 硬件环境检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86"><span class="nav-text">1.2 CUDA环境管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9Acuda%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98"><span class="nav-text">1.2.1 多CUDA版本共存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cuda%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2"><span class="nav-text">1.2.2 CUDA版本切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A9%B1%E5%8A%A8%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-text">1.2.3 驱动兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">1.3 Python环境准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-text">2. 依赖管理策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E6%A3%80%E6%9F%A5"><span class="nav-text">2.1 版本兼容性检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="nav-text">2.2 安装方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-text">2.2.1 标准安装方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%ACwheel%E6%96%87%E4%BB%B6"><span class="nav-text">2.2.2 获取历史版本wheel文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E5%A4%84%E7%90%86"><span class="nav-text">2.2.3 特殊情况处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A1%86%E6%9E%B6%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="nav-text">2.3 常见框架版本对应关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%B8%8Ecuda%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94%E8%A1%A8"><span class="nav-text">2.3.1
+深度学习框架与CUDA版本对应表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96cuda%E4%BE%9D%E8%B5%96%E5%8C%85%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94"><span class="nav-text">2.3.2 其他CUDA依赖包版本对应</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0%E6%B5%81%E7%A8%8B"><span class="nav-text">3. 代码复现流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E9%98%B6%E6%AE%B5"><span class="nav-text">3.1 预处理阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%98%B6%E6%AE%B5"><span class="nav-text">3.2 环境配置阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E9%98%B6%E6%AE%B5"><span class="nav-text">3.3 运行阶段</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="左如春"
+      src="/images/wanye.png">
+  <p class="site-author-name" itemprop="name">左如春</p>
+  <div class="site-description" itemprop="description">暂时还没想到怎么描述我的网站，或者说我。</div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zuoruchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zuoruchun" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ruchunzuo@gmail.com" title="E-Mail → mailto:ruchunzuo@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/loverlinxiao" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;loverlinxiao" rel="noopener me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+	 
+		<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=168663695&auto=1&height=90"></iframe> -->
+	 
+   </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/12/13/MachineLearning/CodeReproductionGuide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wanye.png">
+      <meta itemprop="name" content="左如春">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruchun Zuo">
+      <meta itemprop="description" content="暂时还没想到怎么描述我的网站，或者说我。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="code_reproduction_guide | Ruchun Zuo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          code_reproduction_guide
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-13 14:07:07" itemprop="dateCreated datePublished" datetime="2024-12-13T14:07:07+08:00">2024-12-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-07-31 14:18:27" itemprop="dateModified" datetime="2025-07-31T14:18:27+08:00">2025-07-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="深度学习代码复现指南">深度学习代码复现指南</h1>
+<h2 id="环境配置基础检查">1. 环境配置基础检查</h2>
+<p><strong>安装不同版本的CUDA</strong>, 参见<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50677040/article/details/140210921">CUDA多版本安装教程</a></p>
+<h3 id="硬件环境检查">1.1 硬件环境检查</h3>
+<ul>
+<li><strong>检查GPU型号</strong>：<code>nvidia-smi</code></li>
+<li><strong>确认CUDA版本</strong>：<code>nvidia-smi</code> 或
+<code>nvcc --version</code></li>
+<li><strong>检查显存大小</strong>是否满足要求</li>
+<li><strong>确认驱动版本</strong>是否为最新</li>
+</ul>
+<span id="more"></span>
+<h3 id="cuda环境管理">1.2 CUDA环境管理</h3>
+<h4 id="多cuda版本共存">1.2.1 多CUDA版本共存</h4>
+<ul>
+<li><strong>CUDA安装路径</strong>通常在： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/cuda-X.X  <span class="comment"># X.X 表示版本号</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>管理多个CUDA版本</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建软链接</span></span><br><span class="line">sudo <span class="built_in">ln</span> -s /usr/local/cuda-11.1 /usr/local/cuda-11.1</span><br><span class="line">sudo <span class="built_in">ln</span> -s /usr/local/cuda-11.4 /usr/local/cuda-11.4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 ~/.bashrc 中添加环境变量切换函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">switch_cuda</span></span>() &#123;</span><br><span class="line">    sudo <span class="built_in">rm</span> /usr/local/cuda</span><br><span class="line">    sudo <span class="built_in">ln</span> -s /usr/local/cuda-<span class="variable">$1</span> /usr/local/cuda</span><br><span class="line">    <span class="built_in">export</span> CUDA_HOME=/usr/local/cuda</span><br><span class="line">    <span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$CUDA_HOME</span>/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line">    <span class="built_in">export</span> PATH=<span class="variable">$CUDA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="cuda版本切换">1.2.2 CUDA版本切换</h4>
+<ul>
+<li><strong>使用函数切换CUDA版本</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">switch_cuda 11.1  <span class="comment"># 切换到CUDA 11.1</span></span><br><span class="line">nvcc --version    <span class="comment"># 验证版本</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>每个项目使用独立的虚拟环境</strong>, 避免版本冲突</li>
+<li><strong>记录每个项目使用的CUDA版本</strong></li>
+</ul>
+<h4 id="驱动兼容性">1.2.3 驱动兼容性</h4>
+<ul>
+<li><strong>NVIDIA驱动向后兼容</strong>, 选择支持最新CUDA版本的驱动</li>
+<li><strong>查看驱动支持的最高CUDA版本</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi --query-gpu=driver_version --format=csv</span><br></pre></td></tr></table></figure></li>
+<li>参考：<a
+target="_blank" rel="noopener" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">CUDA与驱动版本对应表</a></li>
+</ul>
+<h3 id="python环境准备">1.3 Python环境准备</h3>
+<ul>
+<li><strong>使用conda创建独立环境</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n project_name python=X.X</span><br><span class="line">conda activate project_name</span><br></pre></td></tr></table></figure></li>
+<li><strong>确保pip是最新版本</strong>：<code>pip install --upgrade pip</code></li>
+</ul>
+<h2 id="依赖管理策略">2. 依赖管理策略</h2>
+<h3 id="版本兼容性检查">2.1 版本兼容性检查</h3>
+<ul>
+<li><strong>仔细阅读</strong> <code>requirements.txt</code></li>
+<li><strong>检查关键包之间的依赖关系</strong>：
+<ul>
+<li>CUDA 与深度学习框架版本</li>
+<li>Python 与各个包的兼容版本</li>
+<li>框架之间的版本依赖</li>
+</ul></li>
+</ul>
+<h3 id="安装方法">2.2 安装方法</h3>
+<h4 id="标准安装方式">2.2.1 标准安装方式</h4>
+<ol type="1">
+<li><p><strong>标准安装</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>特定版本安装</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从官方源安装特定版本</span></span><br><span class="line">pip install package==version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从Google Storage安装特定版本</span></span><br><span class="line">pip install package -f https://storage.googleapis.com/[package_name]_releases/</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>本地wheel文件安装</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install /path/to/package.whl</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<h4 id="获取历史版本wheel文件">2.2.2 获取历史版本wheel文件</h4>
+<p><strong>官方源</strong>： - <strong>PyPI官方历史版本</strong>:
+https://pypi.org/project/[package_name]/#history - <strong>Google
+Storage</strong> (适用于JAX等): - JAX:
+https://storage.googleapis.com/jax-releases/jax_releases.html -
+TensorFlow: - 官方归档:
+https://www.tensorflow.org/install/pip#package-location - 历史版本:
+https://pypi.org/project/tensorflow/#history - GPU版本:
+https://www.tensorflow.org/install/pip#gpu -
+<strong>NVIDIA官方wheel库</strong>:
+https://developer.download.nvidia.com/compute/redist/ -
+<strong>Anaconda历史版本库</strong>: https://repo.anaconda.com/pkgs/</p>
+<p><strong>镜像源</strong>： - <strong>清华镜像源</strong>:
+https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/ -
+<strong>中科大镜像</strong>:
+https://pypi.mirrors.ustc.edu.cn/simple/</p>
+<h4 id="特殊情况处理">2.2.3 特殊情况处理</h4>
+<p>对于已不在PyPI的旧版本, 可以： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用特定版本的pip</span></span><br><span class="line">pip install pip==旧版本</span><br><span class="line">pip install package==目标版本</span><br><span class="line">pip install --upgrade pip  <span class="comment"># 完成后升级pip</span></span><br></pre></td></tr></table></figure> - 使用
+<strong>archive.org</strong> 查找历史版本 - 在 <strong>GitHub
+release页面</strong> 寻找历史版本</p>
+<h3 id="常见框架版本对应关系">2.3 常见框架版本对应关系</h3>
+<h4 id="深度学习框架与cuda版本对应表">2.3.1
+深度学习框架与CUDA版本对应表</h4>
+<table>
+<thead>
+<tr>
+<th>框架</th>
+<th>版本</th>
+<th>支持的CUDA版本</th>
+<th>Python版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TensorFlow</strong></td>
+<td>2.12.0</td>
+<td>CUDA 11.2/11.8</td>
+<td>3.8-3.11</td>
+</tr>
+<tr>
+<td></td>
+<td>2.11.0</td>
+<td>CUDA 11.2/11.7</td>
+<td>3.7-3.10</td>
+</tr>
+<tr>
+<td></td>
+<td>2.10.0</td>
+<td>CUDA 11.2</td>
+<td>3.7-3.10</td>
+</tr>
+<tr>
+<td><strong>PyTorch</strong></td>
+<td>2.1.0</td>
+<td>CUDA 11.8/12.1</td>
+<td>3.8-3.11</td>
+</tr>
+<tr>
+<td></td>
+<td>2.0.0</td>
+<td>CUDA 11.7/11.8</td>
+<td>3.8-3.11</td>
+</tr>
+<tr>
+<td></td>
+<td>1.13.1</td>
+<td>CUDA 11.6/11.7</td>
+<td>3.7-3.10</td>
+</tr>
+<tr>
+<td><strong>JAX</strong></td>
+<td>0.4.13</td>
+<td>CUDA 11.8/12.0</td>
+<td>3.9-3.11</td>
+</tr>
+<tr>
+<td></td>
+<td>0.4.8</td>
+<td>CUDA 11.4/11.8</td>
+<td>3.8-3.10</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2.8</td>
+<td>CUDA 11.1</td>
+<td>3.7-3.8</td>
+</tr>
+</tbody>
+</table>
+<h4 id="其他cuda依赖包版本对应">2.3.2 其他CUDA依赖包版本对应</h4>
+<table>
+<thead>
+<tr>
+<th>包名</th>
+<th>版本</th>
+<th>需要的CUDA版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cupy</strong></td>
+<td>12.x</td>
+<td>CUDA 11.2-12.x</td>
+</tr>
+<tr>
+<td></td>
+<td>11.x</td>
+<td>CUDA 11.0-11.8</td>
+</tr>
+<tr>
+<td><strong>nvidia-dali</strong></td>
+<td>1.28.0</td>
+<td>CUDA 11.0-12.1</td>
+</tr>
+<tr>
+<td></td>
+<td>1.24.0</td>
+<td>CUDA 11.0-11.8</td>
+</tr>
+<tr>
+<td><strong>apex</strong></td>
+<td>23.08</td>
+<td>CUDA 11.7/12.1</td>
+</tr>
+<tr>
+<td></td>
+<td>22.04</td>
+<td>CUDA 11.3/11.7</td>
+</tr>
+<tr>
+<td><strong>horovod</strong></td>
+<td>0.28.1</td>
+<td>CUDA 11.0+</td>
+</tr>
+<tr>
+<td><strong>tensorrt</strong></td>
+<td>8.6</td>
+<td>CUDA 11.8-12.2</td>
+</tr>
+<tr>
+<td></td>
+<td>8.5</td>
+<td>CUDA 11.0-11.8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="代码复现流程">3. 代码复现流程</h2>
+<h3 id="预处理阶段">3.1 预处理阶段</h3>
+<ol type="1">
+<li><strong>仔细阅读</strong>论文和代码文档</li>
+<li><strong>检查数据集要求</strong>和预处理步骤</li>
+<li><strong>确认硬件要求</strong>（GPU显存、CPU内存等）</li>
+<li><strong>查看是否需要</strong>预训练模型</li>
+</ol>
+<h3 id="环境配置阶段">3.2 环境配置阶段</h3>
+<ol type="1">
+<li><strong>创建独立的conda环境</strong></li>
+<li><strong>按照版本要求安装依赖</strong></li>
+<li><strong>验证关键包的安装</strong>： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c <span class="string">&quot;import [package]; print([package].__version__)&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="运行阶段">3.3 运行阶段</h3>
+<ol type="1">
+<li><strong>先运行简单的示例或demo</strong></li>
+<li><strong>使用小数据集验证代码可运行</strong></li>
+<li><strong>逐步扩展到完整实验</strong></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/10/22/UsefulUse/UploadFiletoServer/" rel="prev" title="上传文件到服务器">
+                  <i class="fa fa-chevron-left"></i> 上传文件到服务器
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/12/17/MachineLearning/RecreateCodes/" rel="next" title="Recreate codes">
+                  Recreate codes <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">左如春</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

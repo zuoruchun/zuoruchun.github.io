@@ -22,25 +22,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zuoruchun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="代码复现 最近研究score-based SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。  关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。 这里主要讲一下显卡的事情，nvidia-smi这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia">
+    <meta name="description" content="代码复现指南 最近在研究score-based SDE代码时，光是安装依赖就花了三天时间，在此总结一些经验教训。 核心要点  关于依赖安装：安装完成后出现报错是很常见的情况，这主要是由于不同用户的系统环境差异造成的。最佳解决方案是先按照 requirements.txt 进行安装，然后根据具体报错信息在网上搜索对应的解决方法。 关于CUDA版本管理：  使用 nvidia-smi 命令查看的CUD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Recreate codes">
-<meta property="og:url" content="https://zuoruchun.github.io/2024/12/17/Machine%20Learning/Recreate-codes/index.html">
+<meta property="og:url" content="https://zuoruchun.github.io/2024/12/17/MachineLearning/RecreateCodes/index.html">
 <meta property="og:site_name" content="Ruchun Zuo">
-<meta property="og:description" content="代码复现 最近研究score-based SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。  关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。 这里主要讲一下显卡的事情，nvidia-smi这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia">
+<meta property="og:description" content="代码复现指南 最近在研究score-based SDE代码时，光是安装依赖就花了三天时间，在此总结一些经验教训。 核心要点  关于依赖安装：安装完成后出现报错是很常见的情况，这主要是由于不同用户的系统环境差异造成的。最佳解决方案是先按照 requirements.txt 进行安装，然后根据具体报错信息在网上搜索对应的解决方法。 关于CUDA版本管理：  使用 nvidia-smi 命令查看的CUD">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-17T04:39:34.000Z">
-<meta property="article:modified_time" content="2024-12-25T13:17:07.299Z">
+<meta property="article:modified_time" content="2025-07-31T06:20:04.296Z">
 <meta property="article:author" content="左如春">
 <meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zuoruchun.github.io/2024/12/17/Machine%20Learning/Recreate-codes/">
+<link rel="canonical" href="https://zuoruchun.github.io/2024/12/17/MachineLearning/RecreateCodes/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/12/17/Machine%20Learning/Recreate-codes/","path":"2024/12/17/Machine Learning/Recreate-codes/","title":"Recreate codes"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuoruchun.github.io/2024/12/17/MachineLearning/RecreateCodes/","path":"2024/12/17/MachineLearning/RecreateCodes/","title":"Recreate codes"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Recreate codes | Ruchun Zuo</title>
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0"><span class="nav-text">代码复现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC"><span class="nav-text">历史版本</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0%E6%8C%87%E5%8D%97"><span class="nav-text">代码复现指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E8%A6%81%E7%82%B9"><span class="nav-text">核心要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD"><span class="nav-text">常用历史版本下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7%E5%8C%85"><span class="nav-text">核心工具包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6"><span class="nav-text">深度学习框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%94%A8%E5%BB%BA%E8%AE%AE"><span class="nav-text">实用建议</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,7 +163,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/12/17/Machine%20Learning/Recreate-codes/">
+    <link itemprop="mainEntityOfPage" href="https://zuoruchun.github.io/2024/12/17/MachineLearning/RecreateCodes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wanye.png">
@@ -199,7 +199,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-25 21:17:07" itemprop="dateModified" datetime="2024-12-25T21:17:07+08:00">2024-12-25</time>
+      <time title="修改时间：2025-07-31 14:20:04" itemprop="dateModified" datetime="2025-07-31T14:20:04+08:00">2025-07-31</time>
     </span>
 
   
@@ -211,30 +211,58 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="代码复现">代码复现</h1>
-<p>最近研究score-based
-SDE代码的时候，由于安装依赖弄了三天，总结了一些东西。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="代码复现指南">代码复现指南</h1>
+<p>最近在研究<strong>score-based
+SDE</strong>代码时，光是安装依赖就花了三天时间，在此总结一些经验教训。</p>
+<h2 id="核心要点">核心要点</h2>
 <ol type="1">
-<li>关于依赖，在安装完之后，报错是很有可能的事情，由于每个人的电脑系统等等的原因，所以最好的解决办法是，先安装txt，然后根据报错在网上寻找解决办法。</li>
-<li>这里主要讲一下显卡的事情，<code>nvidia-smi</code>这里看到的cuda版本是我们的英伟达显卡所能使用的最大版本，如果想要升级最大版本，我们可以去nvidia官方<a
+<li><p><strong>关于依赖安装</strong>：安装完成后出现报错是很常见的情况，这主要是由于不同用户的系统环境差异造成的。<strong>最佳解决方案</strong>是先按照
+<code>requirements.txt</code>
+进行安装，然后根据具体报错信息在网上搜索对应的解决方法。</p></li>
+<li><p><strong>关于CUDA版本管理</strong>：</p>
+<ul>
+<li>使用 <code>nvidia-smi</code>
+命令查看的CUDA版本是<strong>显卡驱动支持的最高版本</strong></li>
+<li>如需升级最高版本，可前往NVIDIA官方<a
 target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/drivers/">NVIDIA
-GeForce</a>，下载适合自己显卡版本的驱动，进行更新显卡驱动（这个事情最好是不要做，除非是必须的，真的很麻烦，很容易报错）如果确实要做的话，可以去网上找教程，这里就不细说了。如果想要查看自己电脑的cuda版本实际上的命令时<code>nvcc -V</code>，这个能查询自己电脑的cuda（注意这里的cuda版本必须低于使用命令<code>nvidia-smi</code>的cuda版本），这个cuda才是我们后面真正使用的版本，当然他是可以多版本共存的。</li>
-<li>一些关于python，cuda，cudnn，tensorflow，pytorch的<a
-target="_blank" rel="noopener" href="https://blog.csdn.net/ly869915532/article/details/124542362">对应表</a>。</li>
+GeForce</a>下载对应显卡的驱动程序</li>
+<li>⚠️
+<strong>注意</strong>：更新显卡驱动风险较高，容易出现各种问题，<strong>非必要情况下不建议操作</strong></li>
+<li>使用 <code>nvcc -V</code>
+命令查看的是<strong>实际安装的CUDA版本</strong>（必须低于或等于
+<code>nvidia-smi</code> 显示的版本）</li>
+<li>CUDA支持<strong>多版本共存</strong>，这为不同项目提供了灵活性</li>
+</ul></li>
+<li><p><strong>版本兼容性参考</strong>：关于Python、CUDA、cuDNN、TensorFlow、PyTorch之间的<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/ly869915532/article/details/124542362">版本对应关系表</a></p></li>
 </ol>
 <span id="more"></span>
-<h1 id="历史版本">历史版本</h1>
-<p>cuda下载：<a
-target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA
-历史版本</a></p>
-<p>cudnn下载：<a
-target="_blank" rel="noopener" href="https://developer.nvidia.cn/rdp/cudnn-archive">cuDNN
-历史版本</a></p>
-<p>jax下载：<a target="_blank" rel="noopener" href="https://github.com/jax-ml/jax">jax历史版本</a></p>
-<p>jaxlib下载：<a
-target="_blank" rel="noopener" href="https://storage.googleapis.com/jax-releases/jax_cuda_releases.html">jaxlib历史版本</a></p>
-<p>pytorch下载：<a
-target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">Previous历史版本</a></p>
+<h2 id="常用历史版本下载">常用历史版本下载</h2>
+<h3 id="核心工具包">核心工具包</h3>
+<ul>
+<li><strong>CUDA工具包</strong>：<a
+target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA历史版本</a></li>
+<li><strong>cuDNN库</strong>：<a
+target="_blank" rel="noopener" href="https://developer.nvidia.cn/rdp/cudnn-archive">cuDNN历史版本</a></li>
+</ul>
+<h3 id="深度学习框架">深度学习框架</h3>
+<ul>
+<li><strong>JAX框架</strong>：<a
+target="_blank" rel="noopener" href="https://github.com/jax-ml/jax">JAX历史版本</a></li>
+<li><strong>JAXLib库</strong>：<a
+target="_blank" rel="noopener" href="https://storage.googleapis.com/jax-releases/jax_cuda_releases.html">JAXLib历史版本</a></li>
+<li><strong>PyTorch框架</strong>：<a
+target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">PyTorch历史版本</a></li>
+</ul>
+<h2 id="实用建议">实用建议</h2>
+<blockquote>
+<p>💡 <strong>经验分享</strong></p>
+<ul>
+<li>建议为每个项目创建独立的虚拟环境</li>
+<li>详细记录每次安装过程中遇到的问题和解决方案</li>
+<li>保存可用的环境配置文件，便于后续复现</li>
+</ul>
+</blockquote>
 
     </div>
 
@@ -251,7 +279,7 @@ target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-ve
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/13/Machine%20Learning/code-reproduction-guide/" rel="prev" title="code_reproduction_guide">
+                <a href="/2024/12/13/MachineLearning/CodeReproductionGuide/" rel="prev" title="code_reproduction_guide">
                   <i class="fa fa-chevron-left"></i> code_reproduction_guide
                 </a>
             </div>
