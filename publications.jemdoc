@@ -1,7 +1,7 @@
 # jemdoc: menu{MENU}{publications.html}
 = Publications
 
-- [https://www.worldscientific.com/doi/10.1142/S0219477525500361 Parameter-Related Strong Convergence Rate of the Backward Euler–Maruyama Method for Time-Changed Stochastic Differential Equations]. \[[https://github.com/zuoruchun/TCCIR Code]\]
+- [https://www.worldscientific.com/doi/10.1142/S0219477525500361 Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations]. \[[https://github.com/zuoruchun/TCCIR Code]\]
   Wei Liu, Meng Wang, *Ruochun Zuo* (Corresponding author)
   /Fluctuation and Noise Letters/, Vol. 24, No. 03, 2550036, 2025.
 
