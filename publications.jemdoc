@@ -1,24 +1,18 @@
 # jemdoc: menu{MENU}{publications.html}
 = Publications
 
-== Conference Papers
+- [https://www.worldscientific.com/doi/10.1142/S0219477525500361 Parameter-Related Strong Convergence Rate of the Backward Euler–Maruyama Method for Time-Changed Stochastic Differential Equations]. \[[https://github.com/zuoruchun/TCCIR Code]\]
+  Wei Liu, Meng Wang, *Ruochun Zuo* (Corresponding author)
+  /Fluctuation and Noise Letters/, Vol. 24, No. 03, 2550036, 2025.
 
-. *Your Name*, Co-author1, Co-author2. "Paper Title with Full Name". 
-  /International Conference on Machine Learning (ICML)/, 2024. 
-  \[[paper.pdf PDF]\] \[[https://github.com/yourrepo Code]\] \[[slides.pdf Slides]\]
-
-. *Your Name*, Co-author. "Another Paper Title". 
-  /Conference on Computer Vision and Pattern Recognition (CVPR)/, 2023.
-  \[[paper.pdf PDF]\] \[[poster.pdf Poster]\]
-
-== Journal Papers
-
-. *Your Name*, Co-authors. "Journal Paper Title". 
-  /IEEE Transactions on Pattern Analysis and Machine Intelligence/, 2023.
-  \[[paper.pdf PDF]\]
 
 == Preprints
 
-. *Your Name*, Co-authors. "Preprint Title". 
-  /arXiv preprint arXiv:2024.xxxxx/, 2024.
-  \[[https://arxiv.org/abs/xxxx arXiv]\] \[[code Code]\]
+
+- Parameter-related strong convergence rate of an Euler's type method for time-changed stochastic differential equations.
+  *Ruochun Zuo* 
+  /Submitted/, 2025.
+
+- A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations.
+  Ruoxue Wu, *Ruochun Zuo* (Corresponding author)
+  /Submitted/, 2025.

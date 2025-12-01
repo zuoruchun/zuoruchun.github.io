@@ -2,57 +2,36 @@
 = Ruochun Zuo
 
 ~~~
-{}{img_left}{photo.jpg}{Ruochun Zuo}{200px}{250px}
-Ph.D. Student / Research Area\n
-Department of XX, XX University\n
+{}{img_left}{ruchunzuo.jpg}{Ruochun Zuo}{250px}{250px}
+Ph.D. Student\n
+Department of Mathematics\n
+Shanghai Normal University\n
 
 *Contact*
-- Email: your.email@example.com
-- GitHub: [https://github.com/yourusername GitHub]
-- [CV.pdf Curriculum Vitae]
+- Email: ruchunzuo@outlook.com
+- GitHub: [https://github.com/zuoruchun GitHub]
+# - [CV.pdf CV]
 ~~~
 
 == About Me
 
-Write your personal introduction here. You can describe your current research direction, academic interests, and ongoing projects.
+I am currently a Ph.D. student in Computational Mathematics at Shanghai Normal University, working under the supervision of Prof. [https://scholar.google.com/citations?user=ZBKemyIAAAAJ Qian Guo]. My research focuses on the intersection of numerical analysis and machine learning, with particular interests in neural networks, numerical methods for stochastic differential equations, and AI for control systems.
 
-You can describe your research background and academic goals in multiple paragraphs.
+Before starting my doctoral studies, I completed my M.S. in Computational Mathematics at Shanghai Normal University under the supervision of Prof. [https://teacher.shnu.edu.cn/slxy/lw/main.psp Wei Liu], where I worked on numerical methods for time-changed stochastic differential equations.
 
 == Research Interests
 
-- Artificial Intelligence and Machine Learning
-- Computer Vision
-- Natural Language Processing
-- Deep Learning Theory
+- Neural Networks
+- Numerical Methods for Stochastic Differential Equations
+- AI4Control
 
 == Education
 
-- *Ph.D.*, Computer Science, XX University, 2020 - Present
-- *M.S.*, Computer Science, XX University, 2017 - 2020
-- *B.S.*, Software Engineering, XX University, 2013 - 2017
-
-== Selected Publications
-
-. *Your Name*, Co-author. "Paper Title". Conference/Journal Name, Year. \[[paper.pdf PDF]\] \[[code Code]\]
-. *Your Name*, Co-author. "Another Paper Title". Conference/Journal Name, Year. \[[paper.pdf PDF]\]
-
-== Projects
-
-- *Project Name 1* (2023 - Present)\n
-  Brief description of the project, main techniques and achievements
-  
-- *Project Name 2* (2022 - 2023)\n
-  Brief description of the project, main techniques and achievements
-
-== Honors and Awards
-
-- Award Name, Organization, Year
-- Award Name, Organization, Year
-
-== Academic Service
-
-- Reviewer: Conference Name 2024
-- Reviewer: Journal Name
+- *Ph.D.*, Computational Mathematics, Shanghai Normal University, 2025 - Present\n
+  Advisor: Prof. [https://scholar.google.com/citations?user=ZBKemyIAAAAJ Qian Guo]
+- *M.S.*, Computational Mathematics, Shanghai Normal University, 2022 - 2025\n
+  Advisor: Prof. [https://teacher.shnu.edu.cn/slxy/lw/main.psp Wei Liu]
+- *B.S.*, Building Environment and Energy Application Engineering, Zhongyuan University of Technology, 2018 - 2022
 
 ~~~
 {Last Updated}
