@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Editor
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Management guide (local only)
+MANAGEMENT.md
