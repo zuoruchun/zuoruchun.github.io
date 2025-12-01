@@ -1,0 +1,21 @@
+# jemdoc: menu{MENU}{research.html}
+= Research
+
+== Current Research
+
+=== Research Topic 1
+~~~
+{}{img_left}{research1.jpg}{Research 1}{300px}{}
+Research description, including research questions, methods, and main contributions.
+
+*Related Publications:*
+- Paper 1 \[[link]\]
+- Paper 2 \[[link]\]
+~~~
+
+=== Research Topic 2
+Research description...
+
+== Past Research
+
+Brief description of previously completed research work.

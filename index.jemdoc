@@ -1,0 +1,60 @@
+# jemdoc: menu{MENU}{index.html}
+= Ruochun Zuo (左若淳)
+
+~~~
+{}{img_left}{photo.jpg}{Ruochun Zuo}{200px}{250px}
+Ph.D. Student / Research Area\n
+Department of XX, XX University\n
+
+*Contact*
+- Email: your.email@example.com
+- GitHub: [https://github.com/yourusername GitHub]
+- [CV.pdf Curriculum Vitae]
+~~~
+
+== About Me
+
+Write your personal introduction here. You can describe your current research direction, academic interests, and ongoing projects.
+
+You can describe your research background and academic goals in multiple paragraphs.
+
+== Research Interests
+
+- Artificial Intelligence and Machine Learning
+- Computer Vision
+- Natural Language Processing
+- Deep Learning Theory
+
+== Education
+
+- *Ph.D.*, Computer Science, XX University, 2020 - Present
+- *M.S.*, Computer Science, XX University, 2017 - 2020
+- *B.S.*, Software Engineering, XX University, 2013 - 2017
+
+== Selected Publications
+
+. *Your Name*, Co-author. "Paper Title". Conference/Journal Name, Year. \[[paper.pdf PDF]\] \[[code Code]\]
+. *Your Name*, Co-author. "Another Paper Title". Conference/Journal Name, Year. \[[paper.pdf PDF]\]
+
+== Projects
+
+- *Project Name 1* (2023 - Present)\n
+  Brief description of the project, main techniques and achievements
+  
+- *Project Name 2* (2022 - 2023)\n
+  Brief description of the project, main techniques and achievements
+
+== Honors and Awards
+
+- Award Name, Organization, Year
+- Award Name, Organization, Year
+
+== Academic Service
+
+- Reviewer: Conference Name 2024
+- Reviewer: Journal Name
+
+~~~
+{Last Updated}
+Last updated: December 2025
+~~~
