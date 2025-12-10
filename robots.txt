@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zuoruchun.github.io/sitemap.xml
