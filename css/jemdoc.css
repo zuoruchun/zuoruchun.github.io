@@ -1,9 +1,22 @@
 /* Default css file for jemdoc. */
 
+html {
+	overflow-y: scroll;
+	scrollbar-gutter: stable;
+}
+
 table#tlayout {
 	border: none;
-	border-collapse: separate;
+	border-collapse: collapse;
 	background: white;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 170px minmax(0, 1fr);
+}
+
+table#tlayout > tbody,
+table#tlayout > tbody > tr {
+	display: contents;
 }
 
 body {
@@ -13,14 +26,22 @@ body {
 	margin: 0;
 }
 
+html[lang="zh-CN"] body {
+	font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
 #layout-menu {
+	display: block;
 	background: #f6f6f6;
 	border: 1px solid #dddddd;
 	padding-top: 0.5em;
 	padding-left: 8px;
 	padding-right: 8px;
 	font-size: 1.0em;
-	width: auto;
+	width: 170px;
+	min-width: 170px;
+	max-width: 170px;
+	box-sizing: border-box;
 	white-space: nowrap;
 	text-align: left;
 	vertical-align: top;
@@ -32,6 +53,7 @@ body {
 }
 
 #layout-content {
+	display: block;
 	padding-top: 0.0em;
 	padding-left: 1.0em;
 	padding-right: 1.0em;
@@ -39,6 +61,35 @@ body {
 	background: white;
 	text-align: left;
 	vertical-align: top;
+	min-width: 0;
+}
+
+#lang-switcher {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	min-height: 34px;
+	margin-top: 0.55em;
+	margin-bottom: 0.15em;
+}
+
+#lang-toggle {
+	font-family: Georgia, serif;
+	font-size: 85%;
+	color: #527bbd;
+	background: #f6f6f6;
+	border: 1px solid #d7d7d7;
+	border-radius: 999px;
+	width: 88px;
+	padding: 0.25em 0.8em;
+	cursor: pointer;
+	text-align: center;
+}
+
+#lang-toggle:hover {
+	color: #224b8d;
+	background: #eef3fb;
+	border-color: #aabbd8;
 }
 
 #layout-menu a {
@@ -77,6 +128,11 @@ a:hover {
 }
 
 div.menu-category {
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 2.2em;
 	border-bottom: 1px solid gray;
 	margin-top: 0.8em;
 	padding-top: 0.2em;
@@ -85,11 +141,16 @@ div.menu-category {
 }
 
 div.menu-item {
+	width: 100%;
+	box-sizing: border-box;
 	padding-left: 16px;
 	text-indent: -16px;
 }
 
 div#toptitle {
+	display: flex;
+	align-items: flex-end;
+	min-height: 3.3em;
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
 	border-bottom: 3px double gray;
@@ -321,7 +382,13 @@ div#toptitle h1, #layout-content div#toptitle h1 {
 	padding-bottom: 0.1em;
 	padding-top: 0;
 	margin-top: 0.5em;
+	width: 100%;
 	border-bottom: none;
+}
+
+table.imgtable + h2 + p,
+table.imgtable + h2 + p + p {
+	min-height: 2.9em;
 }
 
 img.eq {
@@ -367,4 +434,29 @@ img {
 table.imgtable, table.imgtable td {
 	border: none;
 	text-align: left;
+}
+
+table.imgtable {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 360px minmax(0, 1fr);
+	align-items: start;
+}
+
+table.imgtable > tbody,
+table.imgtable > tbody > tr {
+	display: contents;
+}
+
+table.imgtable td {
+	display: block;
+	min-width: 0;
+}
+
+table.imgtable td:first-child {
+	vertical-align: top;
+}
+
+table.imgtable td:last-child {
+	vertical-align: top;
 }

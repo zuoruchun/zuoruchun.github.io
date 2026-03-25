@@ -1,0 +1,16 @@
+# jemdoc: menu{MENU_ZH}{publications_zh.html}
+= 论文发表
+
+- Liu, W., Wang, M., & *Zuo, R.* (corresponding author). [https://www.worldscientific.com/doi/10.1142/S0219477525500361 Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations]. /Fluctuation and Noise Letters/, Vol. 24, No. 03, 2550036, 2025. \[[https://github.com/zuoruchun/TCCIR Code]\]
+
+
+== 预印本
+
+
+- He, J., Li, X., Mao, W., & *Zuo, R.* (corresponding author). Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. /Submitted/, 2026.
+
+- *Zuo, R.*, Mao, X., & Guo, Q. (corresponding author). Safe neural control for the stationary distribution of stochastic functional differential equations. /Submitted/, 2025.
+
+- *Zuo, R.* [https://arxiv.org/abs/2510.16405 Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations]. /Submitted/, 2025.
+
+- Wu, R., & *Zuo, R.* (corresponding author). [https://arxiv.org/abs/2308.13999 A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations]. /Submitted/, 2025.
