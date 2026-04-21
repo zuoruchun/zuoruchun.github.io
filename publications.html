@@ -28,66 +28,6 @@ MathJax.Hub.Config({
       TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
-<script type="text/javascript">
-(function() {
-  var pageMap = {
-    "index.html": { en: "index.html", zh: "index_zh.html" },
-    "index_zh.html": { en: "index.html", zh: "index_zh.html" },
-    "publications.html": { en: "publications.html", zh: "publications_zh.html" },
-    "publications_zh.html": { en: "publications.html", zh: "publications_zh.html" },
-    "research.html": { en: "research.html", zh: "research_zh.html" },
-    "research_zh.html": { en: "research.html", zh: "research_zh.html" }
-  };
-  function currentPage() {
-    var file = window.location.pathname.split("/").pop();
-    return file || "index.html";
-  }
-  function currentLanguage(file) {
-    return /_zh\.html$/.test(file) ? "zh" : "en";
-  }
-  function preferredLanguage() {
-    try {
-      return window.localStorage.getItem("preferredLang");
-    } catch (err) {
-      return null;
-    }
-  }
-  function saveLanguage(lang) {
-    try {
-      window.localStorage.setItem("preferredLang", lang);
-    } catch (err) {}
-  }
-  function goToLanguage(lang) {
-    var file = currentPage();
-    var pair = pageMap[file];
-    var target = pair ? pair[lang] : file;
-    saveLanguage(lang);
-    if (target) {
-      window.location.href = target;
-    }
-  }
-  var file = currentPage();
-  var lang = currentLanguage(file);
-  var preferred = preferredLanguage();
-  var mapping = pageMap[file];
-  if (mapping && preferred && preferred !== lang) {
-    window.location.replace(mapping[preferred]);
-  }
-  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("lang-toggle");
-    var nextLang = lang === "zh" ? "en" : "zh";
-    if (!button) {
-      return;
-    }
-    button.textContent = nextLang === "zh" ? "中文" : "English";
-    button.setAttribute("aria-label", nextLang === "zh" ? "切换到中文" : "Switch to English");
-    button.onclick = function() {
-      goToLanguage(nextLang);
-    };
-  });
-})();
-</script>
 <!-- End MathJax -->
 </head>
 <body>
@@ -99,33 +39,32 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="publications.html" class="current">Publications</a></div>
 </td>
 <td id="layout-content">
-<div id="lang-switcher"><button type="button" id="lang-toggle">中文</button></div>
 <div id="toptitle">
 <h1>Publications</h1>
 </div>
 <ul>
-<li><p>Liu, W., Wang, M., &amp; <b>Zuo, R.</b> (corresponding author). <a href="https://www.worldscientific.com/doi/10.1142/S0219477525500361" target=&ldquo;blank&rdquo;>Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations</a>. <i>Fluctuation and Noise Letters</i>, Vol. 24, No. 03, 2550036, 2025. [<a href="https://github.com/zuoruchun/TCCIR" target=&ldquo;blank&rdquo;>Code</a>]
+<li><p>Liu, W., Wang, M., &amp; <strong>Zuo, R.</strong><sup>*</sup>. Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations. <i>Fluct. Noise Lett.</i>, Vol. 24, No. 03, 2550036, 2025. [<a href="https://www.worldscientific.com/doi/10.1142/S0219477525500361" target=&ldquo;blank&rdquo;>paper</a>] [<a href="https://github.com/zuoruchun/TCCIR" target=&ldquo;blank&rdquo;>code</a>]
 </p>
 </li>
 </ul>
 <h2>Preprints</h2>
 <ul>
-<li><p>He, J., Li, X., Mao, W., &amp; <b>Zuo, R.</b> (corresponding author). Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. <i>Submitted</i>, 2026.
+<li><p>He, J., Li, X., Mao, W., &amp; <strong>Zuo, R.</strong><sup>*</sup>. Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. <i>Submitted</i>, 2026.
 </p>
 </li>
 </ul>
 <ul>
-<li><p><b>Zuo, R.</b>, Mao, X., &amp; Guo, Q. (corresponding author). Safe neural control for the stationary distribution of stochastic functional differential equations. <i>Submitted</i>, 2025.
+<li><p><strong>Zuo, R.</strong>, Mao, X., &amp; Guo, Q.<sup>*</sup>. Safe neural control for the stationary distribution of stochastic functional differential equations. <i>Submitted</i>, 2025.
 </p>
 </li>
 </ul>
 <ul>
-<li><p><b>Zuo, R.</b> <a href="https://arxiv.org/abs/2510.16405" target=&ldquo;blank&rdquo;>Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations</a>. <i>Submitted</i>, 2025.
+<li><p><b>Zuo, R.</b> Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. <i>Submitted</i>, 2025. [<a href="https://arxiv.org/abs/2510.16405" target=&ldquo;blank&rdquo;>paper</a>]
 </p>
 </li>
 </ul>
 <ul>
-<li><p>Wu, R., &amp; <b>Zuo, R.</b> (corresponding author). <a href="https://arxiv.org/abs/2308.13999" target=&ldquo;blank&rdquo;>A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations</a>. <i>Submitted</i>, 2025.
+<li><p>Wu, R., &amp; <strong>Zuo, R.</strong><sup>*</sup>. A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. <i>Submitted</i>, 2025. [<a href="https://arxiv.org/abs/2308.13999" target=&ldquo;blank&rdquo;>paper</a>]
 </p>
 </li>
 </ul>
@@ -133,7 +72,7 @@ MathJax.Hub.Config({
 <div id="footer-text">
 <div id="footer">
 <div id="footer-text">
-Page generated 2026-03-25 18:15:58 CST.
+Page generated 2026-04-21 13:38:44 CST.
 </div>
 </div>
 </div>

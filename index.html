@@ -28,66 +28,6 @@ MathJax.Hub.Config({
       TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
-<script type="text/javascript">
-(function() {
-  var pageMap = {
-    "index.html": { en: "index.html", zh: "index_zh.html" },
-    "index_zh.html": { en: "index.html", zh: "index_zh.html" },
-    "publications.html": { en: "publications.html", zh: "publications_zh.html" },
-    "publications_zh.html": { en: "publications.html", zh: "publications_zh.html" },
-    "research.html": { en: "research.html", zh: "research_zh.html" },
-    "research_zh.html": { en: "research.html", zh: "research_zh.html" }
-  };
-  function currentPage() {
-    var file = window.location.pathname.split("/").pop();
-    return file || "index.html";
-  }
-  function currentLanguage(file) {
-    return /_zh\.html$/.test(file) ? "zh" : "en";
-  }
-  function preferredLanguage() {
-    try {
-      return window.localStorage.getItem("preferredLang");
-    } catch (err) {
-      return null;
-    }
-  }
-  function saveLanguage(lang) {
-    try {
-      window.localStorage.setItem("preferredLang", lang);
-    } catch (err) {}
-  }
-  function goToLanguage(lang) {
-    var file = currentPage();
-    var pair = pageMap[file];
-    var target = pair ? pair[lang] : file;
-    saveLanguage(lang);
-    if (target) {
-      window.location.href = target;
-    }
-  }
-  var file = currentPage();
-  var lang = currentLanguage(file);
-  var preferred = preferredLanguage();
-  var mapping = pageMap[file];
-  if (mapping && preferred && preferred !== lang) {
-    window.location.replace(mapping[preferred]);
-  }
-  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("lang-toggle");
-    var nextLang = lang === "zh" ? "en" : "zh";
-    if (!button) {
-      return;
-    }
-    button.textContent = nextLang === "zh" ? "中文" : "English";
-    button.setAttribute("aria-label", nextLang === "zh" ? "切换到中文" : "Switch to English");
-    button.onclick = function() {
-      goToLanguage(nextLang);
-    };
-  });
-})();
-</script>
 <!-- End MathJax -->
 </head>
 <body>
@@ -99,7 +39,6 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="publications.html">Publications</a></div>
 </td>
 <td id="layout-content">
-<div id="lang-switcher"><button type="button" id="lang-toggle">中文</button></div>
 <div id="toptitle">
 <h1>Ruochun Zuo</h1>
 </div>
@@ -128,7 +67,7 @@ Shanghai Normal University<br />
 <p>I am currently a Ph.D. student in Computational Mathematics at Shanghai Normal University, working under the supervision of Prof. <a href="https://scholar.google.com/citations?user=ZBKemyIAAAAJ" target=&ldquo;blank&rdquo;>Qian Guo</a>. 
 My research focuses on the intersection of numerical analysis and machine learning, with particular interests in neural networks, numerical methods for stochastic differential equations, and AI for control systems.
 </p>
-<p>Before starting my doctoral studies, I completed my M.S. in Computational Mathematics at Shanghai Normal University under the supervision of Dr. <a href="https://scholar.google.com/citations?user=CvM-APQAAAAJ" target=&ldquo;blank&rdquo;>Wei Liu</a>, where I worked on numerical methods for time-changed stochastic differential equations.
+<p>Before starting my doctoral studies, I completed my M.S. in Computational Mathematics at Shanghai Normal University under the supervision of Dr. <a href="https://scholar.google.com/citations?user=CvM-APQAAAAJ" target=&ldquo;blank&rdquo;>Wei Liu</a>, where I worked on numerical methods for stochastic differential equations.
 </p>
 <h2>Research Interests</h2>
 <ul>
@@ -142,11 +81,19 @@ My research focuses on the intersection of numerical analysis and machine learni
 </p>
 </li>
 </ul>
+<h2>Academic Service</h2>
+<p><b>Reviewer</b>
+</p>
+<ul>
+<li><p><i>Journal of Computational and Applied Mathematics</i>
+</p>
+</li>
+</ul>
 <div id="footer">
 <div id="footer-text">
 <div id="footer">
 <div id="footer-text">
-Page generated 2026-03-25 18:15:58 CST.
+Page generated 2026-04-21 13:38:44 CST.
 </div>
 </div>
 </div>

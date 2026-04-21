@@ -26,10 +26,6 @@ body {
 	margin: 0;
 }
 
-html[lang="zh-CN"] body {
-	font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-}
-
 #layout-menu {
 	display: block;
 	background: #f6f6f6;
@@ -62,34 +58,6 @@ html[lang="zh-CN"] body {
 	text-align: left;
 	vertical-align: top;
 	min-width: 0;
-}
-
-#lang-switcher {
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
-	min-height: 34px;
-	margin-top: 0.55em;
-	margin-bottom: 0.15em;
-}
-
-#lang-toggle {
-	font-family: Georgia, serif;
-	font-size: 85%;
-	color: #527bbd;
-	background: #f6f6f6;
-	border: 1px solid #d7d7d7;
-	border-radius: 999px;
-	width: 88px;
-	padding: 0.25em 0.8em;
-	cursor: pointer;
-	text-align: center;
-}
-
-#lang-toggle:hover {
-	color: #224b8d;
-	background: #eef3fb;
-	border-color: #aabbd8;
 }
 
 #layout-menu a {
