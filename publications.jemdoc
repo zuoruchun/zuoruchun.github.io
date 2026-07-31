@@ -1,6 +1,10 @@
 # jemdoc: menu{MENU}{publications.html}
 = Publications
 
+- Wu, R., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. /Appl. Numer. Math./, to appear. \[[https://arxiv.org/abs/2308.13999 paper]\]
+
+- *Zuo, R.*. Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. /Numer. Algorithms/, published online, 2026. \[[https://link.springer.com/article/10.1007/s11075-026-02454-0 paper]\]
+
 - Liu, W., Wang, M., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations. /Fluct. Noise Lett./, Vol. 24, No. 03, 2550036, 2025. \[[https://www.worldscientific.com/doi/10.1142/S0219477525500361 paper]\] \[[https://github.com/zuoruchun/TCCIR code]\]
 
 
@@ -8,11 +12,8 @@
 
 # - *Zuo, R.*. Stability of equidistant-step Euler-type methods for time-changed stochastic differential equations. 2026.
 
+- Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Submitted/, 2026.
 
 - He, J., Li, X., Mao, W., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. /Submitted/, 2026.
 
 - {{<strong>Zuo, R.</strong>}}, Mao, X., & {{Guo, Q.<sup>*</sup>.}} Safe neural control for the stationary distribution of stochastic functional differential equations. /Submitted/, 2025.
-
-- *Zuo, R.* Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. /Submitted/, 2025. \[[https://arxiv.org/abs/2510.16405 paper]\]
-
-- Wu, R., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. /Submitted/, 2025. \[[https://arxiv.org/abs/2308.13999 paper]\]
