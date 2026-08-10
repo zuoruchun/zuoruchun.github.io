@@ -24,3 +24,6 @@ __pycache__/
 
 # Management guide (local only)
 MANAGEMENT.md
+
+# Local session backups (never push)
+_codex_sessions/
