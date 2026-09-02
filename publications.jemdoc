@@ -1,6 +1,8 @@
 # jemdoc: menu{MENU}{publications.html}
 = Publications
 
+- Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Fluct. Noise Lett./, to appear, 2026. \[[https://github.com/zuoruchun/TCAIT code]\]
+
 - Rong, Z., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Stability of equidistant-step Euler-type methods for time-changed stochastic differential equations. /Stat. Probab. Lett./, to appear, 2026.
 
 - Wu, R., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. /Appl. Numer. Math./, Vol. 230, 209-226, 2026. \[[https://doi.org/10.1016/j.apnum.2026.07.013 paper]\]
@@ -11,8 +13,6 @@
 
 
 == Preprints
-
-- Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Submitted/, 2026.
 
 - He, J., Li, X., Mao, W., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. /Submitted/, 2026.
 
