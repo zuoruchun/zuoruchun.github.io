@@ -9,7 +9,7 @@
 
 - Wu, R., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. /Appl. Numer. Math./, Vol. 230, 209–226, 2026. \[[https://doi.org/10.1016/j.apnum.2026.07.013 paper]\]
 
-- *Zuo, R.*. Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. /Numer. Algorithms/, published online, 2026. \[[https://link.springer.com/article/10.1007/s11075-026-02454-0 paper]\]
+- {{<strong>Zuo, R.</strong>}} Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. /Numer. Algorithms/, published online, 2026. \[[https://link.springer.com/article/10.1007/s11075-026-02454-0 paper]\]
 
 - Liu, W., Wang, M., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Parameter-related strong convergence rate of the backward Euler–Maruyama method for time-changed stochastic differential equations. /Fluct. Noise Lett./, Vol. 24, No. 3, 2550036, 2025. \[[https://www.worldscientific.com/doi/10.1142/S0219477525500361 paper]\] \[[https://github.com/zuoruchun/TCCIR code]\]
 
