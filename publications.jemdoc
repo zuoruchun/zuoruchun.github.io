@@ -3,7 +3,7 @@
 
 /(*: Corresponding author)/
 
-- Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Fluct. Noise Lett./, to appear, 2026. \[[https://github.com/zuoruchun/TCAIT code]\]
+- Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Fluct. Noise Lett./, to appear, 2026. \[[https://www.worldscientific.com/doi/abs/10.1142/S0219477526500586 paper]\] \[[https://github.com/zuoruchun/TCAIT code]\]
 
 - Rong, Z., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Stability of equidistant-step Euler-type methods for time-changed stochastic differential equations. /Stat. Probab. Lett./, to appear, 2026. \[[https://www.sciencedirect.com/science/article/pii/S0167715226003147 paper]\]
 
@@ -15,6 +15,8 @@
 
 
 == Preprints
+
+- {{<strong>Zuo, R.</strong>}}, & {{Guo, Q.<sup>*</sup>}}. An equidistant truncated Euler–Maruyama method for nonlinear time-changed stochastic differential equations. /Submitted/, 2026. \[[https://www.researchsquare.com/article/rs-10974346/v1 paper]\]
 
 - Li, X., Zhou, H., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A diffusion time-changed stochastic SIS epidemic model: well-posedness, long-time behavior, and numerical approximation. /Submitted/, 2026. \[[https://arxiv.org/abs/2608.21930 paper]\]
 

@@ -6,7 +6,7 @@
 
 ## Publications Format
 
-- Use this fixed order: authors. title. venue or status, year. `[paper]` `[code]`. Do not attach the paper link to the title. If a paper link exists, place it at the end as `[paper]`; if a code link exists, place it at the end as `[code]`. Use lowercase `paper` and `code`, and do not add either tag when no such link exists. Use the exact paper title provided by the user unless the user asks for wording changes. Use agreed journal abbreviations, for example `Fluct. Noise Lett.` for `Fluctuation and Noise Letters`.
+- Use this fixed order: authors. title. venue or status, year. `[paper]` `[code]`. Do not attach the paper link to the title. If a paper link exists, place it at the end as `[paper]`; if a code link exists, place it at the end as `[code]`. Use lowercase `paper` and `code`, and do not add either tag when no such link exists. Preserve the wording of the paper title provided by the user unless the user asks for wording changes. Use sentence case for paper titles: capitalize only the first word, proper names, and required abbreviations, for example `An equidistant truncated Euler–Maruyama method for nonlinear time-changed stochastic differential equations`. Use agreed journal abbreviations, for example `Fluct. Noise Lett.` for `Fluctuation and Noise Letters`.
 
 ## Authors and Corresponding Authors
 
