@@ -27,6 +27,17 @@ Before starting my doctoral studies, I completed my M.S. in Computational Mathem
 
 I have been awarded funding from the China Scholarship Council (CSC) and will visit the University of Birmingham in the United Kingdom for a one-year CSC-funded research visit under the supervision of Dr. [https://sites.google.com/site/xiaochengshang Xiaocheng Shang].
 
+== News
+
+- *Talk* (November 2026): Safe neural control for a stationary distribution of stochastic functional differential equations. Joint with X. Mao and Q. Guo. 14th Student Forum of the Technical Committee on Control Theory (TCCT). {{<a href="files/slides/TCCT2026.pdf">[slides]</a>}}
+- *Preprint* (October 2026): Numerical methods for nonlinear stochastic differential equations driven by subdiffusion. Joint with Q. Guo and W. Liu. \[[https://arxiv.org/abs/2610.41550 arXiv]\]
+- *Preprint* (October 2026): Strong convergence of fully discrete tamed Euler approximations for time-changed stochastic delay differential equations. Joint with Q. Guo. \[[https://arxiv.org/abs/2610.28552 arXiv]\]
+- *Preprint* (August 2026): A diffusion time-changed stochastic SIS epidemic model: well-posedness, long-time behavior, and numerical approximation. Joint with X. Li and H. Zhou. \[[https://arxiv.org/abs/2608.21930 arXiv]\]
+- *Accepted* (August 2026): Stability of equidistant-step Euler-type methods for time-changed stochastic differential equations. Joint with Z. Rong. /Statistics & Probability Letters/. \[[https://www.sciencedirect.com/science/article/pii/S0167715226003147 paper]\]
+- *Talk* (August 2026): The 4th Graduate Forum on Numerical Methods for Stochastic Differential Equations. {{<a href="files/slides/Tianyuan2026.pdf">[slides]</a>}}
+- *Accepted* (July 2026): A Milstein-type method for highly non-linear non-autonomous time-changed stochastic differential equations. Joint with R. Wu. /Applied Numerical Mathematics/. \[[https://doi.org/10.1016/j.apnum.2026.07.013 paper]\]
+- *Online* (July 2026): Parameter-related strong convergence rates of Euler-type methods for time-changed stochastic differential equations. /Numerical Algorithms/. \[[https://link.springer.com/article/10.1007/s11075-026-02454-0 paper]\]
+
 == Research Interests
 
 - Neural Networks
@@ -41,4 +52,5 @@ I have been awarded funding from the China Scholarship Council (CSC) and will vi
 
 == Talks
 
+- 14th Student Forum of the Technical Committee on Control Theory (TCCT), November 6, 2026. {{<a href="files/slides/TCCT2026.pdf">[slides]</a>}}
 - The 4th Graduate Forum on Numerical Methods for Stochastic Differential Equations, Tianyuan Mathematical Center in Northeast China, August 8, 2026. {{<a href="files/slides/Tianyuan2026.pdf">[slides]</a>}}
