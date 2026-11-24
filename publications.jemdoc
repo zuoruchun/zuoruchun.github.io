@@ -3,6 +3,8 @@
 
 /(*: Corresponding author)/
 
+- {{<strong>Zuo, R.</strong>}}, Mao, X., & {{Guo, Q.<sup>*</sup>}}. Safe neural control for a stationary distribution of stochastic functional differential equations. /J. Comput. Appl. Math./, published online, 2026. \[[https://doi.org/10.1016/j.cam.2026.118346 paper]\] \[[https://github.com/zuoruchun/SFNC code]\]
+
 - Shu, Q., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A partially time-changed Aït-Sahalia model: well-posedness and moment bounds. /Fluct. Noise Lett./, to appear, 2026. \[[https://www.worldscientific.com/doi/abs/10.1142/S0219477526500586 paper]\] \[[https://github.com/zuoruchun/TCAIT code]\]
 
 - Rong, Z., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Stability of equidistant-step Euler-type methods for time-changed stochastic differential equations. /Stat. Probab. Lett./, to appear, 2026. \[[https://www.sciencedirect.com/science/article/pii/S0167715226003147 paper]\]
@@ -25,5 +27,3 @@
 - Li, X., Zhou, H., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. A diffusion time-changed stochastic SIS epidemic model: well-posedness, long-time behavior, and numerical approximation. /Preprint/, 2026. \[[https://arxiv.org/abs/2608.21930 paper]\]
 
 - He, J., Li, X., Mao, W., & {{<strong>Zuo, R.</strong><sup>*</sup>}}. Truncated Euler–Maruyama method for time-changed McKean–Vlasov stochastic differential equations with superlinear coefficients. /Submitted/, 2026.
-
-- {{<strong>Zuo, R.</strong>}}, Mao, X., & {{Guo, Q.<sup>*</sup>.}} Safe neural control for the stationary distribution of stochastic functional differential equations. /Submitted/, 2025.
